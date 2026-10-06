@@ -81,8 +81,6 @@ export default function ProcessFlow() {
     setMarkerTop(Math.max(2, Math.min(98, percent)));
   }, [active]);
 
-  return () => window.removeEventListener("resize", updateMarker);
-  }, [active]);
 
   return (
     <section className="process-section" id="process" aria-labelledby="process-title">
