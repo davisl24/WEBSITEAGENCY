@@ -259,7 +259,7 @@ export default function Home() {
               </div>
               <div>
                 <span>Kontakti</span>
-                <a href="mailto:hello@kestrel.lv">hello@kestrel.lv</a>
+                <a href="#contact">Sazināties</a>
                 <a href="#contact">Pieteikt projektu</a>
               </div>
             </div>
