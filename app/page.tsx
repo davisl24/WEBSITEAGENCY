@@ -205,9 +205,9 @@ export default function Home() {
         <div className="contact-inner">
           <div className="contact-copy">
             <p className="section-label">Sazināties</p>
-            <h2 id="contact-title">Pastāsti par savu ideju</h2>
+            <h2 id="contact-title">Pastāsti īsumā</h2>
             <p>
-              Īsi apraksti uzņēmumu un ko vēlies uzlabot — atbildēsim ar konkrētu nākamo soli
+              Ja vēl negribi rezervēt zvanu, atsūti īsu aprakstu — atbildēsim ar konkrētu nākamo soli
             </p>
           </div>
 
@@ -266,8 +266,8 @@ export default function Home() {
           </div>
 
           <div className="footer-bottom">
-            <span>© 2026 Kestrel, SIA</span>
-            <span>40203559349</span>
+            <span>Kestrel, SIA · Reģ. nr. 40203559349</span>
+            <span>© 2026</span>
           </div>
         </div>
       </footer>
