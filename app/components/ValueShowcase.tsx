@@ -109,7 +109,6 @@ export default function ValueShowcase() {
               </div>
 
               <div className="preview-note">
-                <span>{itemNumber(active)}</span>
                 <p>{current.description}</p>
               </div>
             </div>
@@ -118,8 +117,4 @@ export default function ValueShowcase() {
       </div>
     </section>
   );
-}
-
-function itemNumber(index: number) {
-  return String(index + 1).padStart(2, "0");
 }
