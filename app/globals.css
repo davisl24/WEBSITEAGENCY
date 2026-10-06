@@ -2,7 +2,7 @@
 .work-section{
   background:#0d0d0e;
   color:#f4f1ea;
-  padding:128px 32px 144px
+  padding:96px 32px 112px
 }
 .work-inner{
   width:min(1360px,100%);
@@ -11,9 +11,9 @@
 .work-heading{
   display:grid;
   grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);
-  column-gap:64px;
+  column-gap:56px;
   align-items:end;
-  margin-bottom:64px
+  margin-bottom:48px
 }
 .section-label{
   grid-column:1/-1;
@@ -40,12 +40,12 @@
 }
 .work-list{
   display:grid;
-  gap:96px
+  gap:72px
 }
 .work-item{
   display:grid;
   grid-template-columns:minmax(0,1.2fr) minmax(260px,.8fr);
-  gap:32px;
+  gap:24px;
   align-items:end
 }
 .work-item-offset{
@@ -59,7 +59,7 @@
   grid-row:1
 }
 .work-visual{
-  min-height:520px;
+  min-height:460px;
   display:grid;
   place-items:center;
   border:1px solid rgba(244,241,234,.12);
@@ -82,7 +82,7 @@
   display:flex;
   justify-content:space-between;
   gap:24px;
-  padding-bottom:4px
+  padding-top:14px;padding-bottom:0
 }
 .work-meta>div{
   display:grid;
@@ -110,7 +110,7 @@
 
 @media(max-width:900px){
   .work-section{
-    padding:96px 24px 112px
+    padding:80px 24px 96px
   }
   .work-heading{
     grid-template-columns:1fr;
@@ -135,13 +135,13 @@
     grid-row:auto
   }
   .work-visual{
-    min-height:420px
+    min-height:360px
   }
 }
 
 @media(max-width:760px){
   .work-section{
-    padding:80px 18px 88px
+    padding:72px 18px 80px
   }
   .work-heading h2{
     font-size:40px;
@@ -154,7 +154,7 @@
     gap:64px
   }
   .work-visual{
-    min-height:300px
+    min-height:280px
   }
   .work-meta{
     flex-direction:column;
