@@ -183,6 +183,47 @@ export default function Home() {
       </section>
 
       <ProcessFlow />
+
+      <section className="contact-section" id="contact" aria-labelledby="contact-title">
+        <div className="contact-inner">
+          <div className="contact-copy">
+            <p className="section-label">Sazināties</p>
+            <h2 id="contact-title">Pastāsti par savu ideju</h2>
+            <p>
+              Īsi apraksti uzņēmumu un ko vēlies uzlabot — atbildēsim ar konkrētu nākamo soli
+            </p>
+          </div>
+
+          <div className="contact-card">
+            <div className="contact-card-top">
+              <span>Bezmaksas ideja</span>
+              <span>Bez saistībām</span>
+            </div>
+
+            <div className="contact-fields">
+              <label>
+                <span>Vārds</span>
+                <input type="text" name="name" placeholder="Tavs vārds" />
+              </label>
+
+              <label>
+                <span>E-pasts vai tālrunis</span>
+                <input type="text" name="contact" placeholder="Kā ar tevi sazināties" />
+              </label>
+
+              <label className="contact-field-wide">
+                <span>Par ko ir projekts</span>
+                <textarea name="message" rows={4} placeholder="Īsi par uzņēmumu un ko vēlies uzlabot" />
+              </label>
+            </div>
+
+            <div className="contact-actions">
+              <p>Atbildēsim ar konkrētu ideju, nevis gatavu pārdošanas tekstu</p>
+              <button type="button" className="button button-primary">Saņemt bezmaksas ideju</button>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
