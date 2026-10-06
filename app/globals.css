@@ -802,7 +802,7 @@
   }
 
    .services-section{
-    padding-top:44px;
+    padding-top:34px;
   }
 }
 
@@ -972,7 +972,7 @@
   position:relative;
   background:transparent;
   color:#f4f1ea;
-  padding:96px 32px 128px;
+  padding:72px 32px 92px;
 }
 .contact-inner{
   width:min(1360px,100%);
@@ -1118,14 +1118,14 @@
   position:relative;
   background:transparent;
   color:#f4f1ea;
-  padding:88px 32px 56px;
+  padding:56px 32px 36px;
 }
 .call-inner{
   width:min(1360px,100%);
   margin:0 auto;
   border:1px solid rgba(244,241,234,.12);
   border-radius:24px;
-  padding:28px;
+  padding:24px;
   background:
     radial-gradient(circle at 82% 22%,rgba(255,255,255,.035),transparent 28%),
     rgba(255,255,255,.018);
@@ -1145,12 +1145,12 @@
   grid-template-columns:minmax(0,1fr) minmax(320px,.7fr);
   gap:56px;
   align-items:end;
-  padding-top:72px;
+  padding-top:48px;
 }
 .call-content h2{
   margin:0;
   max-width:620px;
-  font-size:clamp(42px,4.4vw,68px);
+  font-size:clamp(40px,4vw,60px);
   line-height:1.05;
   letter-spacing:-.045em;
   font-weight:650;
@@ -1186,7 +1186,7 @@
   position:relative;
   background:#070708;
   color:#f4f1ea;
-  padding:72px 32px 28px;
+  padding:48px 32px 22px;
 }
 .footer-inner{
   width:min(1360px,100%);
@@ -1195,18 +1195,18 @@
 .footer-main{
   display:grid;
   grid-template-columns:minmax(0,1.3fr) minmax(320px,.7fr);
-  gap:72px;
-  padding-bottom:64px;
+  gap:56px;
+  padding-bottom:40px;
 }
 .footer-logo{
   display:inline-block;
-  font-size:36px;
+  font-size:32px;
   line-height:1;
   font-weight:700;
   letter-spacing:-.04em;
 }
 .footer-brand p{
-  margin:22px 0 0;
+  margin:16px 0 0;
   max-width:520px;
   font-size:16px;
   line-height:1.6;
@@ -1235,34 +1235,34 @@
   display:flex;
   justify-content:space-between;
   gap:24px;
-  padding-top:20px;
+  padding-top:16px;
   border-top:1px solid rgba(244,241,234,.1);
   font-size:12px;
   color:rgba(244,241,234,.36);
 }
 @media(max-width:900px){
   .call-section{
-    padding:72px 24px 48px;
+    padding:48px 24px 32px;
   }
   .call-content{
     grid-template-columns:1fr;
     gap:32px;
-    padding-top:52px;
+    padding-top:40px;
   }
   .call-cta{
     max-width:520px;
   }
   .site-footer{
-    padding:64px 24px 24px;
+    padding:44px 24px 22px;
   }
   .footer-main{
     grid-template-columns:1fr;
-    gap:48px;
+    gap:36px;
   }
 }
 @media(max-width:700px){
   .call-section{
-    padding:64px 18px 40px;
+    padding:40px 18px 28px;
   }
   .call-inner{
     padding:20px;
@@ -1279,7 +1279,7 @@
     font-size:13px;
   }
   .site-footer{
-    padding:56px 18px 22px;
+    padding:40px 18px 20px;
   }
   .footer-links{
     grid-template-columns:1fr;
