@@ -56,7 +56,6 @@ export default function Home() {
               </div>
               <div className="work-meta">
                 <div>
-                  <span className="work-index">01</span>
                   <h3>Demo projekts</h3>
                 </div>
                 <p>Pakalpojumu uzņēmuma mājaslapa</p>
@@ -69,7 +68,6 @@ export default function Home() {
               </div>
               <div className="work-meta">
                 <div>
-                  <span className="work-index">02</span>
                   <h3>Demo projekts</h3>
                 </div>
                 <p>Lokāla uzņēmuma mājaslapa</p>
