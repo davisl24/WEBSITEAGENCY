@@ -33,6 +33,48 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+      </section>
+
+      <section className="work-section" id="work" aria-labelledby="work-title">
+        <div className="work-inner">
+          <div className="work-heading">
+            <p className="section-label">Atlasīti projekti</p>
+            <h2 id="work-title">Ko mēs veidojam</h2>
+            <p className="section-intro">
+              Mājaslapas, kur katram elementam ir skaidrs uzdevums — palīdzēt klientam
+              saprast piedāvājumu un nonākt līdz nākamajam solim
+            </p>
+          </div>
+
+          <div className="work-list">
+            <article className="work-item">
+              <div className="work-visual work-visual-one" aria-label="Pirmā projekta vizuāļa vieta">
+                <span>Project visual 01</span>
+              </div>
+              <div className="work-meta">
+                <div>
+                  <span className="work-index">01</span>
+                  <h3>Demo projekts</h3>
+                </div>
+                <p>Pakalpojumu uzņēmuma mājaslapa</p>
+              </div>
+            </article>
+
+            <article className="work-item work-item-offset">
+              <div className="work-visual work-visual-two" aria-label="Otrā projekta vizuāļa vieta">
+                <span>Project visual 02</span>
+              </div>
+              <div className="work-meta">
+                <div>
+                  <span className="work-index">02</span>
+                  <h3>Demo projekts</h3>
+                </div>
+                <p>Lokāla uzņēmuma mājaslapa</p>
+              </div>
+            </article>
+          </div>
+        </div>
       </section>
     </main>
   );
