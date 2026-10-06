@@ -1,5 +1,6 @@
 import Image from "next/image";
 import heroBg from "./assets/images/andrew-kliatskyi-k7XTD-HCZAw-unsplash.jpg";
+import ValueShowcase from "./components/ValueShowcase";
 
 export default function Home() {
   return (
@@ -76,57 +77,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="value-section" aria-labelledby="value-title">
-        <div className="value-inner">
-          <div className="value-head">
-            <p className="section-label">Kāpēc tas svarīgi</p>
-            <h2 id="value-title">Mazāk šķēršļu klientam</h2>
-          </div>
-
-          <div className="value-layout">
-            <div className="value-nav">
-              <button className="value-nav-item is-active" type="button">
-                <span>Skaidrs piedāvājums</span>
-                <small>Klients uzreiz saprot, ko jūs piedāvājat</small>
-              </button>
-
-              <button className="value-nav-item" type="button">
-                <span>Vienkārša pieteikšanās</span>
-                <small>Nākamais solis ir skaidrs bez liekas meklēšanas</small>
-              </button>
-
-              <button className="value-nav-item" type="button">
-                <span>Uzticams pirmais iespaids</span>
-                <small>Pārliecība rodas vēl pirms pirmās sarunas</small>
-              </button>
-            </div>
-
-            <div className="value-preview" aria-label="Mājaslapas piemēra vieta">
-              <div className="preview-window">
-                <div className="preview-topbar">
-                  <span />
-                  <span />
-                  <span />
-                </div>
-
-                <div className="preview-body">
-                  <div className="preview-copy">
-                    <span className="preview-kicker">Pakalpojums</span>
-                    <strong>Skaidrs piedāvājums</strong>
-                    <p>Galvenā informācija un nākamais solis ir redzami uzreiz</p>
-                    <div className="preview-cta">Pieteikties</div>
-                  </div>
-
-                  <div className="preview-art">
-                    <div className="preview-art-main" />
-                    <div className="preview-art-small" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ValueShowcase />
     </main>
   );
 }
