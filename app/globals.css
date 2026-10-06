@@ -1270,7 +1270,9 @@
     padding:18px 18px 22px;
   }
   .call-inner{
+    width:min(100%,360px);
     padding:24px 20px 28px;
+    margin:0 auto;
     text-align:center;
   }
   .call-kicker{
