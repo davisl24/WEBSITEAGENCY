@@ -81,28 +81,30 @@ export default function Home() {
           <div className="value-head">
             <p className="section-label">Kāpēc tas svarīgi</p>
             <h2 id="value-title">Mazāk šķēršļu klientam</h2>
-            <p className="value-intro">
-              Mājaslapai jāpalīdz klientam saprast piedāvājumu un rīkoties bez liekas meklēšanas
-            </p>
           </div>
 
-          <div className="value-list">
-            <div className="value-row">
-              <span className="value-number">01</span>
-              <h3>Skaidrs piedāvājums</h3>
-              <p>Klients uzreiz saprot, ko uzņēmums piedāvā un vai tas viņam der</p>
+          <div className="value-composition">
+            <div className="value-statement">
+              <p>
+                Mājaslapai jāpalīdz klientam ātri saprast piedāvājumu un nonākt līdz nākamajam solim
+              </p>
             </div>
 
-            <div className="value-row">
-              <span className="value-number">02</span>
-              <h3>Vienkārša pieteikšanās</h3>
-              <p>Nākamais solis ir redzams un nav jāmeklē pa vairākiem kanāliem</p>
-            </div>
+            <div className="value-points">
+              <div className="value-point">
+                <h3>Skaidrs piedāvājums</h3>
+                <p>Klients uzreiz saprot, ko jūs piedāvājat</p>
+              </div>
 
-            <div className="value-row">
-              <span className="value-number">03</span>
-              <h3>Uzticams pirmais iespaids</h3>
-              <p>Sakārtota mājaslapa rada pārliecību vēl pirms pirmās sarunas</p>
+              <div className="value-point">
+                <h3>Vienkārša pieteikšanās</h3>
+                <p>Nākamais solis ir skaidrs bez liekas meklēšanas</p>
+              </div>
+
+              <div className="value-point">
+                <h3>Uzticams pirmais iespaids</h3>
+                <p>Pārliecība rodas vēl pirms pirmās sarunas</p>
+              </div>
             </div>
           </div>
         </div>
