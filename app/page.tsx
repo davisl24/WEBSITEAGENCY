@@ -1,10 +1,12 @@
 import Image from "next/image";
 import heroBg from "./assets/images/andrew-kliatskyi-k7XTD-HCZAw-unsplash.jpg";
 import ValueShowcase from "./components/ValueShowcase";
+import SmoothScroll from "./components/SmoothScroll";
 
 export default function Home() {
   return (
     <main>
+      <SmoothScroll />
       <section className="hero">
         <div className="hero-media" aria-hidden="true">
           <Image src={heroBg} alt="" fill priority className="hero-media-image" />
