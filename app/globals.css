@@ -659,7 +659,7 @@
   font-size:11px;
   text-transform:uppercase;
   letter-spacing:.12em;
-  color:rgba(244,241,234,.42);
+  color:rgba(244,241,234,.56);
 }
 .service-card h3{
   margin:0;
@@ -991,7 +991,7 @@
 }
 .contact-copy h2{
   margin:0;
-  max-width:560px;
+  max-width:430px;
   font-size:clamp(42px,4vw,60px);
   line-height:1.08;
   letter-spacing:-.045em;
@@ -1008,7 +1008,7 @@
   border:1px solid rgba(244,241,234,.12);
   border-radius:24px;
   overflow:hidden;
-  background:rgba(255,255,255,.02);
+  background:rgba(255,255,255,.035);
 }
 .contact-card-top{
   display:flex;
@@ -1056,7 +1056,7 @@
 }
 .contact-fields input::placeholder,
 .contact-fields textarea::placeholder{
-  color:rgba(244,241,234,.28);
+  color:rgba(244,241,234,.42);
 }
 .contact-actions{
   display:flex;
