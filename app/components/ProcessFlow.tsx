@@ -23,7 +23,9 @@ const steps = [
 
 export default function ProcessFlow() {
   const [active, setActive] = useState(0);
+  const [progress, setProgress] = useState(12);
   const refs = useRef<Array<HTMLElement | null>>([]);
+  const flowRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -42,7 +44,36 @@ export default function ProcessFlow() {
     );
 
     refs.current.forEach((node) => node && observer.observe(node));
-    return () => observer.disconnect();
+
+    let raf = 0;
+    const updateProgress = () => {
+      const flow = flowRef.current;
+      if (!flow) return;
+
+      const rect = flow.getBoundingClientRect();
+      const viewportAnchor = window.innerHeight * 0.5;
+      const travel = Math.max(1, rect.height - window.innerHeight * 0.35);
+      const raw = (viewportAnchor - rect.top) / travel;
+      const clamped = Math.max(0, Math.min(1, raw));
+
+      setProgress(6 + clamped * 88);
+      raf = 0;
+    };
+
+    const onScroll = () => {
+      if (!raf) raf = requestAnimationFrame(updateProgress);
+    };
+
+    updateProgress();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+      if (raf) cancelAnimationFrame(raf);
+    };
   }, []);
 
   return (
@@ -56,9 +87,9 @@ export default function ProcessFlow() {
           </p>
         </div>
 
-        <div className="process-flow">
+        <div className="process-flow" ref={flowRef}>
           <div className="process-rail" aria-hidden="true">
-            <span style={{ top: `${12 + active * 25}%` }} />
+            <span style={{ top: `${progress}%` }} />
           </div>
 
           <div className="process-steps">
