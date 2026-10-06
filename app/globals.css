@@ -1123,12 +1123,10 @@
 .call-inner{
   width:min(1360px,100%);
   margin:0 auto;
-  border:1px solid rgba(244,241,234,.12);
-  border-radius:24px;
+  border:0;
+  border-radius:0;
   padding:24px;
-  background:
-    radial-gradient(circle at 82% 22%,rgba(255,255,255,.035),transparent 28%),
-    rgba(255,255,255,.018);
+  background:transparent;
 }
 .call-kicker{
   display:flex;
