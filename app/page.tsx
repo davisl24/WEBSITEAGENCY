@@ -259,7 +259,6 @@ export default function Home() {
               </div>
               <div>
                 <span>Kontakti</span>
-                <a href="#contact">Sazināties</a>
                 <a href="#contact">Pieteikt projektu</a>
               </div>
             </div>
