@@ -28,45 +28,60 @@ export default function ProcessFlow() {
   const flowRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+    let raf = 0;
 
-        if (!visible) return;
-        setActive(Number((visible.target as HTMLElement).dataset.index));
-      },
-      {
-        threshold: [0.45, 0.6, 0.75],
-        rootMargin: "-28% 0px -28% 0px",
-      }
-    );
+    const updateActive = () => {
+      const viewportCenter = window.innerHeight * 0.5;
 
-    refs.current.forEach((node) => node && observer.observe(node));
+      let nextActive = 0;
+      let closestDistance = Number.POSITIVE_INFINITY;
+
+      refs.current.forEach((node, index) => {
+        if (!node) return;
+
+        const rect = node.getBoundingClientRect();
+        const center = rect.top + rect.height / 2;
+        const distance = Math.abs(center - viewportCenter);
+
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          nextActive = index;
+        }
+      });
+
+      setActive((current) => (current === nextActive ? current : nextActive));
+      raf = 0;
+    };
+
+    const onScroll = () => {
+      if (!raf) raf = requestAnimationFrame(updateActive);
+    };
+
+    updateActive();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
 
     return () => {
-      observer.disconnect();
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+      if (raf) cancelAnimationFrame(raf);
     };
   }, []);
 
   useEffect(() => {
-    const updateMarker = () => {
-      const flow = flowRef.current;
-      const step = refs.current[active];
-      if (!flow || !step) return;
+    const flow = flowRef.current;
+    const step = refs.current[active];
+    if (!flow || !step) return;
 
-      const flowRect = flow.getBoundingClientRect();
-      const stepRect = step.getBoundingClientRect();
-      const center = stepRect.top - flowRect.top + stepRect.height / 2;
-      const percent = (center / flowRect.height) * 100;
+    const flowRect = flow.getBoundingClientRect();
+    const stepRect = step.getBoundingClientRect();
+    const center = stepRect.top - flowRect.top + stepRect.height / 2;
+    const percent = (center / flowRect.height) * 100;
 
-      setMarkerTop(Math.max(2, Math.min(98, percent)));
-    };
+    setMarkerTop(Math.max(2, Math.min(98, percent)));
+  }, [active]);
 
-    updateMarker();
-    window.addEventListener("resize", updateMarker);
-    return () => window.removeEventListener("resize", updateMarker);
+  return () => window.removeEventListener("resize", updateMarker);
   }, [active]);
 
   return (
