@@ -83,27 +83,27 @@ export default function Home() {
             <h2 id="value-title">Mazāk šķēršļu klientam</h2>
           </div>
 
-          <div className="value-composition">
-            <div className="value-statement">
-              <p>
-                Mājaslapai jāpalīdz klientam ātri saprast piedāvājumu un nonākt līdz nākamajam solim
-              </p>
+          <div className="value-showcase">
+            <div className="value-menu" aria-label="Galvenie ieguvumi">
+              <button className="value-menu-item is-active" type="button">
+                <span>Skaidrs piedāvājums</span>
+                <small>Klients uzreiz saprot, ko jūs piedāvājat</small>
+              </button>
+
+              <button className="value-menu-item" type="button">
+                <span>Vienkārša pieteikšanās</span>
+                <small>Nākamais solis ir skaidrs bez liekas meklēšanas</small>
+              </button>
+
+              <button className="value-menu-item" type="button">
+                <span>Uzticams pirmais iespaids</span>
+                <small>Pārliecība rodas vēl pirms pirmās sarunas</small>
+              </button>
             </div>
 
-            <div className="value-points">
-              <div className="value-point">
-                <h3>Skaidrs piedāvājums</h3>
-                <p>Klients uzreiz saprot, ko jūs piedāvājat</p>
-              </div>
-
-              <div className="value-point">
-                <h3>Vienkārša pieteikšanās</h3>
-                <p>Nākamais solis ir skaidrs bez liekas meklēšanas</p>
-              </div>
-
-              <div className="value-point">
-                <h3>Uzticams pirmais iespaids</h3>
-                <p>Pārliecība rodas vēl pirms pirmās sarunas</p>
+            <div className="value-visual" aria-label="Ieguvuma vizuāļa vieta">
+              <div className="value-visual-frame">
+                <span>Skaidrs piedāvājums</span>
               </div>
             </div>
           </div>
