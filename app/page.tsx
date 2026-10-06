@@ -180,6 +180,46 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section className="process-section" id="process" aria-labelledby="process-title">
+        <div className="process-inner">
+          <div className="process-head">
+            <p className="section-label">Process</p>
+            <h2 id="process-title">No idejas līdz live</h2>
+            <p className="process-intro">
+              Process ir vienkāršs — vispirms saprotam, ko lapai jāpanāk, tikai tad ķeramies pie dizaina un izstrādes
+            </p>
+          </div>
+
+          <div className="process-flow">
+            <div className="process-rail" aria-hidden="true">
+              <span />
+            </div>
+
+            <div className="process-steps">
+              <article className="process-step">
+                <div className="process-stage">Saprast mērķi</div>
+                <p>Ko pārdodam, kam un kādu darbību vēlamies no apmeklētāja</p>
+              </article>
+
+              <article className="process-step">
+                <div className="process-stage">Salikt saturu</div>
+                <p>Atlasām tikai to informāciju, kas palīdz klientam saprast un pieņemt lēmumu</p>
+              </article>
+
+              <article className="process-step">
+                <div className="process-stage">Uztaisīt un pārbaudīt</div>
+                <p>Uzbūvējam, pārbaudām desktop un mobile, un salabojam tikai reālas problēmas</p>
+              </article>
+
+              <article className="process-step">
+                <div className="process-stage">Palaist un uzturēt</div>
+                <p>Palaižam lapu dzīvē un pēc tam uzturam to vienkāršu, ātru un aktuālu</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
