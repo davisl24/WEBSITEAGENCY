@@ -83,27 +83,45 @@ export default function Home() {
             <h2 id="value-title">Mazāk šķēršļu klientam</h2>
           </div>
 
-          <div className="value-showcase">
-            <div className="value-menu" aria-label="Galvenie ieguvumi">
-              <button className="value-menu-item is-active" type="button">
+          <div className="value-layout">
+            <div className="value-nav">
+              <button className="value-nav-item is-active" type="button">
                 <span>Skaidrs piedāvājums</span>
                 <small>Klients uzreiz saprot, ko jūs piedāvājat</small>
               </button>
 
-              <button className="value-menu-item" type="button">
+              <button className="value-nav-item" type="button">
                 <span>Vienkārša pieteikšanās</span>
                 <small>Nākamais solis ir skaidrs bez liekas meklēšanas</small>
               </button>
 
-              <button className="value-menu-item" type="button">
+              <button className="value-nav-item" type="button">
                 <span>Uzticams pirmais iespaids</span>
                 <small>Pārliecība rodas vēl pirms pirmās sarunas</small>
               </button>
             </div>
 
-            <div className="value-visual" aria-label="Ieguvuma vizuāļa vieta">
-              <div className="value-visual-frame">
-                <span>Skaidrs piedāvājums</span>
+            <div className="value-preview" aria-label="Mājaslapas piemēra vieta">
+              <div className="preview-window">
+                <div className="preview-topbar">
+                  <span />
+                  <span />
+                  <span />
+                </div>
+
+                <div className="preview-body">
+                  <div className="preview-copy">
+                    <span className="preview-kicker">Pakalpojums</span>
+                    <strong>Skaidrs piedāvājums</strong>
+                    <p>Galvenā informācija un nākamais solis ir redzami uzreiz</p>
+                    <div className="preview-cta">Pieteikties</div>
+                  </div>
+
+                  <div className="preview-art">
+                    <div className="preview-art-main" />
+                    <div className="preview-art-small" />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
