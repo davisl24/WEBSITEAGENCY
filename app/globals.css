@@ -1271,8 +1271,10 @@
   }
   .call-inner{
     width:min(100%,360px);
-    padding:24px 20px 28px;
+    padding:12px 0 16px;
     margin:0 auto;
+    border:0;
+    background:none;
     text-align:center;
   }
   .call-kicker{
