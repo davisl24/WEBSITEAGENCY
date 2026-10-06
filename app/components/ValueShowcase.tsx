@@ -34,7 +34,6 @@ const items = [
 
 export default function ValueShowcase() {
   const [active, setActive] = useState(0);
-  const [visible, setVisible] = useState(true);
   const stepsRef = useRef<Array<HTMLDivElement | null>>([]);
 
   useEffect(() => {
@@ -46,11 +45,7 @@ export default function ValueShowcase() {
 
         if (!visible) return;
         const index = Number((visible.target as HTMLElement).dataset.index);
-        setVisible(false);
-        window.setTimeout(() => {
-          setActive(index);
-          setVisible(true);
-        }, 120);
+        setActive(index);
       },
       {
         threshold: [0.35, 0.5, 0.65],
@@ -90,7 +85,7 @@ export default function ValueShowcase() {
           </div>
 
           <div className="value-sticky">
-            <div className={"value-preview value-preview-" + current.tone + (visible ? " is-visible" : " is-changing")}>
+            <div className={"value-preview value-preview-" + current.tone}>
               <div className="preview-window">
                 <div className="preview-topbar" aria-hidden="true">
                   <span />
