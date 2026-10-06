@@ -201,7 +201,7 @@
   display:grid;
 }
 .value-step{
-  min-height:88vh;
+  min-height:78vh;
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -794,4 +794,22 @@
 .service-meta span,
 .integration-node{
   border-radius:999px;
+}
+
+@media (min-width:901px){
+  .value-step:last-child{
+    min-height:58vh;
+  }
+
+  .value-sticky{
+    min-height:calc(100vh - 84px);
+  }
+
+  .value-section{
+    padding-bottom:64px;
+  }
+
+  .services-section{
+    padding-top:72px;
+  }
 }
