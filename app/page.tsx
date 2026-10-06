@@ -18,11 +18,13 @@ export default function Home() {
 
         <div className="hero-grid">
           <div className="hero-copy">
-            <h1>Mājaslapas, kas pārvērš apmeklētājus par klientiem.</h1>
+            <p className="hero-label">Mājaslapu izstrāde mazajiem uzņēmumiem</p>
+
+            <h1>Mājaslapas, kas strādā</h1>
 
             <p className="hero-description">
-              Veidojam modernas un ātras mājaslapas Latvijas mazajiem uzņēmumiem —
-              no idejas līdz gatavai lapai.
+              Veidojam skaidras un ātras mājaslapas, kas palīdz klientiem saprast
+              piedāvājumu un pieteikties bez liekas meklēšanas.
             </p>
 
             <div className="hero-actions">
@@ -37,7 +39,11 @@ export default function Home() {
           </div>
 
           <div className="showcase-slot" id="work" aria-label="Projektu showcase zona">
-            <span>Projektu showcase</span>
+            <div className="showcase-index">01</div>
+            <div className="showcase-caption">
+              <span>Darbu piemērs</span>
+              <strong>Vizuāli pievienosim vēlāk</strong>
+            </div>
           </div>
         </div>
       </section>
