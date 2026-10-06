@@ -56,6 +56,7 @@
 .work-visual{
   width:100%;
   min-height:420px;
+  border-radius:24px;
   display:grid;
   place-items:center;
   border:1px solid rgba(244,241,234,.12);
@@ -246,6 +247,7 @@
 .preview-window{
   width:100%;
   overflow:hidden;
+  border-radius:24px;
   border:1px solid rgba(244,241,234,.12);
   background:#f3f0e9;
   color:#111;
@@ -501,6 +503,7 @@
 .service-card{
   min-width:0;
   overflow:hidden;
+  border-radius:24px;
   border:1px solid rgba(244,241,234,.11);
   background:rgba(255,255,255,.015);
 }
@@ -533,6 +536,8 @@
 }
 .ui-browser{
   width:82%;
+  border-radius:16px;
+  overflow:hidden;
   border:1px solid rgba(255,255,255,.16);
   background:#f0ede6;
   color:#111;
@@ -769,4 +774,24 @@
   .service-card h3{
     font-size:28px;
   }
+}
+
+/* Shared corner system */
+.work-visual,
+.preview-window,
+.service-card{
+  border-radius:24px;
+}
+
+.ui-browser,
+.preview-art-small{
+  border-radius:16px;
+}
+
+.button,
+.preview-cta,
+.service-tags span,
+.service-meta span,
+.integration-node{
+  border-radius:999px;
 }
