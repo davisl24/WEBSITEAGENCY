@@ -871,7 +871,7 @@
   border-radius:50%;
   background:#f4f1ea;
   box-shadow:0 0 0 4px rgba(244,241,234,.045);
-  transition:top .38s cubic-bezier(.22,1,.36,1),background .28s ease;
+  transition:background .28s ease;
 }
 .process-steps{
   display:grid;
