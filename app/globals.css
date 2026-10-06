@@ -1290,3 +1290,44 @@
     gap:8px;
   }
 }
+
+
+/* Mobile canvas: keep the full page dark; light surfaces are reserved for mockups only */
+@media(max-width:760px){
+  html,
+  body,
+  main,
+  .hero,
+  .work-section,
+  .value-section,
+  .services-section,
+  .process-section,
+  .call-section,
+  .contact-section{
+    background:#0a0a0b;
+    color:#f4f1ea;
+  }
+
+  .value-inner,
+  .value-scroll,
+  .value-steps,
+  .value-sticky,
+  .value-preview,
+  .services-inner,
+  .services-head,
+  .services-grid{
+    background:transparent;
+  }
+
+  /* Keep only the intentional UI/mockup surfaces light */
+  .preview-window,
+  .ui-browser{
+    background:#f3f0e9;
+    color:#111;
+  }
+
+  .preview-topbar,
+  .ui-browser-top{
+    background:#fbfaf7;
+  }
+}
