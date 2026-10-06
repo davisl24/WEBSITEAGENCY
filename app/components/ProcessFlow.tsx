@@ -23,7 +23,7 @@ const steps = [
 
 export default function ProcessFlow() {
   const [active, setActive] = useState(0);
-  const [progress, setProgress] = useState(12);
+  const [markerTop, setMarkerTop] = useState(12);
   const refs = useRef<Array<HTMLElement | null>>([]);
   const flowRef = useRef<HTMLDivElement | null>(null);
 
@@ -45,36 +45,29 @@ export default function ProcessFlow() {
 
     refs.current.forEach((node) => node && observer.observe(node));
 
-    let raf = 0;
-    const updateProgress = () => {
-      const flow = flowRef.current;
-      if (!flow) return;
-
-      const rect = flow.getBoundingClientRect();
-      const viewportAnchor = window.innerHeight * 0.5;
-      const travel = Math.max(1, rect.height - window.innerHeight * 0.35);
-      const raw = (viewportAnchor - rect.top) / travel;
-      const clamped = Math.max(0, Math.min(1, raw));
-
-      setProgress(6 + clamped * 88);
-      raf = 0;
-    };
-
-    const onScroll = () => {
-      if (!raf) raf = requestAnimationFrame(updateProgress);
-    };
-
-    updateProgress();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll);
-
     return () => {
       observer.disconnect();
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onScroll);
-      if (raf) cancelAnimationFrame(raf);
     };
   }, []);
+
+  useEffect(() => {
+    const updateMarker = () => {
+      const flow = flowRef.current;
+      const step = refs.current[active];
+      if (!flow || !step) return;
+
+      const flowRect = flow.getBoundingClientRect();
+      const stepRect = step.getBoundingClientRect();
+      const center = stepRect.top - flowRect.top + stepRect.height / 2;
+      const percent = (center / flowRect.height) * 100;
+
+      setMarkerTop(Math.max(2, Math.min(98, percent)));
+    };
+
+    updateMarker();
+    window.addEventListener("resize", updateMarker);
+    return () => window.removeEventListener("resize", updateMarker);
+  }, [active]);
 
   return (
     <section className="process-section" id="process" aria-labelledby="process-title">
@@ -89,7 +82,7 @@ export default function ProcessFlow() {
 
         <div className="process-flow" ref={flowRef}>
           <div className="process-rail" aria-hidden="true">
-            <span style={{ top: `${progress}%` }} />
+            <span style={{ top: `${markerTop}%` }} />
           </div>
 
           <div className="process-steps">
