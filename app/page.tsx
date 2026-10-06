@@ -42,8 +42,7 @@ export default function Home() {
             <p className="section-label">Atlasīti projekti</p>
             <h2 id="work-title">Ko mēs veidojam</h2>
             <p className="section-intro">
-              Mājaslapas, kur katram elementam ir skaidrs uzdevums — palīdzēt klientam
-              saprast piedāvājumu un nonākt līdz nākamajam solim
+              Veidojam mājaslapas, kas palīdz klientam ātri saprast piedāvājumu un rīkoties
             </p>
           </div>
 
