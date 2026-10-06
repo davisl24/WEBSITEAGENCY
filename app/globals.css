@@ -805,3 +805,143 @@
     padding-top:44px;
   }
 }
+
+.process-section{
+  position:relative;
+  background:transparent;
+  color:#f4f1ea;
+  padding:120px 32px 132px;
+}
+.process-inner{
+  width:min(1360px,100%);
+  margin:0 auto;
+}
+.process-head{
+  display:grid;
+  grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
+  column-gap:48px;
+  align-items:end;
+  margin-bottom:64px;
+}
+.process-head .section-label{
+  grid-column:1/-1;
+}
+.process-head h2{
+  margin:0;
+  max-width:620px;
+  font-size:clamp(42px,4vw,60px);
+  line-height:1.08;
+  letter-spacing:-.045em;
+  font-weight:650;
+}
+.process-intro{
+  margin:0;
+  max-width:560px;
+  justify-self:end;
+  font-size:18px;
+  line-height:1.6;
+  color:rgba(244,241,234,.66);
+}
+.process-flow{
+  display:grid;
+  grid-template-columns:24px minmax(0,1fr);
+  gap:28px;
+  align-items:stretch;
+}
+.process-rail{
+  position:relative;
+}
+.process-rail::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:0;
+  bottom:0;
+  width:1px;
+  transform:translateX(-50%);
+  background:rgba(244,241,234,.12);
+}
+.process-rail span{
+  position:sticky;
+  top:42vh;
+  display:block;
+  width:10px;
+  height:10px;
+  margin:0 auto;
+  border-radius:50%;
+  background:#f4f1ea;
+  box-shadow:0 0 0 6px rgba(244,241,234,.06);
+}
+.process-steps{
+  display:grid;
+}
+.process-step{
+  display:grid;
+  grid-template-columns:minmax(220px,.7fr) minmax(0,1.3fr);
+  gap:48px;
+  min-height:220px;
+  align-items:center;
+  padding:36px 0;
+  border-top:1px solid rgba(244,241,234,.12);
+}
+.process-step:last-child{
+  border-bottom:1px solid rgba(244,241,234,.12);
+}
+.process-stage{
+  font-size:clamp(30px,2.6vw,42px);
+  line-height:1.08;
+  letter-spacing:-.035em;
+  font-weight:600;
+}
+.process-step p{
+  margin:0;
+  max-width:620px;
+  font-size:17px;
+  line-height:1.6;
+  color:rgba(244,241,234,.58);
+}
+@media(max-width:900px){
+  .process-section{
+    padding:96px 24px 104px;
+  }
+  .process-head{
+    grid-template-columns:1fr;
+    gap:24px;
+    margin-bottom:44px;
+  }
+  .process-head .section-label{
+    grid-column:auto;
+    margin-bottom:0;
+  }
+  .process-intro{
+    justify-self:start;
+  }
+  .process-step{
+    grid-template-columns:1fr;
+    gap:14px;
+    min-height:0;
+    padding:30px 0;
+  }
+}
+@media(max-width:760px){
+  .process-section{
+    padding:88px 18px 88px;
+  }
+  .process-head h2{
+    font-size:40px;
+    line-height:1.08;
+  }
+  .process-intro{
+    font-size:17px;
+  }
+  .process-flow{
+    grid-template-columns:16px 1fr;
+    gap:18px;
+  }
+  .process-stage{
+    font-size:30px;
+  }
+  .process-step p{
+    font-size:15px;
+  }
+}
