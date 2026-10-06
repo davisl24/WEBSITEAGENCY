@@ -455,7 +455,7 @@
   position:relative;
   background:transparent;
   color:#f4f1ea;
-  padding:120px 32px 132px;
+  padding:120px 32px 72px;
 }
 .services-inner{
   width:min(1360px,100%);
@@ -729,7 +729,7 @@
 }
 @media(max-width:900px){
   .services-section{
-    padding:96px 24px 104px;
+    padding:96px 24px 64px;
   }
   .services-head{
     grid-template-columns:1fr;
@@ -746,7 +746,7 @@
 }
 @media(max-width:700px){
   .services-section{
-    padding:88px 18px 88px;
+    padding:88px 18px 56px;
   }
   .services-head h2{
     font-size:40px;
@@ -810,7 +810,7 @@
   position:relative;
   background:transparent;
   color:#f4f1ea;
-  padding:120px 32px 132px;
+  padding:72px 32px 132px;
 }
 .process-inner{
   width:min(1360px,100%);
@@ -902,7 +902,7 @@
 }
 @media(max-width:900px){
   .process-section{
-    padding:96px 24px 104px;
+    padding:64px 24px 104px;
   }
   .process-head{
     grid-template-columns:1fr;
@@ -925,7 +925,7 @@
 }
 @media(max-width:760px){
   .process-section{
-    padding:88px 18px 88px;
+    padding:56px 18px 88px;
   }
   .process-head h2{
     font-size:40px;
