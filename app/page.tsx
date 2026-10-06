@@ -184,6 +184,23 @@ export default function Home() {
 
       <ProcessFlow />
 
+      <section className="call-section" aria-labelledby="call-title">
+        <div className="call-inner">
+          <div className="call-kicker">Īsa saruna bez saistībām</div>
+          <div className="call-content">
+            <div>
+              <h2 id="call-title">Parunājam par tavu lapu</h2>
+              <p>15 minūtes, lai saprastu, ko uzņēmumam reāli vajag un vai varam palīdzēt</p>
+            </div>
+            <a className="call-cta" href="#contact">
+              <span className="call-dot" aria-hidden="true" />
+              <span>Rezervēt bezmaksas zvanu</span>
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
       <section className="contact-section" id="contact" aria-labelledby="contact-title">
         <div className="contact-inner">
           <div className="contact-copy">
@@ -224,6 +241,36 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <footer className="site-footer">
+        <div className="footer-inner">
+          <div className="footer-main">
+            <div className="footer-brand">
+              <a href="/" className="footer-logo">Kestrel</a>
+              <p>Mājaslapas mazajiem uzņēmumiem ar skaidru mērķi un vienkāršu klienta ceļu</p>
+            </div>
+
+            <div className="footer-links">
+              <div>
+                <span>Navigācija</span>
+                <a href="#work">Darbi</a>
+                <a href="#process">Process</a>
+                <a href="#contact">Sazināties</a>
+              </div>
+              <div>
+                <span>Kontakti</span>
+                <a href="mailto:hello@kestrel.lv">hello@kestrel.lv</a>
+                <a href="#contact">Pieteikt projektu</a>
+              </div>
+            </div>
+          </div>
+
+          <div className="footer-bottom">
+            <span>© 2026 Kestrel, SIA</span>
+            <span>40203559349</span>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }
