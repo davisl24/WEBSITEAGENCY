@@ -797,19 +797,19 @@
 }
 
 @media (min-width:901px){
-  .value-step:last-child{
-    min-height:58vh;
+   .value-step:last-child{
+    min-height:42vh;
   }
 
   .value-sticky{
     min-height:calc(100vh - 84px);
   }
 
-  .value-section{
-    padding-bottom:64px;
+   .value-section{
+    padding-bottom:28px;
   }
 
-  .services-section{
-    padding-top:72px;
+   .services-section{
+    padding-top:44px;
   }
 }
