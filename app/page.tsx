@@ -91,40 +91,92 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="services-list">
-            <article className="service-row">
-              <div className="service-main">
+          <div className="services-grid">
+            <article className="service-card">
+              <div className="service-visual service-visual-landing">
+                <div className="ui-browser">
+                  <div className="ui-browser-top"><span/><span/><span/></div>
+                  <div className="ui-browser-body">
+                    <div className="ui-copy-short"/>
+                    <div className="ui-copy-long"/>
+                    <div className="ui-button"/>
+                  </div>
+                </div>
+              </div>
+
+              <div className="service-card-body">
+                <p className="service-kicker">Vienam piedāvājumam</p>
                 <h3>Landing lapa</h3>
                 <p>Vienam piedāvājumam un vienam skaidram klienta solim</p>
-              </div>
-              <div className="service-meta">
-                <span>1 lapa</span>
-                <span>Pieteikuma forma</span>
-                <span>Mobilā versija</span>
+
+                <div className="service-tags">
+                  <span>1 lapa</span>
+                  <span>Pieteikuma forma</span>
+                  <span>Mobilā versija</span>
+                </div>
+
+                <a href="#contact" className="service-link">Apskatīt risinājumu <span aria-hidden="true">→</span></a>
               </div>
             </article>
 
-            <article className="service-row">
-              <div className="service-main">
+            <article className="service-card service-card-featured">
+              <div className="service-visual service-visual-website">
+                <div className="ui-browser ui-browser-wide">
+                  <div className="ui-browser-top"><span/><span/><span/></div>
+                  <div className="ui-browser-body ui-site-body">
+                    <div className="ui-nav-line"/>
+                    <div className="ui-layout">
+                      <div className="ui-layout-copy">
+                        <div className="ui-copy-short"/>
+                        <div className="ui-copy-long"/>
+                        <div className="ui-copy-medium"/>
+                      </div>
+                      <div className="ui-layout-art"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="service-card-body">
+                <p className="service-kicker">Galvenais risinājums</p>
                 <h3>Uzņēmuma mājaslapa</h3>
                 <p>Pakalpojumiem, uzticībai un ērtam ceļam līdz kontaktam</p>
-              </div>
-              <div className="service-meta">
-                <span>Vairākas sadaļas</span>
-                <span>SEO pamati</span>
-                <span>Kontaktu plūsma</span>
+
+                <div className="service-tags">
+                  <span>Vairākas sadaļas</span>
+                  <span>SEO pamati</span>
+                  <span>Kontaktu plūsma</span>
+                </div>
+
+                <a href="#contact" className="service-link">Apskatīt risinājumu <span aria-hidden="true">→</span></a>
               </div>
             </article>
 
-            <article className="service-row">
-              <div className="service-main">
+            <article className="service-card">
+              <div className="service-visual service-visual-integrations">
+                <div className="integration-canvas">
+                  <div className="integration-node integration-node-main">Web</div>
+                  <div className="integration-node integration-node-a">Booking</div>
+                  <div className="integration-node integration-node-b">CRM</div>
+                  <div className="integration-node integration-node-c">Form</div>
+                  <span className="integration-line line-a"/>
+                  <span className="integration-line line-b"/>
+                  <span className="integration-line line-c"/>
+                </div>
+              </div>
+
+              <div className="service-card-body">
+                <p className="service-kicker">Kad vajag vairāk</p>
                 <h3>Funkcijas un integrācijas</h3>
                 <p>Kad ar informatīvu lapu vien nepietiek</p>
-              </div>
-              <div className="service-meta">
-                <span>Booking</span>
-                <span>Ārējās sistēmas</span>
-                <span>Pielāgota loģika</span>
+
+                <div className="service-tags">
+                  <span>Booking</span>
+                  <span>Ārējās sistēmas</span>
+                  <span>Pielāgota loģika</span>
+                </div>
+
+                <a href="#contact" className="service-link">Izrunāt vajadzību <span aria-hidden="true">→</span></a>
               </div>
             </article>
           </div>
