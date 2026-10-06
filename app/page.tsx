@@ -12,39 +12,35 @@ export default function Home() {
           </a>
         </header>
 
-        <div className="hero-copy">
-          <p className="eyebrow">Mājaslapu izstrāde Latvijas uzņēmumiem</p>
+        <div className="hero-inner">
+          <div className="hero-copy">
+            <h1>Mājaslapas, kas pārvērš apmeklētājus par klientiem.</h1>
 
-          <h1>Mājaslapas, kas pārvērš apmeklētājus par klientiem.</h1>
+            <p className="hero-description">
+              Veidojam modernas un ātras mājaslapas Latvijas mazajiem uzņēmumiem —
+              no idejas līdz gatavai lapai.
+            </p>
 
-          <p className="hero-description">
-            Veidojam modernas un ātras mājaslapas Latvijas mazajiem uzņēmumiem —
-            no idejas līdz gatavai lapai.
-          </p>
+            <div className="hero-actions">
+              <a className="button button-primary" href="#contact">
+                Saņemt bezmaksas ideju
+              </a>
 
-          <div className="hero-actions">
-            <a className="button button-primary" href="#contact">
-              Saņemt bezmaksas ideju
-            </a>
-            <a className="button button-secondary" href="#work">
-              Apskatīt, ko veidojam
-            </a>
-          </div>
-        </div>
-
-        <div className="preview-shell" id="work" aria-label="Mājaslapas priekšskatījuma vieta">
-          <div className="browser-bar">
-            <div className="browser-dots" aria-hidden="true">
-              <span />
-              <span />
-              <span />
+              <a className="button button-secondary" href="#work">
+                Apskatīt, ko veidojam
+              </a>
             </div>
-            <span className="browser-label">projekta priekšskatījums</span>
           </div>
 
-          <div className="preview-stage">
-            <div className="preview-content">
-              <p>Šeit ievietosim reālu mūsu darba mājaslapas priekšskatījumu.</p>
+          <div className="preview-frame" id="work" aria-label="Darba piemēra vieta">
+            <div className="preview-topline" />
+            <div className="preview-canvas">
+              <div className="preview-hero-block" />
+              <div className="preview-grid">
+                <div />
+                <div />
+                <div />
+              </div>
             </div>
           </div>
         </div>
