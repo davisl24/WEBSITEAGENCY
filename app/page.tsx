@@ -80,6 +80,56 @@ export default function Home() {
       </section>
 
       <ValueShowcase />
+
+      <section className="services-section" aria-labelledby="services-title">
+        <div className="services-inner">
+          <div className="services-head">
+            <p className="section-label">Pakalpojumi</p>
+            <h2 id="services-title">Ko vari saņemt</h2>
+            <p className="services-intro">
+              Izvēlamies tik lielu risinājumu, cik uzņēmumam patiešām vajag
+            </p>
+          </div>
+
+          <div className="services-list">
+            <article className="service-row">
+              <div className="service-main">
+                <h3>Landing lapa</h3>
+                <p>Vienam piedāvājumam un vienam skaidram klienta solim</p>
+              </div>
+              <div className="service-meta">
+                <span>1 lapa</span>
+                <span>Pieteikuma forma</span>
+                <span>Mobilā versija</span>
+              </div>
+            </article>
+
+            <article className="service-row">
+              <div className="service-main">
+                <h3>Uzņēmuma mājaslapa</h3>
+                <p>Pakalpojumiem, uzticībai un ērtam ceļam līdz kontaktam</p>
+              </div>
+              <div className="service-meta">
+                <span>Vairākas sadaļas</span>
+                <span>SEO pamati</span>
+                <span>Kontaktu plūsma</span>
+              </div>
+            </article>
+
+            <article className="service-row">
+              <div className="service-main">
+                <h3>Funkcijas un integrācijas</h3>
+                <p>Kad ar informatīvu lapu vien nepietiek</p>
+              </div>
+              <div className="service-meta">
+                <span>Booking</span>
+                <span>Ārējās sistēmas</span>
+                <span>Pielāgota loģika</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
