@@ -22,10 +22,10 @@ export default function Home() {
         <div className="hero-shell">
           <div className="hero-copy">
             <p className="hero-label">Mājaslapu izstrāde mazajiem uzņēmumiem</p>
-            <h1>Mājaslapas, kas strādā</h1>
+            <h1>Mājaslapas, kas palīdz pārdot</h1>
             <p className="hero-description">
-              Veidojam skaidras un ātras mājaslapas, kas palīdz klientiem saprast
-              piedāvājumu un pieteikties bez liekas meklēšanas
+              Veidojam skaidras un ātras mājaslapas mazajiem uzņēmumiem, lai klienti
+              ātrāk saprastu piedāvājumu un pieteiktos
             </p>
             <div className="hero-actions">
               <a className="button button-primary" href="#contact">Saņemt bezmaksas ideju</a>
