@@ -86,10 +86,6 @@
   display:grid;
   gap:8px;
 }
-.work-index{
-  font-size:12px;
-  color:rgba(244,241,234,.45);
-}
 .work-meta h3{
   margin:0;
   font-size:28px;
@@ -362,13 +358,9 @@
 }
 .preview-note{
   display:flex;
-  justify-content:space-between;
+  justify-content:flex-end;
   gap:24px;
   padding-top:14px;
-}
-.preview-note span{
-  font-size:12px;
-  color:rgba(244,241,234,.38);
 }
 .preview-note p{
   margin:0;
