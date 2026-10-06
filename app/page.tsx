@@ -75,6 +75,38 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section className="value-section" aria-labelledby="value-title">
+        <div className="value-inner">
+          <div className="value-head">
+            <p className="section-label">Kāpēc tas svarīgi</p>
+            <h2 id="value-title">Mazāk šķēršļu klientam</h2>
+            <p className="value-intro">
+              Mājaslapai jāpalīdz klientam saprast piedāvājumu un rīkoties bez liekas meklēšanas
+            </p>
+          </div>
+
+          <div className="value-list">
+            <div className="value-row">
+              <span className="value-number">01</span>
+              <h3>Skaidrs piedāvājums</h3>
+              <p>Klients uzreiz saprot, ko uzņēmums piedāvā un vai tas viņam der</p>
+            </div>
+
+            <div className="value-row">
+              <span className="value-number">02</span>
+              <h3>Vienkārša pieteikšanās</h3>
+              <p>Nākamais solis ir redzams un nav jāmeklē pa vairākiem kanāliem</p>
+            </div>
+
+            <div className="value-row">
+              <span className="value-number">03</span>
+              <h3>Uzticams pirmais iespaids</h3>
+              <p>Sakārtota mājaslapa rada pārliecību vēl pirms pirmās sarunas</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
