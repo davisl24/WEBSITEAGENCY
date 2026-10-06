@@ -810,7 +810,7 @@
   position:relative;
   background:transparent;
   color:#f4f1ea;
-  padding:72px 32px 132px;
+  padding:72px 32px 84px;
 }
 .process-inner{
   width:min(1360px,100%);
@@ -924,7 +924,7 @@
 }
 @media(max-width:900px){
   .process-section{
-    padding:64px 24px 104px;
+    padding:64px 24px 72px;
   }
   .process-head{
     grid-template-columns:1fr;
@@ -947,7 +947,7 @@
 }
 @media(max-width:760px){
   .process-section{
-    padding:56px 18px 88px;
+    padding:56px 18px 64px;
   }
   .process-head h2{
     font-size:40px;
@@ -972,7 +972,7 @@
   position:relative;
   background:transparent;
   color:#f4f1ea;
-  padding:72px 32px 92px;
+  padding:64px 32px 56px;
 }
 .contact-inner{
   width:min(1360px,100%);
@@ -1077,7 +1077,7 @@
 }
 @media(max-width:900px){
   .contact-section{
-    padding:80px 24px 104px;
+    padding:64px 24px 52px;
   }
   .contact-inner{
     grid-template-columns:1fr;
@@ -1090,7 +1090,7 @@
 }
 @media(max-width:700px){
   .contact-section{
-    padding:72px 18px 88px;
+    padding:56px 18px 48px;
   }
   .contact-copy h2{
     font-size:40px;
@@ -1118,7 +1118,7 @@
   position:relative;
   background:transparent;
   color:#f4f1ea;
-  padding:56px 32px 36px;
+  padding:24px 32px 28px;
 }
 .call-inner{
   width:min(1360px,100%);
@@ -1186,7 +1186,7 @@
   position:relative;
   background:#070708;
   color:#f4f1ea;
-  padding:48px 32px 22px;
+  padding:34px 32px 22px;
 }
 .footer-inner{
   width:min(1360px,100%);
@@ -1242,7 +1242,7 @@
 }
 @media(max-width:900px){
   .call-section{
-    padding:48px 24px 32px;
+    padding:20px 24px 24px;
   }
   .call-content{
     grid-template-columns:1fr;
@@ -1253,7 +1253,7 @@
     max-width:520px;
   }
   .site-footer{
-    padding:44px 24px 22px;
+    padding:32px 24px 22px;
   }
   .footer-main{
     grid-template-columns:1fr;
@@ -1262,7 +1262,7 @@
 }
 @media(max-width:700px){
   .call-section{
-    padding:40px 18px 28px;
+    padding:18px 18px 22px;
   }
   .call-inner{
     padding:20px;
@@ -1279,7 +1279,7 @@
     font-size:13px;
   }
   .site-footer{
-    padding:40px 18px 20px;
+    padding:28px 18px 20px;
   }
   .footer-links{
     grid-template-columns:1fr;
