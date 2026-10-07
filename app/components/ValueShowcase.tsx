@@ -1,11 +1,5 @@
 import RevealOnView from "./RevealOnView";
 
-const benefits = [
-  { number: "01", title: "Piemērots risinājums", detail: "Bez liekām funkcijām" },
-  { number: "02", title: "Skaidrs apjoms un cena", detail: "Vienojamies pirms izstrādes" },
-  { number: "03", title: "Vizuālais virziens", detail: "Redzams pirms pilnas izstrādes" },
-];
-
 export default function ValueShowcase() {
   return (
     <section className="value-section" aria-labelledby="value-title">
@@ -20,7 +14,7 @@ export default function ValueShowcase() {
           </RevealOnView>
 
           <RevealOnView className="value-showcase" >
-            <div className="value-showcase-visual" aria-hidden="true">
+            <div className="value-showcase-visual">
               <div className="value-showcase-meta"><span>KESTREL / PROJEKTA PĀRSKATS</span><span>PIEMĒRS</span></div>
               <div className="value-brief">
                 <div className="value-brief-goal">
@@ -42,20 +36,17 @@ export default function ValueShowcase() {
                 </div>
                 <div className="value-brief-preview">
                   <span className="value-brief-label">VIZUĀLAIS VIRZIENS</span>
-                  <div className="value-brief-preview-main" aria-hidden="true"><i/><i/></div>
-                  <div className="value-brief-preview-line" aria-hidden="true" />
+                  <div className="value-brief-mini-site" aria-hidden="true">
+                    <div className="value-brief-mini-top"><i/><i/><i/><span/></div>
+                    <div className="value-brief-mini-body">
+                      <div className="value-brief-mini-copy"><b/><i/><i/><span/></div>
+                      <div className="value-brief-mini-art"/>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="value-showcase-benefits">
-              {benefits.map((benefit) => (
-                <div className="value-showcase-benefit" key={benefit.number}>
-                  <span className="value-showcase-benefit-number">{benefit.number}</span>
-                  <h3>{benefit.title}</h3>
-                  <p>{benefit.detail}</p>
-                </div>
-              ))}
-            </div>
+
           </RevealOnView>
         </div>
       </div>
