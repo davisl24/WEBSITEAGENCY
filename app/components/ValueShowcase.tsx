@@ -94,7 +94,7 @@ export default function ValueShowcase() {
                 </div>
 
                 <div className="preview-body">
-                  <div className="preview-copy">
+                  <div className="preview-copy" key={`preview-copy-${active}`}>
                     <span className="preview-kicker">{current.kicker}</span>
                     <strong>{current.previewTitle}</strong>
                     <p>{current.previewText}</p>
@@ -108,7 +108,7 @@ export default function ValueShowcase() {
                 </div>
               </div>
 
-              <div className="preview-note">
+              <div className="preview-note" key={`preview-note-${active}`}>
                 <p>{current.description}</p>
               </div>
             </div>
