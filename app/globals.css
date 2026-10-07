@@ -6048,3 +6048,64 @@ html[data-theme="light"] .call-cta:hover{border-color:rgba(23,23,23,.32)}
   .services-section .service-story{height:170px}
   .services-section .story-upgrade{min-height:170px}
 }
+
+/* Service cards final visual polish */
+.services-section .service-card-body .service-kicker{
+  color:rgba(244,241,234,.74);
+  letter-spacing:.075em;
+}
+html[data-theme="light"] .services-section .service-card-body .service-kicker{
+  color:rgba(23,23,23,.68);
+}
+.services-section .story-landing-cta{
+  position:relative;
+  box-shadow:0 0 0 3px rgba(38,38,38,.1);
+}
+.services-section .story-landing-cta::after{
+  content:"→";
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#eeeae3;
+  font-size:14px;
+  line-height:1;
+}
+.services-section .story-company-pages span{
+  position:relative;
+  overflow:hidden;
+}
+.services-section .story-company-pages span::after{
+  content:"";
+  position:absolute;
+  left:9px;
+  right:16px;
+  top:18px;
+  height:3px;
+  border-radius:2px;
+  background:#aaa49a;
+}
+.services-section .story-upgrade-before{
+  background:#cbc6bf;
+  border-color:rgba(255,255,255,.09);
+}
+.services-section .story-before-body{
+  gap:7px;
+  padding-top:14px;
+}
+.services-section .story-before-body span{
+  height:11px;
+  border-radius:1px;
+  background:#908b85;
+}
+.services-section .story-before-body span:first-child{
+  height:21px;
+  width:94%;
+  background:#807a74;
+}
+.services-section .story-upgrade-after{
+  background:#f0ede6;
+  border-color:rgba(255,255,255,.32);
+  box-shadow:0 18px 36px rgba(0,0,0,.26);
+}
