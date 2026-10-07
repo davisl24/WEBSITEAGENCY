@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import RevealOnView from "../../components/RevealOnView";
 import ThemeToggle from "../../components/ThemeToggle";
+import ServicesDropdown from "../../components/ServicesDropdown";
 import ServiceDelivery from "../../components/ServiceDelivery";
 
 export const metadata: Metadata = {
@@ -15,13 +16,11 @@ export default function WebsiteUpgradePage() {
       <header className="service-page-header" aria-label="Galvenā navigācija">
         <a className="brand" href="/" aria-label="Sākumlapa">Kestrel</a>
         <nav className="service-page-nav" aria-label="Galvenā navigācija">
-          <a href="/#work">Darbi</a>
-          <a href="/#services">Pakalpojumi</a>
-          <a href="/#process">Process</a>
-          <a href="/par-mums">Par mums</a>
-          <ThemeToggle />
-          <a className="header-cta" href="/kontakti">Sazināties</a>
-        </nav>
+            <ServicesDropdown />
+            <a href="/par-mums">Par mums</a>
+            <ThemeToggle />
+            <a className="header-cta" href="/kontakti">Pieteikt sarunu</a>
+          </nav>
       </header>
 
       <section className="service-page-hero upgrade-service-hero">
