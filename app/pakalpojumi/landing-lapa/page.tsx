@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import RevealOnView from "../../components/RevealOnView";
 import ThemeToggle from "../../components/ThemeToggle";
+import ServiceDelivery from "../../components/ServiceDelivery";
 
 export const metadata: Metadata = {
   title: "Landing lapas izstrāde | Kestrel",
@@ -261,6 +262,18 @@ export default function LandingPage() {
           </RevealOnView>
         </div>
       </section>
+
+      <ServiceDelivery
+        id="delivery-title"
+        title="Gatavs palaišanai"
+        description="Praktiskās lietas, kurām jābūt sakārtotām, lai landing lapa nav tikai skaists dizains."
+        items={[
+          { title: "Saturs un struktūra", text: "Sakārtojam galveno domu, secību un skaidru ceļu līdz darbībai." },
+          { title: "Forma vai CTA", text: "Pieteikšanās vai kontakta solis tur, kur tas klientam ir vajadzīgs." },
+          { title: "Mobile un pārbaude", text: "Pielāgojam telefonam un pārbaudām galvenos stāvokļus pirms palaišanas." },
+          { title: "SEO pamati", text: "Sakārtota semantika, metadati un tehniski tīrs pamats meklētājiem." }
+        ]}
+      />
 
       <section className="service-page-cta">
         <RevealOnView className="line-mask-reveal service-cta-title">
