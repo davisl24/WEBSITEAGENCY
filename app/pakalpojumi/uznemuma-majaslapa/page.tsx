@@ -125,38 +125,59 @@ export default function CompanyWebsitePage() {
           </RevealOnView>
         </div>
 
-        <div className="company-map">
-          <RevealOnView className="company-map-main">
-            <div className="company-map-browser" aria-hidden="true">
+        <div className="company-page-system" aria-label="Uzņēmuma mājaslapas struktūras piemērs">
+          <RevealOnView className="company-page-main">
+            <div className="company-page-browser" aria-hidden="true">
               <div className="ui-browser-top"><span/><span/><span/></div>
-              <div className="company-map-browser-body">
-                <span className="company-map-nav"/>
-                <span className="company-map-title"/>
-                <span className="company-map-copy"/>
-                <span className="company-map-cta"/>
-                <div className="company-map-grid">
-                  <span/><span/><span/>
+              <div className="company-page-browser-nav">
+                <strong>North</strong>
+                <div><span>Pakalpojumi</span><span>Par mums</span><span>Kontakti</span></div>
+              </div>
+              <div className="company-page-browser-hero">
+                <div>
+                  <span className="company-page-kicker"/>
+                  <span className="company-page-title"/>
+                  <span className="company-page-copy"/>
+                  <span className="company-page-cta"/>
                 </div>
+                <span className="company-page-art"/>
+              </div>
+              <div className="company-page-browser-footer">
+                <span>Sākumlapa</span>
+                <small>Galvenā doma un virziens</small>
               </div>
             </div>
           </RevealOnView>
 
-          <div className="company-map-links">
-            <RevealOnView className="company-map-link" delay={60}>
-              <span>Sākumlapa</span>
-              <small>Galvenā doma un virziens</small>
+          <div className="company-page-stack">
+            <RevealOnView className="company-page-sheet company-page-sheet-services" delay={80}>
+              <div className="company-page-sheet-top">
+                <span>Pakalpojumi</span>
+                <small>Ko tu piedāvā un kam</small>
+              </div>
+              <div className="company-page-sheet-preview" aria-hidden="true">
+                <span/><span/><span/>
+              </div>
             </RevealOnView>
-            <RevealOnView className="company-map-link" delay={130}>
-              <span>Pakalpojumi</span>
-              <small>Ko tu piedāvā un kam</small>
+
+            <RevealOnView className="company-page-sheet company-page-sheet-about" delay={170}>
+              <div className="company-page-sheet-top">
+                <span>Par mums</span>
+                <small>Kāpēc tev uzticēties</small>
+              </div>
+              <div className="company-page-sheet-preview company-page-sheet-preview-about" aria-hidden="true">
+                <span/><span/>
+              </div>
             </RevealOnView>
-            <RevealOnView className="company-map-link" delay={200}>
-              <span>Par mums</span>
-              <small>Kāpēc tev uzticēties</small>
-            </RevealOnView>
-            <RevealOnView className="company-map-link" delay={270}>
-              <span>Kontakti</span>
-              <small>Skaidrs nākamais solis</small>
+
+            <RevealOnView className="company-page-sheet company-page-sheet-contact" delay={260}>
+              <div className="company-page-sheet-top">
+                <span>Kontakti</span>
+                <small>Skaidrs nākamais solis</small>
+              </div>
+              <div className="company-page-sheet-form" aria-hidden="true">
+                <span/><span/><span/>
+              </div>
             </RevealOnView>
           </div>
         </div>
