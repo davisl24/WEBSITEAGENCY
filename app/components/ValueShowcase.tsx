@@ -37,24 +37,44 @@ export default function ValueShowcase() {
   const stepsRef = useRef<Array<HTMLDivElement | null>>([]);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+    let raf = 0;
 
-        if (!visible) return;
-        const index = Number((visible.target as HTMLElement).dataset.index);
-        setActive(index);
-      },
-      {
-        threshold: [0.35, 0.5, 0.65],
-        rootMargin: "-20% 0px -35% 0px",
-      }
-    );
+    const updateActive = () => {
+      const viewportCenter = window.innerHeight / 2;
+      let nextActive = 0;
+      let closestDistance = Number.POSITIVE_INFINITY;
 
-    stepsRef.current.forEach((step) => step && observer.observe(step));
-    return () => observer.disconnect();
+      stepsRef.current.forEach((step, index) => {
+        if (!step) return;
+        const rect = step.getBoundingClientRect();
+        const stepCenter = rect.top + rect.height / 2;
+        const distance = Math.abs(stepCenter - viewportCenter);
+
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          nextActive = index;
+        }
+      });
+
+      setActive((currentActive) =>
+        currentActive === nextActive ? currentActive : nextActive
+      );
+      raf = 0;
+    };
+
+    const onScroll = () => {
+      if (!raf) raf = requestAnimationFrame(updateActive);
+    };
+
+    updateActive();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+      if (raf) cancelAnimationFrame(raf);
+    };
   }, []);
 
   const current = items[active];
@@ -94,7 +114,7 @@ export default function ValueShowcase() {
                 </div>
 
                 <div className="preview-body">
-                  <div className="preview-copy" key={`preview-copy-${active}`}>
+                  <div className="preview-copy">
                     <span className="preview-kicker">{current.kicker}</span>
                     <strong>{current.previewTitle}</strong>
                     <p>{current.previewText}</p>
@@ -108,7 +128,7 @@ export default function ValueShowcase() {
                 </div>
               </div>
 
-              <div className="preview-note" key={`preview-note-${active}`}>
+              <div className="preview-note">
                 <p>{current.description}</p>
               </div>
             </div>
