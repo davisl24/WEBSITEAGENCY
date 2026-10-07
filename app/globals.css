@@ -3126,3 +3126,22 @@ html[data-theme="light"] .call-cta:hover{border-color:rgba(23,23,23,.32)}
   .home-about-section{padding:68px 18px}
   .call-section{padding:72px 18px 80px}
 }
+
+/* Homepage services: consistent illustration frame and scan-friendly content */
+@media(min-width:901px){
+  .services-section .service-visual{
+    height:244px;
+    min-height:244px;
+    flex:0 0 244px;
+  }
+  .services-section .service-visual .ui-browser,
+  .services-section .service-visual .upgrade-preview{
+    max-height:206px;
+  }
+}
+.services-section .service-card-body .service-kicker{
+  min-height:18px;
+}
+.services-section .service-card-body>p:not(.service-kicker){
+  line-height:1.6;
+}
