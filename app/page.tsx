@@ -2,7 +2,6 @@ import Image from "next/image";
 import heroBg from "./assets/images/andrew-kliatskyi-k7XTD-HCZAw-unsplash.jpg";
 import heroBgLight from "./assets/images/balts_fons_optimizets.webp";
 import ValueShowcase from "./components/ValueShowcase";
-import SmoothScroll from "./components/SmoothScroll";
 import ProcessFlow from "./components/ProcessFlow";
 import RevealOnView from "./components/RevealOnView";
 import ThemeToggle from "./components/ThemeToggle";
@@ -10,7 +9,6 @@ import ThemeToggle from "./components/ThemeToggle";
 export default function Home() {
   return (
     <main>
-      <SmoothScroll />
       <section className="hero">
         <div className="hero-media" aria-hidden="true">
           <Image src={heroBg} alt="" fill priority className="hero-media-image hero-media-image-dark" />
