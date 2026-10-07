@@ -2389,8 +2389,8 @@
 .service-reveal-line{
   display:block;
   overflow:hidden;
-  padding-bottom:.055em;
-  margin-bottom:-.055em;
+  padding-bottom:.16em;
+  margin-bottom:-.08em;
 }
 .service-reveal-line>span{
   display:block;
@@ -2659,12 +2659,6 @@
   margin-top:28px;
 }
 
-
-/* Keep descenders visible in animated CTA heading */
-.service-cta-title .service-reveal-line{
-  padding-bottom:.16em;
-  margin-bottom:-.08em;
-}
 
 
 /* Company website service page */
