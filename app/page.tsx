@@ -57,12 +57,13 @@ export default function Home() {
           <div className="services-grid">
             <article className="service-card">
               <div className="service-visual service-visual-landing">
-                <div className="ui-browser">
-                  <div className="ui-browser-top"><span/><span/><span/></div>
-                  <div className="ui-browser-body">
-                    <div className="ui-copy-short"/>
-                    <div className="ui-copy-long"/>
-                    <div className="ui-button"/>
+                <div className="service-story service-story-landing" aria-hidden="true">
+                  <div className="story-top"><span/><span/><span/></div>
+                  <div className="story-landing-body">
+                    <span className="story-eyebrow"/>
+                    <span className="story-landing-title"/>
+                    <span className="story-landing-subtitle"/>
+                    <span className="story-landing-cta"/>
                   </div>
                 </div>
               </div>
@@ -78,19 +79,14 @@ export default function Home() {
 
             <article className="service-card service-card-featured">
               <div className="service-visual service-visual-website">
-                <div className="ui-browser ui-browser-wide">
-                  <div className="ui-browser-top"><span/><span/><span/></div>
-                  <div className="ui-browser-body ui-site-body">
-                    <div className="ui-nav-line"/>
-                    <div className="ui-layout">
-                      <div className="ui-layout-copy">
-                        <div className="ui-copy-short"/>
-                        <div className="ui-copy-long"/>
-                        <div className="ui-copy-medium"/>
-                      </div>
-                      <div className="ui-layout-art"/>
-                    </div>
+                <div className="service-story service-story-company" aria-hidden="true">
+                  <div className="story-top"><span/><span/><span/></div>
+                  <div className="story-company-nav"><span/><span/><span/><span/></div>
+                  <div className="story-company-hero">
+                    <div className="story-company-copy"><span/><span/><span/></div>
+                    <div className="story-company-image"/>
                   </div>
+                  <div className="story-company-pages"><span/><span/><span/></div>
                 </div>
               </div>
 
@@ -105,20 +101,19 @@ export default function Home() {
 
             <article className="service-card">
               <div className="service-visual service-visual-upgrade">
-                <div className="upgrade-preview" aria-hidden="true">
-                  <div className="upgrade-browser upgrade-before">
-                    <div className="ui-browser-top"><span/><span/><span/></div>
-                    <div className="upgrade-lines">
-                      <span/><span/><span/>
-                    </div>
+                <div className="story-upgrade" aria-hidden="true">
+                  <div className="story-upgrade-before">
+                    <div className="story-top"><span/><span/><span/></div>
+                    <div className="story-before-body"><span/><span/><span/><span/></div>
                   </div>
-                  <div className="upgrade-browser upgrade-after">
-                    <div className="ui-browser-top"><span/><span/><span/></div>
-                    <div className="upgrade-after-body">
-                      <span className="upgrade-kicker"/>
-                      <span className="upgrade-title"/>
-                      <span className="upgrade-copy"/>
-                      <span className="upgrade-button"/>
+                  <span className="story-upgrade-arrow">→</span>
+                  <div className="story-upgrade-after">
+                    <div className="story-top"><span/><span/><span/></div>
+                    <div className="story-after-body">
+                      <span className="story-after-eyebrow"/>
+                      <span className="story-after-title"/>
+                      <span className="story-after-copy"/>
+                      <span className="story-after-button"/>
                     </div>
                   </div>
                 </div>
