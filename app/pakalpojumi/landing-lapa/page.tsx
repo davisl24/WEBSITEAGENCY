@@ -209,32 +209,52 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="service-page-section" aria-labelledby="process-title">
-        <div className="service-section-head">
-          <h2 id="process-title">Kā strādājam</h2>
-          <p>
-            Sākam ar mērķi un saturu. Dizains nāk pēc tam, kad ir skaidrs,
-            ko lapai patiesībā jāpanāk.
-          </p>
+      <section className="service-page-section service-process-section" aria-labelledby="process-title">
+        <div className="service-process-intro">
+          <RevealOnView className="service-process-kicker">
+            <p className="service-page-kicker">Kā strādājam</p>
+          </RevealOnView>
+
+          <RevealOnView className="line-mask-reveal service-process-title" delay={60}>
+            <h2 id="process-title" className="service-line-stack">
+              <span className="service-reveal-line"><span>No mērķa līdz live</span></span>
+            </h2>
+          </RevealOnView>
+
+          <RevealOnView className="service-process-copy" delay={150}>
+            <p>
+              Sākam ar to, ko lapai jāpanāk. Tikai pēc tam liekam kopā saturu,
+              dizainu un izstrādi.
+            </p>
+          </RevealOnView>
         </div>
 
-        <div className="service-process-list">
-          <div className="service-process-row">
-            <h3>Mērķis</h3>
-            <p>Nosakām, kam lapa domāta un kādu darbību gribam no apmeklētāja.</p>
-          </div>
-          <div className="service-process-row">
-            <h3>Saturs</h3>
-            <p>Saliekam tikai to informāciju, kas palīdz saprast un pieņemt lēmumu.</p>
-          </div>
-          <div className="service-process-row">
-            <h3>Dizains un izstrāde</h3>
-            <p>Uzbūvējam lapu, pārbaudām desktop un mobile, un sakārtojam detaļas.</p>
-          </div>
-          <div className="service-process-row">
-            <h3>Palaišana</h3>
-            <p>Pārbaudām gala versiju un palaižam lapu dzīvē.</p>
-          </div>
+        <div className="service-process-flow" aria-label="Landing lapas izstrādes process">
+          <RevealOnView className="service-process-step" delay={0}>
+            <span className="service-process-name">Mērķis</span>
+            <p>Kam lapa domāta un kādu darbību gribam no apmeklētāja.</p>
+          </RevealOnView>
+
+          <span className="service-process-arrow" aria-hidden="true">→</span>
+
+          <RevealOnView className="service-process-step" delay={120}>
+            <span className="service-process-name">Saturs</span>
+            <p>Informācija pareizā secībā, lai cilvēks saprot un pieņem lēmumu.</p>
+          </RevealOnView>
+
+          <span className="service-process-arrow" aria-hidden="true">→</span>
+
+          <RevealOnView className="service-process-step" delay={240}>
+            <span className="service-process-name">Dizains</span>
+            <p>Vizuālais risinājums un izstrāde desktopam un mobile.</p>
+          </RevealOnView>
+
+          <span className="service-process-arrow" aria-hidden="true">→</span>
+
+          <RevealOnView className="service-process-step" delay={360}>
+            <span className="service-process-name">Live</span>
+            <p>Pārbaude, pēdējās detaļas un lapa ir gatava darbam.</p>
+          </RevealOnView>
         </div>
       </section>
 
