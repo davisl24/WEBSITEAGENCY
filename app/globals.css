@@ -4756,3 +4756,33 @@ html[data-theme="light"] .service-page-footer-bottom{
   margin-top:-.04em;
   margin-bottom:-.09em;
 }
+
+
+/* Dedicated homepage hero image per theme */
+.hero-media-image-light{
+  opacity:0;
+  pointer-events:none;
+}
+.hero-media-image-dark{
+  opacity:1;
+}
+html[data-theme="light"] .hero-media-image-dark{
+  opacity:0;
+}
+html[data-theme="light"] .hero-media-image-light{
+  opacity:1;
+  filter:saturate(.92) brightness(1.02) contrast(.96);
+}
+html[data-theme="light"] .hero-media-overlay{
+  background:
+    linear-gradient(90deg,rgba(247,244,237,.82) 0%,rgba(247,244,237,.66) 34%,rgba(247,244,237,.34) 68%,rgba(247,244,237,.16) 100%),
+    linear-gradient(180deg,rgba(247,244,237,.08) 0%,rgba(247,244,237,.12) 54%,rgba(243,240,233,.58) 84%,#f3f0e9 100%);
+}
+
+@media(max-width:760px){
+  html[data-theme="light"] .hero-media-overlay{
+    background:
+      linear-gradient(90deg,rgba(247,244,237,.76) 0%,rgba(247,244,237,.42) 100%),
+      linear-gradient(180deg,rgba(247,244,237,.08) 0%,rgba(243,240,233,.66) 72%,rgba(243,240,233,.9) 100%);
+  }
+}
