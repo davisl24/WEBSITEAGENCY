@@ -36,7 +36,7 @@ export default function Home() {
               ātrāk saprastu piedāvājumu un pieteiktos
             </p>
             <div className="hero-actions">
-              <a className="button button-primary" href="#contact">Pieteikt sarunu</a>
+              <a className="button button-primary" href="/kontakti">Pieteikt sarunu</a>
               <a className="text-link" href="#services">Skatīt pakalpojumus <span aria-hidden="true">↘</span></a>
             </div>
           </div>
@@ -48,9 +48,9 @@ export default function Home() {
         <div className="services-inner">
           <div className="services-head">
             <p className="section-label">Pakalpojumi</p>
-            <h2 id="services-title">Ko vari saņemt</h2>
+            <h2 id="services-title">Izvēlies sev piemērotāko</h2>
             <p className="services-intro">
-              Izvēlamies tik lielu risinājumu, cik uzņēmumam patiešām vajag
+              Trīs skaidri veidi, kā palīdzēt tava uzņēmuma mājaslapai.
             </p>
           </div>
 
@@ -72,13 +72,7 @@ export default function Home() {
                 <h3>Landing lapa</h3>
                 <p>Vienam piedāvājumam un vienam skaidram klienta solim</p>
 
-                <div className="service-tags">
-                  <span>1 lapa</span>
-                  <span>Pieteikuma forma</span>
-                  <span>Mobilā versija</span>
-                </div>
-
-                <a href="/pakalpojumi/landing-lapa" className="service-link">Apskatīt risinājumu <span aria-hidden="true">→</span></a>
+                <a href="/pakalpojumi/landing-lapa" className="service-link">Apskatīt pakalpojumu <span aria-hidden="true">→</span></a>
               </div>
             </article>
 
@@ -104,12 +98,6 @@ export default function Home() {
                 <p className="service-kicker">Galvenais risinājums</p>
                 <h3>Uzņēmuma mājaslapa</h3>
                 <p>Pakalpojumiem, uzticībai un ērtam ceļam līdz kontaktam</p>
-
-                <div className="service-tags">
-                  <span>Vairākas sadaļas</span>
-                  <span>SEO pamati</span>
-                  <span>Kontaktu plūsma</span>
-                </div>
 
                 <a href="/pakalpojumi/uznemuma-majaslapa" className="service-link">Apskatīt risinājumu <span aria-hidden="true">→</span></a>
               </div>
@@ -141,13 +129,7 @@ export default function Home() {
                 <h3>Mājaslapas uzlabošana</h3>
                 <p>Skaidrāka struktūra, modernāks dizains un labāks klienta ceļš esošai lapai</p>
 
-                <div className="service-tags">
-                  <span>Redesign</span>
-                  <span>Mobile</span>
-                  <span>UX / ātrums</span>
-                </div>
-
-                <a href="/pakalpojumi/majaslapas-uzlabosana" className="service-link">Uzlabot esošo lapu <span aria-hidden="true">→</span></a>
+                <a href="/pakalpojumi/majaslapas-uzlabosana" className="service-link">Apskatīt pakalpojumu <span aria-hidden="true">→</span></a>
               </div>
             </article>
           </div>
@@ -163,16 +145,16 @@ export default function Home() {
         <div className="home-about-inner">
           <RevealOnView className="home-about-copy">
             <p className="section-label">Par Kestrel</p>
-            <h2 id="home-about-title">Mājaslapas ar domu</h2>
+            <h2 id="home-about-title">Iepazīsti Kestrel</h2>
             <p>
-              Skaidrība pirms efektiem. Veidojam tikai to, kas palīdz cilvēkam
-              saprast piedāvājumu un nonākt līdz nākamajam solim.
+              Aiz katras mājaslapas ir cilvēki, kuri uzklausa, palīdz sakārtot idejas
+              un kopā ar tevi pieņem skaidrus lēmumus.
             </p>
           </RevealOnView>
 
           <RevealOnView className="home-about-action" delay={120}>
             <a className="text-link" href="/par-mums">
-              Kā mēs domājam <span aria-hidden="true">→</span>
+              Vairāk par mums <span aria-hidden="true">→</span>
             </a>
           </RevealOnView>
         </div>
@@ -186,52 +168,11 @@ export default function Home() {
               <h2 id="call-title">Parunājam par tavu lapu</h2>
               <p>15 minūtes, lai saprastu, ko uzņēmumam reāli vajag un vai varam palīdzēt</p>
             </div>
-            <a className="call-cta" href="#contact">
+            <a className="call-cta" href="/kontakti">
               <span className="call-dot" aria-hidden="true" />
-              <span>Rezervēt bezmaksas zvanu</span>
+              <span>Pieteikt sarunu</span>
               <span aria-hidden="true">→</span>
             </a>
-          </div>
-        </div>
-      </section>
-
-      <section className="contact-section" id="contact" aria-labelledby="contact-title">
-        <div className="contact-inner">
-          <div className="contact-copy">
-            <p className="section-label">Sazināties</p>
-            <h2 id="contact-title">Pastāsti īsumā</h2>
-            <p>
-              Ja vēl negribi rezervēt zvanu, atsūti īsu aprakstu — atbildēsim ar konkrētu nākamo soli
-            </p>
-          </div>
-
-          <div className="contact-card">
-            <div className="contact-card-top">
-              <span>Bezmaksas ideja</span>
-              <span>Bez saistībām</span>
-            </div>
-
-            <div className="contact-fields">
-              <label>
-                <span>Vārds</span>
-                <input type="text" name="name" placeholder="Tavs vārds" />
-              </label>
-
-              <label>
-                <span>E-pasts vai tālrunis</span>
-                <input type="text" name="contact" placeholder="Kā ar tevi sazināties" />
-              </label>
-
-              <label className="contact-field-wide">
-                <span>Par ko ir projekts</span>
-                <textarea name="message" rows={4} placeholder="Īsi par uzņēmumu un ko vēlies uzlabot" />
-              </label>
-            </div>
-
-            <div className="contact-actions">
-              <p>Atbildēsim ar konkrētu ideju, nevis gatavu pārdošanas tekstu</p>
-              <button type="button" className="button button-primary">Saņemt bezmaksas ideju</button>
-            </div>
           </div>
         </div>
       </section>
