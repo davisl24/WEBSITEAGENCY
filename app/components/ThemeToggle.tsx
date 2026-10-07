@@ -31,6 +31,7 @@ export default function ThemeToggle() {
       className="theme-toggle"
       onClick={toggleTheme}
       aria-label={theme === "dark" ? "Ieslēgt gaišo režīmu" : "Ieslēgt tumšo režīmu"}
+      aria-pressed={theme === "light"}
       title={theme === "dark" ? "Gaišais režīms" : "Tumšais režīms"}
     >
       <span className="theme-toggle-track" aria-hidden="true">
