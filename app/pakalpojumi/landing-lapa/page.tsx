@@ -22,7 +22,7 @@ export default function LandingPage() {
       <section className="service-page-hero">
         <div>
           <p className="service-page-kicker">Landing lapa</p>
-          <h1>Viena lapa. Viens mērķis.</h1>
+          <h1>Viena lapa<br/>Viens mērķis</h1>
           <p className="service-page-lead">
             Landing lapa vienam piedāvājumam, lai apmeklētājs ātri saprot,
             ko tu piedāvā, kāpēc tas ir svarīgi un ko darīt tālāk.
