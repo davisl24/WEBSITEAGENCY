@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import RevealOnView from "../components/RevealOnView";
+import ThemeToggle from "../components/ThemeToggle";
 
 export const metadata: Metadata = {
   title: "Par mums | Kestrel",
@@ -17,6 +18,7 @@ export default function AboutPage() {
           <a href="/#services">Pakalpojumi</a>
           <a href="/#process">Process</a>
           <a href="/par-mums" aria-current="page">Par mums</a>
+          <ThemeToggle />
           <a className="header-cta" href="/kontakti">Sazināties</a>
         </nav>
       </header>
