@@ -269,7 +269,7 @@ export default function CompanyWebsitePage() {
           <a href="/kontakti">Kontakti</a>
         </nav>
         <div className="service-page-footer-bottom">
-          <span>Kestrel, SIA · Reģ. nr. 40203559349</span>
+          <span>Kestrel</span>
           <span>© 2026</span>
         </div>
       </footer>
