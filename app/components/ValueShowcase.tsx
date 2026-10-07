@@ -1,9 +1,9 @@
 import RevealOnView from "./RevealOnView";
 
-const plan = [
-  { number: "01", title: "Piemērots risinājums", detail: "Tikai tas, kas uzņēmumam vajadzīgs" },
-  { number: "02", title: "Apjoms un cena", detail: "Vienošanās pirms izstrādes" },
-  { number: "03", title: "Vizuālais virziens", detail: "Skaidrs pirms pilnas izstrādes" },
+const benefits = [
+  { number: "01", title: "Piemērots risinājums", detail: "Bez liekām funkcijām" },
+  { number: "02", title: "Skaidrs apjoms un cena", detail: "Vienojamies pirms izstrādes" },
+  { number: "03", title: "Vizuālais virziens", detail: "Redzams pirms pilnas izstrādes" },
 ];
 
 export default function ValueShowcase() {
@@ -19,32 +19,34 @@ export default function ValueShowcase() {
             </p>
           </RevealOnView>
 
-          <RevealOnView className="value-plan">
-            <div className="value-plan-toolbar">
-              <span className="value-plan-status" aria-hidden="true" />
-              <span>PROJEKTA PLĀNS</span>
-              <span className="value-plan-toolbar-lines" aria-hidden="true"><i/><i/></span>
-            </div>
-            <div className="value-plan-paper">
-              <div className="value-plan-paper-top">
-                <span className="value-plan-paper-label">NO IDEJAS LĪDZ SKAIDRAM VIRZIENAM</span>
-                <span className="value-plan-paper-count">03 SOĻI</span>
-              </div>
-              {plan.map((item) => (
-                <div className="value-plan-row" key={item.number}>
-                  <span className="value-plan-check" aria-hidden="true">✓</span>
-                  <div className="value-plan-row-copy">
-                    <h3>{item.title}</h3>
-                    <p>{item.detail}</p>
+          <RevealOnView className="value-showcase" >
+            <div className="value-showcase-visual" aria-hidden="true">
+              <div className="value-showcase-meta"><span>KESTREL PIEEJA</span><span>01 / 03</span></div>
+              <div className="value-showcase-window">
+                <div className="value-showcase-browser-top"><i/><i/><i/><span/></div>
+                <div className="value-showcase-browser-content">
+                  <div className="value-showcase-site-copy">
+                    <span className="value-showcase-site-kicker"/>
+                    <span className="value-showcase-site-title"/>
+                    <span className="value-showcase-site-description"/>
+                    <span className="value-showcase-site-description short"/>
+                    <span className="value-showcase-site-button"/>
                   </div>
-                  <span className="value-plan-row-number" aria-hidden="true">{item.number}</span>
+                  <div className="value-showcase-site-art">
+                    <span/><span/><span/>
+                  </div>
+                </div>
+              </div>
+              <div className="value-showcase-caption"><span className="value-showcase-caption-dot"/>Skaidrs virziens pirms izstrādes</div>
+            </div>
+            <div className="value-showcase-benefits">
+              {benefits.map((benefit) => (
+                <div className="value-showcase-benefit" key={benefit.number}>
+                  <span className="value-showcase-benefit-number">{benefit.number}</span>
+                  <h3>{benefit.title}</h3>
+                  <p>{benefit.detail}</p>
                 </div>
               ))}
-            </div>
-            <div className="value-plan-footer" aria-hidden="true">
-              <span>SKAIDRS MĒRĶIS</span>
-              <span className="value-plan-footer-line" />
-              <span>SKAIDRS REZULTĀTS</span>
             </div>
           </RevealOnView>
         </div>
