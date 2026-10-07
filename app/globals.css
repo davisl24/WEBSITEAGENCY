@@ -2457,3 +2457,66 @@
     font-size:32px;
   }
 }
+
+
+/* Landing benefits reveal polish */
+.service-includes-kicker,
+.service-includes-copy{
+  width:fit-content;
+}
+.service-includes-title{
+  width:100%;
+}
+.service-includes-title h2{
+  max-width:620px;
+}
+.service-includes-copy{
+  max-width:590px;
+}
+.service-includes-copy p{
+  margin:22px 0 0;
+  font-size:17px;
+  line-height:1.65;
+  color:rgba(244,241,234,.6);
+}
+
+.reveal-on-view.anatomy-browser-reveal{
+  transform:translate3d(-34px,22px,0) scale(.985);
+}
+.reveal-on-view.anatomy-browser-reveal.is-visible{
+  transform:translate3d(0,0,0) scale(1);
+}
+
+.reveal-on-view.anatomy-phone-reveal{
+  transform:translate3d(18px,42px,0) scale(.94);
+}
+.reveal-on-view.anatomy-phone-reveal.is-visible{
+  transform:translate3d(0,0,0) scale(1);
+}
+
+.reveal-on-view.anatomy-note-reveal{
+  transform:translate3d(22px,10px,0);
+}
+.reveal-on-view.anatomy-note-reveal.is-visible{
+  transform:translate3d(0,0,0);
+}
+.reveal-on-view.anatomy-note-reveal.is-visible:hover{
+  transform:translate3d(4px,0,0);
+}
+
+@media(max-width:700px){
+  .service-includes-title h2{
+    font-size:40px;
+  }
+  .reveal-on-view.anatomy-browser-reveal,
+  .reveal-on-view.anatomy-phone-reveal,
+  .reveal-on-view.anatomy-note-reveal{
+    transform:translate3d(0,18px,0) scale(.99);
+  }
+  .reveal-on-view.anatomy-browser-reveal.is-visible,
+  .reveal-on-view.anatomy-phone-reveal.is-visible,
+  .reveal-on-view.anatomy-note-reveal.is-visible,
+  .reveal-on-view.anatomy-note-reveal.is-visible:hover{
+    transform:none;
+  }
+}
