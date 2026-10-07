@@ -5,6 +5,7 @@ import ValueShowcase from "./components/ValueShowcase";
 import ProcessFlow from "./components/ProcessFlow";
 import RevealOnView from "./components/RevealOnView";
 import ThemeToggle from "./components/ThemeToggle";
+import ServicesDropdown from "./components/ServicesDropdown";
 
 export default function Home() {
   return (
@@ -19,12 +20,10 @@ export default function Home() {
         <header className="site-header" aria-label="Galvenā navigācija">
           <a className="brand" href="/" aria-label="Sākumlapa">Kestrel</a>
           <nav className="site-nav" aria-label="Galvenā navigācija">
-            <a href="#work">Darbi</a>
-            <a href="#services">Pakalpojumi</a>
-            <a href="#process">Process</a>
+            <ServicesDropdown />
             <a href="/par-mums">Par mums</a>
             <ThemeToggle />
-            <a className="header-cta" href="/kontakti">Sazināties</a>
+            <a className="header-cta" href="/kontakti">Pieteikt sarunu</a>
           </nav>
         </header>
 
