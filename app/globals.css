@@ -2658,3 +2658,10 @@
 .service-cta-action .button{
   margin-top:28px;
 }
+
+
+/* Keep descenders visible in animated CTA heading */
+.service-cta-title .service-reveal-line{
+  padding-bottom:.16em;
+  margin-bottom:-.08em;
+}
