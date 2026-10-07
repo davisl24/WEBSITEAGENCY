@@ -247,11 +247,10 @@ export default function Home() {
             <div className="footer-links">
               <div>
                 <span>Navigācija</span>
-                <a href="#work">Darbi</a>
                 <a href="#services">Pakalpojumi</a>
                 <a href="#process">Process</a>
                 <a href="/par-mums">Par mums</a>
-                <a href="/kontakti">Sazināties</a>
+                <a href="/kontakti">Kontakti</a>
               </div>
               <div>
                 <span>Kontakti</span>
