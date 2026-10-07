@@ -4,22 +4,22 @@ const steps = [
   {
     label: "01",
     title: "Mērķis",
-    text: "Saprotam, ko pārdodam, kam un kādu darbību vēlamies no apmeklētāja.",
+    text: "Saprotam, ko pārdodam, kam un kādu darbību vēlamies no apmeklētāja",
   },
   {
     label: "02",
     title: "Saturs",
-    text: "Atlasām tikai to informāciju, kas palīdz klientam saprast un pieņemt lēmumu.",
+    text: "Atlasām tikai to informāciju, kas palīdz klientam saprast un pieņemt lēmumu",
   },
   {
     label: "03",
     title: "Izstrāde",
-    text: "Uzbūvējam un pārbaudām lapu uz desktop un mobile.",
+    text: "Uzbūvējam un pārbaudām lapu uz desktop un mobile",
   },
   {
     label: "04",
     title: "Live",
-    text: "Palaižam lapu dzīvē un, ja vajag, turpinām ar uzturēšanu un uzlabojumiem.",
+    text: "Palaižam lapu dzīvē un, ja vajag, turpinām ar uzturēšanu un uzlabojumiem",
   },
 ];
 
@@ -40,7 +40,7 @@ export default function ProcessFlow() {
 
           <RevealOnView delay={120}>
             <p className="process-intro">
-              Vispirms saprotam, ko lapai jāpanāk. Tikai tad ķeramies pie dizaina un izstrādes.
+              Vispirms saprotam, ko lapai jāpanāk — tikai tad ķeramies pie dizaina un izstrādes
             </p>
           </RevealOnView>
         </div>
