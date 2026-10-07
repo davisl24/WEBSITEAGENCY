@@ -4048,3 +4048,36 @@
     font-size:24px;
   }
 }
+
+
+/* About focus comparison motion */
+.about-chaos-panel.reveal-on-view{
+  transform:translate3d(-30px,18px,0) scale(.99);
+}
+.about-chaos-panel.reveal-on-view.is-visible{
+  transform:none;
+}
+.about-clear-panel.reveal-on-view{
+  transform:translate3d(30px,18px,0) scale(.99);
+}
+.about-clear-panel.reveal-on-view.is-visible{
+  transform:none;
+}
+.about-focus-arrow.reveal-on-view{
+  opacity:0;
+  transform:scale(.8);
+  filter:none;
+}
+.about-focus-arrow.reveal-on-view.is-visible{
+  opacity:1;
+  transform:scale(1);
+}
+
+@media(max-width:900px){
+  .about-focus-arrow.reveal-on-view{
+    transform:rotate(90deg) scale(.8);
+  }
+  .about-focus-arrow.reveal-on-view.is-visible{
+    transform:rotate(90deg) scale(1);
+  }
+}
