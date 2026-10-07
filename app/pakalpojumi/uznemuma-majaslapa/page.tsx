@@ -15,6 +15,7 @@ export default function CompanyWebsitePage() {
         <nav className="service-page-nav" aria-label="Galvenā navigācija">
           <a href="/#work">Darbi</a>
           <a href="/#process">Process</a>
+          <a href="/par-mums">Par mums</a>
           <a className="header-cta" href="/#contact">Sazināties</a>
         </nav>
       </header>
