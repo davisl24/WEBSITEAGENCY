@@ -1331,47 +1331,6 @@
 }
 
 
-/* Mobile canvas: keep the full page dark; light surfaces are reserved for mockups only */
-@media(max-width:760px){
-  html,
-  body,
-  main,
-  .hero,
-  .work-section,
-  .value-section,
-  .services-section,
-  .process-section,
-  .call-section,
-  .contact-section{
-    background:#0a0a0b;
-    color:#f4f1ea;
-  }
-
-  .value-inner,
-  .value-scroll,
-  .value-steps,
-  .value-sticky,
-  .value-preview,
-  .services-inner,
-  .services-head,
-  .services-grid{
-    background:transparent;
-  }
-
-  /* Keep only the intentional UI/mockup surfaces light */
-  .preview-window,
-  .ui-browser{
-    background:#f3f0e9;
-    color:#111;
-  }
-
-  .preview-topbar,
-  .ui-browser-top{
-    background:#fbfaf7;
-  }
-}
-
-
 @media(max-width:760px){
   .hero{
     min-height:100svh;
@@ -4784,5 +4743,239 @@ html[data-theme="light"] .hero-media-overlay{
     background:
       linear-gradient(90deg,rgba(247,244,237,.76) 0%,rgba(247,244,237,.42) 100%),
       linear-gradient(180deg,rgba(247,244,237,.08) 0%,rgba(243,240,233,.66) 72%,rgba(243,240,233,.9) 100%);
+  }
+}
+
+
+/* Mobile QA foundation */
+html,
+body{
+  overflow-x:clip;
+}
+
+@media(max-width:760px){
+  .site-header,
+  .service-page-header{
+    gap:12px;
+  }
+
+  .site-nav,
+  .service-page-nav{
+    gap:10px;
+    min-width:0;
+  }
+
+  .theme-toggle{
+    width:40px;
+  }
+
+  .header-cta{
+    white-space:nowrap;
+    font-size:13px;
+  }
+
+  .hero-shell{
+    min-height:calc(100svh - 64px);
+    padding-top:48px;
+  }
+
+  .hero-copy{
+    max-width:100%;
+  }
+
+  .hero-copy h1{
+    max-width:9.2em;
+    font-size:clamp(42px,11.8vw,50px);
+    line-height:1.04;
+  }
+
+  .hero-description{
+    max-width:33em;
+  }
+
+  .work-section,
+  .value-section,
+  .services-section,
+  .process-section,
+  .contact-section{
+    overflow:hidden;
+  }
+
+  .work-visual{
+    min-height:240px;
+  }
+
+  .preview-window,
+  .service-card,
+  .contact-card{
+    border-radius:20px;
+  }
+
+  .preview-body{
+    min-height:0;
+  }
+
+  .service-visual{
+    min-height:220px;
+    padding:20px;
+  }
+
+  .ui-browser,
+  .ui-browser-wide{
+    width:94%;
+  }
+
+  .service-card-body{
+    padding-left:20px;
+    padding-right:20px;
+  }
+
+  .process-step{
+    padding:26px 0;
+  }
+
+  .call-content{
+    padding-top:34px;
+  }
+
+  .call-cta{
+    width:100%;
+    min-width:0;
+    max-width:360px;
+  }
+
+  .contact-card-top{
+    padding:16px 18px;
+  }
+
+  .contact-fields label{
+    padding:20px 18px;
+  }
+
+  .contact-actions{
+    padding:18px;
+  }
+
+  .site-footer{
+    overflow:hidden;
+  }
+}
+
+@media(max-width:700px){
+  .service-page-hero,
+  .about-hero,
+  .contact-page-hero{
+    overflow:hidden;
+  }
+
+  .service-page-hero h1,
+  .company-service-hero h1,
+  .upgrade-service-hero h1,
+  .about-hero-copy h1,
+  .contact-page-copy h1{
+    font-size:clamp(42px,11.4vw,48px);
+    line-height:1.02;
+  }
+
+  .service-page-section{
+    padding:72px 0;
+  }
+
+  .service-page-cta{
+    padding:76px 0 84px;
+  }
+
+  .service-page-cta h2,
+  .service-fit-head h2,
+  .service-includes-title h2,
+  .service-process-title h2,
+  .company-fit-title,
+  .company-structure-title,
+  .upgrade-signs-title,
+  .upgrade-compare-title,
+  .about-thinking-title,
+  .about-focus-title,
+  .about-working-title,
+  .contact-page-call-title{
+    font-size:clamp(36px,9.8vw,40px);
+    line-height:1.04;
+  }
+
+  .service-fit-editorial{
+    gap:28px;
+    padding-top:40px;
+  }
+
+  .service-fit-case,
+  .service-fit-case-a,
+  .service-fit-case-b,
+  .service-fit-case-c{
+    width:100%;
+    border-radius:26px;
+    padding:18px 20px;
+  }
+
+  .service-fit-statement .service-line-stack,
+  .company-fit-statement .service-line-stack,
+  .upgrade-signs-statement .service-line-stack,
+  .about-thinking-statement .service-line-stack{
+    font-size:clamp(28px,8vw,32px);
+    line-height:1.08;
+  }
+
+  .service-anatomy,
+  .company-page-system,
+  .upgrade-compare,
+  .about-focus-visual{
+    min-width:0;
+  }
+
+  .service-anatomy-browser,
+  .company-page-browser,
+  .upgrade-compare-browser,
+  .about-chaos-ui,
+  .about-clear-ui{
+    max-width:100%;
+  }
+
+  .company-page-sheet,
+  .company-page-sheet-services,
+  .company-page-sheet-about,
+  .company-page-sheet-contact{
+    transform:none;
+  }
+
+  .upgrade-hero-before{
+    left:2%;
+    width:70%;
+  }
+
+  .upgrade-hero-after{
+    right:2%;
+    width:82%;
+  }
+
+  .about-plan-sheet{
+    left:0;
+    width:62%;
+    padding:20px;
+  }
+
+  .about-browser{
+    right:0;
+    width:74%;
+  }
+
+  .contact-page-form .contact-fields input,
+  .contact-page-form .contact-fields textarea{
+    font-size:16px;
+  }
+
+  .service-page-footer{
+    width:calc(100% - 36px);
+  }
+
+  .service-page-footer-nav{
+    row-gap:12px;
   }
 }
