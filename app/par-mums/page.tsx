@@ -59,6 +59,42 @@ export default function AboutPage() {
         </div>
       </section>
 
+
+      <section className="service-page-section about-company-section" aria-labelledby="about-company-title">
+        <div className="about-company-intro">
+          <RevealOnView>
+            <p className="service-page-kicker">Kas mēs esam</p>
+          </RevealOnView>
+
+          <RevealOnView className="line-mask-reveal" delay={60}>
+            <h2 id="about-company-title" className="service-line-stack about-company-title">
+              <span className="service-reveal-line"><span>Web izstrāde ar skaidru mērķi</span></span>
+            </h2>
+          </RevealOnView>
+        </div>
+
+        <div className="about-company-layout">
+          <RevealOnView className="about-company-main">
+            <p>
+              Kestrel ir web izstrādes komanda Latvijā. Strādājam ar mazajiem
+              uzņēmumiem, kuriem vajag skaidru, ātru un profesionālu mājaslapu,
+              nevis sarežģītu digitālu projektu bez konkrēta mērķa.
+            </p>
+          </RevealOnView>
+
+          <RevealOnView className="about-company-side" delay={120}>
+            <div>
+              <span>Ko veidojam</span>
+              <p>Landing lapas, uzņēmumu mājaslapas un esošo lapu uzlabojumus.</p>
+            </div>
+            <div>
+              <span>Pēc palaišanas</span>
+              <p>Ja vajag, turpinām ar hostingu, tehnisko uzturēšanu un nākamajiem uzlabojumiem.</p>
+            </div>
+          </RevealOnView>
+        </div>
+      </section>
+
       <section className="service-page-section about-thinking-section" aria-labelledby="about-thinking-title">
         <div className="about-thinking-intro">
           <RevealOnView>
