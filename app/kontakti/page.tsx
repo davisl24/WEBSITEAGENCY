@@ -36,7 +36,7 @@ export default function ContactPage() {
         </div>
 
         <RevealOnView className="contact-page-form-wrap" delay={80}>
-          <div className="contact-card contact-page-form">
+          <div className="contact-card contact-page-form" id="contact-form">
             <div className="contact-card-top">
               <span>Bezmaksas ideja</span>
               <span>Bez saistībām</span>
@@ -90,7 +90,7 @@ export default function ContactPage() {
           </p>
           <a className="call-cta" href="#contact-form">
             <span className="call-dot" aria-hidden="true" />
-            <span>Rezervēt bezmaksas zvanu</span>
+            <span>Pieteikt bezmaksas zvanu</span>
             <span aria-hidden="true">→</span>
           </a>
         </RevealOnView>
