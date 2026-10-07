@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import RevealOnView from "../../components/RevealOnView";
 
 export const metadata: Metadata = {
   title: "Landing lapas izstrāde | Kestrel",
@@ -87,26 +88,26 @@ export default function LandingPage() {
             Ne katram uzņēmumam vajag desmit lapas. Dažreiz vajag vienu, kas savu darbu izdara labi.
           </p>
 
-          <div className="service-fit-case service-fit-case-a">
+          <RevealOnView className="service-fit-case service-fit-case-a" delay={0}>
             <h3>Viens pakalpojums</h3>
             <p>
               Kad visa uzmanība jānotur uz vienu konkrētu piedāvājumu, nevis jāizkaisa pa vairākām sadaļām.
             </p>
-          </div>
+          </RevealOnView>
 
-          <div className="service-fit-case service-fit-case-b">
+          <RevealOnView className="service-fit-case service-fit-case-b" delay={120}>
             <h3>Reklāmas kampaņa</h3>
             <p>
               Kad klikšķim no reklāmas vajag precīzu galamērķi ar vienu skaidru nākamo soli.
             </p>
-          </div>
+          </RevealOnView>
 
-          <div className="service-fit-case service-fit-case-c">
+          <RevealOnView className="service-fit-case service-fit-case-c" delay={240}>
             <h3>Jauns piedāvājums</h3>
             <p>
               Kad gribi ātri palaist vai pārbaudīt ideju, neceļot pilnu uzņēmuma mājaslapu.
             </p>
-          </div>
+          </RevealOnView>
         </div>
       </section>
 
