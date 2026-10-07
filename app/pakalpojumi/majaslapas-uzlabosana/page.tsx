@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import RevealOnView from "../../components/RevealOnView";
 import ThemeToggle from "../../components/ThemeToggle";
+import ServiceDelivery from "../../components/ServiceDelivery";
 
 export const metadata: Metadata = {
   title: "Mājaslapas uzlabošana | Kestrel",
@@ -207,6 +208,18 @@ export default function WebsiteUpgradePage() {
           </RevealOnView>
         </div>
       </section>
+
+      <ServiceDelivery
+        id="delivery-title"
+        title="Labojam to, kam ir jēga"
+        description="Uzlabošanas apjomu nosaka esošās lapas problēmas, nevis iepriekš sagatavota pakete."
+        items={[
+          { title: "Audits", text: "Pārbaudām struktūru, klienta ceļu, mobile un galvenos tehniskos šķēršļus." },
+          { title: "UX un saturs", text: "Sakārtojam hierarhiju, tekstu un nākamo soli tur, kur cilvēks apjūk." },
+          { title: "Dizains un izstrāde", text: "Pārbūvējam tikai tās daļas, kur izmaiņas dod reālu ieguvumu." },
+          { title: "Pārbaude", text: "Pārbaudām desktop, mobile un galvenos scenārijus pirms izmaiņas palaižam live." }
+        ]}
+      />
 
       <section className="service-page-cta">
         <RevealOnView className="line-mask-reveal service-cta-title">
