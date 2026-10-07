@@ -20,7 +20,7 @@ export default function Home() {
             <a href="#work">Darbi</a>
             <a href="#process">Process</a>
             <a href="/par-mums">Par mums</a>
-            <a className="header-cta" href="#contact">Sazināties</a>
+            <a className="header-cta" href="/kontakti">Sazināties</a>
           </nav>
         </header>
 
@@ -265,11 +265,11 @@ export default function Home() {
                 <a href="#work">Darbi</a>
                 <a href="#process">Process</a>
                 <a href="/par-mums">Par mums</a>
-                <a href="#contact">Sazināties</a>
+                <a href="/kontakti">Sazināties</a>
               </div>
               <div>
                 <span>Kontakti</span>
-                <a href="#contact">Pieteikt projektu</a>
+                <a href="/kontakti">Pieteikt projektu</a>
               </div>
             </div>
           </div>
