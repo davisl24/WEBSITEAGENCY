@@ -72,35 +72,39 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="service-page-section" aria-labelledby="der-title">
-        <div className="service-section-head">
-          <h2 id="der-title">Kad tas der</h2>
+      <section className="service-page-section service-fit-section" aria-labelledby="der-title">
+        <div className="service-fit-head">
+          <p className="service-page-kicker">Kad tas der</p>
+          <h2 id="der-title">Kad pietiek ar vienu</h2>
           <p>
-            Landing lapa ir pareizā izvēle, ja nevajag plašu uzņēmuma mājaslapu,
-            bet vajag vienu skaidru ceļu līdz pieteikumam vai pirkumam.
+            Landing lapa ir pareizā izvēle, ja ir viens galvenais piedāvājums
+            un viena darbība, līdz kurai gribam aizvest apmeklētāju.
           </p>
         </div>
 
-        <div className="service-use-list">
-          <div className="service-use-row">
+        <div className="service-fit-editorial">
+          <p className="service-fit-statement">
+            Ne katram uzņēmumam vajag desmit lapas. Dažreiz vajag vienu, kas savu darbu izdara labi.
+          </p>
+
+          <div className="service-fit-case service-fit-case-a">
             <h3>Viens pakalpojums</h3>
             <p>
-              Kad gribi fokusēt visu uzmanību uz vienu konkrētu pakalpojumu
-              un neizkaisīt cilvēku pa vairākām sadaļām.
+              Kad visa uzmanība jānotur uz vienu konkrētu piedāvājumu, nevis jāizkaisa pa vairākām sadaļām.
             </p>
           </div>
-          <div className="service-use-row">
-            <h3>Kampaņa vai reklāma</h3>
+
+          <div className="service-fit-case service-fit-case-b">
+            <h3>Reklāmas kampaņa</h3>
             <p>
-              Kad reklāmas klikšķim vajag skaidru galamērķi ar vienu piedāvājumu
-              un vienu galveno CTA.
+              Kad klikšķim no reklāmas vajag precīzu galamērķi ar vienu skaidru nākamo soli.
             </p>
           </div>
-          <div className="service-use-row">
+
+          <div className="service-fit-case service-fit-case-c">
             <h3>Jauns piedāvājums</h3>
             <p>
-              Kad gribi ātri pārbaudīt jaunu ideju vai piedāvājumu, neceļot
-              lielu mājaslapu no nulles.
+              Kad gribi ātri palaist vai pārbaudīt ideju, neceļot pilnu uzņēmuma mājaslapu.
             </p>
           </div>
         </div>
