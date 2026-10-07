@@ -4300,3 +4300,408 @@
     gap:8px;
   }
 }
+
+
+/* Theme system */
+html,
+body,
+main,
+.service-page,
+.hero,
+.site-footer,
+.work-section,
+.service-card,
+.contact-card,
+.call-cta{
+  transition:
+    background-color .28s ease,
+    color .28s ease,
+    border-color .28s ease;
+}
+
+.theme-toggle{
+  flex:0 0 auto;
+  width:44px;
+  height:26px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:0;
+  border:0;
+  background:transparent;
+  color:inherit;
+  cursor:pointer;
+}
+.theme-toggle-track{
+  position:relative;
+  width:38px;
+  height:22px;
+  display:block;
+  border:1px solid rgba(244,241,234,.2);
+  border-radius:999px;
+  background:rgba(255,255,255,.05);
+  transition:background .25s ease,border-color .25s ease;
+}
+.theme-toggle-thumb{
+  position:absolute;
+  top:3px;
+  left:3px;
+  width:14px;
+  height:14px;
+  border-radius:50%;
+  background:#f4f1ea;
+  box-shadow:0 1px 4px rgba(0,0,0,.22);
+  transition:transform .28s cubic-bezier(.22,1,.36,1),background .25s ease;
+}
+html[data-theme="light"] .theme-toggle-track{
+  border-color:rgba(20,20,20,.18);
+  background:rgba(20,20,20,.06);
+}
+html[data-theme="light"] .theme-toggle-thumb{
+  transform:translateX(16px);
+  background:#171717;
+}
+html[data-theme="light"] .hero .theme-toggle-track{
+  border-color:rgba(20,20,20,.2);
+  background:rgba(255,255,255,.38);
+}
+html[data-theme="light"] .hero .theme-toggle-thumb{
+  background:#171717;
+}
+
+/* Light mode */
+html[data-theme="light"]{
+  background:#f3f0e9;
+}
+html[data-theme="light"] body{
+  background:#f3f0e9;
+  color:#171717;
+}
+html[data-theme="light"] main{
+  background:
+    radial-gradient(circle at 78% 38%,rgba(0,0,0,.018),transparent 30%),
+    #f3f0e9;
+}
+html[data-theme="light"] .service-page{
+  background:#f3f0e9;
+  color:#171717;
+}
+
+/* Homepage hero */
+html[data-theme="light"] .hero{
+  background:#ece8df;
+}
+html[data-theme="light"] .hero-media-image{
+  filter:saturate(.72) brightness(1.05) contrast(.88);
+}
+html[data-theme="light"] .hero-media-overlay{
+  background:
+    linear-gradient(90deg,rgba(247,244,237,.92) 0%,rgba(247,244,237,.78) 34%,rgba(247,244,237,.52) 67%,rgba(247,244,237,.34) 100%),
+    linear-gradient(180deg,rgba(247,244,237,.16) 0%,rgba(247,244,237,.22) 54%,rgba(243,240,233,.74) 84%,#f3f0e9 100%);
+}
+html[data-theme="light"] .hero .brand,
+html[data-theme="light"] .hero h1{
+  color:#171717;
+}
+html[data-theme="light"] .hero .site-nav{
+  color:rgba(23,23,23,.78);
+}
+html[data-theme="light"] .hero .header-cta{
+  color:#171717;
+  border-color:rgba(23,23,23,.42);
+}
+html[data-theme="light"] .hero-label{
+  color:rgba(23,23,23,.58);
+}
+html[data-theme="light"] .hero-description{
+  color:rgba(23,23,23,.74);
+}
+
+/* Global actions */
+html[data-theme="light"] .button-primary{
+  background:#171717;
+  color:#f7f4ed;
+}
+html[data-theme="light"] .text-link{
+  color:rgba(23,23,23,.9);
+  border-color:rgba(23,23,23,.26);
+}
+
+/* Homepage sections */
+html[data-theme="light"] .work-section{
+  background:linear-gradient(180deg,rgba(243,240,233,0) 0%,#f3f0e9 88px,#f3f0e9 100%);
+  color:#171717;
+}
+html[data-theme="light"] .value-section,
+html[data-theme="light"] .services-section,
+html[data-theme="light"] .process-section,
+html[data-theme="light"] .call-section,
+html[data-theme="light"] .contact-section{
+  color:#171717;
+}
+html[data-theme="light"] .section-label,
+html[data-theme="light"] .work-meta p,
+html[data-theme="light"] .section-intro,
+html[data-theme="light"] .services-intro,
+html[data-theme="light"] .process-intro,
+html[data-theme="light"] .call-content p,
+html[data-theme="light"] .contact-copy>p:not(.section-label),
+html[data-theme="light"] .footer-brand p{
+  color:rgba(23,23,23,.58);
+}
+html[data-theme="light"] .work-visual{
+  border-color:rgba(23,23,23,.1);
+  background:linear-gradient(145deg,#e6e1d7,#ddd7cb);
+}
+html[data-theme="light"] .work-visual span{
+  color:rgba(23,23,23,.34);
+}
+html[data-theme="light"] .value-step{
+  border-color:rgba(23,23,23,.1);
+  color:rgba(23,23,23,.34);
+}
+html[data-theme="light"] .value-step p{
+  color:rgba(23,23,23,.34);
+}
+html[data-theme="light"] .value-step.is-active{
+  color:#171717;
+}
+html[data-theme="light"] .value-step.is-active p{
+  color:rgba(23,23,23,.6);
+}
+html[data-theme="light"] .service-card{
+  border-color:rgba(23,23,23,.1);
+  background:rgba(255,255,255,.34);
+}
+html[data-theme="light"] .service-card-featured{
+  background:rgba(255,255,255,.55);
+}
+html[data-theme="light"] .service-visual{
+  border-color:rgba(23,23,23,.08);
+}
+html[data-theme="light"] .service-card-body,
+html[data-theme="light"] .service-card-body h3{
+  color:#171717;
+}
+html[data-theme="light"] .service-kicker,
+html[data-theme="light"] .service-card-body>p,
+html[data-theme="light"] .service-tags span{
+  color:rgba(23,23,23,.56);
+}
+html[data-theme="light"] .service-tags span{
+  border-color:rgba(23,23,23,.1);
+  background:rgba(23,23,23,.025);
+}
+html[data-theme="light"] .service-link{
+  color:#171717;
+  border-color:rgba(23,23,23,.18);
+}
+html[data-theme="light"] .process-rail::before{
+  background:rgba(23,23,23,.08);
+}
+html[data-theme="light"] .process-rail span{
+  background:#171717;
+  box-shadow:0 0 0 4px rgba(23,23,23,.045);
+}
+html[data-theme="light"] .process-step{
+  border-color:rgba(23,23,23,.1);
+}
+html[data-theme="light"] .process-stage{
+  color:rgba(23,23,23,.36);
+}
+html[data-theme="light"] .process-step p{
+  color:rgba(23,23,23,.46);
+}
+html[data-theme="light"] .process-step.is-active .process-stage{
+  color:#171717;
+}
+html[data-theme="light"] .process-step.is-active p{
+  color:rgba(23,23,23,.64);
+}
+html[data-theme="light"] .call-kicker{
+  border-color:rgba(23,23,23,.12);
+  color:rgba(23,23,23,.56);
+}
+html[data-theme="light"] .call-cta{
+  border-color:rgba(23,23,23,.12);
+  background:#ebe7de;
+  color:#171717;
+}
+html[data-theme="light"] .contact-card{
+  border-color:rgba(23,23,23,.11);
+  background:rgba(255,255,255,.36);
+}
+html[data-theme="light"] .contact-card-top,
+html[data-theme="light"] .contact-fields label,
+html[data-theme="light"] .contact-fields label:nth-child(1){
+  border-color:rgba(23,23,23,.09);
+}
+html[data-theme="light"] .contact-card-top,
+html[data-theme="light"] .contact-fields label>span,
+html[data-theme="light"] .contact-actions p{
+  color:rgba(23,23,23,.46);
+}
+html[data-theme="light"] .contact-fields input,
+html[data-theme="light"] .contact-fields textarea{
+  color:#171717;
+}
+html[data-theme="light"] .contact-fields input::placeholder,
+html[data-theme="light"] .contact-fields textarea::placeholder{
+  color:rgba(23,23,23,.38);
+}
+
+/* Homepage about bridge */
+html[data-theme="light"] .home-about-section{
+  border-color:rgba(23,23,23,.08);
+}
+html[data-theme="light"] .home-about-copy>p:last-child{
+  color:rgba(23,23,23,.58);
+}
+
+/* Main footer */
+html[data-theme="light"] .site-footer{
+  background:#ebe7de;
+  color:#171717;
+}
+html[data-theme="light"] .footer-links span,
+html[data-theme="light"] .footer-bottom{
+  color:rgba(23,23,23,.38);
+}
+html[data-theme="light"] .footer-links a{
+  color:rgba(23,23,23,.68);
+}
+html[data-theme="light"] .footer-bottom{
+  border-color:rgba(23,23,23,.1);
+}
+
+/* Subpage navigation and typography */
+html[data-theme="light"] .service-page .brand{
+  color:#171717;
+}
+html[data-theme="light"] .service-page-nav{
+  color:rgba(23,23,23,.68);
+}
+html[data-theme="light"] .service-page .header-cta{
+  color:#171717;
+  border-color:rgba(23,23,23,.4);
+}
+html[data-theme="light"] .service-page h1,
+html[data-theme="light"] .service-page h2,
+html[data-theme="light"] .service-page h3,
+html[data-theme="light"] .service-page .service-process-name{
+  color:#171717;
+}
+html[data-theme="light"] .service-page-kicker{
+  color:rgba(23,23,23,.52);
+}
+html[data-theme="light"] .service-page-lead,
+html[data-theme="light"] .service-fit-copy-reveal p,
+html[data-theme="light"] .service-includes-copy p,
+html[data-theme="light"] .service-process-copy p,
+html[data-theme="light"] .company-fit-copy,
+html[data-theme="light"] .company-structure-copy,
+html[data-theme="light"] .upgrade-signs-copy,
+html[data-theme="light"] .upgrade-compare-copy,
+html[data-theme="light"] .about-thinking-copy,
+html[data-theme="light"] .about-focus-copy,
+html[data-theme="light"] .contact-page-copy>p:not(.service-page-kicker),
+html[data-theme="light"] .contact-page-call-copy p{
+  color:rgba(23,23,23,.6);
+}
+html[data-theme="light"] .service-page-section{
+  border-color:rgba(23,23,23,.08);
+}
+html[data-theme="light"] .service-hero-demo,
+html[data-theme="light"] .company-hero-visual{
+  border-color:rgba(23,23,23,.09);
+  background:rgba(255,255,255,.28);
+}
+html[data-theme="light"] .service-fit-case{
+  border-color:rgba(23,23,23,.1);
+  background:rgba(255,255,255,.36);
+}
+html[data-theme="light"] .service-fit-case:hover{
+  border-color:rgba(23,23,23,.18);
+  background:rgba(255,255,255,.58);
+}
+html[data-theme="light"] .service-fit-case p,
+html[data-theme="light"] .service-anatomy-note p,
+html[data-theme="light"] .service-process-step p,
+html[data-theme="light"] .company-fit-item p,
+html[data-theme="light"] .company-map-link small,
+html[data-theme="light"] .company-page-sheet-top small,
+html[data-theme="light"] .upgrade-sign p,
+html[data-theme="light"] .upgrade-compare-before>p,
+html[data-theme="light"] .upgrade-compare-after>p,
+html[data-theme="light"] .about-principle p{
+  color:rgba(23,23,23,.5);
+}
+html[data-theme="light"] .service-anatomy-note::before,
+html[data-theme="light"] .company-fit-item h3::before,
+html[data-theme="light"] .upgrade-sign h3::before,
+html[data-theme="light"] .about-principle h3::before{
+  background:rgba(23,23,23,.22);
+}
+html[data-theme="light"] .service-process-arrow{
+  color:rgba(23,23,23,.24);
+}
+html[data-theme="light"] .service-process-flow:hover .service-process-arrow{
+  color:rgba(23,23,23,.48);
+}
+
+/* Keep deliberate dark demo surfaces dark */
+html[data-theme="light"] .about-plan-sheet,
+html[data-theme="light"] .company-page-sheet,
+html[data-theme="light"] .upgrade-hero-before,
+html[data-theme="light"] .upgrade-compare-browser:not(.upgrade-compare-browser-after),
+html[data-theme="light"] .about-chaos-ui{
+  color:#f4f1ea;
+}
+html[data-theme="light"] .company-page-sheet-top span{
+  color:#f4f1ea;
+}
+html[data-theme="light"] .company-page-sheet-top small{
+  color:rgba(244,241,234,.48);
+}
+
+/* About */
+html[data-theme="light"] .about-hero-copy>p:not(.service-page-kicker),
+html[data-theme="light"] .about-working-copy p{
+  color:rgba(23,23,23,.68);
+}
+html[data-theme="light"] .about-working-copy>div:last-child p{
+  color:rgba(23,23,23,.5);
+}
+html[data-theme="light"] .about-focus-caption{
+  color:rgba(23,23,23,.46);
+}
+
+/* Contact page */
+html[data-theme="light"] .contact-page-note span{
+  color:rgba(23,23,23,.74);
+}
+html[data-theme="light"] .contact-page-note small{
+  color:rgba(23,23,23,.42);
+}
+
+/* Subpage footers */
+html[data-theme="light"] .service-page-footer{
+  color:rgba(23,23,23,.42);
+}
+html[data-theme="light"] .service-page-footer-nav a{
+  color:rgba(23,23,23,.54);
+}
+html[data-theme="light"] .service-page-footer-nav a:hover{
+  color:#171717;
+}
+html[data-theme="light"] .service-page-footer-bottom{
+  border-color:rgba(23,23,23,.09);
+}
+
+@media(max-width:760px){
+  html[data-theme="light"] .hero-media-overlay{
+    background:
+      linear-gradient(90deg,rgba(247,244,237,.84) 0%,rgba(247,244,237,.62) 100%),
+      linear-gradient(180deg,rgba(247,244,237,.16) 0%,rgba(243,240,233,.78) 72%,rgba(243,240,233,.94) 100%);
+  }
+}
