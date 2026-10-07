@@ -4,6 +4,7 @@ import ValueShowcase from "./components/ValueShowcase";
 import SmoothScroll from "./components/SmoothScroll";
 import ProcessFlow from "./components/ProcessFlow";
 import RevealOnView from "./components/RevealOnView";
+import ThemeToggle from "./components/ThemeToggle";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
             <a href="#services">Pakalpojumi</a>
             <a href="#process">Process</a>
             <a href="/par-mums">Par mums</a>
+            <ThemeToggle />
             <a className="header-cta" href="/kontakti">Sazināties</a>
           </nav>
         </header>
