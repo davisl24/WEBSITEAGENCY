@@ -299,7 +299,7 @@ export default function Home() {
           </div>
 
           <div className="footer-bottom">
-            <span>Kestrel, SIA · Reģ. nr. 40203559349</span>
+            <span>Kestrel</span>
             <span>© 2026</span>
           </div>
         </div>
