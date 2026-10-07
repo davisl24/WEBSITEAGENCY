@@ -24,7 +24,7 @@ export default function ValueShowcase() {
             <p className="section-label">Kāpēc Kestrel</p>
             <h2 id="value-title">Mazāk liekā.<span>Vairāk skaidrības.</span></h2>
             <p className="value-intro">
-              Saprotams piedāvājums, skaidrs darba apjoms un pārliecība par virzienu pirms izstrādes.
+              Mājaslapas izstrādei nav jābūt sarežģītai. Mēs palīdzam saprast, kas tev patiešām vajadzīgs.
             </p>
           </RevealOnView>
           <div className="value-principles">
