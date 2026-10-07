@@ -2520,3 +2520,119 @@
     transform:none;
   }
 }
+
+
+/* Landing: compact process flow */
+.service-process-section{
+  overflow:hidden;
+}
+.service-process-intro{
+  max-width:720px;
+  margin-bottom:72px;
+}
+.service-process-title{
+  width:100%;
+}
+.service-process-title h2{
+  margin:0;
+  max-width:690px;
+  font-size:clamp(44px,4.4vw,66px);
+  line-height:1.02;
+  letter-spacing:-.05em;
+  font-weight:650;
+}
+.service-process-copy{
+  max-width:600px;
+}
+.service-process-copy p{
+  margin:22px 0 0;
+  font-size:17px;
+  line-height:1.65;
+  color:rgba(244,241,234,.6);
+}
+.service-process-flow{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto minmax(0,1fr) auto minmax(0,1fr) auto minmax(0,1fr);
+  align-items:start;
+  gap:22px;
+  padding:34px 0 8px;
+}
+.service-process-step{
+  min-width:0;
+}
+.service-process-name{
+  display:block;
+  font-size:clamp(28px,2.7vw,40px);
+  line-height:1;
+  letter-spacing:-.04em;
+  font-weight:600;
+  color:#f4f1ea;
+}
+.service-process-step p{
+  margin:16px 0 0;
+  max-width:240px;
+  font-size:14px;
+  line-height:1.6;
+  color:rgba(244,241,234,.5);
+}
+.service-process-arrow{
+  align-self:center;
+  margin-top:4px;
+  font-size:28px;
+  line-height:1;
+  color:rgba(244,241,234,.28);
+  transition:color .25s ease,transform .25s ease;
+}
+.service-process-flow:hover .service-process-arrow{
+  color:rgba(244,241,234,.5);
+  transform:translateX(2px);
+}
+.service-process-step.reveal-on-view{
+  transform:translate3d(0,24px,0);
+}
+.service-process-step.reveal-on-view.is-visible{
+  transform:none;
+}
+
+@media(max-width:900px){
+  .service-process-flow{
+    grid-template-columns:1fr 1fr;
+    gap:40px 56px;
+  }
+  .service-process-arrow{
+    display:none;
+  }
+  .service-process-step p{
+    max-width:320px;
+  }
+}
+
+@media(max-width:700px){
+  .service-process-intro{
+    margin-bottom:48px;
+  }
+  .service-process-title h2{
+    font-size:40px;
+  }
+  .service-process-flow{
+    grid-template-columns:1fr;
+    gap:30px;
+    padding-top:18px;
+  }
+  .service-process-step{
+    padding-bottom:24px;
+    border-bottom:1px solid rgba(244,241,234,.09);
+  }
+  .service-process-step:last-of-type{
+    border-bottom:0;
+    padding-bottom:0;
+  }
+  .service-process-name{
+    font-size:30px;
+  }
+  .service-process-step p{
+    max-width:100%;
+    margin-top:10px;
+    font-size:15px;
+  }
+}
