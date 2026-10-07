@@ -6330,3 +6330,24 @@ html[data-theme="light"] .value-showcase-benefit p{color:rgba(23,23,23,.62)}
 .value-section .value-brief-mini-copy span{display:block;width:39%;height:15px;margin-top:3px;border-radius:99px;background:#292929}
 .value-section .value-brief-mini-art{height:74px;border-radius:5px;background:linear-gradient(135deg,#c8c0b4,#a6a095)}
 @media(max-width:480px){.value-section .value-brief-mini-body{padding:12px;gap:8px}.value-section .value-brief-mini-art{height:60px}}
+
+/* About Kestrel CTA integrated into Why section */
+.value-section .value-about-link{
+  display:inline-flex;
+  align-items:center;
+  gap:18px;
+  margin-top:28px;
+  padding:0 0 9px;
+  border-bottom:1px solid rgba(244,241,234,.45);
+  color:#f4f1ea;
+  font-size:15px;
+  font-weight:600;
+  text-decoration:none;
+  transition:gap .22s ease,border-color .22s ease;
+}
+.value-section .value-about-link span{font-size:20px;line-height:1}
+@media(hover:hover) and (pointer:fine){
+  .value-section .value-about-link:hover{gap:25px;border-color:currentColor}
+}
+.value-section .value-about-link:focus-visible{outline:2px solid currentColor;outline-offset:6px}
+html[data-theme="light"] .value-section .value-about-link{color:#171717;border-color:rgba(23,23,23,.4)}
