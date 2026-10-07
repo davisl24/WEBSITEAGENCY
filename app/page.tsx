@@ -136,25 +136,6 @@ export default function Home() {
 
       <ProcessFlow />
 
-      <section className="home-about-section" aria-labelledby="home-about-title">
-        <div className="home-about-inner">
-          <RevealOnView className="home-about-copy">
-            <p className="section-label">Par Kestrel</p>
-            <h2 id="home-about-title">Iepazīsti Kestrel</h2>
-            <p>
-              Aiz katras mājaslapas ir cilvēki, kuri uzklausa, palīdz sakārtot idejas
-              un kopā ar tevi pieņem skaidrus lēmumus
-            </p>
-          </RevealOnView>
-
-          <RevealOnView className="home-about-action" delay={120}>
-            <a className="text-link" href="/par-mums">
-              Vairāk par mums <span aria-hidden="true">→</span>
-            </a>
-          </RevealOnView>
-        </div>
-      </section>
-
       <section className="call-section" aria-labelledby="call-title">
         <div className="call-inner">
           <div className="call-kicker">Īsa saruna bez saistībām</div>
