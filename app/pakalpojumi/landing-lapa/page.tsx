@@ -16,7 +16,7 @@ export default function LandingPage() {
           <a href="/#work">Darbi</a>
           <a href="/#process">Process</a>
           <a href="/par-mums">Par mums</a>
-          <a className="header-cta" href="/#contact">Sazināties</a>
+          <a className="header-cta" href="/kontakti">Sazināties</a>
         </nav>
       </header>
 
@@ -30,7 +30,7 @@ export default function LandingPage() {
           </p>
 
           <div className="service-page-actions">
-            <a className="button button-primary" href="/#contact">Izrunāt projektu</a>
+            <a className="button button-primary" href="/kontakti">Izrunāt projektu</a>
             <a className="text-link" href="#kas-ietilpst">Ko saņem <span aria-hidden="true">↓</span></a>
           </div>
         </div>
@@ -275,7 +275,7 @@ export default function LandingPage() {
         </RevealOnView>
 
         <RevealOnView className="service-cta-action" delay={220}>
-          <a className="button button-primary" href="/#contact">Pastāstīt par projektu</a>
+          <a className="button button-primary" href="/kontakti">Pastāstīt par projektu</a>
         </RevealOnView>
       </section>
 
