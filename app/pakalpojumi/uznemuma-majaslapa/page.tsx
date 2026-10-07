@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import RevealOnView from "../../components/RevealOnView";
 import ThemeToggle from "../../components/ThemeToggle";
+import ServiceDelivery from "../../components/ServiceDelivery";
 
 export const metadata: Metadata = {
   title: "Uzņēmuma mājaslapas izstrāde | Kestrel",
@@ -228,6 +229,18 @@ export default function CompanyWebsitePage() {
           </RevealOnView>
         </div>
       </section>
+
+      <ServiceDelivery
+        id="delivery-title"
+        title="No struktūras līdz live"
+        description="Uzņēmuma lapai vajag ne tikai vairāk sadaļu, bet vienotu sistēmu, kas strādā desktopā un telefonā."
+        items={[
+          { title: "Lapas arhitektūra", text: "Sākumlapa, pakalpojumi, par uzņēmumu un cits saturs tiek salikts saprotamā struktūrā." },
+          { title: "Pielāgots dizains", text: "Vizuālā sistēma tiek veidota uzņēmumam, nevis pielāgota nejaušam template." },
+          { title: "Kontakti un integrācijas", text: "Formas, rezervācija, karte vai citas integrācijas pēc projekta vajadzības." },
+          { title: "Mobile, SEO un palaišana", text: "Responsive versija, SEO pamati, pārbaude un gala sagatavošana live videi." }
+        ]}
+      />
 
       <section className="service-page-cta">
         <RevealOnView className="line-mask-reveal service-cta-title">
