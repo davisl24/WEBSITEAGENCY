@@ -110,35 +110,70 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="service-page-section" id="kas-ietilpst" aria-labelledby="includes-title">
-        <div className="service-section-head">
-          <h2 id="includes-title">Ko saņem</h2>
+      <section className="service-page-section service-includes-section" id="kas-ietilpst" aria-labelledby="includes-title">
+        <div className="service-includes-intro">
+          <p className="service-page-kicker">Ko saņem</p>
+          <h2 id="includes-title">Viss vienā lapā</h2>
           <p>
-            Tik daudz, cik vajag, lai lapa izskatās uzticama, strādā ātri
-            un palīdz cilvēkam nonākt līdz nākamajam solim.
+            Nevis pieci atsevišķi punkti, bet viena sistēma, kur struktūra,
+            dizains un pieteikšanās ceļš strādā kopā.
           </p>
         </div>
 
-        <div className="service-includes-list">
-          <div className="service-include-row">
+        <div className="service-anatomy" aria-label="Landing lapas uzbūves piemērs">
+          <div className="service-anatomy-browser" aria-hidden="true">
+            <div className="ui-browser-top"><span/><span/><span/></div>
+            <div className="service-anatomy-nav">
+              <span className="service-anatomy-logo">North</span>
+              <span className="service-anatomy-nav-line"/>
+              <span className="service-anatomy-nav-button"/>
+            </div>
+
+            <div className="service-anatomy-hero">
+              <div className="service-anatomy-copy">
+                <span className="service-anatomy-kicker"/>
+                <span className="service-anatomy-title"/>
+                <span className="service-anatomy-text"/>
+                <span className="service-anatomy-cta"/>
+              </div>
+              <div className="service-anatomy-art"/>
+            </div>
+
+            <div className="service-anatomy-content">
+              <span/><span/><span/>
+            </div>
+          </div>
+
+          <div className="service-anatomy-phone" aria-hidden="true">
+            <div className="service-anatomy-phone-top"/>
+            <span className="service-anatomy-phone-title"/>
+            <span className="service-anatomy-phone-copy"/>
+            <span className="service-anatomy-phone-cta"/>
+          </div>
+
+          <div className="service-anatomy-note note-structure">
             <h3>Skaidra struktūra</h3>
-            <p>Saturs un secība, kas palīdz klientam ātri saprast piedāvājumu.</p>
+            <p>Saturs pareizā secībā, lai piedāvājums ir saprotams bez minēšanas.</p>
           </div>
-          <div className="service-include-row">
+
+          <div className="service-anatomy-note note-design">
             <h3>Pielāgots dizains</h3>
-            <p>Vizuāls risinājums, kas atbilst zīmolam, nevis gatavam template.</p>
+            <p>Vizuāls risinājums, kas izskatās pēc tava zīmola, nevis template.</p>
           </div>
-          <div className="service-include-row">
-            <h3>Mobilā versija</h3>
-            <p>Responsive izkārtojums telefonam, planšetei un desktopam.</p>
-          </div>
-          <div className="service-include-row">
+
+          <div className="service-anatomy-note note-cta">
             <h3>Forma un CTA</h3>
-            <p>Skaidrs pieteikšanās ceļš bez liekiem soļiem un apjukuma.</p>
+            <p>Viens skaidrs nākamais solis bez liekiem šķēršļiem.</p>
           </div>
-          <div className="service-include-row">
+
+          <div className="service-anatomy-note note-mobile">
+            <h3>Mobilā versija</h3>
+            <p>Tas pats skaidrais ceļš arī telefonā.</p>
+          </div>
+
+          <div className="service-anatomy-note note-seo">
             <h3>SEO pamati</h3>
-            <p>Pamata meta dati, semantiska struktūra un tehniski tīrs izpildījums.</p>
+            <p>Semantiska struktūra un tehniski tīrs pamats meklētājiem.</p>
           </div>
         </div>
       </section>
