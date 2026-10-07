@@ -75,18 +75,34 @@ export default function LandingPage() {
 
       <section className="service-page-section service-fit-section" aria-labelledby="der-title">
         <div className="service-fit-head">
-          <p className="service-page-kicker">Kad tas der</p>
-          <h2 id="der-title">Kad pietiek ar vienu</h2>
-          <p>
-            Landing lapa ir pareizā izvēle, ja ir viens galvenais piedāvājums
-            un viena darbība, līdz kurai gribam aizvest apmeklētāju.
-          </p>
+          <RevealOnView className="service-fit-kicker-reveal">
+            <p className="service-page-kicker">Kad tas der</p>
+          </RevealOnView>
+
+          <RevealOnView className="line-mask-reveal service-fit-title-reveal" delay={60}>
+            <h2 id="der-title" className="service-line-stack">
+              <span className="service-reveal-line"><span>Kad pietiek</span></span>
+              <span className="service-reveal-line"><span>ar vienu</span></span>
+            </h2>
+          </RevealOnView>
+
+          <RevealOnView className="service-fit-copy-reveal" delay={180}>
+            <p>
+              Landing lapa ir pareizā izvēle, ja ir viens galvenais piedāvājums
+              un viena darbība, līdz kurai gribam aizvest apmeklētāju.
+            </p>
+          </RevealOnView>
         </div>
 
         <div className="service-fit-editorial">
-          <p className="service-fit-statement">
-            Ne katram uzņēmumam vajag desmit lapas. Dažreiz vajag vienu, kas savu darbu izdara labi.
-          </p>
+          <RevealOnView className="line-mask-reveal service-fit-statement">
+            <p className="service-line-stack">
+              <span className="service-reveal-line"><span>Ne katram uzņēmumam</span></span>
+              <span className="service-reveal-line"><span>vajag desmit lapas. Dažreiz</span></span>
+              <span className="service-reveal-line"><span>vajag vienu, kas savu darbu</span></span>
+              <span className="service-reveal-line"><span>izdara labi.</span></span>
+            </p>
+          </RevealOnView>
 
           <RevealOnView className="service-fit-case service-fit-case-a" delay={0}>
             <h3>Viens pakalpojums</h3>
