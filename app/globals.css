@@ -5548,3 +5548,114 @@ html[data-theme="light"] .about-company-main p{
     scroll-behavior:smooth;
   }
 }
+
+
+/* Primary navigation: services dropdown */
+.services-dropdown{
+  position:relative;
+  flex:0 0 auto;
+}
+
+.services-dropdown-trigger{
+  min-height:40px;
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  padding:0;
+  border:0;
+  background:transparent;
+  color:inherit;
+  font:inherit;
+  font-size:inherit;
+  font-weight:inherit;
+  cursor:pointer;
+}
+
+.services-dropdown-chevron{
+  display:block;
+  margin-top:-2px;
+  font-size:14px;
+  line-height:1;
+  opacity:.58;
+  transition:transform .2s ease,opacity .2s ease;
+}
+
+.services-dropdown-trigger[aria-expanded="true"] .services-dropdown-chevron{
+  transform:rotate(180deg) translateY(-1px);
+  opacity:.9;
+}
+
+.services-dropdown-menu{
+  position:absolute;
+  top:calc(100% + 10px);
+  left:-18px;
+  z-index:170;
+  width:260px;
+  padding:7px;
+  border:1px solid rgba(244,241,234,.11);
+  border-radius:16px;
+  background:rgba(17,17,19,.96);
+  box-shadow:0 18px 46px rgba(0,0,0,.3);
+  -webkit-backdrop-filter:blur(16px) saturate(125%);
+  backdrop-filter:blur(16px) saturate(125%);
+}
+
+.services-dropdown-link{
+  min-height:44px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  padding:0 12px;
+  border-radius:10px;
+  color:rgba(244,241,234,.76);
+  font-size:13px;
+  font-weight:600;
+  transition:
+    color .18s ease,
+    background-color .18s ease,
+    transform .18s ease;
+}
+
+.services-dropdown-link>span:last-child{
+  opacity:.38;
+  transition:opacity .18s ease,transform .18s ease;
+}
+
+html[data-theme="light"] .services-dropdown-menu{
+  border-color:rgba(23,23,23,.1);
+  background:rgba(247,244,237,.98);
+  box-shadow:0 18px 44px rgba(36,31,24,.12);
+}
+
+html[data-theme="light"] .services-dropdown-link{
+  color:rgba(23,23,23,.7);
+}
+
+@media(hover:hover) and (pointer:fine){
+  .services-dropdown-trigger:hover{
+    opacity:.72;
+  }
+
+  .services-dropdown-link:hover{
+    color:#f4f1ea;
+    background:rgba(255,255,255,.055);
+    transform:translateX(2px);
+  }
+
+  .services-dropdown-link:hover>span:last-child{
+    opacity:.85;
+    transform:translateX(2px);
+  }
+
+  html[data-theme="light"] .services-dropdown-link:hover{
+    color:#171717;
+    background:rgba(23,23,23,.05);
+  }
+}
+
+@media(max-width:760px){
+  .services-dropdown{
+    display:none;
+  }
+}
