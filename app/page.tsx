@@ -114,7 +114,7 @@ export default function Home() {
                   <span>Mobilā versija</span>
                 </div>
 
-                <a href="#contact" className="service-link">Apskatīt risinājumu <span aria-hidden="true">→</span></a>
+                <a href="/pakalpojumi/landing-lapa" className="service-link">Apskatīt risinājumu <span aria-hidden="true">→</span></a>
               </div>
             </article>
 
@@ -152,30 +152,38 @@ export default function Home() {
             </article>
 
             <article className="service-card">
-              <div className="service-visual service-visual-integrations">
-                <div className="integration-canvas">
-                  <div className="integration-node integration-node-main">Web</div>
-                  <div className="integration-node integration-node-a">Booking</div>
-                  <div className="integration-node integration-node-b">CRM</div>
-                  <div className="integration-node integration-node-c">Form</div>
-                  <span className="integration-line line-a"/>
-                  <span className="integration-line line-b"/>
-                  <span className="integration-line line-c"/>
+              <div className="service-visual service-visual-upgrade">
+                <div className="upgrade-preview" aria-hidden="true">
+                  <div className="upgrade-browser upgrade-before">
+                    <div className="ui-browser-top"><span/><span/><span/></div>
+                    <div className="upgrade-lines">
+                      <span/><span/><span/>
+                    </div>
+                  </div>
+                  <div className="upgrade-browser upgrade-after">
+                    <div className="ui-browser-top"><span/><span/><span/></div>
+                    <div className="upgrade-after-body">
+                      <span className="upgrade-kicker"/>
+                      <span className="upgrade-title"/>
+                      <span className="upgrade-copy"/>
+                      <span className="upgrade-button"/>
+                    </div>
+                  </div>
                 </div>
               </div>
 
               <div className="service-card-body">
-                <p className="service-kicker">Kad vajag vairāk</p>
-                <h3>Funkcijas un integrācijas</h3>
-                <p>Kad ar informatīvu lapu vien nepietiek</p>
+                <p className="service-kicker">Esošai mājaslapai</p>
+                <h3>Mājaslapas uzlabošana</h3>
+                <p>Skaidrāka struktūra, modernāks dizains un labāks klienta ceļš esošai lapai</p>
 
                 <div className="service-tags">
-                  <span>Booking</span>
-                  <span>Ārējās sistēmas</span>
-                  <span>Pielāgota loģika</span>
+                  <span>Redesign</span>
+                  <span>Mobile</span>
+                  <span>UX / ātrums</span>
                 </div>
 
-                <a href="#contact" className="service-link">Izrunāt vajadzību <span aria-hidden="true">→</span></a>
+                <a href="#contact" className="service-link">Uzlabot esošo lapu <span aria-hidden="true">→</span></a>
               </div>
             </article>
           </div>
