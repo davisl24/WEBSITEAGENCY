@@ -72,7 +72,7 @@ export default function ContactPage() {
       </section>
 
       <section className="service-page-section contact-page-call" aria-labelledby="contact-call-title">
-        <div>
+        <div className="contact-page-call-inner">
           <RevealOnView>
             <p className="service-page-kicker">Īss zvans</p>
           </RevealOnView>
@@ -82,18 +82,21 @@ export default function ContactPage() {
               <span className="service-reveal-line"><span>Ja ērtāk izrunāt</span></span>
             </h2>
           </RevealOnView>
-        </div>
 
-        <RevealOnView className="contact-page-call-copy" delay={140}>
-          <p>
-            15 minūtes, lai saprastu situāciju un vai vispār ir jēga kaut ko būvēt vai pārbūvēt.
-          </p>
-          <a className="call-cta" href="#contact-form">
-            <span className="call-dot" aria-hidden="true" />
-            <span>Pieteikt bezmaksas zvanu</span>
-            <span aria-hidden="true">→</span>
-          </a>
-        </RevealOnView>
+          <RevealOnView className="contact-page-call-copy" delay={140}>
+            <p>
+              15 minūtes, lai saprastu situāciju un vai vispār ir jēga kaut ko būvēt vai pārbūvēt.
+            </p>
+          </RevealOnView>
+
+          <RevealOnView className="contact-page-call-action" delay={220}>
+            <a className="call-cta" href="#contact-form">
+              <span className="call-dot" aria-hidden="true" />
+              <span>Pieteikt bezmaksas zvanu</span>
+              <span aria-hidden="true">→</span>
+            </a>
+          </RevealOnView>
+        </div>
       </section>
 
       <footer className="service-page-footer">
