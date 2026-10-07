@@ -1843,3 +1843,122 @@
     gap:8px;
   }
 }
+
+
+/* Landing: editorial "Kad tas der" */
+.service-fit-section{
+  overflow:hidden;
+}
+.service-fit-head{
+  max-width:760px;
+  margin-bottom:18px;
+}
+.service-fit-head h2{
+  margin:0;
+  max-width:650px;
+  font-size:clamp(44px,4.4vw,66px);
+  line-height:1.02;
+  letter-spacing:-.05em;
+  font-weight:650;
+}
+.service-fit-head>p:last-child{
+  max-width:600px;
+  margin:22px 0 0;
+  font-size:17px;
+  line-height:1.65;
+  color:rgba(244,241,234,.6);
+}
+.service-fit-editorial{
+  display:grid;
+  grid-template-columns:repeat(12,minmax(0,1fr));
+  grid-template-rows:auto auto;
+  column-gap:24px;
+  min-height:560px;
+  padding-top:72px;
+}
+.service-fit-statement{
+  grid-column:1/7;
+  grid-row:1;
+  margin:0;
+  max-width:610px;
+  font-size:clamp(34px,3.4vw,50px);
+  line-height:1.1;
+  letter-spacing:-.04em;
+  color:#f4f1ea;
+}
+.service-fit-case{
+  max-width:330px;
+}
+.service-fit-case h3{
+  margin:0;
+  font-size:22px;
+  line-height:1.15;
+  letter-spacing:-.03em;
+  font-weight:600;
+}
+.service-fit-case p{
+  margin:12px 0 0;
+  font-size:15px;
+  line-height:1.65;
+  color:rgba(244,241,234,.52);
+}
+.service-fit-case-a{
+  grid-column:9/13;
+  grid-row:1;
+  margin-top:10px;
+  justify-self:end;
+}
+.service-fit-case-b{
+  grid-column:3/7;
+  grid-row:2;
+  margin-top:118px;
+}
+.service-fit-case-c{
+  grid-column:9/13;
+  grid-row:2;
+  margin-top:64px;
+  justify-self:end;
+}
+
+@media(max-width:900px){
+  .service-fit-editorial{
+    min-height:500px;
+    padding-top:56px;
+  }
+  .service-fit-statement{
+    grid-column:1/8;
+  }
+  .service-fit-case-a,
+  .service-fit-case-c{
+    grid-column:9/13;
+  }
+  .service-fit-case-b{
+    grid-column:2/7;
+  }
+}
+@media(max-width:700px){
+  .service-fit-head{
+    margin-bottom:0;
+  }
+  .service-fit-head h2{
+    font-size:40px;
+  }
+  .service-fit-editorial{
+    display:flex;
+    flex-direction:column;
+    min-height:0;
+    gap:42px;
+    padding-top:52px;
+  }
+  .service-fit-statement{
+    max-width:100%;
+    font-size:32px;
+  }
+  .service-fit-case,
+  .service-fit-case-a,
+  .service-fit-case-b,
+  .service-fit-case-c{
+    max-width:100%;
+    margin-top:0;
+  }
+}
