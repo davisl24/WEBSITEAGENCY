@@ -24,10 +24,14 @@ export default function RootLayout({
     (() => {
       try {
         const saved = localStorage.getItem("kestrel-theme");
-        const theme = saved === "light" || saved === "dark"
+        const mode = saved === "light" || saved === "dark" || saved === "system"
           ? saved
-          : (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+          : "system";
+        const theme = mode === "system"
+          ? (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark")
+          : mode;
         document.documentElement.dataset.theme = theme;
+        document.documentElement.dataset.themeMode = mode;
         document.documentElement.style.colorScheme = theme;
       } catch (_) {}
     })();
