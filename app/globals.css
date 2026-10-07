@@ -6224,3 +6224,59 @@ html[data-theme="light"] .value-plan-footer-line{background:rgba(23,23,23,.16)}
   .value-plan-row-copy p{font-size:12px}
   .value-plan-footer{font-size:8px;gap:8px}
 }
+
+/* Why Kestrel v2: one focal visual, three concise benefits */
+.value-section .value-showcase{min-width:0;width:100%}
+.value-showcase-visual{
+  position:relative;
+  overflow:hidden;
+  padding:24px clamp(18px,3vw,34px) 18px;
+  border:1px solid rgba(244,241,234,.13);
+  border-radius:20px;
+  background:radial-gradient(ellipse at 50% 20%,rgba(244,241,234,.07),transparent 70%),#161618;
+}
+.value-showcase-meta{display:flex;justify-content:space-between;gap:10px;color:rgba(244,241,234,.56);font-size:10px;font-weight:650;letter-spacing:.11em}
+.value-showcase-window{
+  margin:22px auto 18px;
+  width:min(100%,490px);
+  background:#efece5;
+  border-radius:13px;
+  overflow:hidden;
+  box-shadow:0 20px 44px rgba(0,0,0,.28);
+  transform:rotate(-1deg);
+}
+.value-showcase-browser-top{height:25px;padding:0 12px;display:flex;align-items:center;gap:5px;border-bottom:1px solid #d6d1c9;background:#f8f6f2}
+.value-showcase-browser-top i{height:5px;width:5px;border-radius:50%;background:#bdb6ab}
+.value-showcase-browser-top span{height:4px;width:28%;margin-left:auto;border-radius:3px;background:#d1cbc1}
+.value-showcase-browser-content{display:grid;grid-template-columns:1.15fr .85fr;gap:19px;align-items:center;padding:30px 27px 34px}
+.value-showcase-site-copy{display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+.value-showcase-site-copy span{display:block;border-radius:3px}
+.value-showcase-site-kicker{height:5px;width:31%;background:#a8a196}
+.value-showcase-site-title{height:18px;width:91%;background:#282828}
+.value-showcase-site-description{height:6px;width:88%;background:#b4aca1}
+.value-showcase-site-description.short{width:69%}
+.value-showcase-site-button{height:24px;width:45%;margin-top:8px;border-radius:999px!important;background:#282828}
+.value-showcase-site-art{height:142px;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.value-showcase-site-art span{background:#d3cdc3;border-radius:6px}
+.value-showcase-site-art span:first-child{grid-column:span 2;background:linear-gradient(120deg,#c6bfb4,#9f9991)}
+.value-showcase-caption{display:flex;justify-content:center;align-items:center;gap:9px;font-size:12px;color:rgba(244,241,234,.7)}
+.value-showcase-caption-dot{width:6px;height:6px;border-radius:50%;background:#c6bdb1}
+.value-showcase-benefits{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:22px}
+.value-showcase-benefit{min-width:0;border-top:1px solid rgba(244,241,234,.16);padding-top:13px}
+.value-showcase-benefit-number{display:block;color:rgba(244,241,234,.4);font-size:11px;margin-bottom:12px}
+.value-showcase-benefit h3{margin:0;color:inherit;font-size:clamp(15px,1.25vw,19px);letter-spacing:-.025em;line-height:1.24}
+.value-showcase-benefit p{margin:9px 0 0;font-size:12px;line-height:1.5;color:rgba(244,241,234,.55)}
+html[data-theme="light"] .value-showcase-visual{background:radial-gradient(ellipse at 50% 20%,rgba(23,23,23,.04),transparent 70%),#e2ddd3;border-color:rgba(23,23,23,.1)}
+html[data-theme="light"] .value-showcase-meta,html[data-theme="light"] .value-showcase-caption{color:rgba(23,23,23,.6)}
+html[data-theme="light"] .value-showcase-benefit{border-color:rgba(23,23,23,.16)}
+html[data-theme="light"] .value-showcase-benefit-number{color:rgba(23,23,23,.45)}
+html[data-theme="light"] .value-showcase-benefit p{color:rgba(23,23,23,.62)}
+@media(max-width:900px){.value-showcase-benefits{gap:20px}}
+@media(max-width:540px){
+  .value-showcase-visual{padding:18px 14px}
+  .value-showcase-browser-content{padding:22px 16px;gap:10px}
+  .value-showcase-site-art{height:105px}
+  .value-showcase-benefits{gap:10px}
+  .value-showcase-benefit h3{font-size:14px}
+  .value-showcase-benefit p{font-size:11px}
+}
