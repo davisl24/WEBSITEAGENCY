@@ -6316,3 +6316,17 @@ html[data-theme="light"] .value-showcase-benefit p{color:rgba(23,23,23,.62)}
  .value-section .value-brief-details{gap:12px}
  .value-section .value-brief-details strong{font-size:15px}
 }
+
+/* Kestrel brief: illustrative, legible mini website structure */
+.value-section .value-brief-mini-site{margin-top:12px;border:1px solid #c9c2b7;border-radius:7px;overflow:hidden;background:#f0ede6}
+.value-section .value-brief-mini-top{height:16px;display:flex;align-items:center;gap:4px;padding:0 8px;border-bottom:1px solid #d4cec4;background:#faf8f4}
+.value-section .value-brief-mini-top i{display:block;width:4px;height:4px;border-radius:50%;background:#b9b1a6}
+.value-section .value-brief-mini-top span{width:24%;height:3px;margin-left:auto;border-radius:2px;background:#b9b1a6}
+.value-section .value-brief-mini-body{display:grid;grid-template-columns:1.1fr .9fr;gap:12px;align-items:center;padding:15px 17px}
+.value-section .value-brief-mini-copy{display:flex;flex-direction:column;align-items:flex-start;gap:7px}
+.value-section .value-brief-mini-copy b{display:block;width:77%;height:11px;border-radius:2px;background:#292929}
+.value-section .value-brief-mini-copy i{display:block;width:89%;height:5px;border-radius:2px;background:#b4aca1}
+.value-section .value-brief-mini-copy i:nth-child(3){width:65%}
+.value-section .value-brief-mini-copy span{display:block;width:39%;height:15px;margin-top:3px;border-radius:99px;background:#292929}
+.value-section .value-brief-mini-art{height:74px;border-radius:5px;background:linear-gradient(135deg,#c8c0b4,#a6a095)}
+@media(max-width:480px){.value-section .value-brief-mini-body{padding:12px;gap:8px}.value-section .value-brief-mini-art{height:60px}}
