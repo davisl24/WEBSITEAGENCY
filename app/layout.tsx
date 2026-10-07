@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
-import SmoothScroll from "./components/SmoothScroll";
 import ScrollToTop from "./components/ScrollToTop";
 
 const manrope = Manrope({
@@ -40,7 +39,6 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
       <body className={manrope.variable}>
-        <SmoothScroll />
         {children}
         <ScrollToTop />
       </body>
