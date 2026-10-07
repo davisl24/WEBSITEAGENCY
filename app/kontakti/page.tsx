@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import RevealOnView from "../components/RevealOnView";
 import ThemeToggle from "../components/ThemeToggle";
+import ServicesDropdown from "../components/ServicesDropdown";
 
 export const metadata: Metadata = {
   title: "Kontakti | Kestrel",
@@ -14,13 +15,11 @@ export default function ContactPage() {
       <header className="service-page-header" aria-label="Galvenā navigācija">
         <a className="brand" href="/" aria-label="Sākumlapa">Kestrel</a>
         <nav className="service-page-nav" aria-label="Galvenā navigācija">
-          <a href="/#work">Darbi</a>
-          <a href="/#services">Pakalpojumi</a>
-          <a href="/#process">Process</a>
-          <a href="/par-mums">Par mums</a>
-          <ThemeToggle />
-          <a className="header-cta" href="/kontakti" aria-current="page">Sazināties</a>
-        </nav>
+            <ServicesDropdown />
+            <a href="/par-mums">Par mums</a>
+            <ThemeToggle />
+            <a className="header-cta" href="/kontakti" aria-current="page">Pieteikt sarunu</a>
+          </nav>
       </header>
 
       <section className="contact-page-hero">
