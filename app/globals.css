@@ -6280,3 +6280,39 @@ html[data-theme="light"] .value-showcase-benefit p{color:rgba(23,23,23,.62)}
   .value-showcase-benefit h3{font-size:14px}
   .value-showcase-benefit p{font-size:11px}
 }
+
+/* Kestrel project brief focal illustration, scoped to Why section */
+.value-section .value-brief{
+  margin:22px auto 0;
+  width:min(100%,520px);
+  padding:24px;
+  border-radius:13px;
+  color:#292929;
+  background:#eeeae2;
+  box-shadow:0 18px 38px rgba(0,0,0,.2);
+}
+.value-section .value-brief-label{
+  display:block;
+  font-size:10px;
+  letter-spacing:.09em;
+  color:#777168;
+  font-weight:650;
+}
+.value-section .value-brief-goal{position:relative;padding:0 38px 20px 0;border-bottom:1px solid #d5cec3}
+.value-section .value-brief-goal strong{display:block;margin-top:8px;font-size:clamp(20px,2vw,26px);line-height:1.2;letter-spacing:-.035em}
+.value-section .value-brief-target{position:absolute;right:0;top:9px;font-size:28px;color:#666057}
+.value-section .value-brief-details{display:grid;grid-template-columns:1fr 1fr;gap:20px;padding:20px 0}
+.value-section .value-brief-details>div{display:flex;flex-direction:column;gap:7px;min-width:0}
+.value-section .value-brief-details strong{font-size:17px;line-height:1.25;letter-spacing:-.02em}
+.value-section .value-brief-details div>span:last-child{font-size:12px;color:#706a62;line-height:1.4}
+.value-section .value-brief-preview{padding:16px 18px;border-radius:8px;background:#dad4ca}
+.value-section .value-brief-preview-main{display:flex;align-items:center;gap:10px;margin-top:16px}
+.value-section .value-brief-preview-main i:first-child{display:block;width:49%;height:14px;background:#292929;border-radius:3px}
+.value-section .value-brief-preview-main i:last-child{display:block;width:28%;height:6px;background:#aca398;border-radius:3px}
+.value-section .value-brief-preview-line{width:66%;height:6px;margin-top:11px;background:#aaa297;border-radius:3px}
+@media(max-width:540px){
+ .value-section .value-brief{padding:18px}
+ .value-section .value-brief-goal strong{font-size:21px}
+ .value-section .value-brief-details{gap:12px}
+ .value-section .value-brief-details strong{font-size:15px}
+}
