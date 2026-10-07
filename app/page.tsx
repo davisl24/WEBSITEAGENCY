@@ -147,7 +147,7 @@ export default function Home() {
                   <span>Kontaktu plūsma</span>
                 </div>
 
-                <a href="#contact" className="service-link">Apskatīt risinājumu <span aria-hidden="true">→</span></a>
+                <a href="/pakalpojumi/uznemuma-majaslapa" className="service-link">Apskatīt risinājumu <span aria-hidden="true">→</span></a>
               </div>
             </article>
 
