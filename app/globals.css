@@ -2986,3 +2986,143 @@ html[data-theme="light"] .services-dropdown-link{
     display:none;
   }
 }
+
+/* Kestrel homepage composition v1: scoped overrides; preserve service-page styles */
+:root{
+  --home-max:1360px;
+  --home-gutter:clamp(24px,4vw,64px);
+  --home-line-dark:rgba(244,241,234,.11);
+  --home-line-light:rgba(23,23,23,.1);
+}
+.services-section,
+.value-section,
+.process-section,
+.home-about-section,
+.call-section{
+  scroll-margin-top:24px;
+}
+.services-section{padding:96px var(--home-gutter) 102px}
+.services-inner,.value-inner,.process-inner,.call-inner{
+  width:min(var(--home-max),100%);
+}
+.services-grid{gap:20px}
+.services-section .service-card{
+  display:flex;
+  flex-direction:column;
+  border-radius:22px;
+}
+.services-section .service-visual{min-height:210px;padding:20px}
+.services-section .service-card-body{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  padding-top:25px;
+  padding-bottom:28px;
+}
+.services-section .service-card-body .service-link{margin-top:auto}
+.services-section .service-card-body>p{margin-bottom:24px}
+.services-section .upgrade-preview{min-height:196px}
+.services-section .upgrade-before{top:14px}
+.services-section .upgrade-after{bottom:0}
+.value-section{
+  padding:100px var(--home-gutter) 110px;
+}
+.value-layout{
+  grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
+  align-items:center;
+  gap:clamp(48px,7vw,104px);
+}
+.value-copy-side{
+  position:static;
+  top:auto;
+  padding-top:0;
+}
+.value-copy-side h2{
+  font-size:clamp(44px,4.35vw,64px);
+  line-height:1.08;
+  letter-spacing:-.047em;
+}
+.value-copy-side h2 span{display:block}
+.value-principles{
+  border-top:1px solid var(--home-line-dark);
+}
+.value-principles .value-principle,
+.value-principles .value-principle.is-active{
+  min-height:0;
+  opacity:1;
+  transform:none;
+  display:grid;
+  grid-template-columns:32px minmax(0,1fr);
+  gap:22px;
+  align-items:start;
+  padding:28px 0 30px;
+  border-bottom:1px solid var(--home-line-dark);
+}
+.value-principles .value-principle-mark{
+  width:22px;
+  height:1px;
+  margin-top:13px;
+  background:rgba(244,241,234,.42);
+}
+.value-principles .value-principle h3{
+  font-size:clamp(23px,2vw,29px);
+  line-height:1.16;
+}
+.value-principles .value-principle p{
+  margin-top:10px;
+  font-size:15px;
+  line-height:1.65;
+  color:rgba(244,241,234,.59);
+}
+.process-section{padding:82px var(--home-gutter) 92px}
+.home-about-section{padding:88px var(--home-gutter)}
+.home-about-inner{
+  width:min(var(--home-max),100%);
+  grid-template-columns:minmax(0,1fr) auto;
+  align-items:center;
+}
+.home-about-copy h2{font-size:clamp(44px,4.35vw,64px)}
+.call-section{
+  padding:100px var(--home-gutter) 122px;
+  border-top:1px solid var(--home-line-dark);
+}
+.call-inner{padding:0}
+.call-content{
+  gap:32px;
+  padding-top:34px;
+}
+.call-cta{transition:transform .24s ease,border-color .24s ease}
+@media(hover:hover) and (pointer:fine){
+  .call-cta:hover{transform:translateY(-2px);border-color:rgba(244,241,234,.35)}
+}
+html[data-theme="light"] .value-principles,
+html[data-theme="light"] .value-principles .value-principle,
+html[data-theme="light"] .call-section{
+  border-color:var(--home-line-light);
+}
+html[data-theme="light"] .value-principles .value-principle p{
+  color:rgba(23,23,23,.59);
+}
+html[data-theme="light"] .value-principles .value-principle-mark{
+  background:rgba(23,23,23,.38);
+}
+html[data-theme="light"] .call-cta:hover{border-color:rgba(23,23,23,.32)}
+@media(max-width:900px){
+  .services-section{padding:80px 24px}
+  .value-section{padding:80px 24px}
+  .value-layout{grid-template-columns:1fr;gap:34px}
+  .value-copy-side{max-width:720px}
+  .process-section{padding:76px 24px}
+  .home-about-section{padding:72px 24px}
+  .home-about-inner{grid-template-columns:1fr}
+  .call-section{padding:80px 24px 92px}
+}
+@media(max-width:760px){
+  .services-section{padding:70px 18px}
+  .value-section{padding:72px 18px}
+  .value-principles .value-principle{grid-template-columns:22px minmax(0,1fr);gap:14px}
+  .value-principles .value-principle h3{font-size:24px}
+  .process-section{padding:68px 18px}
+  .home-about-section{padding:68px 18px}
+  .call-section{padding:72px 18px 80px}
+}
