@@ -16,7 +16,7 @@ export default function WebsiteUpgradePage() {
           <a href="/#work">Darbi</a>
           <a href="/#process">Process</a>
           <a href="/par-mums">Par mums</a>
-          <a className="header-cta" href="/#contact">Sazināties</a>
+          <a className="header-cta" href="/kontakti">Sazināties</a>
         </nav>
       </header>
 
@@ -30,7 +30,7 @@ export default function WebsiteUpgradePage() {
           </p>
 
           <div className="service-page-actions">
-            <a className="button button-primary" href="/#contact">Izrunāt uzlabojumus</a>
+            <a className="button button-primary" href="/kontakti">Izrunāt uzlabojumus</a>
             <a className="text-link" href="#ko-mainam">Ko mainām <span aria-hidden="true">↓</span></a>
           </div>
         </div>
@@ -220,7 +220,7 @@ export default function WebsiteUpgradePage() {
         </RevealOnView>
 
         <RevealOnView className="service-cta-action" delay={220}>
-          <a className="button button-primary" href="/#contact">Parādīt esošo lapu</a>
+          <a className="button button-primary" href="/kontakti">Parādīt esošo lapu</a>
         </RevealOnView>
       </section>
 
