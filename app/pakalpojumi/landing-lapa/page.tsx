@@ -36,11 +36,37 @@ export default function LandingPage() {
         <div className="service-hero-demo" aria-hidden="true">
           <div className="service-demo-window">
             <div className="ui-browser-top"><span/><span/><span/></div>
-            <div className="service-demo-body">
-              <span className="service-demo-label"/>
-              <span className="service-demo-title"/>
-              <span className="service-demo-copy"/>
-              <span className="service-demo-button"/>
+
+            <div className="service-demo-nav">
+              <span className="service-demo-brand">North</span>
+              <div className="service-demo-nav-links">
+                <span>Pakalpojumi</span>
+                <span>Par mums</span>
+                <span className="service-demo-nav-cta">Sākt</span>
+              </div>
+            </div>
+
+            <div className="service-demo-hero">
+              <div className="service-demo-copy-block">
+                <span className="service-demo-eyebrow">Jauns piedāvājums</span>
+                <strong>Skaidri. Ātri.<br/>Bez lieka.</strong>
+                <p>Viena lapa ar vienu mērķi un skaidru ceļu līdz pieteikumam.</p>
+                <span className="service-demo-primary">Pieteikties</span>
+              </div>
+
+              <div className="service-demo-art">
+                <div className="service-demo-art-shape"/>
+                <div className="service-demo-art-card">
+                  <span>Vienam mērķim</span>
+                  <strong>Skaidrs ceļš</strong>
+                </div>
+              </div>
+            </div>
+
+            <div className="service-demo-proof">
+              <span>Skaidrs piedāvājums</span>
+              <span>Mobilā versija</span>
+              <span>Viena galvenā CTA</span>
             </div>
           </div>
         </div>
