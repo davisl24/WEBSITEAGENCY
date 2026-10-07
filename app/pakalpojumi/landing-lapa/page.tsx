@@ -129,69 +129,83 @@ export default function LandingPage() {
 
       <section className="service-page-section service-includes-section" id="kas-ietilpst" aria-labelledby="includes-title">
         <div className="service-includes-intro">
-          <p className="service-page-kicker">Ko saņem</p>
-          <h2 id="includes-title">Viss vienā lapā</h2>
-          <p>
-            Nevis pieci atsevišķi punkti, bet viena sistēma, kur struktūra,
-            dizains un pieteikšanās ceļš strādā kopā.
-          </p>
+          <RevealOnView className="service-includes-kicker">
+            <p className="service-page-kicker">Ko saņem</p>
+          </RevealOnView>
+
+          <RevealOnView className="line-mask-reveal service-includes-title" delay={60}>
+            <h2 id="includes-title" className="service-line-stack">
+              <span className="service-reveal-line"><span>Viss vienā lapā</span></span>
+            </h2>
+          </RevealOnView>
+
+          <RevealOnView className="service-includes-copy" delay={160}>
+            <p>
+              Nevis pieci atsevišķi punkti, bet viena sistēma, kur struktūra,
+              dizains un pieteikšanās ceļš strādā kopā.
+            </p>
+          </RevealOnView>
         </div>
 
         <div className="service-anatomy" aria-label="Landing lapas uzbūves piemērs">
-          <div className="service-anatomy-browser" aria-hidden="true">
-            <div className="ui-browser-top"><span/><span/><span/></div>
-            <div className="service-anatomy-nav">
-              <span className="service-anatomy-logo">North</span>
-              <span className="service-anatomy-nav-line"/>
-              <span className="service-anatomy-nav-button"/>
-            </div>
-
-            <div className="service-anatomy-hero">
-              <div className="service-anatomy-copy">
-                <span className="service-anatomy-kicker"/>
-                <span className="service-anatomy-title"/>
-                <span className="service-anatomy-text"/>
-                <span className="service-anatomy-cta"/>
+          <RevealOnView className="service-anatomy-browser anatomy-browser-reveal">
+            <div aria-hidden="true">
+              <div className="ui-browser-top"><span/><span/><span/></div>
+              <div className="service-anatomy-nav">
+                <span className="service-anatomy-logo">North</span>
+                <span className="service-anatomy-nav-line"/>
+                <span className="service-anatomy-nav-button"/>
               </div>
-              <div className="service-anatomy-art"/>
+
+              <div className="service-anatomy-hero">
+                <div className="service-anatomy-copy">
+                  <span className="service-anatomy-kicker"/>
+                  <span className="service-anatomy-title"/>
+                  <span className="service-anatomy-text"/>
+                  <span className="service-anatomy-cta"/>
+                </div>
+                <div className="service-anatomy-art"/>
+              </div>
+
+              <div className="service-anatomy-content">
+                <span/><span/><span/>
+              </div>
             </div>
+          </RevealOnView>
 
-            <div className="service-anatomy-content">
-              <span/><span/><span/>
+          <RevealOnView className="service-anatomy-phone anatomy-phone-reveal" delay={180}>
+            <div aria-hidden="true">
+              <div className="service-anatomy-phone-top"/>
+              <span className="service-anatomy-phone-title"/>
+              <span className="service-anatomy-phone-copy"/>
+              <span className="service-anatomy-phone-cta"/>
             </div>
-          </div>
+          </RevealOnView>
 
-          <div className="service-anatomy-phone" aria-hidden="true">
-            <div className="service-anatomy-phone-top"/>
-            <span className="service-anatomy-phone-title"/>
-            <span className="service-anatomy-phone-copy"/>
-            <span className="service-anatomy-phone-cta"/>
-          </div>
-
-          <div className="service-anatomy-note note-structure">
+          <RevealOnView className="service-anatomy-note note-structure anatomy-note-reveal" delay={80}>
             <h3>Skaidra struktūra</h3>
             <p>Saturs pareizā secībā, lai piedāvājums ir saprotams bez minēšanas.</p>
-          </div>
+          </RevealOnView>
 
-          <div className="service-anatomy-note note-design">
+          <RevealOnView className="service-anatomy-note note-design anatomy-note-reveal" delay={160}>
             <h3>Pielāgots dizains</h3>
             <p>Vizuāls risinājums, kas izskatās pēc tava zīmola, nevis template.</p>
-          </div>
+          </RevealOnView>
 
-          <div className="service-anatomy-note note-cta">
+          <RevealOnView className="service-anatomy-note note-cta anatomy-note-reveal" delay={240}>
             <h3>Forma un CTA</h3>
             <p>Viens skaidrs nākamais solis bez liekiem šķēršļiem.</p>
-          </div>
+          </RevealOnView>
 
-          <div className="service-anatomy-note note-mobile">
+          <RevealOnView className="service-anatomy-note note-mobile anatomy-note-reveal" delay={320}>
             <h3>Mobilā versija</h3>
             <p>Tas pats skaidrais ceļš arī telefonā.</p>
-          </div>
+          </RevealOnView>
 
-          <div className="service-anatomy-note note-seo">
+          <RevealOnView className="service-anatomy-note note-seo anatomy-note-reveal" delay={400}>
             <h3>SEO pamati</h3>
             <p>Semantiska struktūra un tehniski tīrs pamats meklētājiem.</p>
-          </div>
+          </RevealOnView>
         </div>
       </section>
 
