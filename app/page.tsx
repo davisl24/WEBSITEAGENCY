@@ -50,7 +50,7 @@ export default function Home() {
             <p className="section-label">Pakalpojumi</p>
             <h2 id="services-title">Izvēlies sev piemērotāko</h2>
             <p className="services-intro">
-              Trīs skaidri veidi, kā palīdzēt tava uzņēmuma mājaslapai.
+              Vai vajag vienu lapu, pilnu uzņēmuma mājaslapu vai uzlabot esošo? Izvēlies savu situāciju.
             </p>
           </div>
 
@@ -68,9 +68,9 @@ export default function Home() {
               </div>
 
               <div className="service-card-body">
-                <p className="service-kicker">Vienam piedāvājumam</p>
+                <p className="service-kicker">Ja jāizceļ viens piedāvājums</p>
                 <h3>Landing lapa</h3>
-                <p>Vienam piedāvājumam un vienam skaidram klienta solim</p>
+                <p>Viena lapa konkrētam pakalpojumam, produktam vai kampaņai.</p>
 
                 <a href="/pakalpojumi/landing-lapa" className="service-link">Apskatīt pakalpojumu <span aria-hidden="true">→</span></a>
               </div>
@@ -95,11 +95,11 @@ export default function Home() {
               </div>
 
               <div className="service-card-body">
-                <p className="service-kicker">Galvenais risinājums</p>
+                <p className="service-kicker">Ja uzņēmumam vajag vairākas lapas</p>
                 <h3>Uzņēmuma mājaslapa</h3>
-                <p>Pakalpojumiem, uzticībai un ērtam ceļam līdz kontaktam</p>
+                <p>Vairākas lapas, kur vienuviet parādīt pakalpojumus un informāciju par uzņēmumu.</p>
 
-                <a href="/pakalpojumi/uznemuma-majaslapa" className="service-link">Apskatīt risinājumu <span aria-hidden="true">→</span></a>
+                <a href="/pakalpojumi/uznemuma-majaslapa" className="service-link">Apskatīt pakalpojumu <span aria-hidden="true">→</span></a>
               </div>
             </article>
 
@@ -125,9 +125,9 @@ export default function Home() {
               </div>
 
               <div className="service-card-body">
-                <p className="service-kicker">Esošai mājaslapai</p>
+                <p className="service-kicker">Ja mājaslapa jau ir</p>
                 <h3>Mājaslapas uzlabošana</h3>
-                <p>Skaidrāka struktūra, modernāks dizains un labāks klienta ceļš esošai lapai</p>
+                <p>Uzlabojam esošās mājaslapas dizainu, struktūru un lietošanas ērtumu.</p>
 
                 <a href="/pakalpojumi/majaslapas-uzlabosana" className="service-link">Apskatīt pakalpojumu <span aria-hidden="true">→</span></a>
               </div>
