@@ -183,7 +183,7 @@ export default function Home() {
                   <span>UX / ātrums</span>
                 </div>
 
-                <a href="#contact" className="service-link">Uzlabot esošo lapu <span aria-hidden="true">→</span></a>
+                <a href="/pakalpojumi/majaslapas-uzlabosana" className="service-link">Uzlabot esošo lapu <span aria-hidden="true">→</span></a>
               </div>
             </article>
           </div>
