@@ -175,11 +175,10 @@
   display:grid;
   grid-template-columns:minmax(0,.86fr) minmax(520px,1.14fr);
   gap:96px;
-  align-items:start;
+  align-items:center;
 }
 .value-copy-side{
-  position:sticky;
-  top:124px;
+  position:relative;
   min-width:0;
 }
 .value-copy-side .section-label{
@@ -261,10 +260,6 @@ html[data-theme="light"] .value-principle-mark{
   .value-layout{
     grid-template-columns:minmax(0,.9fr) minmax(460px,1.1fr);
     gap:58px;
-  }
-  .value-copy-side{
-    position:relative;
-    top:auto;
   }
 }
 @media(max-width:900px){
