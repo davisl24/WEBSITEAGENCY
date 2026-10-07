@@ -28,17 +28,17 @@ export default function ProcessFlow() {
     <section className="process-section" id="process" aria-labelledby="process-title">
       <div className="process-inner">
         <div className="process-head">
-          <RevealOnView>
+          <RevealOnView className="process-eyebrow">
             <p className="section-label">Process</p>
           </RevealOnView>
 
-          <RevealOnView className="line-mask-reveal" delay={60}>
+          <RevealOnView className="line-mask-reveal process-heading" delay={60}>
             <h2 id="process-title" className="service-line-stack">
               <span className="service-reveal-line"><span>No idejas līdz live</span></span>
             </h2>
           </RevealOnView>
 
-          <RevealOnView delay={120}>
+          <RevealOnView className="process-summary" delay={120}>
             <p className="process-intro">
               Vispirms saprotam, ko lapai jāpanāk — tikai tad ķeramies pie dizaina un izstrādes
             </p>
