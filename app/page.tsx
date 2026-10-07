@@ -3,6 +3,7 @@ import heroBg from "./assets/images/andrew-kliatskyi-k7XTD-HCZAw-unsplash.jpg";
 import ValueShowcase from "./components/ValueShowcase";
 import SmoothScroll from "./components/SmoothScroll";
 import ProcessFlow from "./components/ProcessFlow";
+import RevealOnView from "./components/RevealOnView";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
           <a className="brand" href="/" aria-label="Sākumlapa">Kestrel</a>
           <nav className="site-nav" aria-label="Galvenā navigācija">
             <a href="#work">Darbi</a>
+            <a href="#services">Pakalpojumi</a>
             <a href="#process">Process</a>
             <a href="/par-mums">Par mums</a>
             <a className="header-cta" href="/kontakti">Sazināties</a>
@@ -81,7 +83,7 @@ export default function Home() {
 
       <ValueShowcase />
 
-      <section className="services-section" aria-labelledby="services-title">
+      <section className="services-section" id="services" aria-labelledby="services-title">
         <div className="services-inner">
           <div className="services-head">
             <p className="section-label">Pakalpojumi</p>
@@ -191,6 +193,25 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="home-about-section" aria-labelledby="home-about-title">
+        <div className="home-about-inner">
+          <RevealOnView className="home-about-copy">
+            <p className="section-label">Par Kestrel</p>
+            <h2 id="home-about-title">Mājaslapas ar domu</h2>
+            <p>
+              Skaidrība pirms efektiem. Veidojam tikai to, kas palīdz cilvēkam
+              saprast piedāvājumu un nonākt līdz nākamajam solim.
+            </p>
+          </RevealOnView>
+
+          <RevealOnView className="home-about-action" delay={120}>
+            <a className="text-link" href="/par-mums">
+              Kā mēs domājam <span aria-hidden="true">→</span>
+            </a>
+          </RevealOnView>
+        </div>
+      </section>
+
       <ProcessFlow />
 
       <section className="call-section" aria-labelledby="call-title">
@@ -263,6 +284,7 @@ export default function Home() {
               <div>
                 <span>Navigācija</span>
                 <a href="#work">Darbi</a>
+                <a href="#services">Pakalpojumi</a>
                 <a href="#process">Process</a>
                 <a href="/par-mums">Par mums</a>
                 <a href="/kontakti">Sazināties</a>
