@@ -21,23 +21,31 @@ export default function ValueShowcase() {
 
           <RevealOnView className="value-showcase" >
             <div className="value-showcase-visual" aria-hidden="true">
-              <div className="value-showcase-meta"><span>KESTREL PIEEJA</span><span>01 / 03</span></div>
-              <div className="value-showcase-window">
-                <div className="value-showcase-browser-top"><i/><i/><i/><span/></div>
-                <div className="value-showcase-browser-content">
-                  <div className="value-showcase-site-copy">
-                    <span className="value-showcase-site-kicker"/>
-                    <span className="value-showcase-site-title"/>
-                    <span className="value-showcase-site-description"/>
-                    <span className="value-showcase-site-description short"/>
-                    <span className="value-showcase-site-button"/>
+              <div className="value-showcase-meta"><span>KESTREL / PROJEKTA PĀRSKATS</span><span>PIEMĒRS</span></div>
+              <div className="value-brief">
+                <div className="value-brief-goal">
+                  <span className="value-brief-label">MĒRĶIS</span>
+                  <strong>Vairāk klientu pieteikumu</strong>
+                  <span className="value-brief-target" aria-hidden="true">◎</span>
+                </div>
+                <div className="value-brief-details">
+                  <div>
+                    <span className="value-brief-label">RISINĀJUMS</span>
+                    <strong>Landing lapa</strong>
+                    <span>Bez liekām funkcijām</span>
                   </div>
-                  <div className="value-showcase-site-art">
-                    <span/><span/><span/>
+                  <div>
+                    <span className="value-brief-label">DARBA APJOMS</span>
+                    <strong>Skaidri definēts</strong>
+                    <span>Vienojamies pirms izstrādes</span>
                   </div>
                 </div>
+                <div className="value-brief-preview">
+                  <span className="value-brief-label">VIZUĀLAIS VIRZIENS</span>
+                  <div className="value-brief-preview-main" aria-hidden="true"><i/><i/></div>
+                  <div className="value-brief-preview-line" aria-hidden="true" />
+                </div>
               </div>
-              <div className="value-showcase-caption"><span className="value-showcase-caption-dot"/>Skaidrs virziens pirms izstrādes</div>
             </div>
             <div className="value-showcase-benefits">
               {benefits.map((benefit) => (
