@@ -4705,3 +4705,54 @@ html[data-theme="light"] .service-page-footer-bottom{
       linear-gradient(180deg,rgba(247,244,237,.16) 0%,rgba(243,240,233,.78) 72%,rgba(243,240,233,.94) 100%);
   }
 }
+
+
+/* Light mode contrast QA */
+html[data-theme="light"] .preview-note p,
+html[data-theme="light"] .service-section-head p,
+html[data-theme="light"] .service-use-row p,
+html[data-theme="light"] .service-include-row p,
+html[data-theme="light"] .service-process-row p,
+html[data-theme="light"] .service-fit-head>p:last-child,
+html[data-theme="light"] .service-includes-intro>p:last-child,
+html[data-theme="light"] .service-page-cta p,
+html[data-theme="light"] .company-map-link small,
+html[data-theme="light"] .upgrade-compare-label{
+  color:rgba(23,23,23,.56);
+}
+
+html[data-theme="light"] .service-fit-statement,
+html[data-theme="light"] .service-fit-statement .service-line-stack{
+  color:#171717;
+}
+
+html[data-theme="light"] .about-plan-arrow,
+html[data-theme="light"] .about-focus-arrow{
+  color:rgba(23,23,23,.34);
+}
+
+html[data-theme="light"] .process-step.is-active .process-stage::before{
+  background:rgba(23,23,23,.62);
+}
+
+html[data-theme="light"] .service-page-cta .button-primary{
+  background:#171717;
+  color:#f7f4ed;
+}
+
+html[data-theme="light"] .service-page-footer,
+html[data-theme="light"] .service-page-footer-bottom{
+  color:rgba(23,23,23,.42);
+}
+
+/* Keep reveal text fully visible after animation */
+.service-line-stack{
+  overflow:visible;
+}
+.service-reveal-line{
+  overflow:hidden;
+  padding-top:.04em;
+  padding-bottom:.18em;
+  margin-top:-.04em;
+  margin-bottom:-.09em;
+}
