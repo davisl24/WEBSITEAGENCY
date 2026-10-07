@@ -14,6 +14,7 @@ export default function AboutPage() {
         <a className="brand" href="/" aria-label="Sākumlapa">Kestrel</a>
         <nav className="service-page-nav" aria-label="Galvenā navigācija">
           <a href="/#work">Darbi</a>
+          <a href="/#services">Pakalpojumi</a>
           <a href="/#process">Process</a>
           <a href="/par-mums" aria-current="page">Par mums</a>
           <a className="header-cta" href="/kontakti">Sazināties</a>
@@ -198,8 +199,16 @@ export default function AboutPage() {
       </section>
 
       <footer className="service-page-footer">
-        <span>Kestrel, SIA · Reģ. nr. 40203559349</span>
-        <span>© 2026</span>
+        <nav className="service-page-footer-nav" aria-label="Lapas navigācija">
+          <a href="/">Sākums</a>
+          <a href="/#services">Pakalpojumi</a>
+          <a href="/par-mums">Par mums</a>
+          <a href="/kontakti">Kontakti</a>
+        </nav>
+        <div className="service-page-footer-bottom">
+          <span>Kestrel, SIA · Reģ. nr. 40203559349</span>
+          <span>© 2026</span>
+        </div>
       </footer>
     </main>
   );
