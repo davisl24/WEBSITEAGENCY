@@ -259,12 +259,23 @@ export default function LandingPage() {
       </section>
 
       <section className="service-page-cta">
-        <h2>Vajag vienu skaidru lapu?</h2>
-        <p>
-          Atsūti īsu aprakstu par piedāvājumu, un pateiksim, kādu landing lapu
-          būtu jēga veidot.
-        </p>
-        <a className="button button-primary" href="/#contact">Pastāstīt par projektu</a>
+        <RevealOnView className="line-mask-reveal service-cta-title">
+          <h2 className="service-line-stack">
+            <span className="service-reveal-line"><span>Vajag vienu skaidru</span></span>
+            <span className="service-reveal-line"><span>lapu?</span></span>
+          </h2>
+        </RevealOnView>
+
+        <RevealOnView className="service-cta-copy" delay={120}>
+          <p>
+            Atsūti īsu aprakstu par piedāvājumu, un pateiksim, kādu landing lapu
+            būtu jēga veidot.
+          </p>
+        </RevealOnView>
+
+        <RevealOnView className="service-cta-action" delay={220}>
+          <a className="button button-primary" href="/#contact">Pastāstīt par projektu</a>
+        </RevealOnView>
       </section>
 
       <footer className="service-page-footer">
