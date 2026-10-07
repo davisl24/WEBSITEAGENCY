@@ -36,53 +36,13 @@ export default function Home() {
               ātrāk saprastu piedāvājumu un pieteiktos
             </p>
             <div className="hero-actions">
-              <a className="button button-primary" href="#contact">Saņemt bezmaksas ideju</a>
-              <a className="text-link" href="#work">Apskatīt, ko veidojam <span aria-hidden="true">↘</span></a>
+              <a className="button button-primary" href="#contact">Pieteikt sarunu</a>
+              <a className="text-link" href="#services">Skatīt pakalpojumus <span aria-hidden="true">↘</span></a>
             </div>
           </div>
         </div>
 
       </section>
-
-      <section className="work-section" id="work" aria-labelledby="work-title">
-        <div className="work-inner">
-          <div className="work-heading">
-            <p className="section-label">Atlasīti projekti</p>
-            <h2 id="work-title">Ko mēs veidojam</h2>
-            <p className="section-intro">
-              Veidojam mājaslapas, kas palīdz klientam ātri saprast piedāvājumu un rīkoties
-            </p>
-          </div>
-
-          <div className="work-list">
-            <article className="work-item">
-              <div className="work-visual work-visual-one" aria-label="Pirmā projekta vizuāļa vieta">
-                <span>Project visual 01</span>
-              </div>
-              <div className="work-meta">
-                <div>
-                  <h3>Demo projekts</h3>
-                </div>
-                <p>Pakalpojumu uzņēmuma mājaslapa</p>
-              </div>
-            </article>
-
-            <article className="work-item work-item-offset">
-              <div className="work-visual work-visual-two" aria-label="Otrā projekta vizuāļa vieta">
-                <span>Project visual 02</span>
-              </div>
-              <div className="work-meta">
-                <div>
-                  <h3>Demo projekts</h3>
-                </div>
-                <p>Lokāla uzņēmuma mājaslapa</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <ValueShowcase />
 
       <section className="services-section" id="services" aria-labelledby="services-title">
         <div className="services-inner">
@@ -194,6 +154,11 @@ export default function Home() {
         </div>
       </section>
 
+
+      <ValueShowcase />
+
+      <ProcessFlow />
+
       <section className="home-about-section" aria-labelledby="home-about-title">
         <div className="home-about-inner">
           <RevealOnView className="home-about-copy">
@@ -212,8 +177,6 @@ export default function Home() {
           </RevealOnView>
         </div>
       </section>
-
-      <ProcessFlow />
 
       <section className="call-section" aria-labelledby="call-title">
         <div className="call-inner">
