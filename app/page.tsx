@@ -19,6 +19,7 @@ export default function Home() {
           <nav className="site-nav" aria-label="Galvenā navigācija">
             <a href="#work">Darbi</a>
             <a href="#process">Process</a>
+            <a href="/par-mums">Par mums</a>
             <a className="header-cta" href="#contact">Sazināties</a>
           </nav>
         </header>
@@ -263,6 +264,7 @@ export default function Home() {
                 <span>Navigācija</span>
                 <a href="#work">Darbi</a>
                 <a href="#process">Process</a>
+                <a href="/par-mums">Par mums</a>
                 <a href="#contact">Sazināties</a>
               </div>
               <div>
