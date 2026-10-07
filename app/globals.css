@@ -6351,3 +6351,23 @@ html[data-theme="light"] .value-showcase-benefit p{color:rgba(23,23,23,.62)}
 }
 .value-section .value-about-link:focus-visible{outline:2px solid currentColor;outline-offset:6px}
 html[data-theme="light"] .value-section .value-about-link{color:#171717;border-color:rgba(23,23,23,.4)}
+
+/* Process steps: compact meaningful symbols without additional cards */
+.process-section .process-step-symbol{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:34px;
+  height:34px;
+  margin:14px 0 18px;
+  color:rgba(244,241,234,.78);
+}
+.process-section .process-step-symbol svg{
+  width:30px;
+  height:30px;
+  stroke:currentColor;
+  stroke-width:1.6;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+html[data-theme="light"] .process-section .process-step-symbol{color:rgba(23,23,23,.7)}
