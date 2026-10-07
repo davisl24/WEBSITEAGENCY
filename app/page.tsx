@@ -50,7 +50,7 @@ export default function Home() {
             <p className="section-label">Pakalpojumi</p>
             <h2 id="services-title">Izvēlies sev piemērotāko</h2>
             <p className="services-intro">
-              Vai vajag vienu lapu, pilnu uzņēmuma mājaslapu vai uzlabot esošo? Izvēlies savu situāciju.
+              Vai vajag vienu lapu, pilnu uzņēmuma mājaslapu vai uzlabot esošo? Izvēlies savu situāciju
             </p>
           </div>
 
@@ -70,7 +70,7 @@ export default function Home() {
               <div className="service-card-body">
                 <p className="service-kicker">Ja jāizceļ viens piedāvājums</p>
                 <h3>Landing lapa</h3>
-                <p>Viena lapa konkrētam pakalpojumam, produktam vai kampaņai.</p>
+                <p>Viena lapa konkrētam pakalpojumam, produktam vai kampaņai</p>
 
                 <a href="/pakalpojumi/landing-lapa" className="service-link">Apskatīt pakalpojumu <span aria-hidden="true">→</span></a>
               </div>
@@ -97,7 +97,7 @@ export default function Home() {
               <div className="service-card-body">
                 <p className="service-kicker">Ja uzņēmumam vajag vairākas lapas</p>
                 <h3>Uzņēmuma mājaslapa</h3>
-                <p>Vairākas lapas, kur vienuviet parādīt pakalpojumus un informāciju par uzņēmumu.</p>
+                <p>Vairākas lapas, kur vienuviet parādīt pakalpojumus un informāciju par uzņēmumu</p>
 
                 <a href="/pakalpojumi/uznemuma-majaslapa" className="service-link">Apskatīt pakalpojumu <span aria-hidden="true">→</span></a>
               </div>
@@ -127,7 +127,7 @@ export default function Home() {
               <div className="service-card-body">
                 <p className="service-kicker">Ja mājaslapa jau ir</p>
                 <h3>Mājaslapas uzlabošana</h3>
-                <p>Uzlabojam esošās mājaslapas dizainu, struktūru un lietošanas ērtumu.</p>
+                <p>Uzlabojam esošās mājaslapas dizainu, struktūru un lietošanas ērtumu</p>
 
                 <a href="/pakalpojumi/majaslapas-uzlabosana" className="service-link">Apskatīt pakalpojumu <span aria-hidden="true">→</span></a>
               </div>
@@ -148,7 +148,7 @@ export default function Home() {
             <h2 id="home-about-title">Iepazīsti Kestrel</h2>
             <p>
               Aiz katras mājaslapas ir cilvēki, kuri uzklausa, palīdz sakārtot idejas
-              un kopā ar tevi pieņem skaidrus lēmumus.
+              un kopā ar tevi pieņem skaidrus lēmumus
             </p>
           </RevealOnView>
 
