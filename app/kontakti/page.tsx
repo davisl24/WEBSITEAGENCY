@@ -1,3 +1,4 @@
+import LanguageSwitcher from "../components/LanguageSwitcher";
 import type { Metadata } from "next";
 import RevealOnView from "../components/RevealOnView";
 import ThemeToggle from "../components/ThemeToggle";
@@ -18,6 +19,7 @@ export default function ContactPage() {
             <ServicesDropdown />
             <a href="/par-mums">Par mums</a>
             <ThemeToggle />
+            <LanguageSwitcher />
             <a className="header-cta" href="/kontakti" aria-current="page">Pieteikt sarunu</a>
           </nav>
       </header>
