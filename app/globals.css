@@ -6991,3 +6991,29 @@ html[data-theme="light"] .theme-segmented-button[aria-pressed="true"]{
   .theme-segmented-button svg{width:17px;height:17px}
   .site-nav,.service-page-nav{gap:10px}
 }
+
+/* Service delivery refinement: compact and quiet card hierarchy */
+.service-page .service-delivery-item,
+.service-page .service-delivery-item:nth-child(odd),
+.service-page .service-delivery-item:nth-child(even){
+  min-height:176px;
+  padding:22px 25px;
+  border-color:rgba(244,241,234,.12);
+}
+.service-page .service-delivery-item-top{padding-bottom:20px}
+.service-page .service-delivery-icon{
+  width:36px;height:36px;
+  border-radius:10px;
+  background:transparent;
+  border-color:rgba(244,241,234,.12);
+}
+.service-page .service-delivery-item h3{font-size:clamp(20px,1.55vw,25px)}
+.service-page .service-delivery-item p{font-size:14px;margin-top:10px;line-height:1.6}
+html[data-theme="light"] .service-page .service-delivery-item{border-color:rgba(23,23,23,.115)}
+html[data-theme="light"] .service-page .service-delivery-icon{background:transparent;border-color:rgba(23,23,23,.13)}
+@media(max-width:760px){
+ .service-page .service-delivery-item,
+ .service-page .service-delivery-item:nth-child(odd),
+ .service-page .service-delivery-item:nth-child(even){min-height:0;padding:20px}
+ .service-page .service-delivery-item-top{padding-bottom:15px}
+}
