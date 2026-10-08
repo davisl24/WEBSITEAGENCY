@@ -187,6 +187,20 @@ export default function CompanyWebsitePage() {
         </div>
       </section>
 
+      <ServiceDelivery
+        compact
+        id="delivery-title"
+        title="No struktūras līdz live"
+        description="Uzņēmuma lapai vajag ne tikai vairāk sadaļu, bet vienotu sistēmu, kas strādā desktopā un telefonā."
+        items={[
+          { title: "Lapas arhitektūra", text: "Klients viegli atrod pakalpojumus, informāciju par uzņēmumu un kontaktus." },
+          { title: "Pielāgots dizains", text: "Mājaslapa izskatās vienoti un atspoguļo uzņēmuma identitāti." },
+          { title: "Kontakti un integrācijas", text: "Klientam ir vienkāršāk sazināties vai pieteikties, izmantojot projektam vajadzīgās integrācijas." },
+          { title: "Mobile, SEO un palaišana", text: "Lapa ir lietojama telefonā, ar sakārtotiem SEO pamatiem un pārbaudīta pirms palaišanas." }
+        ]}
+      />
+
+
       <section className="service-page-section service-process-section" aria-labelledby="company-process-title">
         <div className="service-process-intro">
           <RevealOnView className="service-process-kicker">
@@ -229,17 +243,6 @@ export default function CompanyWebsitePage() {
         </div>
       </section>
 
-      <ServiceDelivery
-        id="delivery-title"
-        title="No struktūras līdz live"
-        description="Uzņēmuma lapai vajag ne tikai vairāk sadaļu, bet vienotu sistēmu, kas strādā desktopā un telefonā."
-        items={[
-          { title: "Lapas arhitektūra", text: "Klients viegli atrod pakalpojumus, informāciju par uzņēmumu un kontaktus." },
-          { title: "Pielāgots dizains", text: "Mājaslapa izskatās vienoti un atspoguļo uzņēmuma identitāti." },
-          { title: "Kontakti un integrācijas", text: "Klientam ir vienkāršāk sazināties vai pieteikties, izmantojot projektam vajadzīgās integrācijas." },
-          { title: "Mobile, SEO un palaišana", text: "Lapa ir lietojama telefonā, ar sakārtotiem SEO pamatiem un pārbaudīta pirms palaišanas." }
-        ]}
-      />
 
       <section className="service-page-cta">
         <RevealOnView className="line-mask-reveal service-cta-title">
