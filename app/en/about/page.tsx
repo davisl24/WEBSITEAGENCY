@@ -1,14 +1,10 @@
+import { localizedMetadata } from "../../lib/localizedSeo";
 import LanguageSwitcher from "../../components/LanguageSwitcher";
-import type { Metadata } from "next";
 import RevealOnView from "../../components/RevealOnView";
 import ThemeToggle from "../../components/ThemeToggle";
 import ServicesDropdown from "../../components/ServicesDropdown";
 
-export const metadata: Metadata = {
-  title: "About us | Kestrel",
-  description:
-    "Kestrel builds clear, fast websites for small businesses, with a focus on the offer and customer journey.",
-};
+export const metadata = localizedMetadata("en","about");
 
 export default function AboutPage() {
   return (
