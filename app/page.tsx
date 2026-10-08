@@ -9,7 +9,7 @@ import ServicesDropdown from "./components/ServicesDropdown";
 
 export default function Home() {
   return (
-    <main>
+    <main id="top">
       <section className="hero">
         <div className="hero-media" aria-hidden="true">
           <Image src={heroBg} alt="" fill priority className="hero-media-image hero-media-image-dark" />
@@ -170,15 +170,16 @@ export default function Home() {
                 <a href="/kontakti">Kontakti</a>
               </div>
               <div>
-                <span>Kontakti</span>
-                <a href="/kontakti">Pieteikt projektu</a>
+                <span>Saziņa</span>
+                <a href="/kontakti">Pieteikt sarunu <span aria-hidden="true">↗</span></a>
               </div>
             </div>
           </div>
 
+          <div className="footer-wordmark" aria-hidden="true">Kestrel</div>
           <div className="footer-bottom">
-            <span>Kestrel</span>
-            <span>© 2026</span>
+            <span>© 2026 Kestrel</span>
+            <a href="#top" className="footer-top-link">Atpakaļ uz augšu ↑</a>
           </div>
         </div>
       </footer>
