@@ -7357,35 +7357,48 @@ html[data-theme="light"] .value-contrast-transition{--contrast-surround:#f3f0e9}
 }
 
 
-/* Explicit service-card colors in both themes: keep center card charcoal. */
-html[data-theme="light"] .services-section .service-card:nth-child(2),
-html[data-theme="dark"] .services-section .service-card:nth-child(2){
-  background:#202020;
-  border-color:rgba(255,255,255,.14);
-  color:#f4f1ea;
+/* Homepage services: theme-aware accent. Layout and illustrations unchanged. */
+.services-section .service-card{
+  transition:background-color .25s ease,border-color .25s ease,color .25s ease;
 }
+/* LIGHT: ivory / charcoal / warm beige */
+html[data-theme="light"] .services-section .service-card:nth-child(1){background:#f5f2ed;color:#171717}
+html[data-theme="light"] .services-section .service-card:nth-child(2){background:#202020;color:#f4f1ea;border-color:rgba(255,255,255,.14)}
+html[data-theme="light"] .services-section .service-card:nth-child(3){background:#e5e0d7;color:#171717}
+/* DARK: charcoal / ivory / softer charcoal */
+html[data-theme="dark"] .services-section .service-card:nth-child(1){background:#202020;color:#f4f1ea;border-color:rgba(255,255,255,.14)}
+html[data-theme="dark"] .services-section .service-card:nth-child(2){background:#eeeae3;color:#171717;border-color:rgba(23,23,23,.12)}
+html[data-theme="dark"] .services-section .service-card:nth-child(3){background:#2e2c2a;color:#f4f1ea;border-color:rgba(255,255,255,.14)}
+/* Inherit foreground intentionally from each card, regardless of global light styles. */
+html[data-theme="dark"] .services-section .service-card:nth-child(1) .service-card-body,
+html[data-theme="dark"] .services-section .service-card:nth-child(1) .service-card-body h3,
+html[data-theme="dark"] .services-section .service-card:nth-child(1) .service-link,
+html[data-theme="dark"] .services-section .service-card:nth-child(3) .service-card-body,
+html[data-theme="dark"] .services-section .service-card:nth-child(3) .service-card-body h3,
+html[data-theme="dark"] .services-section .service-card:nth-child(3) .service-link,
 html[data-theme="light"] .services-section .service-card:nth-child(2) .service-card-body,
 html[data-theme="light"] .services-section .service-card:nth-child(2) .service-card-body h3,
-html[data-theme="light"] .services-section .service-card:nth-child(2) .service-link,
-html[data-theme="dark"] .services-section .service-card:nth-child(2) .service-card-body h3{
-  color:#f4f1ea;
-}
-html[data-theme="light"] .services-section .service-card:nth-child(2) .service-kicker,
-html[data-theme="dark"] .services-section .service-card:nth-child(2) .service-kicker{
-  color:rgba(244,241,234,.72);
-}
-html[data-theme="light"] .services-section .service-card:nth-child(2) .service-card-body>p:not(.service-kicker),
-html[data-theme="dark"] .services-section .service-card:nth-child(2) .service-card-body>p:not(.service-kicker){
-  color:rgba(244,241,234,.7);
-}
-html[data-theme="light"] .services-section .service-card:nth-child(2) .service-link,
-html[data-theme="dark"] .services-section .service-card:nth-child(2) .service-link{
-  border-top-color:rgba(244,241,234,.18);
-}
+html[data-theme="light"] .services-section .service-card:nth-child(2) .service-link{color:#f4f1ea}
+html[data-theme="dark"] .services-section .service-card:nth-child(2) .service-card-body,
+html[data-theme="dark"] .services-section .service-card:nth-child(2) .service-card-body h3,
+html[data-theme="dark"] .services-section .service-card:nth-child(2) .service-link{color:#171717}
+html[data-theme="dark"] .services-section .service-card:is(:nth-child(1),:nth-child(3)) .service-kicker,
+html[data-theme="light"] .services-section .service-card:nth-child(2) .service-kicker{color:rgba(244,241,234,.7)}
+html[data-theme="dark"] .services-section .service-card:nth-child(2) .service-kicker{color:rgba(23,23,23,.65)}
+html[data-theme="dark"] .services-section .service-card:is(:nth-child(1),:nth-child(3)) .service-card-body>p:not(.service-kicker),
+html[data-theme="light"] .services-section .service-card:nth-child(2) .service-card-body>p:not(.service-kicker){color:rgba(244,241,234,.72)}
+html[data-theme="dark"] .services-section .service-card:nth-child(2) .service-card-body>p:not(.service-kicker){color:rgba(23,23,23,.68)}
+html[data-theme="dark"] .services-section .service-card:is(:nth-child(1),:nth-child(3)) .service-link,
+html[data-theme="light"] .services-section .service-card:nth-child(2) .service-link{border-top-color:rgba(244,241,234,.2)}
+html[data-theme="dark"] .services-section .service-card:nth-child(2) .service-link{border-top-color:rgba(23,23,23,.18)}
+html[data-theme="dark"] .services-section .service-card:nth-child(2) .service-visual{border-color:rgba(23,23,23,.12)}
+html[data-theme="dark"] .services-section .service-card:is(:nth-child(1),:nth-child(3)) .service-visual{border-color:rgba(244,241,234,.13)}
 @media(hover:hover) and (pointer:fine){
- html[data-theme="light"] .services-section .service-card:nth-child(2):hover,
- html[data-theme="dark"] .services-section .service-card:nth-child(2):hover{
-   background:#202020;
-   border-color:rgba(255,255,255,.3);
- }
+  html[data-theme="light"] .services-section .service-card:nth-child(1):hover{background:#f5f2ed;border-color:rgba(23,23,23,.24)}
+  html[data-theme="light"] .services-section .service-card:nth-child(2):hover{background:#202020;border-color:rgba(255,255,255,.32)}
+  html[data-theme="light"] .services-section .service-card:nth-child(3):hover{background:#e5e0d7;border-color:rgba(23,23,23,.24)}
+  html[data-theme="dark"] .services-section .service-card:nth-child(1):hover{background:#202020;border-color:rgba(255,255,255,.32)}
+  html[data-theme="dark"] .services-section .service-card:nth-child(2):hover{background:#eeeae3;border-color:rgba(23,23,23,.32)}
+  html[data-theme="dark"] .services-section .service-card:nth-child(3):hover{background:#2e2c2a;border-color:rgba(255,255,255,.32)}
 }
+@media(prefers-reduced-motion:reduce){.services-section .service-card{transition:none}}
