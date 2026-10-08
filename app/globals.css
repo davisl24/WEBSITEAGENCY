@@ -7459,3 +7459,21 @@ main#top > .home-about-section{border-top:0;border-bottom:0}
 @media(max-width:760px){
   .landing-page > .service-page-section{padding-top:68px}
 }
+
+
+/* Shared visual rhythm for the three Kestrel service-detail pages. */
+.service-page:is(.landing-page,.company-page,.upgrade-page) > .service-page-section{
+  border-top:0;
+  padding-top:88px;
+}
+.service-page:is(.landing-page,.company-page,.upgrade-page) > .service-page-footer{
+  border-top:0;
+}
+.service-page:is(.landing-page,.company-page,.upgrade-page) > .service-page-footer .service-page-footer-bottom{
+  border-top:0;
+}
+@media(max-width:760px){
+  .service-page:is(.landing-page,.company-page,.upgrade-page) > .service-page-section{
+    padding-top:68px;
+  }
+}
