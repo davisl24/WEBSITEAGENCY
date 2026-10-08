@@ -69,3 +69,9 @@ export function localizedMetadata(lang: Exclude<Language,"lv">,page:PageKey): Me
     twitter:{card:"summary",title:copy.title,description:copy.description}
   };
 }
+
+export function lvMetadataAlternates(page: PageKey): Metadata["alternates"] {
+  const base=origin();
+  if (!base) return undefined;
+  return {...(languageAlternates(page)??{}),canonical:new URL(localizedRoutes[page].lv,base).toString()};
+}
