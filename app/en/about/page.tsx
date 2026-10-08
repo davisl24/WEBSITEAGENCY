@@ -13,9 +13,9 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <main className="service-page about-page">
-      <header className="service-page-header" aria-label="Galvenā navigācija">
-        <a className="brand" href="/en" aria-label="Sākumlapa">Kestrel</a>
-        <nav className="service-page-nav" aria-label="Galvenā navigācija">
+      <header className="service-page-header" aria-label="Main navigation">
+        <a className="brand" href="/en" aria-label="Home">Kestrel</a>
+        <nav className="service-page-nav" aria-label="Main navigation">
             <ServicesDropdown />
             <a href="/en/about" aria-current="page">About us</a>
             <ThemeToggle />
@@ -29,8 +29,7 @@ export default function AboutPage() {
           <p className="service-page-kicker">About Kestrel</p>
           <h1>Websites built with purpose</h1>
           <p>
-            Veidojam mājaslapas mazajiem uzņēmumiem tā, lai cilvēkam būtu viegli
-            saprast piedāvājumu, uzticēties un izdarīt nākamo soli.
+            We create websites that make it easier for small businesses to explain their offer, earn trust and turn visits into enquiries.
           </p>
           <a className="button button-primary" href="/en/contact">Tell us about your project</a>
         </div>
@@ -77,9 +76,7 @@ export default function AboutPage() {
         <div className="about-company-layout">
           <RevealOnView className="about-company-main">
             <p>
-              Kestrel ir web izstrādes komanda Latvijā. Strādājam ar mazajiem
-              uzņēmumiem, kuriem vajag skaidru, ātru un profesionālu mājaslapu,
-              nevis sarežģītu digitālu projektu bez konkrēta mērķa.
+              Kestrel is a web development team based in Latvia. We help small businesses build clear, fast websites with a purpose — not complicated projects that add no value.
             </p>
           </RevealOnView>
 
@@ -110,8 +107,7 @@ export default function AboutPage() {
 
           <RevealOnView delay={150}>
             <p className="about-thinking-copy">
-              Labs dizains nav tikai skaists ekrāns. Tam jāpalīdz cilvēkam ātri saprast,
-              kur viņš ir, ko saņems un ko darīt tālāk.
+              Good design isn't just a nice-looking screen. It helps visitors quickly understand the offer and what to do next.
             </p>
           </RevealOnView>
         </div>
@@ -158,8 +154,7 @@ export default function AboutPage() {
 
           <RevealOnView delay={150}>
             <p className="about-focus-copy">
-              Mēs labāk noņemam vienu lieku bloku nekā pievienojam trīs jaunus.
-              Katram elementam jābūt ar iemeslu.
+              We'd rather remove one unnecessary section than add three new ones. Every element should have a reason to exist.
             </p>
           </RevealOnView>
         </div>
@@ -204,15 +199,13 @@ export default function AboutPage() {
         <div className="about-working-copy">
           <RevealOnView delay={0}>
             <p>
-              Mēs negribam sarežģīt procesu ar liekām prezentācijām un tehniskiem vārdiem
-              tikai tāpēc, lai tas izklausītos dārgāk.
+              We don't use needless presentations or technical jargon to make simple work seem complicated.
             </p>
           </RevealOnView>
 
           <RevealOnView delay={120}>
             <p>
-              Ja kaut ko nav jēgas būvēt, pasakām. Ja ir skaidrs nākamais solis,
-              ejam uz izpildi un pabeidzam to pirms pievienojam nākamo.
+              If something isn't worth building, we'll tell you. When the next step is clear, we focus on finishing it.
             </p>
           </RevealOnView>
         </div>
@@ -238,7 +231,7 @@ export default function AboutPage() {
       </section>
 
       <footer className="service-page-footer">
-        <nav className="service-page-footer-nav" aria-label="Lapas navigācija">
+        <nav className="service-page-footer-nav" aria-label="Page navigation">
           <a href="/en">Home</a>
           <a href="/en/#services">Services</a>
           <a href="/en/about">About us</a>
