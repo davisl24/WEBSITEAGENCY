@@ -14,40 +14,32 @@ export default function ValueShowcase() {
             <a className="value-about-link" href="/par-mums">Vairāk par mums <span aria-hidden="true">→</span></a>
           </RevealOnView>
 
-          <RevealOnView className="value-showcase" >
-            <div className="value-showcase-visual">
-              <div className="value-showcase-meta"><span>KESTREL / PROJEKTA PĀRSKATS</span><span>PIEMĒRS</span></div>
-              <div className="value-brief">
-                <div className="value-brief-goal">
-                  <span className="value-brief-label">MĒRĶIS</span>
-                  <strong>Vairāk klientu pieteikumu</strong>
-                  <span className="value-brief-target" aria-hidden="true">◎</span>
+          <RevealOnView className="value-showcase">
+            <div className="value-contrast-showcase" aria-label="No sarežģītas struktūras līdz skaidram piedāvājumam">
+              <div className="value-contrast-panel value-contrast-before">
+                <div className="value-contrast-top"><span>PAR DAUDZ</span><span>01 / PIRMS</span></div>
+                <div className="value-contrast-wireframe" aria-hidden="true">
+                  <div className="value-contrast-bar long" />
+                  <div className="value-contrast-bar medium" />
+                  <div className="value-contrast-fragments"><i/><i/></div>
+                  <div className="value-contrast-bar long" />
+                  <div className="value-contrast-fragments"><i/><i/></div>
+                  <div className="value-contrast-bar short" />
                 </div>
-                <div className="value-brief-details">
-                  <div>
-                    <span className="value-brief-label">RISINĀJUMS</span>
-                    <strong>Landing lapa</strong>
-                    <span>Bez liekām funkcijām</span>
-                  </div>
-                  <div>
-                    <span className="value-brief-label">DARBA APJOMS</span>
-                    <strong>Skaidri definēts</strong>
-                    <span>Vienojamies pirms izstrādes</span>
-                  </div>
+                <p>Daudz informācijas. Nav skaidrs, ar ko sākt.</p>
+              </div>
+              <span className="value-contrast-transition" aria-hidden="true">→</span>
+              <div className="value-contrast-panel value-contrast-after">
+                <div className="value-contrast-top"><span>SKAIDRS</span><span>02 / PĒC</span></div>
+                <div className="value-contrast-simple" aria-hidden="true">
+                  <div className="value-contrast-line small"/>
+                  <div className="value-contrast-headline"/>
+                  <div className="value-contrast-line medium"/>
+                  <div className="value-contrast-button"/>
                 </div>
-                <div className="value-brief-preview">
-                  <span className="value-brief-label">VIZUĀLAIS VIRZIENS</span>
-                  <div className="value-brief-mini-site" aria-hidden="true">
-                    <div className="value-brief-mini-top"><i/><i/><i/><span/></div>
-                    <div className="value-brief-mini-body">
-                      <div className="value-brief-mini-copy"><b/><i/><i/><span/></div>
-                      <div className="value-brief-mini-art"/>
-                    </div>
-                  </div>
-                </div>
+                <p>Viens piedāvājums. Viens saprotams nākamais solis.</p>
               </div>
             </div>
-
           </RevealOnView>
         </div>
       </div>
