@@ -6,17 +6,17 @@ import ThemeToggle from "../../../components/ThemeToggle";
 import ServicesDropdown from "../../../components/ServicesDropdown";
 
 export const metadata: Metadata = {
-  title: "Сайт для бизнесаs izstrāde | Kestrel",
+  title: "Разработка сайтов для бизнеса | Kestrel",
   description:
-    "Сайт для бизнесаs ar skaidru struktūru, uzticamu pirmo iespaidu un ērtu ceļu līdz kontaktam.",
+    "Сайты для бизнеса с понятной структурой и простым способом связи.",
 };
 
 export default function CompanyWebsitePage() {
   return (
     <main className="service-page company-page">
-      <header className="service-page-header" aria-label="Galvenā navigācija">
+      <header className="service-page-header" aria-label="Главная навигация">
         <a className="brand" href="/ru" aria-label="Главная">Kestrel</a>
-        <nav className="service-page-nav" aria-label="Galvenā navigācija">
+        <nav className="service-page-nav" aria-label="Главная навигация">
             <ServicesDropdown />
             <a href="/ru/o-nas">О нас</a>
             <ThemeToggle />
@@ -30,8 +30,7 @@ export default function CompanyWebsitePage() {
           <p className="service-page-kicker">Сайт для бизнеса</p>
           <h1>Ваш бизнес — на одном понятном сайте</h1>
           <p className="service-page-lead">
-            Mājaslapa, kas palīdz klientam saprast, ko tu dari, kāpēc tev uzticēties
-            un kā ar tevi sazināties.
+            Сайт, который помогает клиентам понять ваш бизнес, довериться вам и связаться с вами.
           </p>
 
           <div className="service-page-actions">
@@ -133,7 +132,7 @@ export default function CompanyWebsitePage() {
           </RevealOnView>
         </div>
 
-        <div className="company-page-system" aria-label="Сайт для бизнесаs struktūras piemērs">
+        <div className="company-page-system" aria-label="Пример структуры сайта">
           <RevealOnView className="company-page-main">
             <div className="company-page-browser" aria-hidden="true">
               <div className="ui-browser-top"><span/><span/><span/></div>
@@ -211,7 +210,7 @@ export default function CompanyWebsitePage() {
           </RevealOnView>
         </div>
 
-        <div className="service-process-flow" aria-label="Сайт для бизнесаs izstrādes process">
+        <div className="service-process-flow" aria-label="Этапы разработки сайта">
           <RevealOnView className="service-process-step" delay={0}>
             <span className="service-process-name">Цель</span>
             <p>Что клиент должен понять и какое действие совершить.</p>
@@ -262,7 +261,7 @@ export default function CompanyWebsitePage() {
       </section>
 
       <footer className="service-page-footer">
-        <nav className="service-page-footer-nav" aria-label="Lapas navigācija">
+        <nav className="service-page-footer-nav" aria-label="Навигация">
           <a href="/ru">Главная</a>
           <a href="/ru/#services">Услуги</a>
           <a href="/ru/o-nas">О нас</a>
