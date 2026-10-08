@@ -1,5 +1,5 @@
-import { lvMetadataAlternates } from "lib/localizedSeo";
-import LanguageSwitcher from "components/LanguageSwitcher";
+import { lvMetadataAlternates } from "./lib/localizedSeo";
+import LanguageSwitcher from "./components/LanguageSwitcher";
 import Image from "next/image";
 import heroBg from "./assets/images/andrew-kliatskyi-k7XTD-HCZAw-unsplash.jpg";
 import heroBgLight from "./assets/images/balts_fons_optimizets.webp";
