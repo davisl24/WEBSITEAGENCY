@@ -131,40 +131,22 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <ServiceDelivery
-        compact
-        id="delivery-title"
-        title="Gatavs palaišanai"
-        description="Praktiskās lietas, kurām jābūt sakārtotām, lai landing lapa nav tikai skaists dizains."
-        items={[
-          { title: "Saturs un struktūra", text: "Klients ātrāk saprot, ko piedāvā un kur pieteikties." },
-          { title: "Forma vai CTA", text: "Apmeklētājam ir skaidrs un ērts ceļš līdz pieteikumam." },
-          { title: "Mobile un pārbaude", text: "Lapa ir ērti lietojama arī telefonā, un galvenās darbības ir pārbaudītas." },
-          { title: "SEO pamati", text: "Sakārtoti pamati, kas palīdz meklētājiem saprast lapas saturu." }
-        ]}
-      />
-
-      <section className="service-page-section service-includes-section" id="kas-ietilpst" aria-labelledby="includes-title">
+      <section className="service-page-section service-includes-section service-includes-merged" id="kas-ietilpst" aria-labelledby="includes-title">
         <div className="service-includes-intro">
           <RevealOnView className="service-includes-kicker">
             <p className="service-page-kicker">Ko saņem</p>
           </RevealOnView>
-
           <RevealOnView className="line-mask-reveal service-includes-title" delay={60}>
             <h2 id="includes-title" className="service-line-stack">
               <span className="service-reveal-line"><span>Viss vienā lapā</span></span>
             </h2>
           </RevealOnView>
-
           <RevealOnView className="service-includes-copy" delay={160}>
-            <p>
-              Nevis pieci atsevišķi punkti, bet viena sistēma, kur struktūra,
-              dizains un pieteikšanās ceļš strādā kopā.
-            </p>
+            <p>Nevis pieci atsevišķi punkti, bet viena sistēma, kur struktūra, dizains un pieteikšanās ceļš strādā kopā.</p>
           </RevealOnView>
         </div>
-
-        <div className="service-anatomy" aria-label="Landing lapas uzbūves piemērs">
+        <div className="service-merged-layout">
+          <div className="service-anatomy service-merged-anatomy" aria-label="Landing lapas uzbūves piemērs">
           <RevealOnView className="service-anatomy-browser anatomy-browser-reveal">
             <div aria-hidden="true">
               <div className="ui-browser-top"><span/><span/><span/></div>
@@ -189,44 +171,31 @@ export default function LandingPage() {
               </div>
             </div>
           </RevealOnView>
-
-          <RevealOnView className="service-anatomy-phone anatomy-phone-reveal" delay={180}>
-            <div aria-hidden="true">
-              <div className="service-anatomy-phone-top"/>
-              <span className="service-anatomy-phone-title"/>
-              <span className="service-anatomy-phone-copy"/>
-              <span className="service-anatomy-phone-cta"/>
-            </div>
-          </RevealOnView>
-
-          <RevealOnView className="service-anatomy-note note-structure anatomy-note-reveal" delay={80}>
-            <h3>Skaidra struktūra</h3>
-            <p>Saturs pareizā secībā, lai piedāvājums ir saprotams bez minēšanas.</p>
-          </RevealOnView>
-
-          <RevealOnView className="service-anatomy-note note-design anatomy-note-reveal" delay={160}>
-            <h3>Pielāgots dizains</h3>
-            <p>Vizuāls risinājums, kas izskatās pēc tava zīmola, nevis template.</p>
-          </RevealOnView>
-
-          <RevealOnView className="service-anatomy-note note-cta anatomy-note-reveal" delay={240}>
-            <h3>Forma un CTA</h3>
-            <p>Viens skaidrs nākamais solis bez liekiem šķēršļiem.</p>
-          </RevealOnView>
-
-          <RevealOnView className="service-anatomy-note note-mobile anatomy-note-reveal" delay={320}>
-            <h3>Mobilā versija</h3>
-            <p>Tas pats skaidrais ceļš arī telefonā.</p>
-          </RevealOnView>
-
-          <RevealOnView className="service-anatomy-note note-seo anatomy-note-reveal" delay={400}>
-            <h3>SEO pamati</h3>
-            <p>Semantiska struktūra un tehniski tīrs pamats meklētājiem.</p>
+          </div>
+          <RevealOnView className="service-merged-benefits" delay={120}>
+            <article className="service-merged-benefit">
+              <span className="service-merged-index">01</span>
+              <h3>Saturs un struktūra</h3>
+              <p>Klients ātrāk saprot, ko piedāvā un kur pieteikties.</p>
+            </article>
+            <article className="service-merged-benefit">
+              <span className="service-merged-index">02</span>
+              <h3>Forma vai CTA</h3>
+              <p>Apmeklētājam ir skaidrs un ērts ceļš līdz pieteikumam.</p>
+            </article>
+            <article className="service-merged-benefit">
+              <span className="service-merged-index">03</span>
+              <h3>Mobile un pārbaude</h3>
+              <p>Lapa ir ērti lietojama arī telefonā, un galvenās darbības ir pārbaudītas.</p>
+            </article>
+            <article className="service-merged-benefit">
+              <span className="service-merged-index">04</span>
+              <h3>SEO pamati</h3>
+              <p>Sakārtoti pamati, kas palīdz meklētājiem saprast lapas saturu.</p>
+            </article>
           </RevealOnView>
         </div>
       </section>
-
-
 
 
       <section className="service-page-section service-process-section" aria-labelledby="process-title">
