@@ -6,17 +6,17 @@ import ThemeToggle from "../../../components/ThemeToggle";
 import ServicesDropdown from "../../../components/ServicesDropdown";
 
 export const metadata: Metadata = {
-  title: "Landing pages izstrāde | Kestrel",
+  title: "Landing Page Design | Kestrel",
   description:
-    "Landing pages vienam piedāvājumam ar skaidru mērķi, ātru ielādi un ērtu pieteikšanos.",
+    "Landing pages focused on one offer, clear messaging and simple enquiries.",
 };
 
 export default function LandingPage() {
   return (
     <main className="service-page landing-page">
-      <header className="service-page-header" aria-label="Galvenā navigācija">
-        <a className="brand" href="/en" aria-label="Sākumlapa">Kestrel</a>
-        <nav className="service-page-nav" aria-label="Galvenā navigācija">
+      <header className="service-page-header" aria-label="Main navigation">
+        <a className="brand" href="/en" aria-label="Home">Kestrel</a>
+        <nav className="service-page-nav" aria-label="Main navigation">
             <ServicesDropdown />
             <a href="/en/about">About us</a>
             <ThemeToggle />
@@ -30,8 +30,7 @@ export default function LandingPage() {
           <p className="service-page-kicker">Landing page</p>
           <h1>One page<br/>One goal</h1>
           <p className="service-page-lead">
-            Landing page vienam piedāvājumam, lai apmeklētājs ātri saprot,
-            ko tu piedāvā, kāpēc tas ir svarīgi un ko darīt tālāk.
+            A focused page that explains your offer, why it matters and how to take the next step.
           </p>
 
           <div className="service-page-actions">
@@ -94,8 +93,7 @@ export default function LandingPage() {
 
           <RevealOnView className="service-fit-copy-reveal" delay={180}>
             <p>
-              Landing page ir pareizā izvēle, ja ir viens galvenais piedāvājums
-              un viena darbība, līdz kurai gribam aizvest apmeklētāju.
+              A landing page works when you have one clear offer and one action for visitors to take.
             </p>
           </RevealOnView>
         </div>
@@ -149,13 +147,12 @@ export default function LandingPage() {
 
           <RevealOnView className="service-includes-copy" delay={160}>
             <p>
-              Nevis pieci atsevišķi punkti, bet viena sistēma, kur struktūra,
-              dizains un pieteikšanās ceļš strādā kopā.
+              Structure, design and the path to an enquiry work together as one.
             </p>
           </RevealOnView>
         </div>
 
-        <div className="service-anatomy" aria-label="Landing pages uzbūves piemērs">
+        <div className="service-anatomy" aria-label="Landing page structure preview">
           <RevealOnView className="service-anatomy-browser anatomy-browser-reveal">
             <div aria-hidden="true">
               <div className="ui-browser-top"><span/><span/><span/></div>
@@ -232,13 +229,12 @@ export default function LandingPage() {
 
           <RevealOnView className="service-process-copy" delay={150}>
             <p>
-              Sākam ar to, ko lapai jāpanāk. Tikai pēc tam liekam kopā saturu,
-              dizainu un izstrādi.
+              First we define the goal. Then we bring the content, design and development together.
             </p>
           </RevealOnView>
         </div>
 
-        <div className="service-process-flow" aria-label="Landing pages izstrādes process">
+        <div className="service-process-flow" aria-label="Landing page process">
           <RevealOnView className="service-process-step" delay={0}>
             <span className="service-process-name">Goal</span>
             <p>Who the page is for and what visitors should do.</p>
@@ -295,7 +291,7 @@ export default function LandingPage() {
       </section>
 
       <footer className="service-page-footer">
-        <nav className="service-page-footer-nav" aria-label="Lapas navigācija">
+        <nav className="service-page-footer-nav" aria-label="Page navigation">
           <a href="/en">Home</a>
           <a href="/en/#services">Services</a>
           <a href="/en/about">About us</a>
