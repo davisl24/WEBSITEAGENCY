@@ -1,15 +1,11 @@
+import { localizedMetadata } from "../../../lib/localizedSeo";
 import LanguageSwitcher from "../../../components/LanguageSwitcher";
 import ServicePricingFaq from "../../../components/ServicePricingFaqEn";
-import type { Metadata } from "next";
 import RevealOnView from "../../../components/RevealOnView";
 import ThemeToggle from "../../../components/ThemeToggle";
 import ServicesDropdown from "../../../components/ServicesDropdown";
 
-export const metadata: Metadata = {
-  title: "Landing Page Design | Kestrel",
-  description:
-    "Landing pages focused on one offer, clear messaging and simple enquiries.",
-};
+export const metadata = localizedMetadata("en","landing");
 
 export default function LandingPage() {
   return (
