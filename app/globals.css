@@ -6463,3 +6463,69 @@ html[data-theme="light"] .contact-page .booking-preview-disclaimer{color:rgba(23
   .contact-page .booking-preview{padding:18px}
   .contact-page .booking-preview-days>span{height:39px}
 }
+
+/* Kestrel Footer v2 — editorial closing wordmark */
+.site-footer{
+  padding:64px var(--home-gutter,clamp(24px,4vw,64px)) 24px;
+  border-top:1px solid rgba(244,241,234,.11);
+}
+.site-footer .footer-inner{width:min(1360px,100%)}
+.site-footer .footer-main{
+  grid-template-columns:minmax(0,1.2fr) minmax(340px,.8fr);
+  gap:clamp(48px,7vw,120px);
+  padding-bottom:72px;
+}
+.site-footer .footer-logo{font-size:30px}
+.site-footer .footer-brand p{max-width:390px}
+.site-footer .footer-links{gap:48px}
+.site-footer .footer-links>div{gap:13px}
+.site-footer .footer-links a{transition:color .2s ease}
+.site-footer .footer-links a:hover{color:#f4f1ea}
+.site-footer .footer-links a span{font-size:15px;margin-left:6px;color:inherit}
+.site-footer .footer-wordmark{
+  font-size:clamp(84px,11vw,164px);
+  font-weight:650;
+  letter-spacing:-.085em;
+  line-height:.85;
+  color:#f4f1ea;
+  padding:0 0 42px;
+  white-space:nowrap;
+}
+.site-footer .footer-bottom{
+  align-items:center;
+  padding-top:20px;
+}
+.site-footer .footer-top-link{
+  text-decoration:none;
+  color:inherit;
+  transition:color .2s ease;
+}
+.site-footer .footer-top-link:hover{color:#f4f1ea}
+html[data-theme="light"] .site-footer{
+  background:#eae7df;
+  color:#171717;
+  border-top-color:rgba(23,23,23,.11);
+}
+html[data-theme="light"] .site-footer .footer-brand p,
+html[data-theme="light"] .site-footer .footer-links a{color:rgba(23,23,23,.64)}
+html[data-theme="light"] .site-footer .footer-links span,
+html[data-theme="light"] .site-footer .footer-bottom{color:rgba(23,23,23,.48)}
+html[data-theme="light"] .site-footer .footer-wordmark{color:#171717}
+html[data-theme="light"] .site-footer .footer-bottom{border-color:rgba(23,23,23,.13)}
+html[data-theme="light"] .site-footer .footer-links a:hover,
+html[data-theme="light"] .site-footer .footer-top-link:hover{color:#171717}
+@media(max-width:900px){
+  .site-footer{padding:56px 24px 24px}
+  .site-footer .footer-main{grid-template-columns:1fr;gap:42px;padding-bottom:64px}
+  .site-footer .footer-wordmark{font-size:clamp(76px,14vw,140px);padding-bottom:32px}
+}
+@media(max-width:700px){
+  .site-footer{padding:48px 18px 22px}
+  .site-footer .footer-links{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+  .site-footer .footer-main{padding-bottom:52px}
+  .site-footer .footer-wordmark{font-size:clamp(66px,16vw,110px);padding-bottom:26px}
+  .site-footer .footer-bottom{flex-direction:row;flex-wrap:wrap;gap:12px}
+}
+@media(max-width:360px){
+  .site-footer .footer-wordmark{font-size:17vw}
+}
