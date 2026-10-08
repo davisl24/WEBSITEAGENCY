@@ -7252,3 +7252,18 @@ html[data-theme="light"] .service-page .service-delivery-compact .service-afterc
 html[data-theme="light"] .value-contrast-transition{--contrast-surround:#f3f0e9}
 @media(max-width:900px){.value-section .value-layout.value-plan-layout{gap:36px}.value-contrast-showcase{gap:18px}.value-contrast-panel{min-height:340px;padding:22px}.value-contrast-fragments i{height:52px}}
 @media(max-width:640px){.value-contrast-showcase{grid-template-columns:1fr;gap:20px}.value-contrast-panel{min-height:295px;padding:22px}.value-contrast-transition{top:50%;transform:translate(-50%,-50%) rotate(90deg);width:44px;height:44px;font-size:20px}.value-contrast-wireframe{gap:10px;margin:22px 0}.value-contrast-fragments i{height:40px}.value-contrast-simple{gap:17px;margin:20px 0}.value-contrast-headline{height:40px}.value-contrast-button{height:34px;width:108px}}
+
+
+/* Value section: centered editorial heading, compact spacing (variant A). */
+.value-section .value-layout.value-plan-layout{gap:30px}
+.value-section .value-plan-layout .value-copy-side{width:100%;max-width:800px;margin:0 auto;text-align:center}
+.value-section .value-plan-layout .value-copy-side .section-label{margin-bottom:16px}
+.value-section .value-plan-layout .value-copy-side h2{max-width:none;font-size:clamp(44px,5vw,72px);line-height:1.06}
+.value-section .value-plan-layout .value-copy-side .value-intro{max-width:560px;margin:20px auto 0}
+.value-section .value-bottom-link{display:flex;justify-content:center;margin-top:4px}
+.value-section .value-bottom-link .value-about-link{margin-top:22px}
+@media(max-width:760px){
+  .value-section .value-layout.value-plan-layout{gap:26px}
+  .value-section .value-plan-layout .value-copy-side h2{font-size:clamp(36px,9vw,48px)}
+  .value-section .value-plan-layout .value-copy-side .value-intro{margin-top:16px;font-size:16px}
+}
