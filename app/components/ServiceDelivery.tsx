@@ -44,7 +44,7 @@ export default function ServiceDelivery({
             <p>{item.text}</p>
           </RevealOnView>
         ))}
-        <RevealOnView className="service-aftercare" delay={120}>
+        <RevealOnView className="service-aftercare service-aftercare-docked" delay={120}>
           <div>
             <span>Pēc palaišanas</span>
             <p>
