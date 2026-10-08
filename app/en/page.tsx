@@ -1,8 +1,8 @@
 import { localizedMetadata } from "../lib/localizedSeo";
-import LanguageSwitcher from "components/LanguageSwitcher";
+import LanguageSwitcher from "../components/LanguageSwitcher";
 import Image from "next/image";
 import heroBg from "../assets/images/andrew-kliatskyi-k7XTD-HCZAw-unsplash.jpg";
-import heroBgLight from "./assets/images/balts_fons_optimizets.webp";
+import heroBgLight from "../assets/images/balts_fons_optimizets.webp";
 import ValueShowcase from "../components/ValueShowcaseEn";
 import ProcessFlow from "../components/ProcessFlowEn";
 import RevealOnView from "../components/RevealOnView";
