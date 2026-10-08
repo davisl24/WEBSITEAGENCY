@@ -7221,30 +7221,3 @@ html[data-theme="light"] .service-page .service-delivery-compact .service-afterc
  .service-page .service-delivery-compact .service-delivery-item{padding:16px 0}
  .service-page .service-delivery-compact .service-aftercare-docked{padding:16px 0}
 }
-
-
-/* Landing service: combined presentation and deliverables (preview branch). */
-.service-includes-merged{padding-top:100px;padding-bottom:100px}
-.service-includes-merged .service-includes-intro{max-width:760px;margin-bottom:48px}
-.service-includes-merged .service-includes-intro .service-includes-copy p{max-width:650px}
-.service-merged-layout{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.92fr);align-items:stretch;gap:32px}
-.service-merged-anatomy{min-width:0;min-height:0}
-.service-merged-anatomy .service-anatomy-browser{position:relative;inset:auto;left:auto;top:auto;width:100%;height:100%;min-height:390px}
-.service-merged-anatomy .service-anatomy-browser>div{height:100%;display:flex;flex-direction:column}
-.service-merged-anatomy .service-anatomy-hero{flex:1;min-height:290px;grid-template-columns:minmax(0,1fr) minmax(120px,.75fr);gap:18px;padding:26px}
-.service-merged-anatomy .service-anatomy-art{min-height:190px}
-.service-merged-anatomy .service-anatomy-content span{min-height:62px}
-.service-merged-benefits{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-content:stretch;overflow:hidden;border:1px solid rgba(244,241,234,.13);border-radius:24px;background:rgba(255,255,255,.025)}
-.service-merged-benefit{min-width:0;padding:28px 25px}
-.service-merged-benefit:nth-child(odd){border-right:1px solid rgba(244,241,234,.12)}
-.service-merged-benefit:nth-child(-n+2){border-bottom:1px solid rgba(244,241,234,.12)}
-.service-merged-index{display:block;margin-bottom:29px;font-size:12px;letter-spacing:.12em;color:rgba(244,241,234,.48)}
-.service-merged-benefit h3{margin:0;font-size:clamp(19px,1.45vw,23px);line-height:1.2;font-weight:600;letter-spacing:-.035em}
-.service-merged-benefit p{margin:10px 0 0;font-size:14px;line-height:1.55;color:rgba(244,241,234,.6)}
-html[data-theme="light"] .service-merged-benefits{border-color:rgba(20,20,20,.12);background:rgba(255,255,255,.55)}
-html[data-theme="light"] .service-merged-benefit:nth-child(odd){border-right-color:rgba(20,20,20,.1)}
-html[data-theme="light"] .service-merged-benefit:nth-child(-n+2){border-bottom-color:rgba(20,20,20,.1)}
-html[data-theme="light"] .service-merged-index{color:rgba(20,20,20,.48)}
-html[data-theme="light"] .service-merged-benefit p{color:rgba(20,20,20,.6)}
-@media(max-width:1050px){.service-merged-layout{grid-template-columns:1fr;gap:22px}.service-merged-anatomy .service-anatomy-browser{min-height:0}.service-merged-anatomy .service-anatomy-hero{min-height:290px}.service-merged-benefits{min-height:260px}.service-merged-index{margin-bottom:18px}}
-@media(max-width:600px){.service-includes-merged{padding-top:72px;padding-bottom:72px}.service-includes-merged .service-includes-intro{margin-bottom:32px}.service-merged-layout{gap:18px}.service-merged-anatomy .service-anatomy-hero{grid-template-columns:1fr 0.68fr;gap:12px;padding:20px 16px;min-height:200px}.service-merged-anatomy .service-anatomy-nav{padding:0 16px}.service-merged-anatomy .service-anatomy-art{min-height:138px}.service-merged-anatomy .service-anatomy-content span{min-height:47px}.service-merged-benefit{padding:20px 16px}.service-merged-benefit h3{font-size:18px}.service-merged-benefit p{font-size:13px}.service-merged-index{margin-bottom:14px}}
