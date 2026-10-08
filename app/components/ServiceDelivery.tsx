@@ -10,6 +10,7 @@ type ServiceDeliveryProps = {
   title: string;
   description: string;
   items: DeliveryItem[];
+  compact?: boolean;
 };
 
 export default function ServiceDelivery({
@@ -17,9 +18,10 @@ export default function ServiceDelivery({
   title,
   description,
   items,
+  compact = false,
 }: ServiceDeliveryProps) {
   return (
-    <section className="service-page-section service-delivery-section" aria-labelledby={id}>
+    <section className={"service-page-section service-delivery-section" + (compact ? " service-delivery-compact" : "")} aria-labelledby={id}>
       <div className="service-delivery-head">
         <RevealOnView>
           <p className="service-page-kicker">Projektā parasti ietilpst</p>
