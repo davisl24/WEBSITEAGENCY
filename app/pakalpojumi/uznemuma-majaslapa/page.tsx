@@ -234,10 +234,10 @@ export default function CompanyWebsitePage() {
         title="No struktūras līdz live"
         description="Uzņēmuma lapai vajag ne tikai vairāk sadaļu, bet vienotu sistēmu, kas strādā desktopā un telefonā."
         items={[
-          { title: "Lapas arhitektūra", text: "Sākumlapa, pakalpojumi, par uzņēmumu un cits saturs tiek salikts saprotamā struktūrā." },
-          { title: "Pielāgots dizains", text: "Vizuālā sistēma tiek veidota uzņēmumam, nevis pielāgota nejaušam template." },
-          { title: "Kontakti un integrācijas", text: "Formas, rezervācija, karte vai citas integrācijas pēc projekta vajadzības." },
-          { title: "Mobile, SEO un palaišana", text: "Responsive versija, SEO pamati, pārbaude un gala sagatavošana live videi." }
+          { title: "Lapas arhitektūra", text: "Klients viegli atrod pakalpojumus, informāciju par uzņēmumu un kontaktus." },
+          { title: "Pielāgots dizains", text: "Mājaslapa izskatās vienoti un atspoguļo uzņēmuma identitāti." },
+          { title: "Kontakti un integrācijas", text: "Klientam ir vienkāršāk sazināties vai pieteikties, izmantojot projektam vajadzīgās integrācijas." },
+          { title: "Mobile, SEO un palaišana", text: "Lapa ir lietojama telefonā, ar sakārtotiem SEO pamatiem un pārbaudīta pirms palaišanas." }
         ]}
       />
 
