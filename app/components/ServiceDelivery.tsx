@@ -39,6 +39,7 @@ export default function ServiceDelivery({
       <div className="service-delivery-grid">
         {items.map((item, index) => (
           <RevealOnView className="service-delivery-item" delay={index * 70} key={item.title}>
+            <div className="service-delivery-item-top"><span className="service-delivery-index">{String(index + 1).padStart(2, "0")}</span><span className="service-delivery-icon" aria-hidden="true">{index === 0 ? "↗" : index === 1 ? "◈" : index === 2 ? "▣" : "✓"}</span></div>
             <h3>{item.title}</h3>
             <p>{item.text}</p>
           </RevealOnView>
