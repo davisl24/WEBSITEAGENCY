@@ -22,7 +22,7 @@ const steps = [
   {
     label: "04",
     title: "Live",
-    text: "Palaižam lapu dzīvē un, ja vajag, turpinām ar uzturēšanu un uzlabojumiem",
+    text: "Запускаем сайт и при необходимости помогаем с поддержкой и улучшениями.",
     icon: "launch",
   },
 ];
@@ -38,13 +38,13 @@ export default function ProcessFlow() {
 
           <RevealOnView className="line-mask-reveal process-heading" delay={60}>
             <h2 id="process-title" className="service-line-stack">
-              <span className="service-reveal-line"><span>No idejas līdz live</span></span>
+              <span className="service-reveal-line"><span>От идеи до запуска</span></span>
             </h2>
           </RevealOnView>
 
           <RevealOnView className="process-summary" delay={120}>
             <p className="process-intro">
-              Vispirms saprotam, ko lapai jāpanāk — tikai tad ķeramies pie dizaina un izstrādes
+              Сначала определяем задачу сайта, затем переходим к дизайну и разработке.
             </p>
           </RevealOnView>
         </div>
