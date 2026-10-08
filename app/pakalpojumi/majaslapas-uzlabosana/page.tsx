@@ -1,3 +1,4 @@
+import ServicePricingFaq from "../../components/ServicePricingFaq";
 import type { Metadata } from "next";
 import RevealOnView from "../../components/RevealOnView";
 import ThemeToggle from "../../components/ThemeToggle";
@@ -210,6 +211,13 @@ export default function WebsiteUpgradePage() {
         </div>
       </section>
 
+
+      <ServicePricingFaq
+        service="Mājaslapas uzlabošana"
+        pricingNote="Cena ir atkarīga no esošās lapas problēmām un nepieciešamo izmaiņu apjoma."
+        included={["Esošās lapas izvērtējums","Svarīgāko problēmu prioritātes","Konkrētie dizaina vai funkcionalitātes labojumi","Pārbaude pēc izmaiņām"]}
+        questions={[{"question":"Vai jāveido visa mājaslapa no jauna?","answer":"Ne vienmēr. Vispirms pārbaudām, ko ir vērts saglabāt un ko nepieciešams labot."},{"question":"Vai var uzlabot tikai vienu sadaļu?","answer":"Jā, ja problēma ir konkrētā vietā, varam sākt ar mērķētu labojumu."},{"question":"Vai varat strādāt ar manu pašreizējo platformu?","answer":"Tas atkarīgs no platformas un piekļuves iespējām. Sākumā izvērtējam tehniskos ierobežojumus."},{"question":"Kā noteiksiet, ko uzlabot vispirms?","answer":"Skatāmies, kas visvairāk traucē klientam saprast piedāvājumu vai sazināties."},{"question":"Vai uzlabojumi ietekmēs esošo mājaslapu?","answer":"Izmaiņu apjomu un drošu ieviešanas procesu saskaņojam pirms darbu sākšanas."}]}
+      />
 
       <section className="service-page-cta">
         <RevealOnView className="line-mask-reveal service-cta-title">
