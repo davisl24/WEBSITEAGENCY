@@ -179,7 +179,7 @@ export default function Home() {
           <div className="footer-wordmark" aria-hidden="true">Kestrel</div>
           <div className="footer-bottom">
             <span>© 2026 Kestrel</span>
-            <a href="#top" className="footer-top-link">Atpakaļ uz augšu ↑</a>
+
           </div>
         </div>
       </footer>
