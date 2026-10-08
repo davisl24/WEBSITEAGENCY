@@ -9,10 +9,33 @@ const manrope = Manrope({
   display: "swap",
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+const siteOrigin = (() => {
+  if (!siteUrl) return undefined;
+  try {
+    const url = new URL(siteUrl);
+    if (!["http:", "https:"].includes(url.protocol) || url.hostname === "localhost") return undefined;
+    return url.origin;
+  } catch {
+    return undefined;
+  }
+})();
+
 export const metadata: Metadata = {
-  title: "Mājaslapu izstrāde Latvijas uzņēmumiem",
-  description:
-    "Veidojam skaidras un ātras mājaslapas Latvijas mazajiem uzņēmumiem.",
+  ...(siteOrigin ? { metadataBase: new URL(siteOrigin) } : {}),
+  title: {
+    default: "Mājaslapu izstrāde Latvijas uzņēmumiem | Kestrel",
+    template: "%s",
+  },
+  description: "Veidojam skaidras un ātras mājaslapas Latvijas mazajiem uzņēmumiem.",
+  openGraph: {
+    type: "website",
+    locale: "lv_LV",
+    siteName: "Kestrel",
+    title: "Mājaslapu izstrāde Latvijas uzņēmumiem | Kestrel",
+    description: "Veidojam skaidras un ātras mājaslapas Latvijas mazajiem uzņēmumiem.",
+  },
+  twitter: { card: "summary", title: "Kestrel — mājaslapu izstrāde" },
 };
 
 export default function RootLayout({
