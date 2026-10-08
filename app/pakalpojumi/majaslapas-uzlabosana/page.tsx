@@ -1,3 +1,4 @@
+import { lvMetadataAlternates } from "../../lib/localizedSeo";
 import LanguageSwitcher from "../../components/LanguageSwitcher";
 import ServicePricingFaq from "../../components/ServicePricingFaq";
 import type { Metadata } from "next";
@@ -6,6 +7,7 @@ import ThemeToggle from "../../components/ThemeToggle";
 import ServicesDropdown from "../../components/ServicesDropdown";
 
 export const metadata: Metadata = {
+  alternates: lvMetadataAlternates("upgrade"),
   title: "Mājaslapas uzlabošana | Kestrel",
   description:
     "Esošas mājaslapas uzlabošana ar skaidrāku struktūru, modernāku dizainu, labāku mobilo versiju un vienkāršāku klienta ceļu.",
