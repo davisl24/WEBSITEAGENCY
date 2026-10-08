@@ -7355,3 +7355,37 @@ html[data-theme="light"] .value-contrast-transition{--contrast-surround:#f3f0e9}
  .services-section .service-card{display:flex;flex-direction:column}
  .services-section .service-card .service-visual{height:210px;min-height:210px;flex:0 0 210px}
 }
+
+
+/* Explicit service-card colors in both themes: keep center card charcoal. */
+html[data-theme="light"] .services-section .service-card:nth-child(2),
+html[data-theme="dark"] .services-section .service-card:nth-child(2){
+  background:#202020;
+  border-color:rgba(255,255,255,.14);
+  color:#f4f1ea;
+}
+html[data-theme="light"] .services-section .service-card:nth-child(2) .service-card-body,
+html[data-theme="light"] .services-section .service-card:nth-child(2) .service-card-body h3,
+html[data-theme="light"] .services-section .service-card:nth-child(2) .service-link,
+html[data-theme="dark"] .services-section .service-card:nth-child(2) .service-card-body h3{
+  color:#f4f1ea;
+}
+html[data-theme="light"] .services-section .service-card:nth-child(2) .service-kicker,
+html[data-theme="dark"] .services-section .service-card:nth-child(2) .service-kicker{
+  color:rgba(244,241,234,.72);
+}
+html[data-theme="light"] .services-section .service-card:nth-child(2) .service-card-body>p:not(.service-kicker),
+html[data-theme="dark"] .services-section .service-card:nth-child(2) .service-card-body>p:not(.service-kicker){
+  color:rgba(244,241,234,.7);
+}
+html[data-theme="light"] .services-section .service-card:nth-child(2) .service-link,
+html[data-theme="dark"] .services-section .service-card:nth-child(2) .service-link{
+  border-top-color:rgba(244,241,234,.18);
+}
+@media(hover:hover) and (pointer:fine){
+ html[data-theme="light"] .services-section .service-card:nth-child(2):hover,
+ html[data-theme="dark"] .services-section .service-card:nth-child(2):hover{
+   background:#202020;
+   border-color:rgba(255,255,255,.3);
+ }
+}
