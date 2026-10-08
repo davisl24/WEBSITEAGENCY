@@ -1,14 +1,10 @@
+import { localizedMetadata } from "../../lib/localizedSeo";
 import LanguageSwitcher from "../../components/LanguageSwitcher";
-import type { Metadata } from "next";
 import RevealOnView from "../../components/RevealOnView";
 import ThemeToggle from "../../components/ThemeToggle";
 import ServicesDropdown from "../../components/ServicesDropdown";
 
-export const metadata: Metadata = {
-  title: "Contact | Kestrel",
-  description:
-    "Tell us about your business and website idea. We'll suggest a practical next step.",
-};
+export const metadata = localizedMetadata("en","contact");
 
 export default function ContactPage() {
   return (
