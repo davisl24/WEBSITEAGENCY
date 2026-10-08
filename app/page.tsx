@@ -55,7 +55,7 @@ export default function Home() {
           </div>
 
           <div className="services-grid">
-            <article className="service-card">
+            <a href="/pakalpojumi/landing-lapa" className="service-card">
               <div className="service-visual service-visual-landing">
                 <div className="service-story service-story-landing" aria-hidden="true">
                   <div className="story-top"><span/><span/><span/></div>
@@ -73,11 +73,11 @@ export default function Home() {
                 <h3>Landing lapa</h3>
                 <p>Viena lapa konkrētam pakalpojumam, produktam vai kampaņai</p>
 
-                <a href="/pakalpojumi/landing-lapa" className="service-link">Apskatīt pakalpojumu <span aria-hidden="true">→</span></a>
+                <span className="service-link" aria-hidden="true">Apskatīt pakalpojumu <span>→</span></span>
               </div>
-            </article>
+            </a>
 
-            <article className="service-card service-card-featured">
+            <a href="/pakalpojumi/uznemuma-majaslapa" className="service-card service-card-featured">
               <div className="service-visual service-visual-website">
                 <div className="service-story service-story-company" aria-hidden="true">
                   <div className="story-top"><span/><span/><span/></div>
@@ -95,11 +95,11 @@ export default function Home() {
                 <h3>Uzņēmuma mājaslapa</h3>
                 <p>Vairākas lapas, kur vienuviet parādīt pakalpojumus un informāciju par uzņēmumu</p>
 
-                <a href="/pakalpojumi/uznemuma-majaslapa" className="service-link">Apskatīt pakalpojumu <span aria-hidden="true">→</span></a>
+                <span className="service-link" aria-hidden="true">Apskatīt pakalpojumu <span>→</span></span>
               </div>
-            </article>
+            </a>
 
-            <article className="service-card">
+            <a href="/pakalpojumi/majaslapas-uzlabosana" className="service-card">
               <div className="service-visual service-visual-upgrade">
                 <div className="story-upgrade" aria-hidden="true">
                   <div className="story-upgrade-before">
@@ -124,9 +124,9 @@ export default function Home() {
                 <h3>Mājaslapas uzlabošana</h3>
                 <p>Uzlabojam esošās mājaslapas dizainu, struktūru un lietošanas ērtumu</p>
 
-                <a href="/pakalpojumi/majaslapas-uzlabosana" className="service-link">Apskatīt pakalpojumu <span aria-hidden="true">→</span></a>
+                <span className="service-link" aria-hidden="true">Apskatīt pakalpojumu <span>→</span></span>
               </div>
-            </article>
+            </a>
           </div>
         </div>
       </section>
