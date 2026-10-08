@@ -7622,3 +7622,18 @@ html[data-theme="dark"] .services-section .services-grid > a.service-card:hover{
 .language-switcher a.is-active{opacity:1;background:rgba(128,128,128,.18);font-weight:700}
 .language-switcher a:focus-visible{outline:2px solid currentColor;outline-offset:2px}
 @media(max-width:760px){.language-switcher{gap:0;padding:2px}.language-switcher a{min-width:23px;padding:7px 3px;font-size:10px}}
+
+
+/* Compact navbar language dropdown: only the current locale is visible until opened. */
+.language-switcher.language-switcher-dropdown{position:relative;display:block;padding:0;background:transparent;z-index:30}
+.language-switcher-dropdown .language-switcher-trigger{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-width:64px;height:36px;padding:0 13px;border:0;border-radius:999px;background:rgba(128,128,128,.12);color:inherit;font:inherit;font-size:12px;font-weight:650;letter-spacing:.02em;cursor:pointer}
+.language-switcher-dropdown .language-switcher-trigger:hover,.language-switcher-dropdown .language-switcher-trigger[aria-expanded="true"]{background:rgba(128,128,128,.19)}
+.language-switcher-dropdown .language-switcher-chevron{opacity:.65;font-size:15px;line-height:1;margin-top:-4px}
+.language-switcher-dropdown .language-switcher-menu{position:absolute;top:calc(100% + 12px);right:0;width:172px;display:grid;gap:3px;padding:7px;border-radius:16px;background:#222223;color:#f5f2ed;box-shadow:0 18px 48px rgba(0,0,0,.23);border:1px solid rgba(255,255,255,.07)}
+.language-switcher-dropdown .language-switcher-menu a{display:flex;justify-content:space-between;align-items:center;padding:12px 11px;border-radius:10px;text-decoration:none;color:inherit;opacity:.8;font-size:13px;min-width:0;line-height:1.25}
+.language-switcher-dropdown .language-switcher-menu a span:last-child{font-size:10px;opacity:.65;letter-spacing:.07em}
+.language-switcher-dropdown .language-switcher-menu a:hover,.language-switcher-dropdown .language-switcher-menu a.is-active{background:rgba(255,255,255,.1);opacity:1}
+html[data-theme="light"] .language-switcher-dropdown .language-switcher-menu{background:#f5f2ed;color:#171717;border-color:rgba(0,0,0,.05);box-shadow:0 18px 48px rgba(0,0,0,.11)}
+html[data-theme="light"] .language-switcher-dropdown .language-switcher-menu a:hover,html[data-theme="light"] .language-switcher-dropdown .language-switcher-menu a.is-active{background:rgba(0,0,0,.07)}
+.language-switcher-dropdown .language-switcher-trigger:focus-visible,.language-switcher-dropdown .language-switcher-menu a:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+@media(max-width:760px){.language-switcher-dropdown .language-switcher-trigger{min-width:52px;height:32px;padding:0 9px;font-size:11px}}
