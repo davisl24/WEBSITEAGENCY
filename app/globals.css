@@ -6371,3 +6371,47 @@ html[data-theme="light"] .value-section .value-about-link{color:#171717;border-c
   stroke-linejoin:round;
 }
 html[data-theme="light"] .process-section .process-step-symbol{color:rgba(23,23,23,.7)}
+
+/* Contact: non-interactive booking preview before Calendar integration */
+.contact-page .contact-booking-layout{align-items:center;gap:clamp(36px,6vw,90px)}
+.contact-page .contact-booking-layout .contact-page-copy h1{max-width:600px}
+.contact-page .booking-preview-disclaimer{margin-top:28px!important;font-size:13px!important;color:rgba(244,241,234,.54)!important;line-height:1.55}
+.contact-page .booking-preview-wrap{min-width:0;width:100%}
+.contact-page .booking-preview{
+  width:100%;max-width:560px;margin-left:auto;
+  padding:clamp(22px,3vw,34px);
+  border-radius:22px;
+  border:1px solid rgba(244,241,234,.12);
+  background:#eeeae3;
+  color:#242424;
+  box-shadow:0 24px 65px rgba(0,0,0,.17);
+  cursor:default;
+}
+.contact-page .booking-preview-top,.contact-page .booking-preview-month{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.contact-page .booking-preview-top{font-size:10px;letter-spacing:.085em;font-weight:650;color:#807a70}
+.contact-page .booking-preview-label{padding:5px 9px;border:1px solid #d7d1c8;border-radius:999px}
+.contact-page .booking-preview-month{margin:28px 0 20px;font-size:21px;letter-spacing:-.03em}
+.contact-page .booking-preview-month>span{font-size:23px;color:#817b73}
+.contact-page .booking-preview-weekdays,.contact-page .booking-preview-days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;text-align:center}
+.contact-page .booking-preview-weekdays{margin-bottom:9px;color:#918a81;font-size:12px}
+.contact-page .booking-preview-days>span{aspect-ratio:1;display:flex;align-items:center;justify-content:center;border-radius:9px;font-size:13px}
+.contact-page .booking-preview-days .booking-preview-blank{visibility:hidden}
+.contact-page .booking-preview-days .booking-preview-selected{background:#292929;color:#eeeae3}
+.contact-page .booking-preview-times{margin-top:24px;padding-top:18px;border-top:1px solid #d9d3cb}
+.contact-page .booking-preview-times>span{font-size:12px;color:#756f68}
+.contact-page .booking-preview-times>div{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:12px}
+.contact-page .booking-preview-times>div>span{display:block;padding:11px 4px;border:1px solid #cec8be;border-radius:9px;text-align:center;font-size:13px}
+.contact-page .booking-preview-times .booking-preview-time-selected{background:#292929;color:#eeeae3;border-color:#292929}
+.contact-page .booking-preview-bottom{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:24px}
+.contact-page .booking-preview-bottom>span:first-child{font-size:12px;color:#756f68}
+.contact-page .booking-preview-submit{padding:13px 17px;border-radius:999px;background:#292929;color:#eeeae3;font-size:12px;font-weight:650;opacity:.72}
+.contact-page .booking-preview-footnote{margin:18px 0 0!important;font-size:11px!important;line-height:1.5;color:#817a70;text-align:center}
+html[data-theme="light"] .contact-page .booking-preview-disclaimer{color:rgba(23,23,23,.58)!important}
+@media(max-width:900px){.contact-page .booking-preview{margin:0;max-width:620px}}
+@media(max-width:520px){
+  .contact-page .booking-preview{padding:18px;border-radius:17px}
+  .contact-page .booking-preview-days>span{font-size:12px}
+  .contact-page .booking-preview-month{font-size:19px}
+  .contact-page .booking-preview-bottom{flex-direction:column;align-items:stretch}
+  .contact-page .booking-preview-submit{text-align:center}
+}
