@@ -6483,7 +6483,7 @@ html[data-theme="light"] .contact-page .booking-preview-disclaimer{color:rgba(23
 .site-footer .footer-links a:hover{color:#f4f1ea}
 .site-footer .footer-links a span{font-size:15px;margin-left:6px;color:inherit}
 .site-footer .footer-wordmark{
-  font-size:clamp(84px,11vw,164px);
+  font-size:clamp(96px,12.65vw,188px);
   font-weight:650;
   letter-spacing:-.085em;
   line-height:.85;
