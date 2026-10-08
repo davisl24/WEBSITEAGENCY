@@ -166,6 +166,20 @@ export default function WebsiteUpgradePage() {
         </div>
       </section>
 
+      <ServiceDelivery
+        compact
+        id="delivery-title"
+        title="Labojam to, kam ir jēga"
+        description="Uzlabošanas apjomu nosaka esošās lapas problēmas, nevis iepriekš sagatavota pakete."
+        items={[
+          { title: "Audits", text: "Noskaidrojam, kas apmeklētājam traucē saprast piedāvājumu vai pieteikties." },
+          { title: "UX un saturs", text: "Svarīgāko informāciju padarām vieglāk atrodamu un saprotamu." },
+          { title: "Dizains un izstrāde", text: "Uzlabošanai koncentrējamies uz vajadzīgajām daļām, nevis pārbūvējam visu bez iemesla." },
+          { title: "Pārbaude", text: "Pārbaudām, lai galvenās darbības strādātu datorā un telefonā." }
+        ]}
+      />
+
+
       <section className="service-page-section service-process-section" aria-labelledby="upgrade-process-title">
         <div className="service-process-intro">
           <RevealOnView>
@@ -208,17 +222,6 @@ export default function WebsiteUpgradePage() {
         </div>
       </section>
 
-      <ServiceDelivery
-        id="delivery-title"
-        title="Labojam to, kam ir jēga"
-        description="Uzlabošanas apjomu nosaka esošās lapas problēmas, nevis iepriekš sagatavota pakete."
-        items={[
-          { title: "Audits", text: "Noskaidrojam, kas apmeklētājam traucē saprast piedāvājumu vai pieteikties." },
-          { title: "UX un saturs", text: "Svarīgāko informāciju padarām vieglāk atrodamu un saprotamu." },
-          { title: "Dizains un izstrāde", text: "Uzlabošanai koncentrējamies uz vajadzīgajām daļām, nevis pārbūvējam visu bez iemesla." },
-          { title: "Pārbaude", text: "Pārbaudām, lai galvenās darbības strādātu datorā un telefonā." }
-        ]}
-      />
 
       <section className="service-page-cta">
         <RevealOnView className="line-mask-reveal service-cta-title">
