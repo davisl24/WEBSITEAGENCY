@@ -170,7 +170,7 @@ export default function Home() {
               </div>
               <div>
                 <span>Saziņa</span>
-                <a className="footer-contact-card" href="/kontakti"><span className="footer-contact-heading">Parunājam <span aria-hidden="true">↗</span></span><span className="footer-contact-subtitle">15 minūšu konsultācija</span></a>
+                <a className="footer-contact-link" href="/kontakti">Pieteikt sarunu <span aria-hidden="true">↗</span></a>
               </div>
             </div>
           </div>
