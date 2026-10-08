@@ -6731,3 +6731,43 @@ html[data-theme="light"] .site-footer .footer-contact-link{
   color:#171717;
   border-color:rgba(23,23,23,.42);
 }
+
+/* Homepage visual hierarchy: quiet background, legible focal surfaces */
+.services-section .service-card{
+  border-color:rgba(244,241,234,.22);
+  box-shadow:0 16px 45px rgba(0,0,0,.18);
+}
+.services-section .service-card .service-visual{
+  border-bottom-color:rgba(244,241,234,.17);
+}
+.services-section .service-card-body h3{color:#f4f1ea}
+.services-section .service-card-body .service-link{
+  border-top-color:rgba(244,241,234,.17);
+}
+.value-section .value-showcase-visual{
+  border-color:rgba(244,241,234,.19);
+  box-shadow:0 18px 48px rgba(0,0,0,.15);
+}
+.call-section .call-cta{
+  border-color:rgba(244,241,234,.26);
+}
+.call-section .call-cta:focus-visible{
+  outline:2px solid currentColor;
+  outline-offset:5px;
+}
+html[data-theme="light"] .services-section .service-card{
+  border-color:rgba(23,23,23,.18);
+  box-shadow:0 14px 32px rgba(23,23,23,.07);
+}
+html[data-theme="light"] .services-section .service-card .service-visual,
+html[data-theme="light"] .services-section .service-card-body .service-link{
+  border-color:rgba(23,23,23,.14);
+}
+html[data-theme="light"] .services-section .service-card-body h3{color:#171717}
+html[data-theme="light"] .value-section .value-showcase-visual{
+  border-color:rgba(23,23,23,.14);
+  box-shadow:0 18px 36px rgba(23,23,23,.065);
+}
+html[data-theme="light"] .call-section .call-cta{
+  border-color:rgba(23,23,23,.22);
+}
