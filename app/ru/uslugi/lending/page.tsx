@@ -6,17 +6,17 @@ import ThemeToggle from "../../../components/ThemeToggle";
 import ServicesDropdown from "../../../components/ServicesDropdown";
 
 export const metadata: Metadata = {
-  title: "Лендингs izstrāde | Kestrel",
+  title: "Разработка лендингов | Kestrel",
   description:
-    "Лендингs vienam piedāvājumam ar skaidru mērķi, ātru ielādi un ērtu pieteikšanos.",
+    "Лендинги с понятной целью, быстрой загрузкой и удобной формой заявки.",
 };
 
 export default function LandingPage() {
   return (
     <main className="service-page landing-page">
-      <header className="service-page-header" aria-label="Galvenā navigācija">
-        <a className="brand" href="/ru" aria-label="Sākumlapa">Kestrel</a>
-        <nav className="service-page-nav" aria-label="Galvenā navigācija">
+      <header className="service-page-header" aria-label="Главная навигация">
+        <a className="brand" href="/ru" aria-label="Главная">Kestrel</a>
+        <nav className="service-page-nav" aria-label="Главная навигация">
             <ServicesDropdown />
             <a href="/ru/o-nas">О нас</a>
             <ThemeToggle />
@@ -30,8 +30,7 @@ export default function LandingPage() {
           <p className="service-page-kicker">Лендинг</p>
           <h1>Одна страница<br/>Одна цель</h1>
           <p className="service-page-lead">
-            Лендинг vienam piedāvājumam, lai apmeklētājs ātri saprot,
-            ko tu piedāvā, kāpēc tas ir svarīgi un ko darīt tālāk.
+            Лендинг для одного предложения: посетитель сразу понимает суть и следующий шаг.
           </p>
 
           <div className="service-page-actions">
@@ -94,8 +93,7 @@ export default function LandingPage() {
 
           <RevealOnView className="service-fit-copy-reveal" delay={180}>
             <p>
-              Лендинг ir pareizā izvēle, ja ir viens galvenais piedāvājums
-              un viena darbība, līdz kurai gribam aizvest apmeklētāju.
+              Лендинг подходит, когда важно представить одно предложение и привести клиента к одному действию.
             </p>
           </RevealOnView>
         </div>
@@ -149,13 +147,12 @@ export default function LandingPage() {
 
           <RevealOnView className="service-includes-copy" delay={160}>
             <p>
-              Nevis pieci atsevišķi punkti, bet viena sistēma, kur struktūra,
-              dizains un pieteikšanās ceļš strādā kopā.
+              Структура, дизайн и путь к заявке работают как единая система.
             </p>
           </RevealOnView>
         </div>
 
-        <div className="service-anatomy" aria-label="Лендингs uzbūves piemērs">
+        <div className="service-anatomy" aria-label="Пример структуры лендинга">
           <RevealOnView className="service-anatomy-browser anatomy-browser-reveal">
             <div aria-hidden="true">
               <div className="ui-browser-top"><span/><span/><span/></div>
@@ -232,13 +229,12 @@ export default function LandingPage() {
 
           <RevealOnView className="service-process-copy" delay={150}>
             <p>
-              Sākam ar to, ko lapai jāpanāk. Tikai pēc tam liekam kopā saturu,
-              dizainu un izstrādi.
+              Сначала определяем цель, затем выстраиваем контент, дизайн и разработку.
             </p>
           </RevealOnView>
         </div>
 
-        <div className="service-process-flow" aria-label="Лендингs izstrādes process">
+        <div className="service-process-flow" aria-label="Этапы разработки лендинга">
           <RevealOnView className="service-process-step" delay={0}>
             <span className="service-process-name">Цель</span>
             <p>Для кого страница и какое действие должен выполнить посетитель.</p>
@@ -295,7 +291,7 @@ export default function LandingPage() {
       </section>
 
       <footer className="service-page-footer">
-        <nav className="service-page-footer-nav" aria-label="Lapas navigācija">
+        <nav className="service-page-footer-nav" aria-label="Навигация">
           <a href="/ru">Главная</a>
           <a href="/ru/#services">Услуги</a>
           <a href="/ru/o-nas">О нас</a>
