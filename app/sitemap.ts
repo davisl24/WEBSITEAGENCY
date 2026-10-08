@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { localizedRoutes } from "./lib/localizedSeo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const configured = process.env.NEXT_PUBLIC_SITE_URL;
@@ -8,20 +9,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const url = new URL(configured);
     if (!["https:", "http:"].includes(url.protocol) || url.hostname === "localhost") return [];
     origin = url.origin;
-  } catch {
-    return [];
-  }
+  } catch { return []; }
 
-  const routes = [
-    "/",
-    "/par-mums",
-    "/pakalpojumi/landing-lapa",
-    "/pakalpojumi/uznemuma-majaslapa",
-    "/pakalpojumi/majaslapas-uzlabosana",
-  ];
-  return routes.map((route) => ({
-    url: new URL(route, origin).toString(),
-    changeFrequency: "monthly",
-    priority: route === "/" ? 1 : 0.7,
-  }));
+  // Index only the editorial pages; booking is currently just a preview.
+  const keys = ["home", "about", "landing", "company", "upgrade"] as const;
+  return keys.flatMap((key) =>
+    (["lv", "en", "ru"] as const).map((lang) => ({
+      url: new URL(localizedRoutes[key][lang], origin).toString(),
+      changeFrequency: "monthly" as const,
+      priority: key === "home" ? 1 : 0.7,
+    }))
+  );
 }
