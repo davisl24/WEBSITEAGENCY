@@ -1,125 +1,55 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
-type ThemePreference = "light" | "dark" | "system";
+type ThemePreference = "system" | "light" | "dark";
 type ResolvedTheme = "light" | "dark";
-
-function resolveSystemTheme(): ResolvedTheme {
-  return window.matchMedia("(prefers-color-scheme: light)").matches
-    ? "light"
-    : "dark";
-}
 
 function applyTheme(theme: ResolvedTheme) {
   document.documentElement.dataset.theme = theme;
   document.documentElement.style.colorScheme = theme;
 }
 
+function ThemeIcon({ mode }: { mode: ThemePreference }) {
+  if (mode === "system") return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>;
+  if (mode === "light") return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>;
+  return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20.6 15.2A9 9 0 0 1 8.8 3.4 9 9 0 1 0 20.6 15.2Z"/></svg>;
+}
+
 export default function ThemeToggle() {
   const [preference, setPreference] = useState<ThemePreference>("system");
-  const [open, setOpen] = useState(false);
-  const rootRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const saved = window.localStorage.getItem("kestrel-theme");
-    const initialPreference: ThemePreference =
-      saved === "light" || saved === "dark" || saved === "system"
-        ? saved
-        : "system";
-
-    setPreference(initialPreference);
+    if (saved === "light" || saved === "dark" || saved === "system") setPreference(saved);
   }, []);
 
   useEffect(() => {
     const media = window.matchMedia("(prefers-color-scheme: light)");
-
     const syncTheme = () => {
-      applyTheme(
-        preference === "system"
-          ? media.matches
-            ? "light"
-            : "dark"
-          : preference
-      );
+      applyTheme(preference === "system" ? (media.matches ? "light" : "dark") : preference);
       document.documentElement.dataset.themeMode = preference;
     };
-
     syncTheme();
-
     if (preference === "system") {
       media.addEventListener("change", syncTheme);
       return () => media.removeEventListener("change", syncTheme);
     }
   }, [preference]);
 
-  useEffect(() => {
-    if (!open) return;
-
-    const onPointerDown = (event: PointerEvent) => {
-      if (!rootRef.current?.contains(event.target as Node)) {
-        setOpen(false);
-      }
-    };
-
-    const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setOpen(false);
-    };
-
-    document.addEventListener("pointerdown", onPointerDown);
-    document.addEventListener("keydown", onKeyDown);
-
-    return () => {
-      document.removeEventListener("pointerdown", onPointerDown);
-      document.removeEventListener("keydown", onKeyDown);
-    };
-  }, [open]);
-
-  const chooseTheme = (next: ThemePreference) => {
-    setPreference(next);
-    window.localStorage.setItem("kestrel-theme", next);
-    setOpen(false);
+  const selectTheme = (mode: ThemePreference) => {
+    setPreference(mode);
+    window.localStorage.setItem("kestrel-theme", mode);
   };
 
-  const labels: Record<ThemePreference, string> = {
-    light: "Gaišs",
-    dark: "Tumšs",
-    system: "Sistēmas",
-  };
-
+  const labels: Record<ThemePreference, string> = { system: "Sistēmas režīms", light: "Gaišais režīms", dark: "Tumšais režīms" };
   return (
-    <div className="theme-menu" ref={rootRef}>
-      <button
-        type="button"
-        className="theme-toggle"
-        onClick={() => setOpen((value) => !value)}
-        aria-label="Mainīt krāsu režīmu"
-        aria-haspopup="menu"
-        aria-expanded={open}
-        title="Krāsu režīms"
-      >
-        <span className="theme-toggle-icon" aria-hidden="true">◐</span>
-      </button>
-
-      {open && (
-        <div className="theme-popover" role="menu" aria-label="Krāsu režīms">
-          {(Object.keys(labels) as ThemePreference[]).map((option) => (
-            <button
-              type="button"
-              className="theme-option"
-              role="menuitemradio"
-              aria-checked={preference === option}
-              onClick={() => chooseTheme(option)}
-              key={option}
-            >
-              <span>{labels[option]}</span>
-              <span className="theme-option-check" aria-hidden="true">
-                {preference === option ? "✓" : ""}
-              </span>
-            </button>
-          ))}
-        </div>
-      )}
+    <div className="theme-segmented" role="group" aria-label="Krāsu režīms">
+      {(["system", "light", "dark"] as const).map((mode) => (
+        <button key={mode} type="button" className="theme-segmented-button" onClick={() => selectTheme(mode)} aria-label={labels[mode]} aria-pressed={preference === mode} title={labels[mode]}>
+          <ThemeIcon mode={mode} />
+        </button>
+      ))}
     </div>
   );
 }
