@@ -156,11 +156,6 @@ export default function Home() {
       <footer className="site-footer">
         <div className="footer-inner">
           <div className="footer-main">
-            <div className="footer-brand">
-              <a href="/" className="footer-logo">Kestrel</a>
-              <p>Mājaslapas mazajiem uzņēmumiem ar skaidru mērķi un vienkāršu klienta ceļu</p>
-            </div>
-
             <div className="footer-links">
               <div>
                 <span>Navigācija</span>
@@ -176,7 +171,10 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="footer-wordmark" aria-hidden="true">Kestrel</div>
+          <div className="footer-wordmark-block">
+            <a href="/" className="footer-wordmark">Kestrel</a>
+            <p className="footer-statement">Veidojam mājaslapas maziem uzņēmumiem, kas palīdz skaidri parādīt piedāvājumu un piesaistīt klientus<br/>Katru projektu veidojam ar konkrētu mērķi un vienkāršu klienta ceļu</p>
+          </div>
           <div className="footer-bottom">
             <span>© 2026 Kestrel</span>
 
