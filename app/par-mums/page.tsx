@@ -1,3 +1,4 @@
+import { lvMetadataAlternates } from "../lib/localizedSeo";
 import LanguageSwitcher from "../components/LanguageSwitcher";
 import type { Metadata } from "next";
 import RevealOnView from "../components/RevealOnView";
@@ -5,6 +6,7 @@ import ThemeToggle from "../components/ThemeToggle";
 import ServicesDropdown from "../components/ServicesDropdown";
 
 export const metadata: Metadata = {
+  alternates: lvMetadataAlternates("about"),
   title: "Par mums | Kestrel",
   description:
     "Kestrel veido skaidras un ātras mājaslapas mazajiem uzņēmumiem ar fokusu uz saprotamu piedāvājumu un ērtu klienta ceļu.",
