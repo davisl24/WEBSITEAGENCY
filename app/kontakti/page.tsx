@@ -1,3 +1,4 @@
+import { lvMetadataAlternates } from "../lib/localizedSeo";
 import LanguageSwitcher from "../components/LanguageSwitcher";
 import type { Metadata } from "next";
 import RevealOnView from "../components/RevealOnView";
@@ -5,6 +6,7 @@ import ThemeToggle from "../components/ThemeToggle";
 import ServicesDropdown from "../components/ServicesDropdown";
 
 export const metadata: Metadata = {
+  alternates: lvMetadataAlternates("contact"),
   title: "Kontakti | Kestrel",
   description:
     "Pastāsti īsumā par uzņēmumu vai mājaslapu. Atbildēsim ar konkrētu nākamo soli.",
