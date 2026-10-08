@@ -13,9 +13,9 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <main className="service-page about-page">
-      <header className="service-page-header" aria-label="Galvenā navigācija">
-        <a className="brand" href="/ru" aria-label="Sākumlapa">Kestrel</a>
-        <nav className="service-page-nav" aria-label="Galvenā navigācija">
+      <header className="service-page-header" aria-label="Главная навигация">
+        <a className="brand" href="/ru" aria-label="Главная">Kestrel</a>
+        <nav className="service-page-nav" aria-label="Главная навигация">
             <ServicesDropdown />
             <a href="/ru/o-nas" aria-current="page">О нас</a>
             <ThemeToggle />
@@ -29,8 +29,7 @@ export default function AboutPage() {
           <p className="service-page-kicker">О Kestrel</p>
           <h1>Сайты с понятной целью</h1>
           <p>
-            Veidojam mājaslapas mazajiem uzņēmumiem tā, lai cilvēkam būtu viegli
-            saprast piedāvājumu, uzticēties un izdarīt nākamo soli.
+            Мы создаём сайты для малого бизнеса, на которых клиент легко понимает предложение, доверяет компании и знает, как оставить заявку.
           </p>
           <a className="button button-primary" href="/ru/kontakty">Рассказать о проекте</a>
         </div>
@@ -77,9 +76,7 @@ export default function AboutPage() {
         <div className="about-company-layout">
           <RevealOnView className="about-company-main">
             <p>
-              Kestrel ir web izstrādes komanda Latvijā. Strādājam ar mazajiem
-              uzņēmumiem, kuriem vajag skaidru, ātru un profesionālu mājaslapu,
-              nevis sarežģītu digitālu projektu bez konkrēta mērķa.
+              Kestrel — команда веб-разработки из Латвии. Помогаем малому бизнесу создавать понятные и быстрые сайты с конкретной задачей, без лишних сложностей.
             </p>
           </RevealOnView>
 
@@ -110,8 +107,7 @@ export default function AboutPage() {
 
           <RevealOnView delay={150}>
             <p className="about-thinking-copy">
-              Labs dizains nav tikai skaists ekrāns. Tam jāpalīdz cilvēkam ātri saprast,
-              kur viņš ir, ko saņems un ko darīt tālāk.
+              Хороший дизайн не только красиво выглядит. Он помогает быстро понять предложение и следующий шаг.
             </p>
           </RevealOnView>
         </div>
@@ -158,8 +154,7 @@ export default function AboutPage() {
 
           <RevealOnView delay={150}>
             <p className="about-focus-copy">
-              Mēs labāk noņemam vienu lieku bloku nekā pievienojam trīs jaunus.
-              Katram elementam jābūt ar iemeslu.
+              Лучше убрать один ненужный блок, чем добавить три новых. У каждого элемента должна быть цель.
             </p>
           </RevealOnView>
         </div>
@@ -204,15 +199,13 @@ export default function AboutPage() {
         <div className="about-working-copy">
           <RevealOnView delay={0}>
             <p>
-              Mēs negribam sarežģīt procesu ar liekām prezentācijām un tehniskiem vārdiem
-              tikai tāpēc, lai tas izklausītos dārgāk.
+              Не усложняем процесс презентациями и техническими терминами ради видимости серьёзности.
             </p>
           </RevealOnView>
 
           <RevealOnView delay={120}>
             <p>
-              Ja kaut ko nav jēgas būvēt, pasakām. Ja ir skaidrs nākamais solis,
-              ejam uz izpildi un pabeidzam to pirms pievienojam nākamo.
+              Если что-то делать не нужно, скажем об этом. Когда следующий шаг ясен, приступаем к работе и доводим её до конца.
             </p>
           </RevealOnView>
         </div>
@@ -238,7 +231,7 @@ export default function AboutPage() {
       </section>
 
       <footer className="service-page-footer">
-        <nav className="service-page-footer-nav" aria-label="Lapas navigācija">
+        <nav className="service-page-footer-nav" aria-label="Навигация">
           <a href="/ru">Главная</a>
           <a href="/ru/#services">Услуги</a>
           <a href="/ru/o-nas">О нас</a>
