@@ -44,18 +44,16 @@ export default function ServiceDelivery({
             <p>{item.text}</p>
           </RevealOnView>
         ))}
+        <RevealOnView className="service-aftercare" delay={120}>
+          <div>
+            <span>Pēc palaišanas</span>
+            <p>
+              Ja vajag, varam turpināt ar hostingu, tehnisko uzturēšanu un
+              turpmākiem mājaslapas uzlabojumiem.
+            </p>
+          </div>
+        </RevealOnView>
       </div>
-
-      <RevealOnView className="service-aftercare" delay={120}>
-        <div>
-          <span>Pēc palaišanas</span>
-          <p>
-            Ja vajag, varam turpināt ar hostingu, tehnisko uzturēšanu un
-            turpmākiem mājaslapas uzlabojumiem.
-          </p>
-        </div>
-        <small>Pēc nepieciešamības</small>
-      </RevealOnView>
     </section>
   );
 }
