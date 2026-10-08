@@ -158,7 +158,7 @@ export default function Home() {
           <div className="footer-main">
           <div className="footer-wordmark-block">
             <a href="/" className="footer-wordmark">Kestrel</a>
-            <p className="footer-statement">Veidojam mājaslapas maziem uzņēmumiem, kas palīdz skaidri parādīt piedāvājumu un piesaistīt klientus<br/>Katru projektu veidojam ar konkrētu mērķi un vienkāršu klienta ceļu</p>
+            <p className="footer-statement">Veidojam mājaslapas ar skaidru mērķi un pārdomātu dizainu<br/>Palīdzam mazajiem uzņēmumiem parādīt savu piedāvājumu un atvieglot klienta ceļu</p>
           </div>
             <div className="footer-links">
               <div>
@@ -170,7 +170,7 @@ export default function Home() {
               </div>
               <div>
                 <span>Saziņa</span>
-                <a href="/kontakti">Pieteikt sarunu <span aria-hidden="true">↗</span></a>
+                <a className="footer-contact-card" href="/kontakti"><span className="footer-contact-heading">Parunājam <span aria-hidden="true">↗</span></span><span className="footer-contact-subtitle">15 minūšu konsultācija</span></a>
               </div>
             </div>
           </div>
