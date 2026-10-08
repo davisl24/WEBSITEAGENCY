@@ -7515,3 +7515,39 @@ html[data-theme="light"] .service-page .service-faq-item{border-bottom-color:rgb
   .service-page .service-faq-item>p{margin:0 0 23px 26px}
 }
 @media(prefers-reduced-motion:reduce){.service-page .service-faq-plus{transition:none}}
+
+
+/* Kestrel service pricing: emphasized inverted card, shared across all three pages. */
+.service-page .service-price-layout{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+.service-page .service-price-primary{
+  background:#eeeae3;
+  color:#171717;
+  border-color:rgba(23,23,23,.09);
+}
+.service-page .service-price-primary>span{color:#726d66;opacity:1}
+.service-page .service-price-amount{display:flex;flex-direction:column;align-items:flex-start;gap:7px;margin:34px 0 20px}
+.service-page .service-price-amount>span{font-size:13px;color:#716c65}
+.service-page .service-price-amount strong{margin:0;font-size:clamp(64px,6vw,92px);color:#171717;letter-spacing:-.075em;line-height:1}
+.service-page .service-price-primary small{color:#6a665f;opacity:1}
+.service-page .service-price-primary>a{
+  width:100%;justify-content:center;gap:14px;
+  margin-top:auto;padding:17px 22px;border:0;border-radius:999px;
+  color:#f5f2ed;background:#171717;transition:background .2s ease,transform .2s ease;
+}
+.service-page .service-price-primary>a:hover{gap:14px;background:#303030;transform:translateY(-2px)}
+.service-page .service-price-primary>a:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+.service-page .service-price-includes{background:#1c1c1d;border-color:#353537;color:#f4f1ea}
+.service-page .service-price-includes li:before{content:"✓";opacity:.65}
+html[data-theme="light"] .service-page .service-price-primary{
+  background:#202020;color:#f5f2ed;border-color:#343434;
+}
+html[data-theme="light"] .service-page .service-price-primary>span,
+html[data-theme="light"] .service-page .service-price-amount>span,
+html[data-theme="light"] .service-page .service-price-primary small{color:#c4bfb6}
+html[data-theme="light"] .service-page .service-price-amount strong{color:#f5f2ed}
+html[data-theme="light"] .service-page .service-price-primary>a{background:#f5f2ed;color:#171717}
+html[data-theme="light"] .service-page .service-price-primary>a:hover{background:#e3ded5}
+html[data-theme="light"] .service-page .service-price-includes{
+  background:#e5e0d7;color:#171717;border-color:rgba(23,23,23,.12);
+}
+@media(prefers-reduced-motion:reduce){.service-page .service-price-primary>a{transition:none}}
