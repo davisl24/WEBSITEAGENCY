@@ -11,7 +11,6 @@ export default function ValueShowcase() {
             <p className="value-intro">
               Mājaslapas izstrādei nav jābūt sarežģītai — mēs palīdzam saprast, kas tev patiešām vajadzīgs
             </p>
-            <a className="value-about-link" href="/par-mums">Vairāk par mums <span aria-hidden="true">→</span></a>
           </RevealOnView>
 
           <RevealOnView className="value-showcase">
@@ -41,6 +40,7 @@ export default function ValueShowcase() {
               </div>
             </div>
           </RevealOnView>
+          <div className="value-bottom-link"><a className="value-about-link" href="/par-mums">Vairāk par mums <span aria-hidden="true">→</span></a></div>
         </div>
       </div>
     </section>
