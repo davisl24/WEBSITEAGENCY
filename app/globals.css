@@ -7450,3 +7450,12 @@ main#top > .home-about-section{border-top:0;border-bottom:0}
 @media(max-width:760px){
   .about-page > .service-page-section:not(.about-company-section){padding-top:68px}
 }
+
+
+/* Landing page only: editorial transitions without ornamental section rules. */
+.landing-page > .service-page-section{border-top:0;padding-top:88px}
+.landing-page > .service-page-footer{border-top:0}
+.landing-page > .service-page-footer .service-page-footer-bottom{border-top:0}
+@media(max-width:760px){
+  .landing-page > .service-page-section{padding-top:68px}
+}
