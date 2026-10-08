@@ -7267,3 +7267,7 @@ html[data-theme="light"] .value-contrast-transition{--contrast-surround:#f3f0e9}
   .value-section .value-plan-layout .value-copy-side h2{font-size:clamp(36px,9vw,48px)}
   .value-section .value-plan-layout .value-copy-side .value-intro{margin-top:16px;font-size:16px}
 }
+
+/* Remove empty CTA space below homepage comparison. */
+.value-section:has(.value-contrast-showcase){padding-bottom:68px}
+@media(max-width:760px){.value-section:has(.value-contrast-showcase){padding-bottom:56px}}
