@@ -1,3 +1,4 @@
+import LanguageSwitcher from "../../components/LanguageSwitcher";
 import ServicePricingFaq from "../../components/ServicePricingFaq";
 import type { Metadata } from "next";
 import RevealOnView from "../../components/RevealOnView";
@@ -19,6 +20,7 @@ export default function WebsiteUpgradePage() {
             <ServicesDropdown />
             <a href="/par-mums">Par mums</a>
             <ThemeToggle />
+            <LanguageSwitcher />
             <a className="header-cta" href="/kontakti">Pieteikt sarunu</a>
           </nav>
       </header>
