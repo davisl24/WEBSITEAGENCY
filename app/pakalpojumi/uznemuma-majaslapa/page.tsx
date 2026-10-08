@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import RevealOnView from "../../components/RevealOnView";
 import ThemeToggle from "../../components/ThemeToggle";
 import ServicesDropdown from "../../components/ServicesDropdown";
-import ServiceDelivery from "../../components/ServiceDelivery";
 
 export const metadata: Metadata = {
   title: "Uzņēmuma mājaslapas izstrāde | Kestrel",
@@ -109,18 +108,7 @@ export default function CompanyWebsitePage() {
         </div>
       </section>
 
-      <ServiceDelivery
-        compact
-        id="delivery-title"
-        title="No struktūras līdz live"
-        description="Uzņēmuma lapai vajag ne tikai vairāk sadaļu, bet vienotu sistēmu, kas strādā desktopā un telefonā."
-        items={[
-          { title: "Lapas arhitektūra", text: "Klients viegli atrod pakalpojumus, informāciju par uzņēmumu un kontaktus." },
-          { title: "Pielāgots dizains", text: "Mājaslapa izskatās vienoti un atspoguļo uzņēmuma identitāti." },
-          { title: "Kontakti un integrācijas", text: "Klientam ir vienkāršāk sazināties vai pieteikties, izmantojot projektam vajadzīgās integrācijas." },
-          { title: "Mobile, SEO un palaišana", text: "Lapa ir lietojama telefonā, ar sakārtotiem SEO pamatiem un pārbaudīta pirms palaišanas." }
-        ]}
-      />
+      
 
       <section className="service-page-section company-structure-section" id="struktura" aria-labelledby="company-structure-title">
         <div className="company-structure-intro">
@@ -199,8 +187,6 @@ export default function CompanyWebsitePage() {
           </div>
         </div>
       </section>
-
-
 
 
       <section className="service-page-section service-process-section" aria-labelledby="company-process-title">
