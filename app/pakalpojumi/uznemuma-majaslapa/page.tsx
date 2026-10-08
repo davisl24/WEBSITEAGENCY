@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function CompanyWebsitePage() {
   return (
-    <main className="service-page">
+    <main className="service-page company-page">
       <header className="service-page-header" aria-label="Galvenā navigācija">
         <a className="brand" href="/" aria-label="Sākumlapa">Kestrel</a>
         <nav className="service-page-nav" aria-label="Galvenā navigācija">
