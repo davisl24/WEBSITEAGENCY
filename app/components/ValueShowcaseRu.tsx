@@ -7,7 +7,7 @@ export default function ValueShowcase() {
         <div className="value-layout value-plan-layout">
           <RevealOnView className="value-copy-side">
             <p className="section-label">Почему Kestrel</p>
-            <h2 id="value-title">Меньше лишнего<span>Больше ясности</span></h2>
+            <h2 id="value-title">Сайт, на котором<span>всё понятно.</span></h2>
             <p className="value-intro">
               Создание сайта не должно быть сложным. Помогаем сосредоточиться на том, что действительно нужно бизнесу.
             </p>
