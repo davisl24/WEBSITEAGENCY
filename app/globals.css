@@ -7408,3 +7408,6 @@ html[data-theme="dark"] .services-section .service-card:is(:nth-child(1),:nth-ch
 .services-section .service-card .service-visual{border-bottom:0}
 .services-section .service-card .service-link{border-top:0}
 @media(max-width:700px){.services-section .service-card .service-visual{border-bottom:0}}
+
+/* Exact selector overrides the old third-card divider in both themes. */
+.services-section .service-card:nth-child(3) .service-visual{border-bottom:0}
