@@ -13,9 +13,9 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <main className="service-page contact-page">
-      <header className="service-page-header" aria-label="Galvenā navigācija">
-        <a className="brand" href="/ru" aria-label="Sākumlapa">Kestrel</a>
-        <nav className="service-page-nav" aria-label="Galvenā navigācija">
+      <header className="service-page-header" aria-label="Главная навигация">
+        <a className="brand" href="/ru" aria-label="Главная">Kestrel</a>
+        <nav className="service-page-nav" aria-label="Главная навигация">
             <ServicesDropdown />
             <a href="/ru/o-nas">О нас</a>
             <ThemeToggle />
@@ -36,7 +36,7 @@ export default function ContactPage() {
           <p className="booking-preview-disclaimer">Пока это макет календаря — онлайн-запись ещё не подключена.</p>
         </div>
         <RevealOnView className="booking-preview-wrap" delay={80}>
-          <div className="booking-preview" aria-label="Kalendāra dizaina priekšskatījums, rezervācija pašlaik nav pieejama">
+          <div className="booking-preview" aria-label="Макет календаря: запись пока недоступна">
             <div className="booking-preview-top">
               <span>ВЫБЕРИТЕ ДАТУ И ВРЕМЯ</span>
               <span className="booking-preview-label">DEMO</span>
@@ -63,7 +63,7 @@ export default function ContactPage() {
       </section>
 
       <footer className="service-page-footer">
-        <nav className="service-page-footer-nav" aria-label="Lapas navigācija">
+        <nav className="service-page-footer-nav" aria-label="Навигация">
           <a href="/ru">Главная</a>
           <a href="/ru/#services">Услуги</a>
           <a href="/ru/o-nas">О нас</a>
