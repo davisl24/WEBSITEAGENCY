@@ -7198,3 +7198,26 @@ html[data-theme="light"] .service-page .service-delivery-item:nth-child(-n+2){
 .service-page .service-delivery-grid .service-aftercare-docked{grid-column:1/-1;display:block;margin:0;padding:19px 18px 22px;border-top:1px solid rgba(140,140,140,.22)}
 .service-page .service-delivery-grid .service-aftercare-docked p{margin:8px 0 0}
 @media(max-width:560px){.service-page .service-delivery-grid .service-aftercare-docked{padding:18px 0 20px}}
+
+/* Compact service inclusions — supports earlier placement after audience-fit */
+.service-page .service-delivery-compact{padding-top:48px;padding-bottom:64px;align-items:center}
+.service-page .service-delivery-compact .service-delivery-title{font-size:clamp(34px,3vw,46px)}
+.service-page .service-delivery-compact .service-delivery-copy{font-size:16px;line-height:1.6}
+.service-page .service-delivery-compact .service-delivery-grid{padding:4px 17px 0;box-shadow:none}
+.service-page .service-delivery-compact .service-delivery-item,
+.service-page .service-delivery-compact .service-delivery-item:nth-child(odd),
+.service-page .service-delivery-compact .service-delivery-item:nth-child(even){padding:16px 18px 17px}
+.service-page .service-delivery-compact .service-delivery-index{margin-bottom:8px}
+.service-page .service-delivery-compact .service-delivery-item h3{font-size:clamp(17px,1.5vw,21px);margin-bottom:6px}
+.service-page .service-delivery-compact .service-delivery-item p{font-size:13px;line-height:1.5}
+.service-page .service-delivery-compact .service-aftercare-docked{grid-column:1/-1;margin:0;padding:15px 18px 17px;border-top:1px solid rgba(244,241,234,.13)}
+.service-page .service-delivery-compact .service-aftercare-docked>div{max-width:none}
+.service-page .service-delivery-compact .service-aftercare-docked span{margin-bottom:5px}
+.service-page .service-delivery-compact .service-aftercare-docked p{font-size:13px;margin:0;line-height:1.55}
+html[data-theme="light"] .service-page .service-delivery-compact .service-aftercare-docked{border-color:rgba(23,23,23,.12)}
+@media(max-width:900px){.service-page .service-delivery-compact{padding-top:40px;padding-bottom:56px}}
+@media(max-width:560px){
+ .service-page .service-delivery-compact .service-delivery-grid{padding:4px 16px 0}
+ .service-page .service-delivery-compact .service-delivery-item{padding:16px 0}
+ .service-page .service-delivery-compact .service-aftercare-docked{padding:16px 0}
+}
