@@ -1,10 +1,10 @@
 import { localizedMetadata } from "../lib/localizedSeo";
-import LanguageSwitcher from "components/LanguageSwitcher";
+import LanguageSwitcher from "../components/LanguageSwitcher";
 import Image from "next/image";
 import heroBg from "../assets/images/andrew-kliatskyi-k7XTD-HCZAw-unsplash.jpg";
-import heroBgLight from "./assets/images/balts_fons_optimizets.webp";
+import heroBgLight from "../assets/images/balts_fons_optimizets.webp";
 import ValueShowcase from "../components/ValueShowcaseRu";
-import ПроцессFlow from "../components/ПроцессFlowRu";
+import ProcessFlow from "../components/ProcessFlowRu";
 import RevealOnView from "../components/RevealOnView";
 import ThemeToggle from "../components/ThemeToggle";
 import ServicesDropdown from "../components/ServicesDropdown";
@@ -138,7 +138,7 @@ export default function Home() {
 
       <ValueShowcase />
 
-      <ПроцессFlow />
+      <ProcessFlow />
 
       <section className="call-section" aria-labelledby="call-title">
         <div className="call-inner">
