@@ -36,7 +36,7 @@ export default function ServiceDelivery({
         </RevealOnView>
       </div>
 
-      <div className="service-delivery-grid">
+      <div className="service-delivery-grid" style={{paddingBottom:0}}>
         {items.map((item, index) => (
           <RevealOnView className="service-delivery-item" delay={index * 70} key={item.title}>
             <span className="service-delivery-index">{String(index + 1).padStart(2, "0")}</span>
