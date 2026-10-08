@@ -8,15 +8,15 @@ import ServicesDropdown from "../../../components/ServicesDropdown";
 export const metadata: Metadata = {
   title: "Улучшение сайта | Kestrel",
   description:
-    "Esošas mājaslapas uzlabošana ar skaidrāku struktūru, modernāku dizainu, labāku mobilo versiju un vienkāršāku klienta ceļu.",
+    "Улучшаем существующий сайт: структура, удобство и путь клиента.",
 };
 
 export default function WebsiteUpgradePage() {
   return (
     <main className="service-page upgrade-page">
-      <header className="service-page-header" aria-label="Galvenā navigācija">
-        <a className="brand" href="/ru" aria-label="Sākumlapa">Kestrel</a>
-        <nav className="service-page-nav" aria-label="Galvenā navigācija">
+      <header className="service-page-header" aria-label="Главная навигация">
+        <a className="brand" href="/ru" aria-label="Главная">Kestrel</a>
+        <nav className="service-page-nav" aria-label="Главная навигация">
             <ServicesDropdown />
             <a href="/ru/o-nas">О нас</a>
             <ThemeToggle />
@@ -30,8 +30,7 @@ export default function WebsiteUpgradePage() {
           <p className="service-page-kicker">Улучшение сайта</p>
           <h1>Ваш сайт может работать лучше</h1>
           <p className="service-page-lead">
-            Ja mājaslapa jau ir, bet piedāvājumu grūti saprast, mobilā versija klibo
-            vai klientam nav skaidrs nākamais solis, nav vienmēr jāsāk с нуля.
+            Если существующий сайт неудобен и непонятен, не всегда нужно переделывать его с нуля.
           </p>
 
           <div className="service-page-actions">
@@ -132,8 +131,7 @@ export default function WebsiteUpgradePage() {
 
           <RevealOnView delay={150}>
             <p className="upgrade-compare-copy">
-              Ne vienmēr vajag jaunu lapu. Dažreiz lielāko rezultātu dod skaidrāka struktūra,
-              stiprāks vizuālais virziens un vienkāršāks klienta ceļš.
+              Не всегда нужен новый сайт. Иногда достаточно сделать структуру понятнее и упростить путь к заявке.
             </p>
           </RevealOnView>
         </div>
@@ -241,7 +239,7 @@ export default function WebsiteUpgradePage() {
       </section>
 
       <footer className="service-page-footer">
-        <nav className="service-page-footer-nav" aria-label="Lapas navigācija">
+        <nav className="service-page-footer-nav" aria-label="Навигация">
           <a href="/ru">Главная</a>
           <a href="/ru/#services">Услуги</a>
           <a href="/ru/o-nas">О нас</a>
