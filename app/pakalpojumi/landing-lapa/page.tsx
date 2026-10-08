@@ -213,6 +213,20 @@ export default function LandingPage() {
         </div>
       </section>
 
+      <ServiceDelivery
+        compact
+        id="delivery-title"
+        title="Gatavs palaišanai"
+        description="Praktiskās lietas, kurām jābūt sakārtotām, lai landing lapa nav tikai skaists dizains."
+        items={[
+          { title: "Saturs un struktūra", text: "Klients ātrāk saprot, ko piedāvā un kur pieteikties." },
+          { title: "Forma vai CTA", text: "Apmeklētājam ir skaidrs un ērts ceļš līdz pieteikumam." },
+          { title: "Mobile un pārbaude", text: "Lapa ir ērti lietojama arī telefonā, un galvenās darbības ir pārbaudītas." },
+          { title: "SEO pamati", text: "Sakārtoti pamati, kas palīdz meklētājiem saprast lapas saturu." }
+        ]}
+      />
+
+
       <section className="service-page-section service-process-section" aria-labelledby="process-title">
         <div className="service-process-intro">
           <RevealOnView className="service-process-kicker">
@@ -262,17 +276,6 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <ServiceDelivery
-        id="delivery-title"
-        title="Gatavs palaišanai"
-        description="Praktiskās lietas, kurām jābūt sakārtotām, lai landing lapa nav tikai skaists dizains."
-        items={[
-          { title: "Saturs un struktūra", text: "Klients ātrāk saprot, ko piedāvā un kur pieteikties." },
-          { title: "Forma vai CTA", text: "Apmeklētājam ir skaidrs un ērts ceļš līdz pieteikumam." },
-          { title: "Mobile un pārbaude", text: "Lapa ir ērti lietojama arī telefonā, un galvenās darbības ir pārbaudītas." },
-          { title: "SEO pamati", text: "Sakārtoti pamati, kas palīdz meklētājiem saprast lapas saturu." }
-        ]}
-      />
 
       <section className="service-page-cta">
         <RevealOnView className="line-mask-reveal service-cta-title">
