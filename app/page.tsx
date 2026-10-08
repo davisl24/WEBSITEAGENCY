@@ -1,3 +1,4 @@
+import { lvMetadataAlternates } from "lib/localizedSeo";
 import LanguageSwitcher from "components/LanguageSwitcher";
 import Image from "next/image";
 import heroBg from "./assets/images/andrew-kliatskyi-k7XTD-HCZAw-unsplash.jpg";
@@ -7,6 +8,12 @@ import ProcessFlow from "./components/ProcessFlow";
 import RevealOnView from "./components/RevealOnView";
 import ThemeToggle from "./components/ThemeToggle";
 import ServicesDropdown from "./components/ServicesDropdown";
+
+export const metadata = {
+  title: "Mājaslapu izstrāde Latvijas uzņēmumiem | Kestrel",
+  description: "Veidojam skaidras un ātras mājaslapas Latvijas mazajiem uzņēmumiem.",
+  alternates: lvMetadataAlternates("home"),
+};
 
 export default function Home() {
   return (
