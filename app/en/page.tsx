@@ -1,3 +1,4 @@
+import { localizedMetadata } from "../lib/localizedSeo";
 import LanguageSwitcher from "components/LanguageSwitcher";
 import Image from "next/image";
 import heroBg from "../assets/images/andrew-kliatskyi-k7XTD-HCZAw-unsplash.jpg";
@@ -7,6 +8,8 @@ import ProcessFlow from "../components/ProcessFlowEn";
 import RevealOnView from "../components/RevealOnView";
 import ThemeToggle from "../components/ThemeToggle";
 import ServicesDropdown from "../components/ServicesDropdown";
+
+export const metadata = localizedMetadata("en","home");
 
 export default function Home() {
   return (
