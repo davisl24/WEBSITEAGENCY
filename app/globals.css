@@ -7315,3 +7315,15 @@ html[data-theme="light"] .value-contrast-transition{--contrast-surround:#f3f0e9}
   .services-section .service-card-body{padding:24px}
   .services-section .service-card h3{font-size:28px}
 }
+
+
+/* Keep three equal service cards on one desktop row, preserving editorial colors. */
+@media(min-width:981px){
+  .services-section .services-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+  .services-section .service-card,
+  .services-section .service-card:nth-child(2),
+  .services-section .service-card:nth-child(3){grid-column:auto;display:block;min-height:0}
+  .services-section .service-card:nth-child(3) .service-visual{min-height:250px;border-right:0;border-bottom:1px solid rgba(23,23,23,.09)}
+  .services-section .service-card:nth-child(3) .service-card-body{display:block;padding:28px 32px}
+  .services-section .service-card:nth-child(3) .service-link{margin-top:26px}
+}
