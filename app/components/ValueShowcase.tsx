@@ -7,7 +7,7 @@ export default function ValueShowcase() {
         <div className="value-layout value-plan-layout">
           <RevealOnView className="value-copy-side">
             <p className="section-label">Kāpēc Kestrel</p>
-            <h2 id="value-title">Mazāk liekā<span>Vairāk skaidrības</span></h2>
+            <h2 id="value-title">Mājaslapa, kurā<span>viss ir saprotams.</span></h2>
             <p className="value-intro">
               Mājaslapas izstrādei nav jābūt sarežģītai — mēs palīdzam saprast, kas tev patiešām vajadzīgs
             </p>
