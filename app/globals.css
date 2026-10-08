@@ -6625,3 +6625,59 @@ html[data-theme="light"] .site-footer .footer-statement{color:rgba(23,23,23,.64)
   .site-footer .footer-wordmark{font-size:clamp(67px,15vw,102px)}
   .site-footer .footer-statement{margin-top:16px}
 }
+
+/* Footer final polish — subtle depth and compact contact callout */
+.site-footer{
+  background:radial-gradient(ellipse 45% 75% at 23% 44%,rgba(244,241,234,.035),transparent 80%),#070708;
+}
+.site-footer .footer-contact-card{
+  display:flex;
+  flex-direction:column;
+  gap:9px;
+  min-height:100px;
+  padding:19px 20px;
+  border:1px solid rgba(244,241,234,.17);
+  border-radius:14px;
+  background:rgba(244,241,234,.027);
+  color:#f4f1ea;
+  text-decoration:none;
+  transition:border-color .2s ease,background .2s ease;
+}
+.site-footer .footer-contact-heading{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  margin:0;
+  color:inherit;
+  font-size:20px;
+  font-weight:600;
+  letter-spacing:-.03em;
+}
+.site-footer .footer-contact-heading span{margin:0;font-size:21px;color:inherit}
+.site-footer .footer-contact-subtitle{
+  margin:0;
+  font-size:12px;
+  color:rgba(244,241,234,.58);
+}
+.site-footer .footer-contact-card:hover{
+  background:rgba(244,241,234,.05);
+  border-color:rgba(244,241,234,.34);
+}
+.site-footer .footer-contact-card:focus-visible{
+  outline:2px solid currentColor;
+  outline-offset:4px;
+}
+html[data-theme="light"] .site-footer{
+  background:radial-gradient(ellipse 45% 75% at 23% 44%,rgba(23,23,23,.035),transparent 80%),#eae7df;
+}
+html[data-theme="light"] .site-footer .footer-contact-card{
+  background:rgba(23,23,23,.025);
+  border-color:rgba(23,23,23,.17);
+  color:#171717;
+}
+html[data-theme="light"] .site-footer .footer-contact-subtitle{color:rgba(23,23,23,.57)}
+html[data-theme="light"] .site-footer .footer-contact-card:hover{
+  background:rgba(23,23,23,.05);
+  border-color:rgba(23,23,23,.3);
+}
