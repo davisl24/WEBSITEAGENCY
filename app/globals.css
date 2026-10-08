@@ -6415,3 +6415,51 @@ html[data-theme="light"] .contact-page .booking-preview-disclaimer{color:rgba(23
   .contact-page .booking-preview-bottom{flex-direction:column;align-items:stretch}
   .contact-page .booking-preview-submit{text-align:center}
 }
+
+/* Final CTA and contact booking preview proportion polish */
+.call-section .call-dot{
+  background:#c8c1b6;
+  box-shadow:none;
+}
+.contact-page .contact-booking-layout{
+  align-items:center;
+  gap:clamp(28px,4.5vw,72px);
+}
+.contact-page .contact-booking-layout .contact-page-copy h1{
+  font-size:clamp(46px,4.5vw,66px);
+  line-height:1.06;
+  max-width:620px;
+}
+.contact-page .booking-preview{
+  padding:22px 26px;
+}
+.contact-page .booking-preview-month{
+  margin:18px 0 12px;
+}
+.contact-page .booking-preview-weekdays{
+  margin-bottom:4px;
+}
+.contact-page .booking-preview-days>span{
+  aspect-ratio:auto;
+  height:45px;
+}
+.contact-page .booking-preview-times{
+  margin-top:14px;
+  padding-top:12px;
+}
+.contact-page .booking-preview-times>div{
+  margin-top:9px;
+}
+.contact-page .booking-preview-bottom{
+  margin-top:16px;
+}
+.contact-page .booking-preview-footnote{
+  margin-top:10px!important;
+}
+@media(max-width:700px){
+  .contact-page .contact-booking-layout .contact-page-copy h1{
+    font-size:clamp(42px,9vw,54px);
+  }
+  .contact-page .booking-preview{padding:18px}
+  .contact-page .booking-preview-days>span{height:39px}
+}
