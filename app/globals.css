@@ -7579,3 +7579,14 @@ html[data-theme="light"] .service-page-header{
 .service-page .service-price-includes{border-color:transparent}
 html[data-theme="light"] .service-page .service-price-primary,
 html[data-theme="light"] .service-page .service-price-includes{border-color:transparent}
+
+
+/* Homepage service cards: remove decorative outer outlines in all themes/states. */
+.services-section .services-grid > a.service-card,
+html[data-theme="light"] .services-section .services-grid > a.service-card,
+html[data-theme="dark"] .services-section .services-grid > a.service-card,
+.services-section .services-grid > a.service-card:hover,
+html[data-theme="light"] .services-section .services-grid > a.service-card:hover,
+html[data-theme="dark"] .services-section .services-grid > a.service-card:hover{
+  border-color:transparent;
+}
