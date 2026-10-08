@@ -8,15 +8,15 @@ import ServicesDropdown from "../../../components/ServicesDropdown";
 export const metadata: Metadata = {
   title: "Website improvements | Kestrel",
   description:
-    "Esošas mājaslapas uzlabošana ar skaidrāku struktūru, modernāku dizainu, labāku mobilo versiju un vienkāršāku klienta ceļu.",
+    "Improve an existing website with clearer structure, better usability and a simpler customer journey.",
 };
 
 export default function WebsiteUpgradePage() {
   return (
     <main className="service-page upgrade-page">
-      <header className="service-page-header" aria-label="Galvenā navigācija">
-        <a className="brand" href="/en" aria-label="Sākumlapa">Kestrel</a>
-        <nav className="service-page-nav" aria-label="Galvenā navigācija">
+      <header className="service-page-header" aria-label="Main navigation">
+        <a className="brand" href="/en" aria-label="Home">Kestrel</a>
+        <nav className="service-page-nav" aria-label="Main navigation">
             <ServicesDropdown />
             <a href="/en/about">About</a>
             <ThemeToggle />
@@ -30,8 +30,7 @@ export default function WebsiteUpgradePage() {
           <p className="service-page-kicker">Website improvements</p>
           <h1>Your existing website can do more</h1>
           <p className="service-page-lead">
-            Ja mājaslapa jau ir, bet piedāvājumu grūti saprast, mobilā versija klibo
-            vai klientam nav skaidrs nākamais solis, nav vienmēr jāsāk from scratch.
+            If your existing website is difficult to understand or use on mobile, you may not need to start from scratch.
           </p>
 
           <div className="service-page-actions">
@@ -132,8 +131,7 @@ export default function WebsiteUpgradePage() {
 
           <RevealOnView delay={150}>
             <p className="upgrade-compare-copy">
-              Ne vienmēr vajag jaunu lapu. Dažreiz lielāko rezultātu dod skaidrāka struktūra,
-              stiprāks vizuālais virziens un vienkāršāks klienta ceļš.
+              You don't always need a new site. Clearer structure and an easier path to enquiry can make a real difference.
             </p>
           </RevealOnView>
         </div>
@@ -241,7 +239,7 @@ export default function WebsiteUpgradePage() {
       </section>
 
       <footer className="service-page-footer">
-        <nav className="service-page-footer-nav" aria-label="Lapas navigācija">
+        <nav className="service-page-footer-nav" aria-label="Page navigation">
           <a href="/en">Home</a>
           <a href="/en/#services">Services</a>
           <a href="/en/about">About</a>
