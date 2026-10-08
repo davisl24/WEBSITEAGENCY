@@ -1,3 +1,4 @@
+import ServicePricingFaq from "../../components/ServicePricingFaq";
 import type { Metadata } from "next";
 import RevealOnView from "../../components/RevealOnView";
 import ThemeToggle from "../../components/ThemeToggle";
@@ -264,6 +265,13 @@ export default function LandingPage() {
         </div>
       </section>
 
+
+      <ServicePricingFaq
+        service="Landing lapa"
+        pricingNote="Cena atkarīga no satura apjoma un vajadzīgajām funkcijām."
+        included={["Galveno sadaļu skaits un saturs","Dizaina pielāgojums uzņēmumam","Pieteikšanās poga vai forma","Mobilā versija un pārbaude"]}
+        questions={[{"question":"Cik ātri var izveidot landing lapu?","answer":"Termiņš atkarīgs no satura gatavības un funkcijām. Konkrētu grafiku saskaņojam pirms darba sākšanas."},{"question":"Vai man pašam jāsagatavo teksti un bildes?","answer":"Vari iesūtīt esošos materiālus. Ja vajadzīga palīdzība ar struktūru vai tekstiem, to precizējam piedāvājumā."},{"question":"Vai lapa darbosies telefonā?","answer":"Jā, plānojam pielāgotu izkārtojumu datoram un telefonam un pārbaudām svarīgākās darbības."},{"question":"Vai var pieslēgt pieteikuma formu?","answer":"Jā, vajadzīgo formu vai citu pieteikšanās veidu saskaņojam projekta sākumā."},{"question":"Vai domēns un uzturēšana ir iekļauta?","answer":"Domēna, hostinga un turpmākās uzturēšanas izmaksas norādām atsevišķi, ja tās ir nepieciešamas."}]}
+      />
 
       <section className="service-page-cta">
         <RevealOnView className="line-mask-reveal service-cta-title">
