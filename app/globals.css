@@ -6529,3 +6529,62 @@ html[data-theme="light"] .site-footer .footer-top-link:hover{color:#171717}
 @media(max-width:360px){
   .site-footer .footer-wordmark{font-size:17vw}
 }
+
+/* Process cleanup: only the connected timeline, no duplicate rules */
+@media(min-width:761px){
+  .process-section .process-track{border-top:0}
+  .process-section .process-step,
+  .process-section .process-step+.process-step{border-left:0}
+  .process-section .process-step+.process-step{padding-left:0}
+  .process-section .process-step{padding-right:30px}
+  .process-section .process-step-dot,
+  .process-section .process-step+.process-step .process-step-dot{left:-1px}
+}
+@media(min-width:761px) and (max-width:900px){
+  .process-section .process-track{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .process-section .process-step{padding-right:16px}
+}
+@media(max-width:760px){
+  .process-section .process-step,
+  .process-section .process-step+.process-step{border-left:0}
+}
+
+/* Footer v3: one wordmark with two-sentence brand statement */
+.site-footer .footer-main{
+  display:flex;
+  justify-content:flex-end;
+  padding-bottom:clamp(44px,6vw,76px);
+}
+.site-footer .footer-links{
+  width:min(100%,440px);
+}
+.site-footer .footer-wordmark-block{padding:0 0 46px}
+.site-footer .footer-wordmark{
+  display:inline-block;
+  padding:0;
+  text-decoration:none;
+  color:inherit;
+  font-size:clamp(108px,15vw,220px);
+  line-height:.86;
+  white-space:nowrap;
+}
+.site-footer .footer-statement{
+  max-width:680px;
+  margin:28px 0 0;
+  font-size:clamp(15px,1.4vw,18px);
+  line-height:1.7;
+  color:rgba(244,241,234,.62);
+}
+html[data-theme="light"] .site-footer .footer-statement{color:rgba(23,23,23,.64)}
+@media(max-width:900px){
+  .site-footer .footer-main{justify-content:flex-start;padding-bottom:56px}
+  .site-footer .footer-wordmark{font-size:clamp(84px,15vw,164px)}
+}
+@media(max-width:700px){
+  .site-footer .footer-main{padding-bottom:46px}
+  .site-footer .footer-wordmark{font-size:clamp(70px,16vw,115px)}
+  .site-footer .footer-wordmark-block{padding-bottom:34px}
+  .site-footer .footer-statement{font-size:15px;line-height:1.65;margin-top:18px}
+  .site-footer .footer-statement br{display:none}
+  .site-footer .footer-statement br:after{content:" "}
+}
