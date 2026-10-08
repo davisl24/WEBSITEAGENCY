@@ -13,7 +13,7 @@ export const metadata = localizedMetadata("ru","home");
 
 export default function Home() {
   return (
-    <main id="top">
+    <main lang="ru" id="top">
       <section className="hero">
         <div className="hero-media" aria-hidden="true">
           <Image src={heroBg} alt="" fill priority className="hero-media-image hero-media-image-dark" />
