@@ -6771,3 +6771,41 @@ html[data-theme="light"] .value-section .value-showcase-visual{
 html[data-theme="light"] .call-section .call-cta{
   border-color:rgba(23,23,23,.22);
 }
+
+/* Primary closing CTA: clear focal action in both themes */
+.call-section .call-cta{
+  background:#f4f1ea;
+  color:#171717;
+  border:1px solid #f4f1ea;
+  box-shadow:0 14px 38px rgba(0,0,0,.17);
+  transition:background .2s ease,color .2s ease,transform .2s ease,box-shadow .2s ease;
+}
+.call-section .call-cta .call-dot{background:#716b63;box-shadow:none}
+@media(hover:hover) and (pointer:fine){
+  .call-section .call-cta:hover{
+    background:#fff;
+    border-color:#fff;
+    color:#111;
+    transform:translateY(-2px);
+    box-shadow:0 18px 44px rgba(0,0,0,.22);
+  }
+}
+html[data-theme="light"] .call-section .call-cta{
+  background:#171717;
+  color:#f4f1ea;
+  border-color:#171717;
+  box-shadow:0 12px 30px rgba(23,23,23,.14);
+}
+html[data-theme="light"] .call-section .call-cta .call-dot{background:#cec7bc}
+@media(hover:hover) and (pointer:fine){
+  html[data-theme="light"] .call-section .call-cta:hover{
+    background:#343434;
+    border-color:#343434;
+    color:#fff;
+    box-shadow:0 16px 36px rgba(23,23,23,.19);
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .call-section .call-cta{transition:none}
+  .call-section .call-cta:hover{transform:none}
+}
