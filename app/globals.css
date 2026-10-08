@@ -7411,3 +7411,15 @@ html[data-theme="dark"] .services-section .service-card:is(:nth-child(1),:nth-ch
 
 /* Exact selector overrides the old third-card divider in both themes. */
 .services-section .service-card:nth-child(3) .service-visual{border-bottom:0}
+
+
+/* Interactive service cards: one accessible link per card. */
+.services-section a.service-card{cursor:pointer;text-decoration:none}
+.services-section a.service-card:focus-visible{outline:3px solid currentColor;outline-offset:5px}
+.services-section a.service-card .service-link{width:100%;pointer-events:none}
+@media(hover:hover) and (pointer:fine){
+  .services-section a.service-card:hover{transform:translateY(-3px)}
+}
+@media(prefers-reduced-motion:reduce){
+  .services-section a.service-card{transition:none}
+}
