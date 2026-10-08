@@ -7430,3 +7430,15 @@ main#top > .call-section{border-top:0}
 main#top > .site-footer{border-top:0}
 main#top > .site-footer .footer-bottom{border-top:0}
 main#top > .home-about-section{border-top:0;border-bottom:0}
+
+
+/* About page: quieter hero-to-company transition, no decorative divider. */
+.about-page .about-company-section{
+  border-top:0;
+  padding-top:84px;
+}
+.about-page .about-hero{padding-bottom:72px}
+@media(max-width:760px){
+  .about-page .about-company-section{padding-top:64px}
+  .about-page .about-hero{padding-bottom:56px}
+}
