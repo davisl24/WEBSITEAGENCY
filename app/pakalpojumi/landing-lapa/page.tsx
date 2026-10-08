@@ -267,10 +267,10 @@ export default function LandingPage() {
         title="Gatavs palaišanai"
         description="Praktiskās lietas, kurām jābūt sakārtotām, lai landing lapa nav tikai skaists dizains."
         items={[
-          { title: "Saturs un struktūra", text: "Sakārtojam galveno domu, secību un skaidru ceļu līdz darbībai." },
-          { title: "Forma vai CTA", text: "Pieteikšanās vai kontakta solis tur, kur tas klientam ir vajadzīgs." },
-          { title: "Mobile un pārbaude", text: "Pielāgojam telefonam un pārbaudām galvenos stāvokļus pirms palaišanas." },
-          { title: "SEO pamati", text: "Sakārtota semantika, metadati un tehniski tīrs pamats meklētājiem." }
+          { title: "Saturs un struktūra", text: "Klients ātrāk saprot, ko piedāvā un kur pieteikties." },
+          { title: "Forma vai CTA", text: "Apmeklētājam ir skaidrs un ērts ceļš līdz pieteikumam." },
+          { title: "Mobile un pārbaude", text: "Lapa ir ērti lietojama arī telefonā, un galvenās darbības ir pārbaudītas." },
+          { title: "SEO pamati", text: "Sakārtoti pamati, kas palīdz meklētājiem saprast lapas saturu." }
         ]}
       />
 
