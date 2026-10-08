@@ -9,7 +9,7 @@ export const metadata = localizedMetadata("en","upgrade");
 
 export default function WebsiteUpgradePage() {
   return (
-    <main className="service-page upgrade-page">
+    <main lang="en" className="service-page upgrade-page">
       <header className="service-page-header" aria-label="Main navigation">
         <a className="brand" href="/en" aria-label="Home">Kestrel</a>
         <nav className="service-page-nav" aria-label="Main navigation">
