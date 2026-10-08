@@ -1,15 +1,11 @@
+import { localizedMetadata } from "../../../lib/localizedSeo";
 import LanguageSwitcher from "../../../components/LanguageSwitcher";
 import ServicePricingFaq from "../../../components/ServicePricingFaqRu";
-import type { Metadata } from "next";
 import RevealOnView from "../../../components/RevealOnView";
 import ThemeToggle from "../../../components/ThemeToggle";
 import ServicesDropdown from "../../../components/ServicesDropdown";
 
-export const metadata: Metadata = {
-  title: "Улучшение сайта | Kestrel",
-  description:
-    "Улучшаем существующий сайт: структура, удобство и путь клиента.",
-};
+export const metadata = localizedMetadata("ru","upgrade");
 
 export default function WebsiteUpgradePage() {
   return (
