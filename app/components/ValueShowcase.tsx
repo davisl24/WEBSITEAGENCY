@@ -19,12 +19,12 @@ export default function ValueShowcase() {
                 <div className="value-contrast-top"><span>PAR DAUDZ</span><span>01 / PIRMS</span></div>
                 <div className="value-contrast-demo value-contrast-demo-before" aria-hidden="true">
                   <div className="contrast-demo-nav"><strong>Auto kopšana Rīgā</strong><span>Sākums</span><span>Jaunumi</span><span>Pakalpojumi</span></div>
-                  <div className="contrast-demo-promo">Auto kopšana, tīrīšana un vēl daudz kas cits!</div>
-                  <div className="contrast-demo-blurb">Piedāvājam dažādus auto kopšanas pakalpojumus. Apskati jaunumus un mūsu iespējas.</div>
+                  <div className="contrast-demo-promo">Auto kopšanas pakalpojumi Rīgā</div>
+                  <div className="contrast-demo-blurb">Salona tīrīšana, virsbūves kopšana un citi pakalpojumi. Uzzini vairāk mūsu sadaļās.</div>
                   <div className="contrast-demo-grid"><span>Salona tīrīšana</span><span>Virsbūves kopšana</span><span>Akcijas</span><span>Galerija</span><span>Jaunumi</span><span>Kontakti</span></div>
                   <div className="contrast-demo-actions"><span>Apskatīt cenas</span><span>Skatīt akcijas</span><span>Uzzināt vairāk →</span></div>
                 </div>
-                <p>Daudz informācijas. Nav skaidrs, ar ko sākt.</p>
+                <p>Pakalpojumi ir, bet nav skaidra ceļa līdz pieteikumam.</p>
               </div>
               <span className="value-contrast-transition" aria-hidden="true">→</span>
               <div className="value-contrast-panel value-contrast-after">
@@ -32,8 +32,8 @@ export default function ValueShowcase() {
                 <div className="value-contrast-demo value-contrast-demo-after" aria-hidden="true">
                   <div className="contrast-demo-nav"><strong>Uzņēmums</strong><span>Pakalpojumi</span><span>Kontakti</span></div>
                   <div className="contrast-demo-eyebrow">VIENS SKAIDRS PIEDĀVĀJUMS</div>
-                  <div className="contrast-demo-headline">Profesionāla auto salona tīrīšana Rīgā.</div>
-                  <div className="contrast-demo-blurb">Tīrs un kopts auto salons bez liekas piepūles. Izvēlies sev ērtu laiku.</div>
+                  <div className="contrast-demo-headline">Auto salona dziļā tīrīšana Rīgā</div>
+                  <div className="contrast-demo-blurb">Notīrām traipus, putekļus un ikdienā uzkrātos netīrumus. Piesaki sev ērtu laiku.</div>
                   <span className="contrast-demo-cta">Pieteikt tīrīšanu <span>↗</span></span>
                 </div>
                 <p>Viens piedāvājums. Viens saprotams nākamais solis.</p>
