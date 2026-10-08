@@ -1,3 +1,4 @@
+import LanguageSwitcher from "components/LanguageSwitcher";
 import Image from "next/image";
 import heroBg from "./assets/images/andrew-kliatskyi-k7XTD-HCZAw-unsplash.jpg";
 import heroBgLight from "./assets/images/balts_fons_optimizets.webp";
@@ -23,6 +24,7 @@ export default function Home() {
             <ServicesDropdown />
             <a href="/par-mums">Par mums</a>
             <ThemeToggle />
+            <LanguageSwitcher />
             <a className="header-cta" href="/kontakti">Pieteikt sarunu</a>
           </nav>
         </header>
