@@ -1,15 +1,11 @@
+import { localizedMetadata } from "../../../lib/localizedSeo";
 import LanguageSwitcher from "../../../components/LanguageSwitcher";
 import ServicePricingFaq from "../../../components/ServicePricingFaqRu";
-import type { Metadata } from "next";
 import RevealOnView from "../../../components/RevealOnView";
 import ThemeToggle from "../../../components/ThemeToggle";
 import ServicesDropdown from "../../../components/ServicesDropdown";
 
-export const metadata: Metadata = {
-  title: "Разработка лендингов | Kestrel",
-  description:
-    "Лендинги с понятной целью, быстрой загрузкой и удобной формой заявки.",
-};
+export const metadata = localizedMetadata("ru","landing");
 
 export default function LandingPage() {
   return (
