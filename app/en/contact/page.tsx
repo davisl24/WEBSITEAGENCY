@@ -8,7 +8,7 @@ export const metadata = localizedMetadata("en","contact");
 
 export default function ContactPage() {
   return (
-    <main className="service-page contact-page">
+    <main lang="en" className="service-page contact-page">
       <header className="service-page-header" aria-label="Main navigation">
         <a className="brand" href="/en" aria-label="Home">Kestrel</a>
         <nav className="service-page-nav" aria-label="Main navigation">
@@ -39,7 +39,7 @@ export default function ContactPage() {
             </div>
             <div className="booking-preview-month"><strong>October 2026</strong><span aria-hidden="true">‹ &nbsp; ›</span></div>
             <div className="booking-preview-weekdays" aria-hidden="true">
-              <span>P</span><span>O</span><span>T</span><span>Th</span><span>P</span><span>S</span><span>Su</span>
+              <span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span><span>Su</span>
             </div>
             <div className="booking-preview-days" aria-hidden="true">
               {Array.from({ length: 3 }, (_, i) => <span className="booking-preview-blank" key={`blank-${i}`}/>)}
