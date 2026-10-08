@@ -1,15 +1,11 @@
+import { localizedMetadata } from "../../../lib/localizedSeo";
 import LanguageSwitcher from "../../../components/LanguageSwitcher";
 import ServicePricingFaq from "../../../components/ServicePricingFaqRu";
-import type { Metadata } from "next";
 import RevealOnView from "../../../components/RevealOnView";
 import ThemeToggle from "../../../components/ThemeToggle";
 import ServicesDropdown from "../../../components/ServicesDropdown";
 
-export const metadata: Metadata = {
-  title: "Разработка сайтов для бизнеса | Kestrel",
-  description:
-    "Сайты для бизнеса с понятной структурой и простым способом связи.",
-};
+export const metadata = localizedMetadata("ru","company");
 
 export default function CompanyWebsitePage() {
   return (
