@@ -1,14 +1,29 @@
+import { usePathname } from "next/navigation";
 "use client";
 
 import { useEffect, useRef, useState } from "react";
 
-const services = [
-  { href: "/pakalpojumi/landing-lapa", label: "Landing lapa" },
-  { href: "/pakalpojumi/uznemuma-majaslapa", label: "Uzņēmuma mājaslapa" },
-  { href: "/pakalpojumi/majaslapas-uzlabosana", label: "Mājaslapas uzlabošana" },
-];
-
+const services = {
+  lv: [
+    {href:"/pakalpojumi/landing-lapa",label:"Landing lapa"},
+    {href:"/pakalpojumi/uznemuma-majaslapa",label:"Uzņēmuma mājaslapa"},
+    {href:"/pakalpojumi/majaslapas-uzlabosana",label:"Mājaslapas uzlabošana"}
+  ],
+  en: [
+    {href:"/en/services/landing-page",label:"Landing page"},
+    {href:"/en/services/business-website",label:"Business website"},
+    {href:"/en/services/website-improvements",label:"Website improvements"}
+  ],
+  ru: [
+    {href:"/ru/uslugi/lending",label:"Лендинг"},
+    {href:"/ru/uslugi/sajt-dlya-biznesa",label:"Сайт для бизнеса"},
+    {href:"/ru/uslugi/uluchshenie-sajta",label:"Улучшение сайта"}
+  ]
+};
 export default function ServicesDropdown() {
+  const pathname = usePathname();
+  const locale = pathname.startsWith('/en') ? 'en' : pathname.startsWith('/ru') ? 'ru' : 'lv';
+  const label = locale === 'en' ? 'Services' : locale === 'ru' ? 'Услуги' : 'Pakalpojumi';
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -70,13 +85,13 @@ export default function ServicesDropdown() {
         aria-expanded={open}
         onClick={() => setOpen((value) => !value)}
       >
-        <span>Pakalpojumi</span>
+        <span>{label}</span>
         <span className="services-dropdown-chevron" aria-hidden="true">⌄</span>
       </button>
 
       {open && (
-        <div className="services-dropdown-menu" role="menu" aria-label="Pakalpojumi">
-          {services.map((service) => (
+        <div className="services-dropdown-menu" role="menu" aria-label={label}>
+          {services[locale].map((service) => (
             <a
               href={service.href}
               role="menuitem"
