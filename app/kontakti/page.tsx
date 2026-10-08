@@ -22,83 +22,42 @@ export default function ContactPage() {
           </nav>
       </header>
 
-      <section className="contact-page-hero">
+      <section className="contact-page-hero contact-booking-layout" aria-labelledby="booking-title">
         <div className="contact-page-copy">
-          <p className="service-page-kicker">Sazināties</p>
-          <h1>Pastāsti īsumā</h1>
-          <p>
-            Nav vajadzīgs gatavs tehniskais uzdevums. Atsūti, ko uzņēmums dara,
-            kas šobrīd nestrādā vai ko gribi uzlabot.
-          </p>
-
+          <p className="service-page-kicker">Pieteikt sarunu</p>
+          <h1 id="booking-title">Izvēlies laiku sarunai</h1>
+          <p>15 minūtes, lai izrunātu tavu ideju un saprastu, kāds mājaslapas risinājums būtu piemērotākais</p>
           <div className="contact-page-note">
-            <span>Atbildēsim ar konkrētu nākamo soli</span>
-            <small>bez saistībām un bez lieka pārdošanas teksta</small>
+            <span>Bezmaksas konsultācija</span>
+            <small>Google Meet · 15 minūtes · bez saistībām</small>
           </div>
+          <p className="booking-preview-disclaimer">Rezervācijas dizaina priekšskatījums — kalendāra pieslēgšana vēl tiek gatavota</p>
         </div>
-
-        <RevealOnView className="contact-page-form-wrap" delay={80}>
-          <div className="contact-card contact-page-form" id="contact-form">
-            <div className="contact-card-top">
-              <span>Bezmaksas ideja</span>
-              <span>Bez saistībām</span>
+        <RevealOnView className="booking-preview-wrap" delay={80}>
+          <div className="booking-preview" aria-label="Kalendāra dizaina priekšskatījums, rezervācija pašlaik nav pieejama">
+            <div className="booking-preview-top">
+              <span>IZVĒLIES DATUMU UN LAIKU</span>
+              <span className="booking-preview-label">DEMO</span>
             </div>
-
-            <div className="contact-fields">
-              <label>
-                <span>Vārds</span>
-                <input type="text" name="name" placeholder="Tavs vārds" />
-              </label>
-
-              <label>
-                <span>E-pasts vai tālrunis</span>
-                <input type="text" name="contact" placeholder="Kā ar tevi sazināties" />
-              </label>
-
-              <label className="contact-field-wide">
-                <span>Par ko ir projekts</span>
-                <textarea
-                  name="message"
-                  rows={5}
-                  placeholder="Īsi par uzņēmumu, esošo lapu un ko vēlies uzlabot"
-                />
-              </label>
+            <div className="booking-preview-month"><strong>Oktobris 2026</strong><span aria-hidden="true">‹ &nbsp; ›</span></div>
+            <div className="booking-preview-weekdays" aria-hidden="true">
+              <span>P</span><span>O</span><span>T</span><span>C</span><span>P</span><span>S</span><span>Sv</span>
             </div>
-
-            <div className="contact-actions">
-              <p>Pietiek ar pāris teikumiem. Tehniskās detaļas izrunāsim pēc tam.</p>
-              <button type="button" className="button button-primary">Nosūtīt aprakstu</button>
+            <div className="booking-preview-days" aria-hidden="true">
+              {Array.from({ length: 3 }, (_, i) => <span className="booking-preview-blank" key={`blank-${i}`}/>)}
+              {Array.from({ length: 31 }, (_, i) => <span className={i === 13 ? "booking-preview-selected" : ""} key={i}>{i + 1}</span>)}
             </div>
+            <div className="booking-preview-times">
+              <span>Laiki — piemērs</span>
+              <div><span>10:00</span><span className="booking-preview-time-selected">11:30</span><span>14:00</span></div>
+            </div>
+            <div className="booking-preview-bottom">
+              <span>15 min · Google Meet</span>
+              <span className="booking-preview-submit">Rezervēt sarunu →</span>
+            </div>
+            <p className="booking-preview-footnote">Priekšskatījums — datumi un laiki nav reāla pieejamība</p>
           </div>
         </RevealOnView>
-      </section>
-
-      <section className="service-page-section contact-page-call" aria-labelledby="contact-call-title">
-        <div className="contact-page-call-inner">
-          <RevealOnView>
-            <p className="service-page-kicker">Īss zvans</p>
-          </RevealOnView>
-
-          <RevealOnView className="line-mask-reveal" delay={60}>
-            <h2 id="contact-call-title" className="service-line-stack contact-page-call-title">
-              <span className="service-reveal-line"><span>Ja ērtāk izrunāt</span></span>
-            </h2>
-          </RevealOnView>
-
-          <RevealOnView className="contact-page-call-copy" delay={140}>
-            <p>
-              15 minūtes, lai saprastu situāciju un vai vispār ir jēga kaut ko būvēt vai pārbūvēt.
-            </p>
-          </RevealOnView>
-
-          <RevealOnView className="contact-page-call-action" delay={220}>
-            <a className="call-cta" href="#contact-form">
-              <span className="call-dot" aria-hidden="true" />
-              <span>Pieteikt bezmaksas zvanu</span>
-              <span aria-hidden="true">→</span>
-            </a>
-          </RevealOnView>
-        </div>
       </section>
 
       <footer className="service-page-footer">
