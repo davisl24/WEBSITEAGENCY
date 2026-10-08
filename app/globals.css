@@ -6588,3 +6588,40 @@ html[data-theme="light"] .site-footer .footer-statement{color:rgba(23,23,23,.64)
   .site-footer .footer-statement br{display:none}
   .site-footer .footer-statement br:after{content:" "}
 }
+
+/* Footer: align large Kestrel wordmark to annotated upper-left position */
+.site-footer .footer-main{
+  display:grid;
+  grid-template-columns:minmax(0,1.15fr) minmax(340px,.85fr);
+  align-items:start;
+  gap:clamp(36px,5vw,82px);
+  padding-bottom:48px;
+}
+.site-footer .footer-wordmark-block{min-width:0;padding:0}
+.site-footer .footer-wordmark{
+  font-size:clamp(76px,8.8vw,132px);
+  line-height:.92;
+  letter-spacing:-.085em;
+}
+.site-footer .footer-statement{
+  max-width:540px;
+  margin-top:22px;
+  font-size:clamp(14px,1.1vw,17px);
+}
+.site-footer .footer-links{
+  justify-self:end;
+  width:min(100%,440px);
+}
+@media(max-width:900px){
+  .site-footer .footer-main{
+    grid-template-columns:1fr;
+    gap:42px;
+    padding-bottom:44px;
+  }
+  .site-footer .footer-links{justify-self:start}
+  .site-footer .footer-wordmark{font-size:clamp(76px,13vw,120px)}
+}
+@media(max-width:700px){
+  .site-footer .footer-wordmark{font-size:clamp(67px,15vw,102px)}
+  .site-footer .footer-statement{margin-top:16px}
+}
