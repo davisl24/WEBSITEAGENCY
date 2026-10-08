@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import RevealOnView from "../../components/RevealOnView";
 import ThemeToggle from "../../components/ThemeToggle";
 import ServicesDropdown from "../../components/ServicesDropdown";
-import ServiceDelivery from "../../components/ServiceDelivery";
 
 export const metadata: Metadata = {
   title: "Mājaslapas uzlabošana | Kestrel",
@@ -113,18 +112,7 @@ export default function WebsiteUpgradePage() {
         </div>
       </section>
 
-      <ServiceDelivery
-        compact
-        id="delivery-title"
-        title="Labojam to, kam ir jēga"
-        description="Uzlabošanas apjomu nosaka esošās lapas problēmas, nevis iepriekš sagatavota pakete."
-        items={[
-          { title: "Audits", text: "Noskaidrojam, kas apmeklētājam traucē saprast piedāvājumu vai pieteikties." },
-          { title: "UX un saturs", text: "Svarīgāko informāciju padarām vieglāk atrodamu un saprotamu." },
-          { title: "Dizains un izstrāde", text: "Uzlabošanai koncentrējamies uz vajadzīgajām daļām, nevis pārbūvējam visu bez iemesla." },
-          { title: "Pārbaude", text: "Pārbaudām, lai galvenās darbības strādātu datorā un telefonā." }
-        ]}
-      />
+      
 
       <section className="service-page-section upgrade-compare-section" id="ko-mainam" aria-labelledby="upgrade-compare-title">
         <div className="upgrade-compare-intro">
@@ -178,8 +166,6 @@ export default function WebsiteUpgradePage() {
           </RevealOnView>
         </div>
       </section>
-
-
 
 
       <section className="service-page-section service-process-section" aria-labelledby="upgrade-process-title">
