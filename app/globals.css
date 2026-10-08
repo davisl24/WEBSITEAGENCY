@@ -7442,3 +7442,11 @@ main#top > .home-about-section{border-top:0;border-bottom:0}
   .about-page .about-company-section{padding-top:64px}
   .about-page .about-hero{padding-bottom:56px}
 }
+
+
+/* About page: remove decorative dividers between all editorial sections. */
+.about-page > .service-page-section{border-top:0}
+.about-page > .service-page-section:not(.about-company-section){padding-top:88px}
+@media(max-width:760px){
+  .about-page > .service-page-section:not(.about-company-section){padding-top:68px}
+}
