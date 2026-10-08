@@ -213,10 +213,10 @@ export default function WebsiteUpgradePage() {
         title="Labojam to, kam ir jēga"
         description="Uzlabošanas apjomu nosaka esošās lapas problēmas, nevis iepriekš sagatavota pakete."
         items={[
-          { title: "Audits", text: "Pārbaudām struktūru, klienta ceļu, mobile un galvenos tehniskos šķēršļus." },
-          { title: "UX un saturs", text: "Sakārtojam hierarhiju, tekstu un nākamo soli tur, kur cilvēks apjūk." },
-          { title: "Dizains un izstrāde", text: "Pārbūvējam tikai tās daļas, kur izmaiņas dod reālu ieguvumu." },
-          { title: "Pārbaude", text: "Pārbaudām desktop, mobile un galvenos scenārijus pirms izmaiņas palaižam live." }
+          { title: "Audits", text: "Noskaidrojam, kas apmeklētājam traucē saprast piedāvājumu vai pieteikties." },
+          { title: "UX un saturs", text: "Svarīgāko informāciju padarām vieglāk atrodamu un saprotamu." },
+          { title: "Dizains un izstrāde", text: "Uzlabošanai koncentrējamies uz vajadzīgajām daļām, nevis pārbūvējam visu bez iemesla." },
+          { title: "Pārbaude", text: "Pārbaudām, lai galvenās darbības strādātu datorā un telefonā." }
         ]}
       />
 
