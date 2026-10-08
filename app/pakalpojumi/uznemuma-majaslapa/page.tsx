@@ -1,3 +1,4 @@
+import ServicePricingFaq from "../../components/ServicePricingFaq";
 import type { Metadata } from "next";
 import RevealOnView from "../../components/RevealOnView";
 import ThemeToggle from "../../components/ThemeToggle";
@@ -231,6 +232,13 @@ export default function CompanyWebsitePage() {
         </div>
       </section>
 
+
+      <ServicePricingFaq
+        service="Uzņēmuma mājaslapa"
+        pricingNote="Izmaksas nosaka lapu skaits, satura apjoms un vajadzīgās integrācijas."
+        included={["Lapu skaits un informācijas struktūra","Dizains un mobilais izkārtojums","Kontaktformas un vajadzīgās integrācijas","Satura sagatavošanas un uzturēšanas apjoms"]}
+        questions={[{"question":"Cik lapu būs manai mājaslapai?","answer":"To nosaka informācijas daudzums. Sākumā vienojamies par nepieciešamajām sadaļām un lapu struktūru."},{"question":"Vai varēs vēlāk pievienot jaunas lapas?","answer":"Jā, izstrādājot struktūru, ņemam vērā iespēju saturu paplašināt."},{"question":"Vai varat palīdzēt ar tekstiem?","answer":"Varam palīdzēt sakārtot piedāvājumu un tekstu struktūru; pilna satura izveides apjomu saskaņojam atsevišķi."},{"question":"Vai mājaslapa būs piemērota mobilajām ierīcēm?","answer":"Jā, projektējam un pārbaudām lapu gan datorā, gan telefonā."},{"question":"Kas notiek pēc mājaslapas palaišanas?","answer":"Ja nepieciešams, vienojamies par hostingu, tehnisko uzturēšanu un turpmākajiem uzlabojumiem."}]}
+      />
 
       <section className="service-page-cta">
         <RevealOnView className="line-mask-reveal service-cta-title">
