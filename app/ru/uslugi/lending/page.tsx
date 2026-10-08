@@ -9,7 +9,7 @@ export const metadata = localizedMetadata("ru","landing");
 
 export default function LandingPage() {
   return (
-    <main className="service-page landing-page">
+    <main lang="ru" className="service-page landing-page">
       <header className="service-page-header" aria-label="Главная навигация">
         <a className="brand" href="/ru" aria-label="Главная">Kestrel</a>
         <nav className="service-page-nav" aria-label="Главная навигация">
