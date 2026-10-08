@@ -14,7 +14,7 @@ export default function ValueShowcase() {
           </RevealOnView>
 
           <RevealOnView className="value-showcase">
-            <div className="value-contrast-showcase" aria-label="No sarežģītas struktūras līdz skaidram piedāvājumam">
+            <div className="value-contrast-showcase" aria-label="From a cluttered site to a clear offer">
               <div className="value-contrast-panel value-contrast-before">
                 <div className="value-contrast-top"><span>TOO MUCH</span><span>01 / BEFORE</span></div>
                 <div className="value-contrast-demo value-contrast-demo-before" aria-hidden="true">
