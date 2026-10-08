@@ -7423,3 +7423,10 @@ html[data-theme="dark"] .services-section .service-card:is(:nth-child(1),:nth-ch
 @media(prefers-reduced-motion:reduce){
   .services-section a.service-card{transition:none}
 }
+
+
+/* Homepage section transitions: use spacing and background, not decorative rules. */
+main#top > .call-section{border-top:0}
+main#top > .site-footer{border-top:0}
+main#top > .site-footer .footer-bottom{border-top:0}
+main#top > .home-about-section{border-top:0;border-bottom:0}
