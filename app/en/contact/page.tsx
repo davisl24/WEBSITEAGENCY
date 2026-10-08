@@ -13,9 +13,9 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <main className="service-page contact-page">
-      <header className="service-page-header" aria-label="Galvenā navigācija">
-        <a className="brand" href="/en" aria-label="Sākumlapa">Kestrel</a>
-        <nav className="service-page-nav" aria-label="Galvenā navigācija">
+      <header className="service-page-header" aria-label="Main navigation">
+        <a className="brand" href="/en" aria-label="Home">Kestrel</a>
+        <nav className="service-page-nav" aria-label="Main navigation">
             <ServicesDropdown />
             <a href="/en/about">About us</a>
             <ThemeToggle />
@@ -36,7 +36,7 @@ export default function ContactPage() {
           <p className="booking-preview-disclaimer">Booking preview only — online scheduling is not available yet.</p>
         </div>
         <RevealOnView className="booking-preview-wrap" delay={80}>
-          <div className="booking-preview" aria-label="Kalendāra dizaina priekšskatījums, rezervācija pašlaik nav pieejama">
+          <div className="booking-preview" aria-label="Calendar preview only: booking is currently unavailable">
             <div className="booking-preview-top">
               <span>CHOOSE DATE & TIME</span>
               <span className="booking-preview-label">DEMO</span>
@@ -63,7 +63,7 @@ export default function ContactPage() {
       </section>
 
       <footer className="service-page-footer">
-        <nav className="service-page-footer-nav" aria-label="Lapas navigācija">
+        <nav className="service-page-footer-nav" aria-label="Page navigation">
           <a href="/en">Home</a>
           <a href="/en/#services">Services</a>
           <a href="/en/about">About us</a>
