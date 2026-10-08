@@ -7551,3 +7551,31 @@ html[data-theme="light"] .service-page .service-price-includes{
   background:#e5e0d7;color:#171717;border-color:rgba(23,23,23,.12);
 }
 @media(prefers-reduced-motion:reduce){.service-page .service-price-primary>a{transition:none}}
+
+
+/* Kestrel polish: tonal floating nav without the decorative outer outline. */
+.site-header,.service-page-header{
+  border:1px solid transparent;
+  background:rgba(28,28,30,.97);
+  box-shadow:0 12px 36px rgba(0,0,0,.17);
+}
+html[data-theme="light"] .site-header,
+html[data-theme="light"] .service-page-header{
+  border-color:transparent;
+  background:rgba(245,243,239,.97);
+  box-shadow:0 12px 34px rgba(26,24,20,.08);
+}
+/* Give the price explanation a dedicated breathing zone above the CTA. */
+.service-page .service-price-primary{gap:0}
+.service-page .service-price-primary small{
+  display:block;
+  max-width:34ch;
+  line-height:1.5;
+  margin:0 0 26px;
+}
+.service-page .service-price-primary>a{margin-top:auto}
+/* Tonal price-card distinction instead of visible strokes. */
+.service-page .service-price-primary,
+.service-page .service-price-includes{border-color:transparent}
+html[data-theme="light"] .service-page .service-price-primary,
+html[data-theme="light"] .service-page .service-price-includes{border-color:transparent}
