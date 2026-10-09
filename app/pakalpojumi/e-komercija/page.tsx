@@ -4,24 +4,24 @@ import KestrelServiceTemplate, { type ServiceInfo } from "../../components/Kestr
 export const metadata: Metadata = {title:"Tavs veikals tiešsaistē | Kestrel",description:"Izvērtējam un veidojam interneta veikala risinājumu atbilstoši produktiem un pasūtīšanas procesam."};
 const service: ServiceInfo = {
   "title": "Tavs veikals tiešsaistē",
-  "intro": "Izvērtējam un veidojam interneta veikala risinājumu atbilstoši produktiem un pasūtīšanas procesam.",
+  "intro": "Ja produktus internetā nevar viegli atrast un pasūtīt, pirkuma ceļš kļūst sarežģīts. Plānojam veikalu no produktu izvēles līdz pasūtījuma noformēšanai.",
   "audience": [
-    "Ja produktus nepieciešams pārdot internetā.",
-    "Ja vajadzīgs pārskatāms produktu katalogs.",
-    "Ja pasūtījumi jāapstrādā vienā sistēmā."
+    "Produktu piedāvājums jāparāda pārskatāmā katalogā.",
+    "Klientiem jāspēj noformēt pasūtījumu tiešsaistē.",
+    "Jāizvērtē maksājumu un piegādes risinājumi."
   ],
   "offers": [
     {
       "title": "Produktu katalogs",
-      "detail": "Produkti un kategorijas ar aprakstiem."
+      "detail": "Grupējam produktus saprotamās kategorijās."
     },
     {
       "title": "Pasūtījumu plūsma",
-      "detail": "Grozs un pirkuma noformēšana."
+      "detail": "Plānojam grozu un pasūtījuma noformēšanu."
     },
     {
       "title": "Integrācijas",
-      "detail": "Maksājumi un piegādes pēc tehniskas izvērtēšanas."
+      "detail": "Izvērtējam saderīgas maksājumu un piegādes integrācijas."
     }
   ],
   "included": [
