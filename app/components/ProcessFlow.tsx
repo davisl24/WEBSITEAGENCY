@@ -50,6 +50,7 @@ export default function ProcessFlow() {
                 {step.icon === "launch" && <svg viewBox="0 0 32 32" fill="none"><path d="M12 21l-1-7c3-6 8-9 15-9 0 7-3 12-9 15l-5 1Z" /><path d="m17 15 0 0M11 14l-5 1-2 5 7-1M18 21l-1 7-5 1 1-7M9 23l-3 3M24 9h.01" /></svg>}
               </span>
               <h3>{step.title}</h3>
+              <p>{step.text}</p>
             </RevealOnView>
           ))}
         </div>
