@@ -7872,3 +7872,7 @@ html[data-theme="light"] .kestrel-service .kst-offers-section{background:linear-
 html[data-theme="light"] .kestrel-service .kst-offer{background:rgba(0,0,0,.05)}
 @media(max-width:850px){.kestrel-service .kst-hero{min-height:325px;padding:74px 0 86px}.kestrel-service .kst-section{padding:70px 0 78px}.kestrel-service .kst-offers-section{padding:80px 0}.kestrel-service .kst-included-section{padding:80px 0}}
 @media(max-width:600px){.kestrel-service .kst-hero,.kestrel-service .kst-section,.kestrel-service .kst-end{width:calc(100% - 36px)}.kestrel-service .kst-hero{min-height:245px;padding:55px 0 67px}.kestrel-service .kst-section{padding:55px 0 65px}.kestrel-service .kst-offers-section{width:100%;padding:65px 0}.kestrel-service .kst-offers-section>.kst-heading,.kestrel-service .kst-offers-section>.kst-offers{width:calc(100% - 36px)}.kestrel-service .kst-audience p{padding:19px}.kestrel-service .kst-included{gap:25px}.kestrel-service .kst-process>div{text-align:left}.kestrel-service .kst-end{padding:75px 0 95px}}
+
+/* Homepage: center only the Pakalpojumi heading; retain existing service cards. */
+.services-section .services-head{display:block;text-align:center}
+.services-section .services-head h2{max-width:none;margin-inline:auto;text-align:center}
