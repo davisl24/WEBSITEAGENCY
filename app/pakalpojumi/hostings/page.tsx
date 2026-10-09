@@ -1,21 +1,60 @@
-import KestrelHeader from "../../components/KestrelHeader";
-import KestrelFooter from "../../components/KestrelFooter";
 import type { Metadata } from "next";
+import KestrelServiceTemplate, { type ServiceInfo } from "../../components/KestrelServiceTemplate";
 
-export const metadata: Metadata = { title: "Hostings un uzturēšana | Kestrel", description: "Pēc mājaslapas izstrādes varam izvērtēt izvietošanas un tehniskā atbalsta iespējas." };
-
-export default function ServicePage() {
-  return (
-    <main className="ks-detail-page"><div className="ks-detail-inner">
-      <KestrelHeader />
-      <nav className="ks-detail-breadcrumb" aria-label="Lapas atrašanās vieta"><a href="/">Sākums</a><span> / </span><a href="/#services">Pakalpojumi</a><span> / </span><span aria-current="page">Hostings un uzturēšana</span></nav>
-      <section className="ks-detail-hero"><h1>Mājaslapa darbojas bez raizēm</h1></section>
-      <section className="ks-detail-section"><h2>Ko piedāvājam?</h2><div className="ks-detail-list">
-        <div><h3>Hostings</h3><p>Mājaslapas izvietošana izvēlētajā infrastruktūrā.</p></div>
-        <div><h3>Tehniskā uzraudzība</h3><p>Saskaņotas darbības uzturēšanai un kļūdu novēršanai.</p></div>
-        <div><h3>Atjauninājumi</h3><p>Nelieli satura un tehniskie labojumi pēc vienošanās.</p></div>
-      </div></section>
-      <section className="ks-detail-section"><h2>Pastāsti par savu projektu.</h2><p>Noskaidrosim, kāds risinājums nepieciešams, un pirms darba vienosimies par apjomu un cenu.</p><a className="ks-detail-link" href="/kontakti">Sazināties ↗</a></section>
-    </div><KestrelFooter /></main>
-  );
-}
+export const metadata: Metadata = {title:"Mājaslapa darbojas bez raizēm | Kestrel",description:"Palīdzam ar mājaslapas izvietošanu un saskaņotiem uzturēšanas darbiem."};
+const service: ServiceInfo = {
+  "title": "Mājaslapa darbojas bez raizēm",
+  "intro": "Palīdzam ar mājaslapas izvietošanu un saskaņotiem uzturēšanas darbiem.",
+  "audience": [
+    "Ja vajadzīga mājaslapas izvietošana.",
+    "Ja nepieciešama tehniska uzraudzība.",
+    "Ja periodiski jāveic nelieli labojumi."
+  ],
+  "offers": [
+    {
+      "title": "Hostings",
+      "detail": "Izvietošana atbilstošā vidē."
+    },
+    {
+      "title": "Tehniskā uzturēšana",
+      "detail": "Saskaņotas darbības un pārbaudes."
+    },
+    {
+      "title": "Atjauninājumi",
+      "detail": "Izmaiņas pēc vienošanās."
+    }
+  ],
+  "included": [
+    {
+      "title": "Sākotnējā pārbaude",
+      "detail": "Noskaidrojam tehniskās prasības."
+    },
+    {
+      "title": "Izvietošana",
+      "detail": "Sagatavojam darbības vidi."
+    },
+    {
+      "title": "Uzraudzība",
+      "detail": "Atbilstoši izvēlētajam plānam."
+    },
+    {
+      "title": "Atbalsts",
+      "detail": "Saskaņots darbu apjoms un reakcija."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Cik ilgā laikā projekts būs gatavs?",
+      "answer": "Termiņu nosakām pēc darba apjoma un saskaņojam pirms sākuma."
+    },
+    {
+      "question": "Vai man nepieciešami gatavi materiāli?",
+      "answer": "Izmantojam tavus materiālus un palīdzam tos sakārtot. Jaunu materiālu izveidi vērtējam atsevišķi."
+    },
+    {
+      "question": "Kā nosaka gala cenu?",
+      "answer": "Cena atkarīga no apjoma un funkcijām. Pirms izstrādes vienojamies par iekļauto un izmaksām."
+    }
+  ]
+};
+export default function ServicePage(){return <KestrelServiceTemplate service={service}/>;}
