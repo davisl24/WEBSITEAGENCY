@@ -20,47 +20,7 @@ export default function WebsiteUpgradePage() {
     <main className="service-page upgrade-page">
       <KestrelHeader />
 
-      <section className="service-page-hero upgrade-service-hero">
-        <div>
-          <p className="service-page-kicker">Mājaslapas uzlabošana</p>
-          <h1>Esošā lapa var strādāt labāk</h1>
-          <p className="service-page-lead">
-            Ja mājaslapa jau ir, bet piedāvājumu grūti saprast, mobilā versija klibo
-            vai klientam nav skaidrs nākamais solis, nav vienmēr jāsāk no nulles.
-          </p>
-
-          <div className="service-page-actions">
-            <a className="button button-primary" href="/kontakti">Izrunāt uzlabojumus</a>
-            <a className="text-link" href="#ko-mainam">Ko mainām <span aria-hidden="true">↓</span></a>
-          </div>
-        </div>
-
-        <div className="upgrade-hero-visual" aria-hidden="true">
-          <div className="upgrade-hero-before">
-            <div className="ui-browser-top"><span/><span/><span/></div>
-            <div className="upgrade-hero-before-body">
-              <span/><span/><span/><span/>
-            </div>
-          </div>
-
-          <div className="upgrade-hero-after">
-            <div className="ui-browser-top"><span/><span/><span/></div>
-            <div className="upgrade-hero-after-nav">
-              <strong>North</strong>
-              <span/>
-            </div>
-            <div className="upgrade-hero-after-body">
-              <div>
-                <span className="upgrade-hero-kicker"/>
-                <span className="upgrade-hero-title"/>
-                <span className="upgrade-hero-copy"/>
-                <span className="upgrade-hero-cta"/>
-              </div>
-              <span className="upgrade-hero-art"/>
-            </div>
-          </div>
-        </div>
-      </section>
+      <section className="service-page-hero upgrade-service-hero"><h1>Sakārtojam esošo mājaslapu</h1></section>
 
       <section className="service-page-section upgrade-signs-section" aria-labelledby="upgrade-signs-title">
         <div className="upgrade-signs-intro">
