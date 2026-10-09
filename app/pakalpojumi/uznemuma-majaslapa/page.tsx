@@ -1,3 +1,5 @@
+import KestrelHeader from "../../components/KestrelHeader";
+import KestrelFooter from "../../components/KestrelFooter";
 import { lvMetadataAlternates } from "../../lib/localizedSeo";
 import LanguageSwitcher from "../../components/LanguageSwitcher";
 import ServicePricingFaq from "../../components/ServicePricingFaq";
@@ -16,16 +18,7 @@ export const metadata: Metadata = {
 export default function CompanyWebsitePage() {
   return (
     <main className="service-page company-page">
-      <header className="service-page-header" aria-label="Galvenā navigācija">
-        <a className="brand" href="/" aria-label="Sākumlapa">Kestrel</a>
-        <nav className="service-page-nav" aria-label="Galvenā navigācija">
-            <ServicesDropdown />
-            <a href="/par-mums">Par mums</a>
-            <ThemeToggle />
-            <LanguageSwitcher />
-            <a className="header-cta" href="/kontakti">Pieteikt sarunu</a>
-          </nav>
-      </header>
+      <KestrelHeader />
 
       <section className="service-page-hero company-service-hero">
         <div>
@@ -263,18 +256,7 @@ export default function CompanyWebsitePage() {
         </RevealOnView>
       </section>
 
-      <footer className="service-page-footer">
-        <nav className="service-page-footer-nav" aria-label="Lapas navigācija">
-          <a href="/">Sākums</a>
-          <a href="/#services">Pakalpojumi</a>
-          <a href="/par-mums">Par mums</a>
-          <a href="/kontakti">Kontakti</a>
-        </nav>
-        <div className="service-page-footer-bottom">
-          <span>Kestrel</span>
-          <span>© 2026</span>
-        </div>
-      </footer>
+      <KestrelFooter />
     </main>
   );
 }
