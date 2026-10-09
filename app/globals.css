@@ -8007,3 +8007,50 @@ html[data-theme="light"] .kestrel-service-v2 .kst-offer{
    transition:none;
  }
 }
+
+
+/* Homepage V1 completion pass — scoped so service detail pages stay unchanged. */
+main#top > .services-section{padding-top:86px;padding-bottom:88px}
+main#top .services-head{margin-bottom:30px}
+main#top .services-head h2{font-size:clamp(34px,3.25vw,48px);line-height:1.12}
+main#top .kestrel-services-v2{margin-top:0;gap:14px;grid-template-columns:1.05fr 1fr}
+main#top .ks-other-grid{gap:14px}
+main#top .ks-main{min-height:0;padding:30px}
+main#top .ks-item{min-height:0;padding:24px}
+main#top .ks-main .ks-icon{margin-bottom:22px}
+main#top .ks-item .ks-icon{margin-bottom:17px}
+main#top .ks-main .ks-offers{margin-top:25px}
+main#top .ks-category{border-radius:16px}
+main#top > .value-section{padding-top:88px;padding-bottom:90px}
+main#top .value-layout{gap:clamp(28px,4vw,62px)}
+main#top .value-copy-side h2{font-size:clamp(34px,3.65vw,51px);line-height:1.1}
+main#top .value-intro{max-width:480px}
+main#top > .process-section{padding-top:80px;padding-bottom:86px}
+main#top .process-head{margin-bottom:40px}
+main#top .process-heading h2{font-size:clamp(33px,3.55vw,49px);line-height:1.12}
+main#top .process-step{padding-bottom:0}
+main#top .process-step p{max-width:230px}
+main#top > .call-section{padding-top:84px;padding-bottom:96px}
+main#top .call-kicker{display:none}
+main#top .call-content h2{font-size:clamp(34px,3.8vw,54px);line-height:1.12}
+main#top .call-content p{max-width:520px;line-height:1.6}
+main#top > .site-footer{padding-top:62px}
+main#top .site-footer .footer-wordmark{font-size:clamp(62px,7vw,104px)}
+main#top .site-footer .footer-statement{max-width:440px;line-height:1.6}
+@media(max-width:1000px){main#top .kestrel-services-v2{grid-template-columns:1fr}main#top .ks-main{min-height:225px}}
+@media(max-width:760px){
+main#top > .services-section{padding-top:62px;padding-bottom:68px}
+main#top > .value-section{padding-top:68px;padding-bottom:70px}
+main#top > .process-section{padding-top:65px;padding-bottom:70px}
+main#top > .call-section{padding-top:65px;padding-bottom:75px}
+main#top .value-layout{gap:26px}
+main#top .process-head{margin-bottom:28px}
+main#top .ks-main{min-height:0}
+main#top .ks-item{min-height:145px}
+}
+@media(max-width:590px){
+main#top .ks-other-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+main#top .ks-category{padding:18px}
+main#top .ks-item h3{font-size:16px}
+main#top .ks-item>p{font-size:12px;line-height:1.45}
+}
