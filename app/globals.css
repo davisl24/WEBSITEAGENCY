@@ -7788,3 +7788,51 @@ html[data-theme="light"] .ks-web-products>a:hover{background:rgba(0,0,0,.075)}
 .ks-detail-page .ks-detail-section,.ks-web-page .ks-web-section{padding-top:48px;padding-bottom:54px}
 .ks-web-page .ks-web-contact{padding-top:54px;padding-bottom:70px}
 }
+
+
+/* Unified Kestrel service system — same structure on all LV service pages */
+.kestrel-service{min-height:100vh;background:#0b0b0c;color:#f3f1ec;padding-top:76px;overflow:hidden}
+.kestrel-service .kestrel-shared-header{position:fixed;top:12px;left:50%;transform:translateX(-50%);width:min(1180px,calc(100% - 44px));margin:0;z-index:100}
+.kestrel-service .kst-hero,.kestrel-service .kst-section,.kestrel-service .kst-end{width:min(1080px,calc(100% - 52px));margin:0 auto}
+.kestrel-service .kst-hero{display:flex;align-items:center;min-height:380px;padding:90px 0 88px}
+.kestrel-service .kst-hero h1{font-size:clamp(48px,6.2vw,88px);letter-spacing:-.065em;line-height:1.07;max-width:900px;text-align:left;margin:0;font-weight:650}
+.kestrel-service .kst-section{padding:70px 0 78px;text-align:center}
+.kestrel-service .kst-heading{max-width:710px;margin:0 auto 37px}
+.kestrel-service .kst-heading h2{font-size:clamp(30px,3.6vw,48px);font-weight:650;line-height:1.13;letter-spacing:-.052em;margin:0 auto}
+.kestrel-service .kst-heading p{font-size:15px;line-height:1.72;max-width:610px;margin:19px auto 0;opacity:.68}
+.kestrel-service .kst-audience{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;max-width:900px;margin:0 auto}
+.kestrel-service .kst-audience p{font-size:15px;line-height:1.6;opacity:.86;margin:0;text-wrap:balance}
+.kestrel-service .kst-offers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;text-align:left}
+.kestrel-service .kst-offer{display:flex;flex-direction:column;min-height:210px;padding:29px 27px;border-radius:19px;background:rgba(255,255,255,.045);color:inherit;transition:background .2s ease}
+.kestrel-service a.kst-offer:hover{background:rgba(255,255,255,.08)}
+.kestrel-service a.kst-offer:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+.kestrel-service .kst-offer-top{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.kestrel-service .kst-offer-top h3{font-size:20px;line-height:1.28;letter-spacing:-.035em;margin:0}
+.kestrel-service .kst-offer-top span{opacity:.55}
+.kestrel-service .kst-offer p{font-size:13px;line-height:1.65;opacity:.68;max-width:260px;margin:18px 0}
+.kestrel-service .kst-offer strong{font-size:14px;font-weight:650;margin-top:auto}
+.kestrel-service .kst-included{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:31px 75px;max-width:860px;margin:0 auto;text-align:left}
+.kestrel-service .kst-included h3{font-size:18px;letter-spacing:-.025em;margin:0 0 7px}
+.kestrel-service .kst-included p{font-size:13px;line-height:1.65;opacity:.66;margin:0}
+.kestrel-service .kst-process{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;max-width:930px;margin:0 auto;text-align:left}
+.kestrel-service .kst-process>div{display:flex;align-items:baseline;gap:14px}
+.kestrel-service .kst-process span{font-size:12px;opacity:.5}
+.kestrel-service .kst-process h3{font-size:19px;letter-spacing:-.03em;font-weight:600;margin:0}
+.kestrel-service .kst-faq{max-width:740px;margin:0 auto;text-align:left}
+.kestrel-service .kst-faq details{padding:21px 0;border-bottom:1px solid rgba(150,150,150,.17)}
+.kestrel-service .kst-faq summary{list-style:none;display:flex;justify-content:space-between;gap:15px;cursor:pointer;font-size:15px;font-weight:600}
+.kestrel-service .kst-faq summary::-webkit-details-marker{display:none}
+.kestrel-service .kst-faq summary::after{content:"+";opacity:.6}
+.kestrel-service .kst-faq details[open] summary::after{content:"−"}
+.kestrel-service .kst-faq details p{font-size:13px;line-height:1.75;opacity:.7;margin:16px 0 0}
+.kestrel-service .kst-end{text-align:center;padding:100px 0 125px}
+.kestrel-service .kst-end h2{font-size:clamp(35px,4.6vw,60px);font-weight:650;letter-spacing:-.055em;line-height:1.15;margin:0 auto 29px}
+.kestrel-service .kst-glass-cta{display:inline-flex;gap:25px;align-items:center;justify-content:center;padding:15px 23px;border-radius:999px;font-size:14px;font-weight:650;background:linear-gradient(155deg,rgba(255,255,255,.22),rgba(255,255,255,.055) 65%);box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 8px 22px rgba(0,0,0,.15);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.17)}
+.kestrel-service .kst-glass-cta:hover{background:rgba(255,255,255,.19)}
+.kestrel-service .kestrel-shared-header .header-cta{padding:11px 18px;border-radius:999px;background:linear-gradient(145deg,rgba(255,255,255,.18),rgba(255,255,255,.045));border:1px solid rgba(255,255,255,.19);box-shadow:inset 0 1px rgba(255,255,255,.24);backdrop-filter:blur(12px)}
+html[data-theme="light"] .kestrel-service{background:#f7f7f5;color:#1a1b1b}
+html[data-theme="light"] .kestrel-service .kst-offer{background:rgba(0,0,0,.045)}
+html[data-theme="light"] .kestrel-service a.kst-offer:hover{background:rgba(0,0,0,.075)}
+html[data-theme="light"] .kestrel-service .kst-glass-cta,html[data-theme="light"] .kestrel-service .header-cta{background:linear-gradient(150deg,rgba(255,255,255,.9),rgba(255,255,255,.42));border-color:rgba(0,0,0,.095);box-shadow:inset 0 1px rgba(255,255,255,.95),0 8px 24px rgba(0,0,0,.05)}
+@media(max-width:850px){.kestrel-service .kst-offers{grid-template-columns:repeat(2,minmax(0,1fr))}.kestrel-service .kst-hero{min-height:310px}.kestrel-service .kst-section{padding:56px 0}}
+@media(max-width:600px){.kestrel-service{padding-top:70px}.kestrel-service .kst-hero,.kestrel-service .kst-section,.kestrel-service .kst-end{width:calc(100% - 36px)}.kestrel-service .kestrel-shared-header{width:calc(100% - 22px);top:10px}.kestrel-service .kst-hero{min-height:230px;padding:60px 0}.kestrel-service .kst-hero h1{font-size:clamp(43px,11vw,60px)}.kestrel-service .kst-section{padding:48px 0 54px}.kestrel-service .kst-audience,.kestrel-service .kst-offers,.kestrel-service .kst-included{grid-template-columns:1fr}.kestrel-service .kst-audience{gap:16px}.kestrel-service .kst-offer{min-height:160px}.kestrel-service .kst-process{grid-template-columns:repeat(2,1fr);gap:22px}.kestrel-service .kst-end{padding:66px 0 83px}}
