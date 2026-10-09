@@ -7,7 +7,8 @@ export const metadata: Metadata = { title: "Hostings un uzturēšana | Kestrel",
 export default function ServicePage() {
   return (
     <main className="ks-detail-page"><div className="ks-detail-inner">
-      <KestrelHeader />\n      <nav className="ks-detail-breadcrumb" aria-label="Lapas atrašanās vieta"><a href="/">Sākums</a><span> / </span><a href="/#services">Pakalpojumi</a><span> / </span><span aria-current="page">Hostings un uzturēšana</span></nav>
+      <KestrelHeader />
+      <nav className="ks-detail-breadcrumb" aria-label="Lapas atrašanās vieta"><a href="/">Sākums</a><span> / </span><a href="/#services">Pakalpojumi</a><span> / </span><span aria-current="page">Hostings un uzturēšana</span></nav>
       <section className="ks-detail-hero"><h1>Mājaslapa darbojas bez raizēm</h1></section>
       <section className="ks-detail-section"><h2>Ko piedāvājam?</h2><div className="ks-detail-list">
         <div><h3>Hostings</h3><p>Mājaslapas izvietošana izvēlētajā infrastruktūrā.</p></div>
