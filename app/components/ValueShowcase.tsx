@@ -29,10 +29,9 @@ export default function ValueShowcase() {
               <span className="kestrel-problem-number">{String(index + 1).padStart(2, "0")}</span>
               <div className="kestrel-problem-description">
                 <h3>{item.problem}</h3>
-                <p>{item.impact}</p>
               </div>
               <div className="kestrel-problem-solution">
-                <span>Ko darām mēs</span>
+                <span aria-hidden="true" className="kestrel-problem-arrow">→</span>
                 <p>{item.solution}</p>
               </div>
             </div>
