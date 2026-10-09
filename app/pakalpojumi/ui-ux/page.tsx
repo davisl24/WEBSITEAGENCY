@@ -4,24 +4,24 @@ import KestrelServiceTemplate, { type ServiceInfo } from "../../components/Kestr
 export const metadata: Metadata = {title:"Dizains, kuru viegli lietot | Kestrel",description:"Sakārtojam lietotāja ceļu, informācijas hierarhiju un vizuālo noformējumu."};
 const service: ServiceInfo = {
   "title": "Dizains, kuru viegli lietot",
-  "intro": "Sakārtojam lietotāja ceļu, informācijas hierarhiju un vizuālo noformējumu.",
+  "intro": "Ja lietotājs apmaldās lapā, pat labs piedāvājums var palikt nepamanīts. Sakārtojam navigāciju, vizuālo hierarhiju un darbību secību.",
   "audience": [
-    "Ja apmeklētājs neatrod vajadzīgo.",
-    "Ja lapa ir vizuāli nesakārtota.",
-    "Ja galvenā darbība nav saprotama."
+    "Lietotājiem grūti atrast vajadzīgo informāciju.",
+    "Svarīgās pogas un saturs pazūd kopējā dizainā.",
+    "Lapa dažādās ierīcēs nav konsekventa."
   ],
   "offers": [
     {
       "title": "Dizaina audits",
-      "detail": "Pārbaudām lapas hierarhiju."
+      "detail": "Identificējam konkrētas lietojamības problēmas."
     },
     {
       "title": "UX struktūra",
-      "detail": "Sakārtojam informācijas secību."
+      "detail": "Veidojam skaidru sadaļu un darbību secību."
     },
     {
       "title": "UI dizains",
-      "detail": "Projektējam saskarni un komponentus."
+      "detail": "Izstrādājam saskanīgu, lietojamu vizuālo saskarni."
     }
   ],
   "included": [
