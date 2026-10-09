@@ -4,24 +4,24 @@ import KestrelServiceTemplate, { type ServiceInfo } from "../../components/Kestr
 export const metadata: Metadata = {title:"Mājaslapa darbojas bez raizēm | Kestrel",description:"Palīdzam ar mājaslapas izvietošanu un saskaņotiem uzturēšanas darbiem."};
 const service: ServiceInfo = {
   "title": "Mājaslapa darbojas bez raizēm",
-  "intro": "Palīdzam ar mājaslapas izvietošanu un saskaņotiem uzturēšanas darbiem.",
+  "intro": "Lai mājaslapa būtu pieejama pēc publicēšanas, tai nepieciešama atbilstoša izvietošana un uzturēšanas kārtība. Palīdzam izvērtēt tehniskās vajadzības.",
   "audience": [
-    "Ja vajadzīga mājaslapas izvietošana.",
-    "Ja nepieciešama tehniska uzraudzība.",
-    "Ja periodiski jāveic nelieli labojumi."
+    "Jaunā mājaslapa jāizvieto publiski pieejamā vidē.",
+    "Nepieciešama vienošanās par tehnisko atbalstu.",
+    "Laiku pa laikam jāveic satura vai tehniski labojumi."
   ],
   "offers": [
     {
       "title": "Hostings",
-      "detail": "Izvietošana atbilstošā vidē."
+      "detail": "Izvietojam mājaslapu saskaņotā infrastruktūrā."
     },
     {
       "title": "Tehniskā uzturēšana",
-      "detail": "Saskaņotas darbības un pārbaudes."
+      "detail": "Nosakām konkrētu uzraudzības un atbalsta apjomu."
     },
     {
       "title": "Atjauninājumi",
-      "detail": "Izmaiņas pēc vienošanās."
+      "detail": "Veicam iepriekš saskaņotus atjauninājumus."
     }
   ],
   "included": [
