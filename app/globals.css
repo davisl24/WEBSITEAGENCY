@@ -7747,3 +7747,20 @@ html[data-theme="light"] .ks-web-products>a{background:rgba(0,0,0,.045)}
 html[data-theme="light"] .ks-web-products>a:hover{background:rgba(0,0,0,.075)}
 @media(max-width:900px){.ks-web-products{grid-template-columns:1fr 1fr}.ks-web-faq{grid-template-columns:1fr}.ks-web-section{padding:62px 0}.ks-web-page .ks-detail-hero{padding:65px 0 75px}}
 @media(max-width:600px){.ks-web-products,.ks-web-included{grid-template-columns:1fr}.ks-web-products>a{min-height:142px}.ks-web-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.ks-web-section{padding:48px 0}.ks-web-contact{padding:65px 0 85px}}
+
+
+/* One concise H1 per service hero. No extra label, description or artwork. */
+.service-page.landing-page .service-page-hero,
+.service-page.company-page .service-page-hero,
+.service-page.upgrade-page .service-page-hero{display:block;min-height:0;padding-top:112px;padding-bottom:90px}
+.service-page.landing-page .service-page-hero>h1,
+.service-page.company-page .service-page-hero>h1,
+.service-page.upgrade-page .service-page-hero>h1{max-width:900px;margin:0;text-align:left}
+.ks-detail-page .ks-detail-hero{padding-top:82px;padding-bottom:88px}
+.ks-web-page .ks-detail-hero{padding-top:82px;padding-bottom:88px}
+@media(max-width:760px){
+.service-page.landing-page .service-page-hero,
+.service-page.company-page .service-page-hero,
+.service-page.upgrade-page .service-page-hero{padding-top:85px;padding-bottom:65px}
+.ks-detail-page .ks-detail-hero,.ks-web-page .ks-detail-hero{padding-top:68px;padding-bottom:65px}
+}
