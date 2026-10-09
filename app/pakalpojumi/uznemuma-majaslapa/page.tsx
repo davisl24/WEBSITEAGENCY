@@ -20,45 +20,7 @@ export default function CompanyWebsitePage() {
     <main className="service-page company-page">
       <KestrelHeader />
 
-      <section className="service-page-hero company-service-hero">
-        <div>
-          <p className="service-page-kicker">Uzņēmuma mājaslapa</p>
-          <h1>Visa uzņēmuma bilde vienuviet</h1>
-          <p className="service-page-lead">
-            Mājaslapa, kas palīdz klientam saprast, ko tu dari, kāpēc tev uzticēties
-            un kā ar tevi sazināties.
-          </p>
-
-          <div className="service-page-actions">
-            <a className="button button-primary" href="/kontakti">Izrunāt projektu</a>
-            <a className="text-link" href="#struktura">Kā to saliekam <span aria-hidden="true">↓</span></a>
-          </div>
-        </div>
-
-        <div className="company-hero-visual" aria-hidden="true">
-          <div className="company-browser">
-            <div className="ui-browser-top"><span/><span/><span/></div>
-            <div className="company-browser-nav">
-              <strong>North</strong>
-              <span>Pakalpojumi</span>
-              <span>Par mums</span>
-              <span>Kontakti</span>
-            </div>
-            <div className="company-browser-main">
-              <div className="company-browser-copy">
-                <span className="company-browser-kicker"/>
-                <span className="company-browser-title"/>
-                <span className="company-browser-text"/>
-                <span className="company-browser-cta"/>
-              </div>
-              <div className="company-browser-art"/>
-            </div>
-            <div className="company-browser-sections">
-              <span/><span/><span/>
-            </div>
-          </div>
-        </div>
-      </section>
+      <section className="service-page-hero company-service-hero"><h1>Visa informācija vienuviet</h1></section>
 
       <section className="service-page-section company-fit-section" aria-labelledby="company-fit-title">
         <div className="company-fit-intro">
