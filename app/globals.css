@@ -7680,3 +7680,29 @@ html[data-theme="light"] .ks-detail-page{background:#f7f7f5;color:#1c1d1c}
 html[data-theme="light"] .ks-detail-list>div,html[data-theme="light"] .ks-detail-list>a{background:rgba(0,0,0,.05)}
 html[data-theme="light"] .ks-detail-link{background:#171717;color:white!important}
 @media(max-width:640px){.ks-detail-hero{padding:75px 0}.ks-detail-list{grid-template-columns:1fr}.ks-detail-section{padding:42px 0 70px}}
+
+
+/* Shared navigation, section balance and service-page hierarchy */
+.site-header.kestrel-shared-header{z-index:80}
+.kestrel-shared-header .site-nav>a[aria-current="page"]{opacity:1}
+.ks-detail-page .kestrel-shared-header{width:100%;max-width:none;margin:0;position:relative;top:auto;left:auto;right:auto;transform:none;padding:0 32px;min-height:74px;border-radius:999px}
+.ks-detail-breadcrumb{display:flex;align-items:center;gap:10px;margin-top:52px;font-size:12px;opacity:.65}
+.ks-detail-breadcrumb a:hover{text-decoration:underline}
+.ks-detail-page .ks-detail-hero{padding-top:70px}
+.ks-shared-footer{border-top:1px solid rgba(128,128,128,.16);margin-top:18px;padding:32px 24px}
+.ks-shared-footer-inner{display:flex;align-items:center;justify-content:space-between;gap:28px;width:min(1180px,100%);margin:auto}
+.ks-shared-footer-brand{font-size:18px;font-weight:750;letter-spacing:-.06em}
+.ks-shared-footer nav{display:flex;gap:24px;flex-wrap:wrap;font-size:12px}
+.ks-shared-footer-inner>span{font-size:12px;opacity:.55}
+.ks-detail-page .ks-detail-list>div,.ks-detail-page .ks-detail-list>a{border:0}
+.kestrel-services-v2{grid-template-columns:1fr 1.05fr;gap:16px}
+.ks-main{min-height:0;padding:34px;justify-content:center}
+.ks-main .ks-icon{margin-bottom:27px}
+.ks-main .ks-offers{margin-top:30px;padding-top:0;gap:13px 24px}
+.ks-other-grid{gap:16px}
+.ks-item{min-height:190px;justify-content:center}
+.ks-item .ks-icon{margin-bottom:22px}
+.ks-category{transition:background .2s,transform .2s}
+@media(max-width:1000px){.kestrel-services-v2{grid-template-columns:1fr}.ks-main{min-height:235px}.ks-detail-page .kestrel-shared-header{padding:0 20px}}
+@media(max-width:760px){.kestrel-shared-header .site-nav{gap:10px}.kestrel-shared-header .site-nav>a[href="/"]{display:inline-flex;font-size:12px}.kestrel-shared-header .site-nav>a[href="/par-mums"]{display:none}.ks-shared-footer-inner{align-items:flex-start;flex-direction:column}.ks-detail-breadcrumb{margin-top:32px}}
+@media(max-width:590px){.ks-other-grid{grid-template-columns:1fr 1fr}.ks-item{min-height:145px}.ks-main{min-height:210px}.ks-main .ks-icon{margin-bottom:18px}.ks-detail-page .kestrel-shared-header{padding:0 12px}}
