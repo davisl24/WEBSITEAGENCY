@@ -56,26 +56,20 @@ export default function Home() {
       <section className="services-section" id="services" aria-labelledby="services-title">
         <div className="services-inner">
           <div className="services-head">
-            <p className="section-label">Pakalpojumi</p>
-            <h2 id="services-title">Mājaslapu izstrāde un vairāk</h2>
-            <p className="services-intro">Izstrādājam mājaslapas un palīdzam tās uzlabot, atrast un uzturēt.</p>
+            <h2 id="services-title">Pakalpojumi</h2>
           </div>
           <div className="kestrel-services-v2">
-            <div className="ks-main">
-              <div className="ks-heading"><span className="ks-icon" aria-hidden="true">⌘</span><span className="ks-overline">GALVENAIS PAKALPOJUMS</span></div>
-              <h3>Web izstrāde</h3>
-              <p>Izstrādājam mājaslapas, kurās uzņēmuma piedāvājums ir saprotams un saziņa — vienkārša.</p>
-              <div className="ks-offers">
-                <a href="/pakalpojumi/landing-lapa"><span>Landing lapas</span><strong>no 200 €</strong><span aria-hidden="true">↗</span></a>
-                <a href="/pakalpojumi/uznemuma-majaslapa"><span>Uzņēmuma mājaslapas</span><strong>no 450 €</strong><span aria-hidden="true">↗</span></a>
-                <a href="/pakalpojumi/majaslapas-uzlabosana"><span>Esošo mājaslapu uzlabošana</span><strong>Pēc apjoma</strong><span aria-hidden="true">↗</span></a>
-              </div>
-            </div>
+            <a className="ks-main ks-category" href="/pakalpojumi/web-izstrade">
+              <span className="ks-icon" aria-hidden="true">⌘</span>
+              <h3>Web izstrāde <span className="ks-arrow" aria-hidden="true">↗</span></h3>
+              <p>Landing lapas · Uzņēmuma mājaslapas · Mājaslapu uzlabošana</p>
+              <div className="ks-offers" aria-label="Sākuma cenas"><span>Landing no 200 €</span><span>Uzņēmuma mājaslapa no 450 €</span></div>
+            </a>
             <div className="ks-other-grid">
-              <article className="ks-item"><span className="ks-icon" aria-hidden="true">▦</span><h3>E-komercija</h3><p>Interneta veikalu risinājumi.</p><ul><li>Produktu katalogi</li><li>Iepirkumu grozs</li><li>Maksājumu integrācijas</li></ul></article>
-              <article className="ks-item"><span className="ks-icon" aria-hidden="true">⌕</span><h3>SEO</h3><p>Mājaslapas optimizācija meklētājiem.</p><ul><li>Tehniskais SEO</li><li>Satura optimizācija</li><li>SEO audits</li></ul></article>
-              <article className="ks-item"><span className="ks-icon" aria-hidden="true">◫</span><h3>UI/UX dizains</h3><p>Skaidrāka struktūra un ērtāka lietošana.</p><ul><li>Dizaina audits</li><li>Lietotāja ceļš</li><li>Saskarņu dizains</li></ul></article>
-              <article className="ks-item"><span className="ks-icon" aria-hidden="true">▤</span><h3>Hostings un uzturēšana</h3><p>Tehniskā darbība pēc publicēšanas.</p><ul><li>Mājaslapas izvietošana</li><li>Tehniskā uzraudzība</li><li>Saskaņoti atjauninājumi</li></ul></article>
+              <a className="ks-item ks-category" href="/pakalpojumi/e-komercija"><span className="ks-icon" aria-hidden="true">▦</span><h3>E-komercija <span className="ks-arrow" aria-hidden="true">↗</span></h3><p>Interneta veikali · Maksājumi · Piegāde</p></a>
+              <a className="ks-item ks-category" href="/pakalpojumi/seo"><span className="ks-icon" aria-hidden="true">⌕</span><h3>SEO <span className="ks-arrow" aria-hidden="true">↗</span></h3><p>Tehniskais SEO · Satura optimizācija · Audits</p></a>
+              <a className="ks-item ks-category" href="/pakalpojumi/ui-ux"><span className="ks-icon" aria-hidden="true">◫</span><h3>UI/UX dizains <span className="ks-arrow" aria-hidden="true">↗</span></h3><p>Dizaina audits · Struktūra · Saskarnes</p></a>
+              <a className="ks-item ks-category" href="/pakalpojumi/hostings"><span className="ks-icon" aria-hidden="true">▤</span><h3>Hostings un uzturēšana <span className="ks-arrow" aria-hidden="true">↗</span></h3><p>Izvietošana · Uzraudzība · Atjauninājumi</p></a>
             </div>
           </div>
         </div>
