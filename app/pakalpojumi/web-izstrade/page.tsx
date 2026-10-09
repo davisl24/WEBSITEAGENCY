@@ -35,11 +35,7 @@ export default function WebDevelopmentPage() {
         <nav className="ks-detail-breadcrumb" aria-label="Lapas atrašanās vieta">
           <a href="/">Sākums</a><span>/</span><a href="/#services">Pakalpojumi</a><span>/</span><span aria-current="page">Web izstrāde</span>
         </nav>
-        <section className="ks-detail-hero">
-          <h1>Mājaslapu izstrāde uzņēmumiem</h1>
-          <p>Izstrādājam mājaslapas, kurās apmeklētājs ātri saprot piedāvājumu un var ērti sazināties.</p>
-          <a className="ks-detail-link" href="/kontakti">Pieteikt projektu ↗</a>
-        </section>
+        <section className="ks-detail-hero"><h1>Mājaslapas tavam uzņēmumam</h1></section>
         <section className="ks-web-section" aria-labelledby="ks-products">
           <h2 id="ks-products">Izvēlies risinājumu</h2>
           <div className="ks-web-products">
