@@ -7,36 +7,44 @@ export default function ValueShowcase() {
         <div className="value-layout value-plan-layout">
           <RevealOnView className="value-copy-side">
             <p className="section-label">Kāpēc Kestrel</p>
-            <h2 id="value-title">Mājaslapa, kurā<span>viss ir saprotams.</span></h2>
-            <p className="value-intro">
-              Mājaslapas izstrādei nav jābūt sarežģītai — mēs palīdzam saprast, kas tev patiešām vajadzīgs
-            </p>
+            <h2 id="value-title">Mājaslapa, kurā<span>viss ir saprotams</span></h2>
+            <p className="value-intro">No nesakārtotas informācijas līdz skaidram ceļam uz pieteikšanos</p>
           </RevealOnView>
 
           <RevealOnView className="value-showcase">
-            <div className="value-contrast-showcase" aria-label="No sarežģītas struktūras līdz skaidram piedāvājumam">
+            <div className="value-contrast-showcase" aria-label="Pirms un pēc mājaslapas struktūras uzlabošanas — ilustratīvs piemērs">
               <div className="value-contrast-panel value-contrast-before">
-                <div className="value-contrast-top"><span>PAR DAUDZ</span><span>01 / PIRMS</span></div>
-                <div className="value-contrast-demo value-contrast-demo-before" aria-hidden="true">
-                  <div className="contrast-demo-nav"><strong>Auto kopšana Rīgā</strong><span>Sākums</span><span>Jaunumi</span><span>Pakalpojumi</span></div>
-                  <div className="contrast-demo-promo">Auto kopšanas pakalpojumi Rīgā</div>
-                  <div className="contrast-demo-blurb">Salona tīrīšana, virsbūves kopšana un citi pakalpojumi. Uzzini vairāk mūsu sadaļās.</div>
-                  <div className="contrast-demo-grid"><span>Salona tīrīšana</span><span>Virsbūves kopšana</span><span>Akcijas</span><span>Galerija</span><span>Jaunumi</span><span>Kontakti</span></div>
-                  <div className="contrast-demo-actions"><span>Apskatīt cenas</span><span>Skatīt akcijas</span><span>Uzzināt vairāk →</span></div>
+                <div className="value-contrast-top"><span>NESAKĀRTOTS</span><span>01 / PIRMS</span></div>
+                <div className="value-contrast-demo value-contrast-demo-before contrast-messy" aria-hidden="true">
+                  <div className="contrast-demo-nav"><strong>LOGO</strong><span>Sākums</span><span>Jaunumi</span><span>Galerija</span><span>Par mums</span><span>Kontakti</span></div>
+                  <div className="messy-announcement">JAUNUMI! AKCIJAS! APSKATI VISU PIEDĀVĀJUMU!</div>
+                  <div className="messy-headline">Laipni lūdzam mūsu mājaslapā!</div>
+                  <div className="messy-description">Piedāvājam dažādus pakalpojumus un individuālus risinājumus ikvienam klientam</div>
+                  <div className="messy-tiles">
+                    <span>Par mums</span><span>Pakalpojumi</span><span>Akcijas</span><span>Galerija</span><span>Jaunumi</span><span>Cenrādis</span>
+                  </div>
+                  <div className="contrast-demo-actions"><span>Uzzināt vairāk</span><span>Apskatīt</span><span>Sazināties</span></div>
                 </div>
-                <p>Pakalpojumi ir, bet nav skaidra ceļa līdz pieteikumam.</p>
+                <div className="contrast-outcome">
+                  <strong>Kas traucē</strong>
+                  <p>Pārāk daudz izvēļu, vāja hierarhija un nav skaidrs nākamais solis</p>
+                </div>
               </div>
+
               <span className="value-contrast-transition" aria-hidden="true">→</span>
+
               <div className="value-contrast-panel value-contrast-after">
-                <div className="value-contrast-top"><span>SKAIDRS</span><span>02 / PĒC</span></div>
-                <div className="value-contrast-demo value-contrast-demo-after" aria-hidden="true">
-                  <div className="contrast-demo-nav"><strong>Uzņēmums</strong><span>Pakalpojumi</span><span>Kontakti</span></div>
-                  <div className="contrast-demo-eyebrow">VIENS SKAIDRS PIEDĀVĀJUMS</div>
-                  <div className="contrast-demo-headline">Auto salona dziļā tīrīšana Rīgā</div>
-                  <div className="contrast-demo-blurb">Notīrām traipus, putekļus un ikdienā uzkrātos netīrumus. Piesaki sev ērtu laiku.</div>
-                  <span className="contrast-demo-cta">Pieteikt tīrīšanu <span>↗</span></span>
+                <div className="value-contrast-top"><span>SAKĀRTOTS</span><span>02 / PĒC</span></div>
+                <div className="value-contrast-demo value-contrast-demo-after contrast-refined" aria-hidden="true">
+                  <div className="contrast-demo-nav"><strong>LOGO</strong><span>Pakalpojumi</span><span>Kontakti</span></div>
+                  <div className="contrast-demo-headline">Pakalpojums, kas tev nepieciešams</div>
+                  <div className="contrast-demo-blurb">Svarīgākā informācija vienuviet, lai vari ātri pieņemt lēmumu</div>
+                  <span className="contrast-demo-cta">Pieteikties <span>↗</span></span>
                 </div>
-                <p>Viens piedāvājums. Viens saprotams nākamais solis.</p>
+                <div className="contrast-outcome">
+                  <strong>Ko izmainījām un ko tas dod</strong>
+                  <p>Sakārtojām saturu, izcēlām piedāvājumu un vienu darbību — klientam vieglāk saprast un pieteikties</p>
+                </div>
               </div>
             </div>
           </RevealOnView>
