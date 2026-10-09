@@ -4,16 +4,16 @@ import KestrelServiceTemplate, { type ServiceInfo } from "../../components/Kestr
 export const metadata: Metadata = {title:"Viena lapa. Viens mērķis. | Kestrel",description:"Vienā lapā izskaidrojam konkrētu pakalpojumu vai piedāvājumu."};
 const service: ServiceInfo = {
   "title": "Viena lapa. Viens mērķis.",
-  "intro": "Vienā lapā izskaidrojam konkrētu pakalpojumu vai piedāvājumu.",
+  "intro": "Ja vienam piedāvājumam ir pārāk daudz informācijas un izvēļu, apmeklētājs var nesaprast nākamo soli. Veidojam vienu skaidru lapu ar konkrētu mērķi.",
   "audience": [
-    "Vienam pakalpojumam vai produktam.",
-    "Kampaņai vai pasākumam.",
-    "Kad apmeklētājam vajadzīga viena skaidra darbība."
+    "Jāpiesaka viens pakalpojums vai produkts.",
+    "Reklāmas kampaņai vajadzīga atsevišķa lapa.",
+    "Svarīgi, lai apmeklētājs ātri nonāktu līdz pieteikumam."
   ],
   "offers": [
     {
       "title": "Landing lapas izstrāde",
-      "detail": "Viena lapa ar līdz četrām galvenajām satura sadaļām.",
+      "detail": "Izveidojam vienu strukturētu lapu konkrētam piedāvājumam.",
       "price": "no 200 €"
     }
   ],
