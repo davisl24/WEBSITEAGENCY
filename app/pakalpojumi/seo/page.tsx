@@ -1,21 +1,60 @@
-import KestrelHeader from "../../components/KestrelHeader";
-import KestrelFooter from "../../components/KestrelFooter";
 import type { Metadata } from "next";
+import KestrelServiceTemplate, { type ServiceInfo } from "../../components/KestrelServiceTemplate";
 
-export const metadata: Metadata = { title: "SEO | Kestrel", description: "Palīdzam sakārtot mājaslapas tehnisko pamatu un saturu, lai to būtu vieglāk atrast un saprast meklētājprogrammās." };
-
-export default function ServicePage() {
-  return (
-    <main className="ks-detail-page"><div className="ks-detail-inner">
-      <KestrelHeader />
-      <nav className="ks-detail-breadcrumb" aria-label="Lapas atrašanās vieta"><a href="/">Sākums</a><span> / </span><a href="/#services">Pakalpojumi</a><span> / </span><span aria-current="page">SEO</span></nav>
-      <section className="ks-detail-hero"><h1>Esi atrodams Google</h1></section>
-      <section className="ks-detail-section"><h2>Ko piedāvājam?</h2><div className="ks-detail-list">
-        <div><h3>Tehniskais SEO</h3><p>Lapu nosaukumi, virsrakstu struktūra, indeksēšanas un ātrdarbības pamatproblēmas.</p></div>
-        <div><h3>Satura optimizācija</h3><p>Skaidrāka pakalpojumu informācija un atbilstoša lapu struktūra.</p></div>
-        <div><h3>SEO audits</h3><p>Esošās mājaslapas problēmu un iespējamo uzlabojumu izvērtēšana.</p></div>
-      </div></section>
-      <section className="ks-detail-section"><h2>Pastāsti par savu projektu.</h2><p>Noskaidrosim, kāds risinājums nepieciešams, un pirms darba vienosimies par apjomu un cenu.</p><a className="ks-detail-link" href="/kontakti">Sazināties ↗</a></section>
-    </div><KestrelFooter /></main>
-  );
-}
+export const metadata: Metadata = {title:"SEO | Kestrel",description:"Pārbaudām mājaslapas tehnisko pamatu un saturu, lai novērstu šķēršļus atrašanai meklētājos."};
+const service: ServiceInfo = {
+  "title": "Esi atrodams Google",
+  "intro": "Pārbaudām mājaslapas tehnisko pamatu un saturu, lai novērstu šķēršļus atrašanai meklētājos.",
+  "audience": [
+    "Ja lapas saturs nav sakārtots meklēšanai.",
+    "Ja ir tehniskas indeksēšanas problēmas.",
+    "Ja vajadzīgs sākotnējs SEO izvērtējums."
+  ],
+  "offers": [
+    {
+      "title": "SEO audits",
+      "detail": "Pārbaudām esošās problēmas."
+    },
+    {
+      "title": "Tehniskais SEO",
+      "detail": "Indeksēšana, metadati un struktūra."
+    },
+    {
+      "title": "Satura optimizācija",
+      "detail": "Lapu saturs atbilstoši tēmām un meklēšanas nolūkam."
+    }
+  ],
+  "included": [
+    {
+      "title": "Pārbaude",
+      "detail": "Nosakām sākuma situāciju."
+    },
+    {
+      "title": "Prioritātes",
+      "detail": "Iezīmējam nozīmīgākos labojumus."
+    },
+    {
+      "title": "Saskaņoti labojumi",
+      "detail": "Veicam izvēlētos darbus."
+    },
+    {
+      "title": "Pārskats",
+      "detail": "Izskaidrojam paveikto."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Cik ilgā laikā projekts būs gatavs?",
+      "answer": "Termiņu nosakām pēc darba apjoma un saskaņojam pirms sākuma."
+    },
+    {
+      "question": "Vai man nepieciešami gatavi materiāli?",
+      "answer": "Izmantojam tavus materiālus un palīdzam tos sakārtot. Jaunu materiālu izveidi vērtējam atsevišķi."
+    },
+    {
+      "question": "Kā nosaka gala cenu?",
+      "answer": "Cena atkarīga no apjoma un funkcijām. Pirms izstrādes vienojamies par iekļauto un izmaksām."
+    }
+  ]
+};
+export default function ServicePage(){return <KestrelServiceTemplate service={service}/>;}
