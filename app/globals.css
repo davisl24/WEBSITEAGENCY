@@ -7876,3 +7876,20 @@ html[data-theme="light"] .kestrel-service .kst-offer{background:rgba(0,0,0,.05)}
 /* Homepage: center only the Pakalpojumi heading; retain existing service cards. */
 .services-section .services-head{display:block;text-align:center}
 .services-section .services-head h2{max-width:none;margin-inline:auto;text-align:center}
+
+
+/* Shared minimal service pages — one hierarchy, no filler sections */
+.kestrel-service-v2 .kst-hero{min-height:270px;padding:85px 0 65px}
+.kestrel-service-v2 .kst-section{padding-top:64px;padding-bottom:72px}
+.kestrel-service-v2 .kst-offers-section{padding-top:72px;padding-bottom:76px}
+.kestrel-service-v2 .kst-included-section{padding-top:72px;padding-bottom:72px}
+.kestrel-service-v2 .kst-process-section{padding-top:65px;padding-bottom:72px}
+.kestrel-service-v2 .kst-heading{margin-bottom:32px}
+.kestrel-service-v2 .kst-heading h2{font-size:clamp(30px,3.2vw,42px)}
+.kestrel-service-v2 .kst-offer{min-height:155px;padding:26px}
+.kestrel-service-v2 .kst-offer p{margin:12px 0;font-size:14px}
+.kestrel-service-v2 .kst-included{gap:26px 64px}
+.kestrel-service-v2 .kst-included-section .kst-heading,
+.kestrel-service-v2 .kst-process-section .kst-heading{margin-bottom:34px}
+.kestrel-service-v2 .kst-end{padding-top:75px;padding-bottom:95px}
+@media(max-width:600px){.kestrel-service-v2 .kst-hero{min-height:210px;padding:60px 0 48px}.kestrel-service-v2 .kst-section{padding-top:46px;padding-bottom:52px}.kestrel-service-v2 .kst-offers-section{padding-top:54px;padding-bottom:54px}.kestrel-service-v2 .kst-end{padding-top:58px;padding-bottom:72px}}
