@@ -25,7 +25,6 @@ export default function Home() {
         <KestrelHeader active="home" />
         <div className="hero-shell">
           <div className="hero-copy">
-            <p className="hero-label">Mājaslapu izstrāde mazajiem uzņēmumiem</p>
             <h1>Mājaslapas, kas palīdz pārdot</h1>
             <p className="hero-description">
               Veidojam skaidras un ātras mājaslapas mazajiem uzņēmumiem, lai klienti
