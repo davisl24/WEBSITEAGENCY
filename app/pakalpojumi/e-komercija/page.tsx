@@ -1,21 +1,60 @@
-import KestrelHeader from "../../components/KestrelHeader";
-import KestrelFooter from "../../components/KestrelFooter";
 import type { Metadata } from "next";
+import KestrelServiceTemplate, { type ServiceInfo } from "../../components/KestrelServiceTemplate";
 
-export const metadata: Metadata = { title: "E-komercija | Kestrel", description: "Izvērtējam interneta veikala vajadzības un sagatavojam piedāvājumu atbilstoši nepieciešamajām funkcijām." };
-
-export default function ServicePage() {
-  return (
-    <main className="ks-detail-page"><div className="ks-detail-inner">
-      <KestrelHeader />
-      <nav className="ks-detail-breadcrumb" aria-label="Lapas atrašanās vieta"><a href="/">Sākums</a><span> / </span><a href="/#services">Pakalpojumi</a><span> / </span><span aria-current="page">E-komercija</span></nav>
-      <section className="ks-detail-hero"><h1>Tavs veikals tiešsaistē</h1></section>
-      <section className="ks-detail-section"><h2>Ko piedāvājam?</h2><div className="ks-detail-list">
-        <div><h3>Produktu katalogs</h3><p>Produktu attēlošana ar kategorijām un aprakstiem.</p></div>
-        <div><h3>Pasūtījumi un maksājumi</h3><p>Iepirkumu grozs, norēķini un pasūtījumu apstrāde atbilstoši izvēlētajai platformai.</p></div>
-        <div><h3>Piegādes iespējas</h3><p>Piegādes veidu un nepieciešamo integrāciju izvērtēšana.</p></div>
-      </div></section>
-      <section className="ks-detail-section"><h2>Pastāsti par savu projektu.</h2><p>Noskaidrosim, kāds risinājums nepieciešams, un pirms darba vienosimies par apjomu un cenu.</p><a className="ks-detail-link" href="/kontakti">Sazināties ↗</a></section>
-    </div><KestrelFooter /></main>
-  );
-}
+export const metadata: Metadata = {title:"Tavs veikals tiešsaistē | Kestrel",description:"Izvērtējam un veidojam interneta veikala risinājumu atbilstoši produktiem un pasūtīšanas procesam."};
+const service: ServiceInfo = {
+  "title": "Tavs veikals tiešsaistē",
+  "intro": "Izvērtējam un veidojam interneta veikala risinājumu atbilstoši produktiem un pasūtīšanas procesam.",
+  "audience": [
+    "Ja produktus nepieciešams pārdot internetā.",
+    "Ja vajadzīgs pārskatāms produktu katalogs.",
+    "Ja pasūtījumi jāapstrādā vienā sistēmā."
+  ],
+  "offers": [
+    {
+      "title": "Produktu katalogs",
+      "detail": "Produkti un kategorijas ar aprakstiem."
+    },
+    {
+      "title": "Pasūtījumu plūsma",
+      "detail": "Grozs un pirkuma noformēšana."
+    },
+    {
+      "title": "Integrācijas",
+      "detail": "Maksājumi un piegādes pēc tehniskas izvērtēšanas."
+    }
+  ],
+  "included": [
+    {
+      "title": "Vajadzību izvērtēšana",
+      "detail": "Precizējam preču un pasūtījumu procesu."
+    },
+    {
+      "title": "Struktūra un dizains",
+      "detail": "Sakārtojam produktu atrašanu."
+    },
+    {
+      "title": "Integrāciju plāns",
+      "detail": "Nosakām nepieciešamās sistēmas."
+    },
+    {
+      "title": "Testēšana",
+      "detail": "Pārbaudām pirkuma ceļu."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Cik ilgā laikā projekts būs gatavs?",
+      "answer": "Termiņu nosakām pēc darba apjoma un saskaņojam pirms sākuma."
+    },
+    {
+      "question": "Vai man nepieciešami gatavi materiāli?",
+      "answer": "Izmantojam tavus materiālus un palīdzam tos sakārtot. Jaunu materiālu izveidi vērtējam atsevišķi."
+    },
+    {
+      "question": "Kā nosaka gala cenu?",
+      "answer": "Cena atkarīga no apjoma un funkcijām. Pirms izstrādes vienojamies par iekļauto un izmaksām."
+    }
+  ]
+};
+export default function ServicePage(){return <KestrelServiceTemplate service={service}/>;}
