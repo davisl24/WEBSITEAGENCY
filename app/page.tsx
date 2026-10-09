@@ -7,7 +7,7 @@ import ValueShowcase from "./components/ValueShowcase";
 import ProcessFlow from "./components/ProcessFlow";
 import RevealOnView from "./components/RevealOnView";
 import ThemeToggle from "./components/ThemeToggle";
-import ServicesDropdown from "./components/ServicesDropdown";
+import KestrelHeader from "./components/KestrelHeader";
 
 export const metadata = {
   title: "Mājaslapu izstrāde Latvijas uzņēmumiem | Kestrel",
@@ -25,18 +25,7 @@ export default function Home() {
           <div className="hero-media-overlay" />
         </div>
 
-        <header className="site-header" aria-label="Galvenā navigācija">
-          <a className="brand" href="/" aria-label="Sākumlapa">Kestrel</a>
-          <nav className="site-nav" aria-label="Galvenā navigācija">
-            <ServicesDropdown />
-            <a href="/par-mums">Par mums</a>
-            <ThemeToggle />
-            <LanguageSwitcher />
-            <a className="header-cta" href="/kontakti">Pieteikt sarunu</a>
-          </nav>
-        </header>
-
-        <div className="hero-shell">
+              <KestrelHeader active="home" />    <div className="hero-shell">
           <div className="hero-copy">
             <p className="hero-label">Mājaslapu izstrāde mazajiem uzņēmumiem</p>
             <h1>Mājaslapas, kas palīdz pārdot</h1>
