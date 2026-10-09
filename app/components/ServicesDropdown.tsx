@@ -6,7 +6,6 @@ import { useEffect, useRef, useState } from "react";
 
 const services = {
   lv: [
-    {href:"/pakalpojumi/web-izstrade",label:"Web izstrāde"},
     {href:"/pakalpojumi/landing-lapa",label:"Landing lapa"},
     {href:"/pakalpojumi/uznemuma-majaslapa",label:"Uzņēmuma mājaslapa"},
     {href:"/pakalpojumi/majaslapas-uzlabosana",label:"Mājaslapas uzlabošana"}
