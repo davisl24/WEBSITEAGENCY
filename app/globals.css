@@ -8054,3 +8054,30 @@ main#top .ks-category{padding:18px}
 main#top .ks-item h3{font-size:16px}
 main#top .ks-item>p{font-size:12px;line-height:1.45}
 }
+
+
+/* Comparison illustration: intentionally cluttered before / clearly structured after */
+main#top .contrast-messy{display:flex;flex-direction:column;gap:12px;padding:17px;background:#2b2c30;color:#f3f2f0}
+main#top .contrast-messy .contrast-demo-nav{display:flex;flex-wrap:wrap;gap:5px 11px;align-items:center;margin-bottom:0;font-size:9px}
+main#top .contrast-messy .contrast-demo-nav strong{margin-right:auto}
+main#top .messy-announcement{padding:8px 10px;background:#59503c;color:#fff3d9;font-size:9px;font-weight:700;letter-spacing:.03em;text-align:center}
+main#top .messy-headline{font-size:clamp(15px,1.35vw,21px);line-height:1.16;letter-spacing:-.035em;font-weight:750;max-width:310px}
+main#top .messy-description{max-width:390px;font-size:11px;line-height:1.45;opacity:.74}
+main#top .messy-tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px}
+main#top .messy-tiles span{padding:10px 6px;text-align:center;border:1px solid #696969;background:rgba(255,255,255,.07);font-size:9px}
+main#top .contrast-messy .contrast-demo-actions{display:flex;gap:5px;margin-top:auto;flex-wrap:wrap}
+main#top .contrast-messy .contrast-demo-actions span{font-size:9px;padding:7px 9px}
+main#top .contrast-refined{display:flex;flex-direction:column;justify-content:center;padding:clamp(20px,2.1vw,34px);gap:17px;background:#f9f8f5;color:#181818}
+main#top .contrast-refined .contrast-demo-nav{width:100%;margin-bottom:auto}
+main#top .contrast-refined .contrast-demo-headline{font-size:clamp(20px,2.2vw,32px);max-width:16ch;line-height:1.12;letter-spacing:-.045em}
+main#top .contrast-refined .contrast-demo-blurb{font-size:12px;max-width:290px;line-height:1.55}
+main#top .contrast-refined .contrast-demo-cta{margin-top:4px;margin-bottom:auto}
+main#top .contrast-outcome{display:flex;flex-direction:column;gap:7px}
+main#top .contrast-outcome strong{font-size:14px;letter-spacing:-.01em}
+main#top .value-contrast-panel .contrast-outcome p{font-size:13px;line-height:1.55;margin:0;opacity:.75;font-weight:400}
+main#top .value-contrast-panel{gap:13px}
+@media(max-width:600px){
+main#top .contrast-messy .contrast-demo-nav{font-size:8px}
+main#top .messy-tiles span{font-size:8px}
+main#top .contrast-outcome strong{font-size:13px}
+}
