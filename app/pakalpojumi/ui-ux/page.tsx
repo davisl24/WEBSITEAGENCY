@@ -1,21 +1,60 @@
-import KestrelHeader from "../../components/KestrelHeader";
-import KestrelFooter from "../../components/KestrelFooter";
 import type { Metadata } from "next";
+import KestrelServiceTemplate, { type ServiceInfo } from "../../components/KestrelServiceTemplate";
 
-export const metadata: Metadata = { title: "UI/UX dizains | Kestrel", description: "Sakārtojam mājaslapas informāciju un lietošanas ceļu, lai apmeklētājs varētu vieglāk atrast vajadzīgo." };
-
-export default function ServicePage() {
-  return (
-    <main className="ks-detail-page"><div className="ks-detail-inner">
-      <KestrelHeader />
-      <nav className="ks-detail-breadcrumb" aria-label="Lapas atrašanās vieta"><a href="/">Sākums</a><span> / </span><a href="/#services">Pakalpojumi</a><span> / </span><span aria-current="page">UI/UX dizains</span></nav>
-      <section className="ks-detail-hero"><h1>Dizains, kuru viegli lietot</h1></section>
-      <section className="ks-detail-section"><h2>Ko piedāvājam?</h2><div className="ks-detail-list">
-        <div><h3>Dizaina audits</h3><p>Pārbaudām lapas skaidrību, hierarhiju un galvenās darbības.</p></div>
-        <div><h3>Informācijas struktūra</h3><p>Sakārtojam sadaļas pēc apmeklētāja vajadzībām.</p></div>
-        <div><h3>Saskarnes dizains</h3><p>Izstrādājam lapas un komponentu vizuālo risinājumu.</p></div>
-      </div></section>
-      <section className="ks-detail-section"><h2>Pastāsti par savu projektu.</h2><p>Noskaidrosim, kāds risinājums nepieciešams, un pirms darba vienosimies par apjomu un cenu.</p><a className="ks-detail-link" href="/kontakti">Sazināties ↗</a></section>
-    </div><KestrelFooter /></main>
-  );
-}
+export const metadata: Metadata = {title:"Dizains, kuru viegli lietot | Kestrel",description:"Sakārtojam lietotāja ceļu, informācijas hierarhiju un vizuālo noformējumu."};
+const service: ServiceInfo = {
+  "title": "Dizains, kuru viegli lietot",
+  "intro": "Sakārtojam lietotāja ceļu, informācijas hierarhiju un vizuālo noformējumu.",
+  "audience": [
+    "Ja apmeklētājs neatrod vajadzīgo.",
+    "Ja lapa ir vizuāli nesakārtota.",
+    "Ja galvenā darbība nav saprotama."
+  ],
+  "offers": [
+    {
+      "title": "Dizaina audits",
+      "detail": "Pārbaudām lapas hierarhiju."
+    },
+    {
+      "title": "UX struktūra",
+      "detail": "Sakārtojam informācijas secību."
+    },
+    {
+      "title": "UI dizains",
+      "detail": "Projektējam saskarni un komponentus."
+    }
+  ],
+  "included": [
+    {
+      "title": "Problēmas",
+      "detail": "Fiksējam, kas traucē lietotājam."
+    },
+    {
+      "title": "Risinājums",
+      "detail": "Piedāvājam skaidru struktūru."
+    },
+    {
+      "title": "Dizains",
+      "detail": "Izveidojam saskaņotu izkārtojumu."
+    },
+    {
+      "title": "Pārbaude",
+      "detail": "Novērtējam lietojamību."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Cik ilgā laikā projekts būs gatavs?",
+      "answer": "Termiņu nosakām pēc darba apjoma un saskaņojam pirms sākuma."
+    },
+    {
+      "question": "Vai man nepieciešami gatavi materiāli?",
+      "answer": "Izmantojam tavus materiālus un palīdzam tos sakārtot. Jaunu materiālu izveidi vērtējam atsevišķi."
+    },
+    {
+      "question": "Kā nosaka gala cenu?",
+      "answer": "Cena atkarīga no apjoma un funkcijām. Pirms izstrādes vienojamies par iekļauto un izmaksām."
+    }
+  ]
+};
+export default function ServicePage(){return <KestrelServiceTemplate service={service}/>;}
