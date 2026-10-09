@@ -7,7 +7,8 @@ export const metadata: Metadata = { title: "UI/UX dizains | Kestrel", descriptio
 export default function ServicePage() {
   return (
     <main className="ks-detail-page"><div className="ks-detail-inner">
-      <KestrelHeader />\n      <nav className="ks-detail-breadcrumb" aria-label="Lapas atrašanās vieta"><a href="/">Sākums</a><span> / </span><a href="/#services">Pakalpojumi</a><span> / </span><span aria-current="page">UI/UX dizains</span></nav>
+      <KestrelHeader />
+      <nav className="ks-detail-breadcrumb" aria-label="Lapas atrašanās vieta"><a href="/">Sākums</a><span> / </span><a href="/#services">Pakalpojumi</a><span> / </span><span aria-current="page">UI/UX dizains</span></nav>
       <section className="ks-detail-hero"><h1>Dizains, kuru viegli lietot</h1></section>
       <section className="ks-detail-section"><h2>Ko piedāvājam?</h2><div className="ks-detail-list">
         <div><h3>Dizaina audits</h3><p>Pārbaudām lapas skaidrību, hierarhiju un galvenās darbības.</p></div>
