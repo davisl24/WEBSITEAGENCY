@@ -6,9 +6,11 @@ import { useEffect, useRef, useState } from "react";
 
 const services = {
   lv: [
-    {href:"/pakalpojumi/landing-lapa",label:"Landing lapa"},
-    {href:"/pakalpojumi/uznemuma-majaslapa",label:"Uzņēmuma mājaslapa"},
-    {href:"/pakalpojumi/majaslapas-uzlabosana",label:"Mājaslapas uzlabošana"}
+    {href:"/pakalpojumi/web-izstrade",label:"Web izstrāde"},
+    {href:"/pakalpojumi/e-komercija",label:"E-komercija"},
+    {href:"/pakalpojumi/seo",label:"SEO"},
+    {href:"/pakalpojumi/ui-ux",label:"UI/UX dizains"},
+    {href:"/pakalpojumi/hostings",label:"Hostings un uzturēšana"}
   ],
   en: [
     {href:"/en/services/landing-page",label:"Landing page"},
