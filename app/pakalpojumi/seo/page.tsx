@@ -8,7 +8,7 @@ export default function ServicePage() {
   return (
     <main className="ks-detail-page"><div className="ks-detail-inner">
       <KestrelHeader />\n      <nav className="ks-detail-breadcrumb" aria-label="Lapas atrašanās vieta"><a href="/">Sākums</a><span> / </span><a href="/#services">Pakalpojumi</a><span> / </span><span aria-current="page">SEO</span></nav>
-      <section className="ks-detail-hero"><p className="ks-detail-eyebrow">PAKALPOJUMI</p><h1>SEO</h1><p>Palīdzam sakārtot mājaslapas tehnisko pamatu un saturu, lai to būtu vieglāk atrast un saprast meklētājprogrammās.</p></section>
+      <section className="ks-detail-hero"><h1>Esi atrodams Google</h1></section>
       <section className="ks-detail-section"><h2>Ko piedāvājam?</h2><div className="ks-detail-list">
         <div><h3>Tehniskais SEO</h3><p>Lapu nosaukumi, virsrakstu struktūra, indeksēšanas un ātrdarbības pamatproblēmas.</p></div>
         <div><h3>Satura optimizācija</h3><p>Skaidrāka pakalpojumu informācija un atbilstoša lapu struktūra.</p></div>
