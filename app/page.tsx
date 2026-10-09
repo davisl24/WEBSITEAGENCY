@@ -57,85 +57,26 @@ export default function Home() {
         <div className="services-inner">
           <div className="services-head">
             <p className="section-label">Pakalpojumi</p>
-            <h2 id="services-title">Izvēlies sev piemērotāko</h2>
-            <p className="services-intro">
-              Vai vajag vienu lapu, pilnu uzņēmuma mājaslapu vai uzlabot esošo? Izvēlies savu situāciju
-            </p>
+            <h2 id="services-title">Mājaslapu izstrāde un vairāk</h2>
+            <p className="services-intro">Izstrādājam mājaslapas un palīdzam tās uzlabot, atrast un uzturēt.</p>
           </div>
-
-          <div className="services-grid">
-            <a href="/pakalpojumi/landing-lapa" className="service-card">
-              <div className="service-visual service-visual-landing">
-                <div className="service-story service-story-landing" aria-hidden="true">
-                  <div className="story-top"><span/><span/><span/></div>
-                  <div className="story-landing-body">
-                    <span className="story-eyebrow"/>
-                    <span className="story-landing-title"/>
-                    <span className="story-landing-subtitle"/>
-                    <span className="story-landing-cta"/>
-                  </div>
-                </div>
+          <div className="kestrel-services-v2">
+            <div className="ks-main">
+              <div className="ks-heading"><span className="ks-icon" aria-hidden="true">⌘</span><span className="ks-overline">GALVENAIS PAKALPOJUMS</span></div>
+              <h3>Web izstrāde</h3>
+              <p>Izstrādājam mājaslapas, kurās uzņēmuma piedāvājums ir saprotams un saziņa — vienkārša.</p>
+              <div className="ks-offers">
+                <a href="/pakalpojumi/landing-lapa"><span>Landing lapas</span><strong>no 200 €</strong><span aria-hidden="true">↗</span></a>
+                <a href="/pakalpojumi/uznemuma-majaslapa"><span>Uzņēmuma mājaslapas</span><strong>no 450 €</strong><span aria-hidden="true">↗</span></a>
+                <a href="/pakalpojumi/majaslapas-uzlabosana"><span>Esošo mājaslapu uzlabošana</span><strong>Pēc apjoma</strong><span aria-hidden="true">↗</span></a>
               </div>
-
-              <div className="service-card-body">
-                <p className="service-kicker">Ja jāizceļ viens piedāvājums</p>
-                <h3>Landing lapa</h3>
-                <p>Viena lapa konkrētam pakalpojumam, produktam vai kampaņai</p>
-
-                <span className="service-link" aria-hidden="true">Apskatīt pakalpojumu <span>→</span></span>
-              </div>
-            </a>
-
-            <a href="/pakalpojumi/uznemuma-majaslapa" className="service-card service-card-featured">
-              <div className="service-visual service-visual-website">
-                <div className="service-story service-story-company" aria-hidden="true">
-                  <div className="story-top"><span/><span/><span/></div>
-                  <div className="story-company-nav"><span/><span/><span/><span/></div>
-                  <div className="story-company-hero">
-                    <div className="story-company-copy"><span/><span/><span/></div>
-                    <div className="story-company-image"/>
-                  </div>
-                  <div className="story-company-pages"><span/><span/><span/></div>
-                </div>
-              </div>
-
-              <div className="service-card-body">
-                <p className="service-kicker">Ja uzņēmumam vajag vairākas lapas</p>
-                <h3>Uzņēmuma mājaslapa</h3>
-                <p>Vairākas lapas, kur vienuviet parādīt pakalpojumus un informāciju par uzņēmumu</p>
-
-                <span className="service-link" aria-hidden="true">Apskatīt pakalpojumu <span>→</span></span>
-              </div>
-            </a>
-
-            <a href="/pakalpojumi/majaslapas-uzlabosana" className="service-card">
-              <div className="service-visual service-visual-upgrade">
-                <div className="story-upgrade" aria-hidden="true">
-                  <div className="story-upgrade-before">
-                    <div className="story-top"><span/><span/><span/></div>
-                    <div className="story-before-body"><span/><span/><span/><span/></div>
-                  </div>
-                  <span className="story-upgrade-arrow">→</span>
-                  <div className="story-upgrade-after">
-                    <div className="story-top"><span/><span/><span/></div>
-                    <div className="story-after-body">
-                      <span className="story-after-eyebrow"/>
-                      <span className="story-after-title"/>
-                      <span className="story-after-copy"/>
-                      <span className="story-after-button"/>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="service-card-body">
-                <p className="service-kicker">Ja mājaslapa jau ir</p>
-                <h3>Mājaslapas uzlabošana</h3>
-                <p>Uzlabojam esošās mājaslapas dizainu, struktūru un lietošanas ērtumu</p>
-
-                <span className="service-link" aria-hidden="true">Apskatīt pakalpojumu <span>→</span></span>
-              </div>
-            </a>
+            </div>
+            <div className="ks-other-grid">
+              <article className="ks-item"><span className="ks-icon" aria-hidden="true">▦</span><h3>E-komercija</h3><p>Interneta veikalu risinājumi.</p><ul><li>Produktu katalogi</li><li>Iepirkumu grozs</li><li>Maksājumu integrācijas</li></ul></article>
+              <article className="ks-item"><span className="ks-icon" aria-hidden="true">⌕</span><h3>SEO</h3><p>Mājaslapas optimizācija meklētājiem.</p><ul><li>Tehniskais SEO</li><li>Satura optimizācija</li><li>SEO audits</li></ul></article>
+              <article className="ks-item"><span className="ks-icon" aria-hidden="true">◫</span><h3>UI/UX dizains</h3><p>Skaidrāka struktūra un ērtāka lietošana.</p><ul><li>Dizaina audits</li><li>Lietotāja ceļš</li><li>Saskarņu dizains</li></ul></article>
+              <article className="ks-item"><span className="ks-icon" aria-hidden="true">▤</span><h3>Hostings un uzturēšana</h3><p>Tehniskā darbība pēc publicēšanas.</p><ul><li>Mājaslapas izvietošana</li><li>Tehniskā uzraudzība</li><li>Saskaņoti atjauninājumi</li></ul></article>
+            </div>
           </div>
         </div>
       </section>
