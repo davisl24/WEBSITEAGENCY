@@ -8193,3 +8193,9 @@ main#top .kestrel-issue-solution p{font-size:15px;line-height:1.55;margin:0;font
  main#top .kestrel-issue-icon{margin-bottom:16px}
  main#top .kestrel-issue-solution{padding-top:22px}
 }
+
+/* Homepage: Process uses exactly the same centered heading scale as Pakalpojumi */
+main#top .process-head.process-head-minimal{display:block;width:100%;max-width:none;text-align:center;margin:0 auto 42px}
+main#top .process-head.process-head-minimal h2{font-size:clamp(34px,3.25vw,48px);line-height:1.12;letter-spacing:-.045em;font-weight:650;text-align:center;margin:0 auto;max-width:none}
+main#top .process-step p{display:block;font-size:14px;line-height:1.55;margin-top:12px;max-width:240px;opacity:.7}
+@media(max-width:760px){main#top .process-head.process-head-minimal{margin-bottom:30px}}
