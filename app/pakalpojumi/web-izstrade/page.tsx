@@ -4,28 +4,28 @@ import KestrelServiceTemplate, { type ServiceInfo } from "../../components/Kestr
 export const metadata: Metadata = {title:"Mājaslapas tavam uzņēmumam | Kestrel",description:"Izstrādājam mājaslapas, kurās ir skaidrs piedāvājums un viegli atrodama saziņas iespēja."};
 const service: ServiceInfo = {
   "title": "Mājaslapas tavam uzņēmumam",
-  "intro": "Izstrādājam mājaslapas, kurās ir skaidrs piedāvājums un viegli atrodama saziņas iespēja.",
+  "intro": "Ja uzņēmumam nav skaidras mājaslapas, klientam ir grūtāk saprast piedāvājumu un sazināties. Izveidojam pārskatāmu vietni ar konkrētu nākamo soli.",
   "audience": [
-    "Ja uzņēmumam vēl nav mājaslapas.",
-    "Ja esošā lapa vairs neatbilst piedāvājumam.",
-    "Ja klientiem nepieciešama saprotama informācija vienuviet."
+    "Klienti nevar vienuviet atrast pakalpojumus un kontaktus.",
+    "Esošā lapa neatspoguļo uzņēmuma piedāvājumu.",
+    "Nepieciešama mobilajām ierīcēm pielāgota mājaslapa."
   ],
   "offers": [
     {
       "title": "Landing lapa",
-      "detail": "Vienam piedāvājumam vienā lapā.",
+      "detail": "Vienā lapā izskaidrojam vienu piedāvājumu un vedam uz pieteikšanos.",
       "price": "no 200 €",
       "href": "/pakalpojumi/landing-lapa"
     },
     {
       "title": "Uzņēmuma mājaslapa",
-      "detail": "Atsevišķas lapas plašākai informācijai.",
+      "detail": "Sakārtojam vairākus pakalpojumus atsevišķās lapās.",
       "price": "no 450 €",
       "href": "/pakalpojumi/uznemuma-majaslapa"
     },
     {
       "title": "Mājaslapas uzlabošana",
-      "detail": "Sakārtojam jau esošu mājaslapu.",
+      "detail": "Novēršam esošās lapas struktūras un lietojamības problēmas.",
       "href": "/pakalpojumi/majaslapas-uzlabosana"
     }
   ],
