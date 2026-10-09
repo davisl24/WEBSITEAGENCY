@@ -31,23 +31,7 @@ export default function ProcessFlow() {
   return (
     <section className="process-section" id="process" aria-labelledby="process-title">
       <div className="process-inner">
-        <div className="process-head">
-          <RevealOnView className="process-eyebrow">
-            <p className="section-label">Process</p>
-          </RevealOnView>
-
-          <RevealOnView className="line-mask-reveal process-heading" delay={60}>
-            <h2 id="process-title" className="service-line-stack">
-              <span className="service-reveal-line"><span>No idejas līdz live</span></span>
-            </h2>
-          </RevealOnView>
-
-          <RevealOnView className="process-summary" delay={120}>
-            <p className="process-intro">
-              Vispirms saprotam, ko lapai jāpanāk — tikai tad ķeramies pie dizaina un izstrādes
-            </p>
-          </RevealOnView>
-        </div>
+        <div className="process-head process-head-minimal"><h2 id="process-title">Process</h2></div>
 
         <div className="process-track">
           <span className="process-track-line" aria-hidden="true" />
@@ -66,7 +50,6 @@ export default function ProcessFlow() {
                 {step.icon === "launch" && <svg viewBox="0 0 32 32" fill="none"><path d="M12 21l-1-7c3-6 8-9 15-9 0 7-3 12-9 15l-5 1Z" /><path d="m17 15 0 0M11 14l-5 1-2 5 7-1M18 21l-1 7-5 1 1-7M9 23l-3 3M24 9h.01" /></svg>}
               </span>
               <h3>{step.title}</h3>
-              <p>{step.text}</p>
             </RevealOnView>
           ))}
         </div>
