@@ -20,59 +20,7 @@ export default function LandingPage() {
     <main className="service-page landing-page">
       <KestrelHeader />
 
-      <section className="service-page-hero">
-        <div>
-          <p className="service-page-kicker">Landing lapa</p>
-          <h1>Viena lapa<br/>Viens mērķis</h1>
-          <p className="service-page-lead">
-            Landing lapa vienam piedāvājumam, lai apmeklētājs ātri saprot,
-            ko tu piedāvā, kāpēc tas ir svarīgi un ko darīt tālāk.
-          </p>
-
-          <div className="service-page-actions">
-            <a className="button button-primary" href="/kontakti">Izrunāt projektu</a>
-            <a className="text-link" href="#kas-ietilpst">Ko saņem <span aria-hidden="true">↓</span></a>
-          </div>
-        </div>
-
-        <div className="service-hero-demo" aria-hidden="true">
-          <div className="service-demo-window">
-            <div className="ui-browser-top"><span/><span/><span/></div>
-
-            <div className="service-demo-nav">
-              <span className="service-demo-brand">North</span>
-              <div className="service-demo-nav-links">
-                <span>Pakalpojumi</span>
-                <span>Par mums</span>
-                <span className="service-demo-nav-cta">Sākt</span>
-              </div>
-            </div>
-
-            <div className="service-demo-hero">
-              <div className="service-demo-copy-block">
-                <span className="service-demo-eyebrow">Jauns piedāvājums</span>
-                <strong>Skaidri. Ātri.<br/>Bez lieka.</strong>
-                <p>Viena lapa ar vienu mērķi un skaidru ceļu līdz pieteikumam.</p>
-                <span className="service-demo-primary">Pieteikties</span>
-              </div>
-
-              <div className="service-demo-art">
-                <div className="service-demo-art-shape"/>
-                <div className="service-demo-art-card">
-                  <span>Vienam mērķim</span>
-                  <strong>Skaidrs ceļš</strong>
-                </div>
-              </div>
-            </div>
-
-            <div className="service-demo-proof">
-              <span>Skaidrs piedāvājums</span>
-              <span>Mobilā versija</span>
-              <span>Viena galvenā CTA</span>
-            </div>
-          </div>
-        </div>
-      </section>
+      <section className="service-page-hero"><h1>Viena lapa. Viens mērķis.</h1></section>
 
       <section className="service-page-section service-fit-section" aria-labelledby="der-title">
         <div className="service-fit-head">
