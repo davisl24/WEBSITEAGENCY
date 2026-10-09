@@ -4,24 +4,24 @@ import KestrelServiceTemplate, { type ServiceInfo } from "../../components/Kestr
 export const metadata: Metadata = {title:"Sakārtojam esošo mājaslapu | Kestrel",description:"Uzlabojam esošās mājaslapas skaidrību, izskatu un lietošanas ērtumu."};
 const service: ServiceInfo = {
   "title": "Sakārtojam esošo mājaslapu",
-  "intro": "Uzlabojam esošās mājaslapas skaidrību, izskatu un lietošanas ērtumu.",
+  "intro": "Ja apmeklētāji neatrod svarīgo vai mobilā versija ir neērta, ne vienmēr vajag jaunu lapu. Izvērtējam esošo un uzlabojam konkrētas vietas.",
   "audience": [
-    "Ja piedāvājumu ir grūti saprast.",
-    "Ja lapu neērti lietot telefonā.",
-    "Ja svarīgā informācija ir grūti atrodama."
+    "Apmeklētājs nevar ātri saprast piedāvājumu.",
+    "Telefonā informāciju ir grūti izmantot.",
+    "Pieteikšanās vai kontaktu atrašana ir sarežģīta."
   ],
   "offers": [
     {
       "title": "Struktūras uzlabošana",
-      "detail": "Pārkārtojam saturu un navigāciju."
+      "detail": "Pārkārtojam saturu, lai svarīgais būtu uzreiz saprotams."
     },
     {
       "title": "Dizaina uzlabošana",
-      "detail": "Sakārtojam tipogrāfiju un izkārtojumu."
+      "detail": "Uzlabojam vizuālo hierarhiju un mobilās versijas lietojamību."
     },
     {
       "title": "Tehniski labojumi",
-      "detail": "Novēršam identificētās kļūdas pēc izvērtēšanas."
+      "detail": "Izvērtējam tehniskās problēmas un vienojamies par labojumiem."
     }
   ],
   "included": [
