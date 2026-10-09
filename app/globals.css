@@ -7893,3 +7893,117 @@ html[data-theme="light"] .kestrel-service .kst-offer{background:rgba(0,0,0,.05)}
 .kestrel-service-v2 .kst-process-section .kst-heading{margin-bottom:34px}
 .kestrel-service-v2 .kst-end{padding-top:75px;padding-bottom:95px}
 @media(max-width:600px){.kestrel-service-v2 .kst-hero{min-height:210px;padding:60px 0 48px}.kestrel-service-v2 .kst-section{padding-top:46px;padding-bottom:52px}.kestrel-service-v2 .kst-offers-section{padding-top:54px;padding-bottom:54px}.kestrel-service-v2 .kst-end{padding-top:58px;padding-bottom:72px}}
+
+
+/* Service template quality pass — all eight LV service pages.
+   Keep the approved homepage untouched. */
+.kestrel-service-v2{padding-top:12px;overflow:clip}
+.kestrel-service-v2 .kestrel-shared-header{
+  position:sticky;top:12px;left:auto;right:auto;transform:none;
+  width:min(1180px,calc(100% - 40px));margin:0 auto;z-index:100;
+}
+.kestrel-service-v2 .kst-hero{
+  min-height:0;padding:82px 0 72px;
+  display:flex;align-items:center;
+}
+.kestrel-service-v2 .kst-hero h1{
+  font-size:clamp(46px,5.1vw,72px);
+  line-height:1.11;letter-spacing:-.052em;
+  max-width:880px;font-weight:650;
+  overflow-wrap:break-word;
+}
+.kestrel-service-v2 .kst-section{
+  padding-top:55px;padding-bottom:62px;
+}
+.kestrel-service-v2 .kst-heading{margin-bottom:28px}
+.kestrel-service-v2 .kst-heading h2{
+  font-size:clamp(26px,2.7vw,36px);
+  line-height:1.18;letter-spacing:-.04em;font-weight:650;
+}
+.kestrel-service-v2 .kst-offers-section{
+  padding-top:60px;padding-bottom:66px;
+  background:transparent;
+}
+.kestrel-service-v2 .kst-offers-section>.kst-heading,
+.kestrel-service-v2 .kst-offers-section>.kst-offers{
+  width:min(1080px,calc(100% - 64px));
+}
+.kestrel-service-v2 .kst-offer{
+  min-height:0;padding:26px;
+  border-radius:15px;
+  background:rgba(255,255,255,.045);
+}
+.kestrel-service-v2 .kst-offer h3{font-size:19px}
+.kestrel-service-v2 .kst-offer p{line-height:1.55;font-size:14px;margin:13px 0}
+.kestrel-service-v2 .kst-included-section{
+  padding-top:62px;padding-bottom:62px;
+}
+.kestrel-service-v2 .kst-included-section .kst-heading,
+.kestrel-service-v2 .kst-process-section .kst-heading{margin-bottom:33px}
+.kestrel-service-v2 .kst-included{
+  max-width:840px;gap:24px 50px;
+}
+.kestrel-service-v2 .kst-included h3{font-size:17px;margin-bottom:5px}
+.kestrel-service-v2 .kst-included p{font-size:14px;line-height:1.55}
+.kestrel-service-v2 .kst-process-section{
+  padding-top:54px;padding-bottom:60px;
+}
+.kestrel-service-v2 .kst-process{max-width:900px;gap:20px}
+.kestrel-service-v2 .kst-process h3{font-size:17px}
+.kestrel-service-v2 .kst-process span{margin-bottom:10px}
+.kestrel-service-v2 .kst-end{
+  padding-top:75px;padding-bottom:87px;
+}
+.kestrel-service-v2 .kst-end h2{
+  font-size:clamp(30px,3.8vw,48px);
+  margin-bottom:27px;letter-spacing:-.045em;
+}
+.kestrel-service-v2 .kst-glass-cta:focus-visible,
+.kestrel-service-v2 .header-cta:focus-visible{
+  outline:2px solid currentColor;outline-offset:4px;
+}
+html[data-theme="light"] .kestrel-service-v2 .kst-offers-section{
+  background:transparent;
+}
+html[data-theme="light"] .kestrel-service-v2 .kst-offer{
+  background:rgba(0,0,0,.04);
+}
+@media(max-width:850px){
+  .kestrel-service-v2 .kst-hero{padding:70px 0 58px}
+  .kestrel-service-v2 .kst-section{padding:47px 0 53px}
+  .kestrel-service-v2 .kst-offers-section{padding:51px 0 58px}
+}
+@media(max-width:600px){
+  .kestrel-service-v2{padding-top:10px}
+  .kestrel-service-v2 .kestrel-shared-header{
+    width:calc(100% - 20px);top:10px;
+  }
+  .kestrel-service-v2 .kst-hero,
+  .kestrel-service-v2 .kst-section,
+  .kestrel-service-v2 .kst-end{
+    width:calc(100% - 36px);
+  }
+  .kestrel-service-v2 .kst-hero{
+    min-height:0;padding:58px 0 48px;
+  }
+  .kestrel-service-v2 .kst-hero h1{
+    font-size:clamp(38px,10vw,52px);letter-spacing:-.05em;
+  }
+  .kestrel-service-v2 .kst-section{padding:42px 0 48px}
+  .kestrel-service-v2 .kst-offers-section{
+    width:100%;padding:46px 0 52px;
+  }
+  .kestrel-service-v2 .kst-offers-section>.kst-heading,
+  .kestrel-service-v2 .kst-offers-section>.kst-offers{
+    width:calc(100% - 36px);
+  }
+  .kestrel-service-v2 .kst-included{gap:23px}
+  .kestrel-service-v2 .kst-process{gap:22px}
+  .kestrel-service-v2 .kst-process>div{text-align:left}
+  .kestrel-service-v2 .kst-end{padding:55px 0 72px}
+}
+@media(prefers-reduced-motion:reduce){
+ .kestrel-service-v2 .kst-offer,.kestrel-service-v2 .kst-glass-cta{
+   transition:none;
+ }
+}
