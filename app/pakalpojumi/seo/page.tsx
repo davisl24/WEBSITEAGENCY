@@ -4,24 +4,24 @@ import KestrelServiceTemplate, { type ServiceInfo } from "../../components/Kestr
 export const metadata: Metadata = {title:"SEO | Kestrel",description:"Pārbaudām mājaslapas tehnisko pamatu un saturu, lai novērstu šķēršļus atrašanai meklētājos."};
 const service: ServiceInfo = {
   "title": "Esi atrodams Google",
-  "intro": "Pārbaudām mājaslapas tehnisko pamatu un saturu, lai novērstu šķēršļus atrašanai meklētājos.",
+  "intro": "Ja meklētājs nevar pareizi nolasīt lapas saturu, cilvēkiem var būt grūtāk to atrast. Pārbaudām tehniskos šķēršļus un sakārtojam lapu struktūru bez pozīciju garantijām.",
   "audience": [
-    "Ja lapas saturs nav sakārtots meklēšanai.",
-    "Ja ir tehniskas indeksēšanas problēmas.",
-    "Ja vajadzīgs sākotnējs SEO izvērtējums."
+    "Svarīgās lapas netiek pareizi indeksētas.",
+    "Virsraksti un lapu nosaukumi neatbilst saturam.",
+    "Nav skaidrs, kuri SEO labojumi jāveic vispirms."
   ],
   "offers": [
     {
       "title": "SEO audits",
-      "detail": "Pārbaudām esošās problēmas."
+      "detail": "Atrodam konkrētas tehniskas un satura problēmas."
     },
     {
       "title": "Tehniskais SEO",
-      "detail": "Indeksēšana, metadati un struktūra."
+      "detail": "Pārbaudām indeksēšanu, metadatus un lapu hierarhiju."
     },
     {
       "title": "Satura optimizācija",
-      "detail": "Lapu saturs atbilstoši tēmām un meklēšanas nolūkam."
+      "detail": "Sakārtojam saturu atbilstoši pakalpojumiem un meklēšanas nolūkam."
     }
   ],
   "included": [
