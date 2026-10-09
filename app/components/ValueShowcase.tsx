@@ -2,17 +2,17 @@ const issues = [
   {
     problem: "Klients nesaprot piedāvājumu",
     impact: "Svarīgākais pazūd starp pārāk daudziem tekstiem un sadaļām",
-    solution: "Sakārtojam informāciju un skaidri izceļam pakalpojumus"
+    solution: "Izceļam svarīgāko un sakārtojam saturu"
   },
   {
-    problem: "Mājaslapu ir grūti lietot telefonā",
+    problem: "Lapa nav ērta telefonā",
     impact: "Teksti, pogas un navigācija apgrūtina vajadzīgās informācijas atrašanu",
-    solution: "Veidojam pārskatāmu izkārtojumu arī mazākos ekrānos"
+    solution: "Pielāgojam lapu mobilajām ierīcēm"
   },
   {
     problem: "Nav skaidrs, kā pieteikties",
     impact: "Kontaktinformācija vai nākamā darbība ir grūti atrodama",
-    solution: "Izvietojam saprotamu saziņas iespēju tur, kur tā nepieciešama"
+    solution: "Izveidojam skaidru ceļu līdz pieteikumam"
   }
 ];
 
