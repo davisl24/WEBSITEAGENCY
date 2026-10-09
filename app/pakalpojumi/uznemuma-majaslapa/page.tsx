@@ -4,16 +4,16 @@ import KestrelServiceTemplate, { type ServiceInfo } from "../../components/Kestr
 export const metadata: Metadata = {title:"Visa informācija vienuviet | Kestrel",description:"Vairāku lapu mājaslapa uzņēmumam, kuram ir ko pastāstīt par saviem pakalpojumiem."};
 const service: ServiceInfo = {
   "title": "Visa informācija vienuviet",
-  "intro": "Vairāku lapu mājaslapa uzņēmumam, kuram ir ko pastāstīt par saviem pakalpojumiem.",
+  "intro": "Ja pakalpojumi un informācija ir izkaisīti dažādās vietās, klientam ir grūtāk izvēlēties. Apvienojam tos loģiski sakārtotā uzņēmuma mājaslapā.",
   "audience": [
-    "Uzņēmumam ar vairākiem pakalpojumiem.",
-    "Kad vajadzīgas atsevišķas informācijas lapas.",
-    "Kad klientam pirms saziņas jāuzzina vairāk."
+    "Piedāvājumā ir vairāki pakalpojumi.",
+    "Klientiem jāredz uzņēmuma darbi un pieredze.",
+    "Nepieciešamas atsevišķas lapas par pakalpojumiem un kontaktēšanos."
   ],
   "offers": [
     {
       "title": "Uzņēmuma mājaslapas izstrāde",
-      "detail": "Vienkārša vairāku lapu mājaslapa ar navigāciju.",
+      "detail": "Veidojam pārskatāmu mājaslapu ar skaidru navigāciju un kontaktēšanās ceļu.",
       "price": "no 450 €"
     }
   ],
