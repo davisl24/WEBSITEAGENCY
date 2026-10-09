@@ -18,16 +18,16 @@ export default function KestrelServiceTemplate({ service }: { service: ServiceIn
     <section className="kst-hero" aria-label="Pakalpojuma ievads">
       <h1>{service.title}</h1>
     </section>
-    <section className="kst-section" aria-labelledby="kst-purpose">
+    <section className="kst-section kst-purpose-section" aria-labelledby="kst-purpose">
       <div className="kst-heading">
-        <h2 id="kst-purpose">Kam tas paredzēts?</h2>
+        <h2 id="kst-purpose">Kad tas ir vajadzīgs?</h2>
         <p>{service.intro}</p>
       </div>
       <div className="kst-audience">
         {service.audience.map(item => <p key={item}>{item}</p>)}
       </div>
     </section>
-    <section className="kst-section" aria-labelledby="kst-offers">
+    <section className="kst-section kst-offers-section" aria-labelledby="kst-offers">
       <div className="kst-heading"><h2 id="kst-offers">Ko piedāvājam?</h2></div>
       <div className="kst-offers">
         {service.offers.map(item => {
@@ -36,15 +36,15 @@ export default function KestrelServiceTemplate({ service }: { service: ServiceIn
         })}
       </div>
     </section>
-    <section className="kst-section" aria-labelledby="kst-included">
+    <section className="kst-section kst-included-section" aria-labelledby="kst-included">
       <div className="kst-heading"><h2 id="kst-included">Kas ir iekļauts?</h2></div>
       <div className="kst-included">{service.included.map(item => <div key={item.title}><h3>{item.title}</h3><p>{item.detail}</p></div>)}</div>
     </section>
-    <section className="kst-section" aria-labelledby="kst-process">
+    <section className="kst-section kst-process-section" aria-labelledby="kst-process">
       <div className="kst-heading"><h2 id="kst-process">Kā strādājam?</h2></div>
       <div className="kst-process">{process.map((step,i)=><div key={step}><span>{String(i+1).padStart(2,"0")}</span><h3>{step}</h3></div>)}</div>
     </section>
-    <section className="kst-section" aria-labelledby="kst-faq">
+    <section className="kst-section kst-faq-section" aria-labelledby="kst-faq">
       <div className="kst-heading"><h2 id="kst-faq">Biežākie jautājumi</h2></div>
       <div className="kst-faq">{service.faq.map(item=><details key={item.question}><summary>{item.question}</summary><p>{item.answer}</p></details>)}</div>
     </section>
