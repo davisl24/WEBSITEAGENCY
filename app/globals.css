@@ -8163,3 +8163,33 @@ main#top .kestrel-problem-arrow{font-size:19px;opacity:.43}
   main#top .kestrel-problem-description h3{font-size:17px}
   main#top .kestrel-problem-solution p{font-size:15px}
 }
+
+
+/* Homepage pain points: three compact, grounded problem/solution cards */
+main#top .kestrel-problems-cards .kestrel-problems-heading{margin-bottom:38px}
+main#top .kestrel-problems-cards .kestrel-problems-list{
+ display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;
+ width:min(1200px,100%);align-items:stretch;
+}
+main#top .kestrel-issue-card{
+ display:flex;flex-direction:column;min-width:0;
+ padding:32px;border:1px solid rgba(135,135,135,.15);
+ border-radius:20px;background:rgba(130,130,130,.035);
+}
+main#top .kestrel-issue-icon{width:30px;height:30px;margin-bottom:27px;color:currentColor;opacity:.74}
+main#top .kestrel-issue-icon svg{width:100%;height:100%;stroke:currentColor;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}
+main#top .kestrel-issue-card h3{font-size:clamp(19px,1.6vw,23px);line-height:1.25;letter-spacing:-.034em;margin:0 0 12px;font-weight:650}
+main#top .kestrel-issue-impact{font-size:15px;line-height:1.6;opacity:.66;margin:0}
+main#top .kestrel-issue-solution{margin-top:auto;padding-top:36px}
+main#top .kestrel-issue-solution span{display:block;font-size:12px;opacity:.55;margin-bottom:9px}
+main#top .kestrel-issue-solution p{font-size:15px;line-height:1.55;margin:0;font-weight:550}
+@media(max-width:900px){
+ main#top .kestrel-problems-cards .kestrel-problems-list{gap:12px}
+ main#top .kestrel-issue-card{padding:23px}
+}
+@media(max-width:700px){
+ main#top .kestrel-problems-cards .kestrel-problems-list{grid-template-columns:1fr;gap:12px}
+ main#top .kestrel-issue-card{padding:24px}
+ main#top .kestrel-issue-icon{margin-bottom:16px}
+ main#top .kestrel-issue-solution{padding-top:22px}
+}
