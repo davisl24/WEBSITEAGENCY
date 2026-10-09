@@ -1,12 +1,9 @@
 import { lvMetadataAlternates } from "./lib/localizedSeo";
-import LanguageSwitcher from "./components/LanguageSwitcher";
 import Image from "next/image";
 import heroBg from "./assets/images/andrew-kliatskyi-k7XTD-HCZAw-unsplash.jpg";
 import heroBgLight from "./assets/images/balts_fons_optimizets.webp";
 import ValueShowcase from "./components/ValueShowcase";
 import ProcessFlow from "./components/ProcessFlow";
-import RevealOnView from "./components/RevealOnView";
-import ThemeToggle from "./components/ThemeToggle";
 import KestrelHeader from "./components/KestrelHeader";
 
 export const metadata = {
@@ -25,7 +22,8 @@ export default function Home() {
           <div className="hero-media-overlay" />
         </div>
 
-              <KestrelHeader active="home" />    <div className="hero-shell">
+        <KestrelHeader active="home" />
+        <div className="hero-shell">
           <div className="hero-copy">
             <p className="hero-label">Mājaslapu izstrāde mazajiem uzņēmumiem</p>
             <h1>Mājaslapas, kas palīdz pārdot</h1>
@@ -71,11 +69,11 @@ export default function Home() {
 
       <section className="call-section" aria-labelledby="call-title">
         <div className="call-inner">
-          <div className="call-kicker">Īsa saruna bez saistībām</div>
+          
           <div className="call-content">
             <div>
-              <h2 id="call-title">Parunājam par tavu lapu</h2>
-              <p>15 minūtes, lai saprastu, ko uzņēmumam reāli vajag un vai varam palīdzēt</p>
+              <h2 id="call-title">Pastāsti par savu projektu.</h2>
+              <p>Izrunāsim ieceri un vienosimies par piemērotāko risinājumu.</p>
             </div>
             <a className="call-cta" href="/kontakti">
               <span className="call-dot" aria-hidden="true" />
@@ -91,7 +89,7 @@ export default function Home() {
           <div className="footer-main">
           <div className="footer-wordmark-block">
             <a href="/" className="footer-wordmark">Kestrel</a>
-            <p className="footer-statement">Veidojam mājaslapas ar skaidru mērķi un pārdomātu dizainu<br/>Palīdzam mazajiem uzņēmumiem parādīt savu piedāvājumu un atvieglot klienta ceļu</p>
+            <p className="footer-statement">Mājaslapas ar skaidru struktūru un pārdomātu dizainu.</p>
           </div>
             <div className="footer-links">
               <div>
