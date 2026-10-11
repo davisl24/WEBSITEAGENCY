@@ -34,7 +34,7 @@ export default function ValueShowcase() {
     <section className="value-section kestrel-problems-section kestrel-problems-cards kestrel-problems-v3" aria-labelledby="problems-title">
       <div className="value-inner">
         <div className="kestrel-problems-heading">
-          <h2 id="problems-title">Kas traucē mājaslapai piesaistīt klientus?</h2>
+          <h2 id="problems-title">Kas kavē klientu pieteikšanos?</h2>
         </div>
         <div className="kestrel-problems-list">
           {issues.map(item => (
