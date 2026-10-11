@@ -8548,7 +8548,7 @@ main#top .kestrel-problems-v3 .kestrel-problems-list {
 main#top .kestrel-problems-v3 .kestrel-issue-card,
 main#top .kestrel-problems-v3 .kestrel-issue-card:first-child {
   display:grid;
-  grid-template-rows:78px 1fr auto;
+  grid-template-rows:56px 108px auto;
   gap:0;
   padding:0;
   background:transparent;
@@ -8567,10 +8567,10 @@ main#top .kestrel-problems-v3 .kestrel-v3-icon svg {display:block;width:100%;hei
 main#top .kestrel-problems-v3 .kestrel-v3-issue-head h3 {
   margin:0;font-size:22px;line-height:1.3;font-weight:650;letter-spacing:-.035em;
 }
-main#top .kestrel-problems-v3 .kestrel-v3-detail {padding-top:24px}
-main#top .kestrel-problems-v3 .kestrel-issue-card > .kestrel-v3-detail:not(.kestrel-v3-benefit) {min-height:132px}
+main#top .kestrel-problems-v3 .kestrel-v3-detail {padding-top:12px}
+main#top .kestrel-problems-v3 .kestrel-issue-card > .kestrel-v3-detail:not(.kestrel-v3-benefit) {min-height:0}
 main#top .kestrel-problems-v3 .kestrel-v3-benefit {
-  margin-top:0;padding-top:22px;border-top:1px solid rgba(130,130,130,.25);
+  margin-top:0;padding-top:20px;border-top:1px solid rgba(130,130,130,.25);
 }
 main#top .kestrel-problems-v3 .kestrel-v3-label {
   display:block;margin-bottom:9px;font-size:13px;font-weight:500;line-height:1.4;opacity:.6;
