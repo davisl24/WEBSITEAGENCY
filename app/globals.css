@@ -8484,7 +8484,7 @@ html[data-theme="light"] main#top .kestrel-services-premium .ks-other-grid{
   background:rgba(125,125,125,.055);
 }
 main#top .kestrel-services-premium .ks-item:not(:last-child){
-  border-bottom:1px solid rgba(125,125,125,.17);
+  border-bottom:0;
 }
 main#top .kestrel-services-premium .ks-category:hover,
 html[data-theme="light"] main#top .kestrel-services-premium .ks-category:hover{
