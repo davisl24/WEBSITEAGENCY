@@ -8475,8 +8475,8 @@ main#top .kestrel-services-premium .ks-main,
 html[data-theme="light"] main#top .kestrel-services-premium .ks-main{
   padding:38px 36px;min-height:190px;
   border:0;
-  border-radius:0;
-  background:transparent;
+  border-radius:21px;
+  background:rgba(125,125,125,.095);
 }
 main#top .kestrel-services-premium .ks-other-grid,
 html[data-theme="light"] main#top .kestrel-services-premium .ks-other-grid{
