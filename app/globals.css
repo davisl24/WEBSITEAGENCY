@@ -8448,57 +8448,122 @@ main#top .call-section .call-dot {display:none}
 }
 
 
-/* V2 fix — problem/solution rhythm based on Dāvis Design DNA, without filler whitespace */
+/* Home problems — approved B: problem → explanation → solution */
 main#top > section.kestrel-problems-section {
-  height:auto;min-height:0;
-  padding-top:clamp(76px,7vw,108px);
-  padding-bottom:clamp(80px,7.5vw,112px);
+  height:auto;
+  min-height:0;
+  padding:112px 48px;
 }
 main#top .kestrel-problems-section .value-inner {
-  display:flex;flex-direction:column;
-  gap:clamp(42px,4vw,60px);
+  width:min(1360px,100%);
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  gap:72px;
 }
 main#top .kestrel-problems-section .kestrel-problems-heading {
-  margin:0 auto;max-width:900px;
+  max-width:900px;
+  margin:0 auto;
+  text-align:center;
+}
+main#top .kestrel-problems-section .kestrel-problems-heading h2 {
+  margin:0;
+  font-size:48px;
+  line-height:1.12;
+  letter-spacing:-.047em;
+  font-weight:650;
+}
+main#top .kestrel-problems-section .kestrel-problems-heading > p {
+  margin:16px 0 0;
+  font-size:16px;
+  line-height:1.6;
+  opacity:.68;
 }
 main#top .kestrel-problems-section .kestrel-problems-list {
-  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
-  grid-template-rows:auto;gap:clamp(22px,3.2vw,48px);
-  align-items:start;margin:0 auto;width:100%;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:48px;
+  align-items:stretch;
+  width:100%;
+  margin:0 auto;
 }
 main#top .kestrel-problems-section .kestrel-issue-card,
 main#top .kestrel-problems-section .kestrel-issue-card:first-child {
-  grid-row:auto;align-self:start;
-  display:grid;grid-template-rows:auto auto 1fr;
-  gap:0;padding:0;min-height:0;height:auto;
-  background:none;border:0;border-radius:0;box-shadow:none;
+  display:flex;
+  flex-direction:column;
+  align-self:stretch;
+  min-height:0;
+  height:auto;
+  padding:0;
+  margin:0;
+  border:0;
+  border-radius:0;
+  background:transparent;
+  box-shadow:none;
 }
-html[data-theme="light"] main#top .kestrel-problems-section .kestrel-issue-card {background:none}
+html[data-theme="light"] main#top .kestrel-problems-section .kestrel-issue-card {background:transparent}
+main#top .kestrel-problems-section .kestrel-issue-copy {
+  flex:1;
+}
 main#top .kestrel-problems-section .kestrel-issue-card h3 {
-  margin:0 0 14px;font-size:21px;
-  line-height:1.28;font-weight:650;letter-spacing:-.035em;
+  margin:0 0 20px;
+  font-size:21px;
+  line-height:1.3;
+  letter-spacing:-.035em;
+  font-weight:650;
 }
 main#top .kestrel-problems-section .kestrel-issue-impact {
-  margin:0;min-height:3.3em;max-width:34ch;
-  font-size:15px;line-height:1.6;font-weight:400;
+  margin:0;
+  min-height:0;
+  max-width:36ch;
+  font-size:15px;
+  line-height:1.6;
+  font-weight:400;
 }
 main#top .kestrel-problems-section .kestrel-issue-solution {
-  margin:19px 0 0;padding:18px 0 0;
-  border-top:1px solid rgba(130,130,130,.23);
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  margin:28px 0 0;
+  padding:24px 0 0;
+  border-top:1px solid rgba(130,130,130,.28);
+}
+main#top .kestrel-problems-section .kestrel-solution-check {
+  display:block;
+  flex:none;
+  width:18px;
+  height:18px;
+  margin-top:3px;
+  opacity:.82;
 }
 main#top .kestrel-problems-section .kestrel-issue-solution p {
-  margin:0;max-width:35ch;font-size:15px;line-height:1.6;font-weight:600;
+  margin:0;
+  max-width:35ch;
+  font-size:15px;
+  line-height:1.55;
+  font-weight:600;
 }
-@media(max-width:760px) {
-  main#top > section.kestrel-problems-section {padding-block:68px}
-  main#top .kestrel-problems-section .value-inner {gap:30px}
+@media(min-width:768px) and (max-width:1024px) {
+  main#top > section.kestrel-problems-section {padding:88px 32px}
+  main#top .kestrel-problems-section .value-inner {gap:56px}
+  main#top .kestrel-problems-section .kestrel-problems-list {gap:24px}
+  main#top .kestrel-problems-section .kestrel-problems-heading h2 {font-size:38px}
+  main#top .kestrel-problems-section .kestrel-issue-card h3 {font-size:19px}
+}
+@media(max-width:767px) {
+  main#top > section.kestrel-problems-section {padding:72px 24px}
+  main#top .kestrel-problems-section .value-inner {gap:44px}
+  main#top .kestrel-problems-section .kestrel-problems-heading h2 {font-size:32px}
+  main#top .kestrel-problems-section .kestrel-problems-heading > p {font-size:14px}
   main#top .kestrel-problems-section .kestrel-problems-list {
-    grid-template-columns:1fr;gap:30px;
+    grid-template-columns:1fr;
+    gap:48px;
   }
-  main#top .kestrel-problems-section .kestrel-issue-impact {min-height:0}
-  main#top .kestrel-problems-section .kestrel-issue-solution {margin-top:15px;padding-top:15px}
+  main#top .kestrel-problems-section .kestrel-issue-card h3 {font-size:20px}
+  main#top .kestrel-problems-section .kestrel-issue-impact,
+  main#top .kestrel-problems-section .kestrel-issue-solution p {font-size:14px}
+  main#top .kestrel-problems-section .kestrel-issue-solution {margin-top:24px;padding-top:20px}
 }
-
 
 /* Approved services: two rounded surfaces with meaningful monochrome icons */
 main#top .kestrel-services-premium{
