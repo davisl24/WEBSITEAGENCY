@@ -2,25 +2,21 @@ import RevealOnView from "./RevealOnView";
 
 const steps = [
   {
-    label: "01",
     title: "Mērķis",
     text: "Saprotam, ko pārdodam, kam un kādu darbību vēlamies no apmeklētāja",
     icon: "target",
   },
   {
-    label: "02",
     title: "Saturs",
     text: "Atlasām tikai to informāciju, kas palīdz klientam saprast un pieņemt lēmumu",
     icon: "content",
   },
   {
-    label: "03",
     title: "Izstrāde",
     text: "Uzbūvējam un pārbaudām lapu uz desktop un mobile",
     icon: "build",
   },
   {
-    label: "04",
     title: "Live",
     text: "Palaižam lapu dzīvē un, ja vajag, turpinām ar uzturēšanu un uzlabojumiem",
     icon: "launch",
@@ -39,9 +35,8 @@ export default function ProcessFlow() {
             <RevealOnView
               className="process-step"
               delay={120 + index * 90}
-              key={step.label}
+              key={step.title}
             >
-              <span className="process-step-index">{step.label}</span>
               <span className="process-step-dot" aria-hidden="true" />
               <span className="process-step-symbol" aria-hidden="true">
                 {step.icon === "target" && <svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="11" /><circle cx="16" cy="16" r="5" /><path d="M16 3v6M16 23v6M3 16h6M23 16h6" /></svg>}
