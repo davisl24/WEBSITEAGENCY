@@ -8475,19 +8475,19 @@ main#top .kestrel-problems-section .kestrel-issue-card:first-child {
 }
 html[data-theme="light"] main#top .kestrel-problems-section .kestrel-issue-card {background:none}
 main#top .kestrel-problems-section .kestrel-issue-card h3 {
-  margin:0 0 15px;font-size:clamp(19px,1.65vw,23px);
+  margin:0 0 14px;font-size:21px;
   line-height:1.28;font-weight:650;letter-spacing:-.035em;
 }
 main#top .kestrel-problems-section .kestrel-issue-impact {
   margin:0;min-height:3.3em;max-width:34ch;
-  font-size:15px;line-height:1.65;
+  font-size:15px;line-height:1.6;font-weight:400;
 }
 main#top .kestrel-problems-section .kestrel-issue-solution {
-  margin:20px 0 0;padding:19px 0 0;
+  margin:19px 0 0;padding:18px 0 0;
   border-top:1px solid rgba(130,130,130,.23);
 }
 main#top .kestrel-problems-section .kestrel-issue-solution p {
-  margin:0;max-width:35ch;font-size:16px;line-height:1.55;font-weight:600;
+  margin:0;max-width:35ch;font-size:15px;line-height:1.6;font-weight:600;
 }
 @media(max-width:760px) {
   main#top > section.kestrel-problems-section {padding-block:68px}
@@ -8545,10 +8545,10 @@ main#top .kestrel-services-premium .ks-service-icon{
 }
 main#top .kestrel-services-premium .ks-service-svg{width:25px;height:25px;display:block}
 main#top .kestrel-services-premium .ks-row-body{min-width:0}
-main#top .kestrel-services-premium .ks-category h3{font-size:clamp(20px,1.8vw,25px);line-height:1.22;margin:0}
-main#top .kestrel-services-premium .ks-main h3{font-size:clamp(29px,3vw,40px)}
-main#top .kestrel-services-premium .ks-category p{margin:9px 0 0;font-size:14px;line-height:1.55}
-main#top .kestrel-services-premium .ks-offers{margin-top:18px;gap:12px 23px}
+main#top .kestrel-services-premium .ks-category h3{font-size:23px;line-height:1.28;font-weight:650;letter-spacing:-.035em;margin:0}
+main#top .kestrel-services-premium .ks-main h3{font-size:36px;line-height:1.15}
+main#top .kestrel-services-premium .ks-category p{margin:10px 0 0;font-size:14px;line-height:1.65;font-weight:400;opacity:.73}
+main#top .kestrel-services-premium .ks-offers{margin-top:19px;gap:12px 23px;font-size:13px;font-weight:650;line-height:1.45}
 main#top .kestrel-services-premium .ks-arrow{opacity:.55;justify-self:end;font-size:20px}
 @media(max-width:760px){
   main#top .kestrel-services-premium .ks-category,
@@ -8559,9 +8559,9 @@ main#top .kestrel-services-premium .ks-arrow{opacity:.55;justify-self:end;font-s
   html[data-theme="light"] main#top .kestrel-services-premium .ks-category:hover{padding-left:19px}
   main#top .kestrel-services-premium .ks-item:hover,
   html[data-theme="light"] main#top .kestrel-services-premium .ks-item:hover{padding-left:19px}
-  main#top .kestrel-services-premium .ks-category h3{font-size:18px}
-  main#top .kestrel-services-premium .ks-main h3{font-size:26px}
+  main#top .kestrel-services-premium .ks-category h3{font-size:19px}
+  main#top .kestrel-services-premium .ks-main h3{font-size:27px}
   main#top .kestrel-services-premium .ks-service-svg{width:22px;height:22px}
-  main#top .kestrel-services-premium .ks-category p{font-size:12px}
+  main#top .kestrel-services-premium .ks-category p{font-size:13px}
 }
 @media(prefers-reduced-motion:reduce){main#top .kestrel-services-premium .ks-category{transition:none}}
