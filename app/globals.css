@@ -8252,3 +8252,92 @@ main#top .hero .button-primary:focus-visible{
  main#top .call-section .call-cta,
  main#top .hero .button-primary{transition:none}
 }
+
+
+/* Kestrel V2 homepage — shared, theme-aware composition */
+main#top {
+  --k-home-width:1200px;
+  --k-home-gutter:clamp(20px,4.4vw,64px);
+  --k-home-space:clamp(76px,7vw,108px);
+  --k-home-subtle-dark:rgba(255,255,255,.045);
+  --k-home-subtle-light:rgba(10,10,10,.045);
+}
+main#top .services-inner,
+main#top .value-inner,
+main#top .process-inner,
+main#top .call-inner,
+main#top .footer-inner {
+  width:min(var(--k-home-width),calc(100% - 2 * var(--k-home-gutter)));
+  margin-inline:auto;
+}
+main#top > .services-section,
+main#top > .kestrel-problems-section,
+main#top > .process-section,
+main#top > .call-section {
+  padding-inline:0;
+  padding-block:var(--k-home-space);
+}
+main#top .services-head,
+main#top .kestrel-problems-heading,
+main#top .process-head.process-head-minimal { margin-bottom:40px; }
+main#top .services-head h2,
+main#top .kestrel-problems-heading h2,
+main#top .process-head.process-head-minimal h2 {
+  font-size:clamp(36px,3.6vw,48px);
+  line-height:1.13;
+  font-weight:650;
+  letter-spacing:-.047em;
+  text-align:center;
+}
+main#top .kestrel-services-v2 { grid-template-columns:1.12fr 1fr;gap:16px; }
+main#top .ks-other-grid {gap:16px}
+main#top .ks-main { min-height:0; padding:32px; }
+main#top .ks-item { min-height:0; padding:26px; }
+main#top .ks-category {background:var(--k-home-subtle-dark);border:0;box-shadow:none}
+html[data-theme="light"] main#top .ks-category {background:var(--k-home-subtle-light)}
+main#top .ks-main .ks-offers {margin-top:36px;padding-top:0}
+main#top .ks-main .ks-icon {margin-bottom:22px}
+main#top .ks-item .ks-icon {margin-bottom:18px}
+main#top .kestrel-problems-cards .kestrel-problems-list {
+  display:grid;grid-template-columns:1.14fr 1fr;
+  grid-template-rows:repeat(2,minmax(0,1fr));
+  width:100%;gap:16px;
+}
+main#top .kestrel-issue-card {
+  border:0;box-shadow:none;min-height:0;border-radius:18px;
+  padding:30px;gap:0;background:var(--k-home-subtle-dark);
+}
+html[data-theme="light"] main#top .kestrel-issue-card {background:var(--k-home-subtle-light)}
+main#top .kestrel-issue-card:first-child {grid-row:span 2;padding:40px}
+main#top .kestrel-issue-card .kestrel-issue-icon {margin-bottom:20px;width:26px;height:26px}
+main#top .kestrel-issue-card h3 {font-size:clamp(20px,1.75vw,26px);margin-bottom:12px}
+main#top .kestrel-issue-impact {font-size:15px;max-width:36ch}
+main#top .kestrel-issue-solution {padding-top:20px}
+main#top .kestrel-issue-solution p {font-size:15px;line-height:1.55;max-width:38ch}
+main#top .process-track {grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}
+main#top .process-step p {max-width:26ch}
+main#top .process-step-symbol {opacity:.65}
+main#top .call-section .call-content h2 {font-size:clamp(36px,3.8vw,50px)}
+main#top .call-section .call-content p {max-width:430px}
+main#top .site-footer .footer-wordmark {font-size:clamp(62px,6.5vw,100px)}
+@media(max-width:980px) {
+  main#top .kestrel-services-v2 {grid-template-columns:1fr}
+  main#top .ks-main {min-height:0}
+}
+@media(max-width:760px) {
+  main#top {--k-home-space:68px;--k-home-gutter:20px}
+  main#top .services-head,
+  main#top .kestrel-problems-heading,
+  main#top .process-head.process-head-minimal {margin-bottom:30px}
+  main#top .kestrel-problems-cards .kestrel-problems-list {grid-template-columns:1fr;grid-template-rows:auto;gap:12px}
+  main#top .kestrel-issue-card:first-child {grid-row:auto;padding:24px}
+  main#top .kestrel-issue-card {padding:24px}
+  main#top .process-track {grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 20px}
+}
+@media(max-width:460px){
+  main#top .ks-other-grid {grid-template-columns:1fr;gap:10px}
+  main#top .ks-item {min-height:0}
+  main#top .process-track {grid-template-columns:1fr;gap:28px}
+  main#top .process-track-line {display:none}
+  main#top .process-step-dot {display:none}
+}
