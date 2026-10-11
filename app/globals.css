@@ -8476,7 +8476,7 @@ html[data-theme="light"] main#top .kestrel-services-premium .ks-main{
   padding:38px 36px;min-height:190px;
   border:0;
   border-radius:21px;
-  background:rgba(125,125,125,.095);
+  background:transparent;
 }
 main#top .kestrel-services-premium .ks-other-grid,
 html[data-theme="light"] main#top .kestrel-services-premium .ks-other-grid{
@@ -8492,13 +8492,18 @@ main#top .kestrel-services-premium .ks-item:not(:last-child){
 main#top .kestrel-services-premium .ks-category:hover,
 html[data-theme="light"] main#top .kestrel-services-premium .ks-category:hover{
   transform:none;
-  padding-left:32px;
-  background:transparent;
+  background:rgba(125,125,125,.095);
+  border-radius:21px;
 }
 main#top .kestrel-services-premium .ks-item:hover,
 html[data-theme="light"] main#top .kestrel-services-premium .ks-item:hover{
-  padding-left:32px;
-  background:transparent;
+  background:rgba(125,125,125,.095);
+  border-radius:21px;
+}
+main#top .kestrel-services-premium .ks-category:focus-visible{
+  outline:2px solid currentColor;
+  outline-offset:3px;
+  border-radius:21px;
 }
 main#top .kestrel-services-premium .ks-service-icon{
   width:27px;height:27px;display:inline-flex;
@@ -8517,10 +8522,8 @@ main#top .kestrel-services-premium .ks-arrow{opacity:.55;justify-self:end;font-s
   html[data-theme="light"] main#top .kestrel-services-premium .ks-category{grid-template-columns:25px minmax(0,1fr) 20px;column-gap:13px;padding:20px 16px}
   main#top .kestrel-services-premium .ks-main,
   html[data-theme="light"] main#top .kestrel-services-premium .ks-main{min-height:0;padding:26px 18px}
-  main#top .kestrel-services-premium .ks-category:hover,
-  html[data-theme="light"] main#top .kestrel-services-premium .ks-category:hover{padding-left:16px}
-  main#top .kestrel-services-premium .ks-item:hover,
-  html[data-theme="light"] main#top .kestrel-services-premium .ks-item:hover{padding-left:16px}
+
+
   main#top .kestrel-services-premium .ks-category h3{font-size:19px}
   main#top .kestrel-services-premium .ks-main h3{font-size:27px}
   main#top .kestrel-services-premium .ks-service-svg{width:22px;height:22px}
