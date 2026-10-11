@@ -8527,7 +8527,7 @@ main#top .kestrel-services-premium .ks-arrow{opacity:.55;justify-self:end;font-s
 @media(min-width:901px) {
   main#top .process-track {position:relative;border-top:1px solid rgba(125,125,125,.18);padding-top:34px}
   main#top .process-track-line {display:block;top:-1px;background:rgba(125,125,125,.26)}
-  main#top .process-step-dot {display:block}
+  main#top .process-step-dot {display:block;top:-39px}
 }
 main#top .process-step p {color:rgba(244,241,234,.67)}
 html[data-theme="light"] main#top .process-step p {color:rgba(23,23,23,.67)}
