@@ -44,8 +44,9 @@ export default function Home() {
           <div className="services-head">
             <h2 id="services-title">Pakalpojumi</h2>
           </div>
-          <div className="kestrel-services-v2 kestrel-services-editorial">
+          <div className="kestrel-services-v2 kestrel-services-premium">
             <a className="ks-main ks-category" href="/pakalpojumi/web-izstrade">
+              <span className="ks-service-icon"><svg className="ks-service-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="5" width="18" height="13" rx="2"/><path d="M8 22h8m-4-4v4"/></svg></span>
               <div className="ks-row-body">
                 <h3>Web izstrāde</h3>
                 <p>Landing lapas · Uzņēmuma mājaslapas · Mājaslapu uzlabošana</p>
@@ -54,10 +55,10 @@ export default function Home() {
               <span className="ks-arrow" aria-hidden="true">↗</span>
             </a>
             <div className="ks-other-grid">
-              <a className="ks-item ks-category" href="/pakalpojumi/e-komercija"><div className="ks-row-body"><h3>E-komercija</h3><p>Interneta veikali · Maksājumi · Piegāde</p></div><span className="ks-arrow" aria-hidden="true">↗</span></a>
-              <a className="ks-item ks-category" href="/pakalpojumi/seo"><div className="ks-row-body"><h3>SEO</h3><p>Tehniskais SEO · Satura optimizācija · Audits</p></div><span className="ks-arrow" aria-hidden="true">↗</span></a>
-              <a className="ks-item ks-category" href="/pakalpojumi/ui-ux"><div className="ks-row-body"><h3>UI/UX dizains</h3><p>Dizaina audits · Struktūra · Saskarnes</p></div><span className="ks-arrow" aria-hidden="true">↗</span></a>
-              <a className="ks-item ks-category" href="/pakalpojumi/hostings"><div className="ks-row-body"><h3>Hostings un uzturēšana</h3><p>Izvietošana · Uzraudzība · Atjauninājumi</p></div><span className="ks-arrow" aria-hidden="true">↗</span></a>
+              <a className="ks-item ks-category" href="/pakalpojumi/e-komercija"><span className="ks-service-icon"><svg className="ks-service-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><circle cx="9" cy="20" r="1"/><circle cx="19" cy="20" r="1"/><path d="M2 3h2l3 13h13l2-9H5"/></svg></span><div className="ks-row-body"><h3>E-komercija</h3><p>Interneta veikali · Maksājumi · Piegāde</p></div><span className="ks-arrow" aria-hidden="true">↗</span></a>
+              <a className="ks-item ks-category" href="/pakalpojumi/seo"><span className="ks-service-icon"><svg className="ks-service-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><circle cx="10.8" cy="10.8" r="7"/><path d="m16 16 5 5"/></svg></span><div className="ks-row-body"><h3>SEO</h3><p>Tehniskais SEO · Satura optimizācija · Audits</p></div><span className="ks-arrow" aria-hidden="true">↗</span></a>
+              <a className="ks-item ks-category" href="/pakalpojumi/ui-ux"><span className="ks-service-icon"><svg className="ks-service-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="m5 3 14 9-7 1.6L9 20 5 3Z"/></svg></span><div className="ks-row-body"><h3>UI/UX dizains</h3><p>Dizaina audits · Struktūra · Saskarnes</p></div><span className="ks-arrow" aria-hidden="true">↗</span></a>
+              <a className="ks-item ks-category" href="/pakalpojumi/hostings"><span className="ks-service-icon"><svg className="ks-service-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="8" rx="2"/><rect x="3" y="13" width="18" height="8" rx="2"/><path d="M7 7h.01M7 17h.01"/></svg></span><div className="ks-row-body"><h3>Hostings un uzturēšana</h3><p>Izvietošana · Uzraudzība · Atjauninājumi</p></div><span className="ks-arrow" aria-hidden="true">↗</span></a>
             </div>
           </div>
         </div>
