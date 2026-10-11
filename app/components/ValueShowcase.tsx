@@ -1,18 +1,18 @@
 const issues = [
   {
-    title: "Nav skaidrs, ko uzņēmums piedāvā",
-    impact: "Apmeklētājam jāmeklē būtiskākā informācija",
-    solution: "Skaidri pakalpojumi un saprotama struktūra"
+    title: "Klienti nesaprot jūsu piedāvājumu",
+    impact: "Ja pakalpojumi nav skaidri, apmeklētājs var aiziet, nesazinoties ar jums",
+    solution: "Uzreiz parādām, ko piedāvājat un kam tas ir paredzēts"
   },
   {
-    title: "Mājaslapu ir grūti lietot telefonā",
-    impact: "Informācija un svarīgās pogas nav ērti atrodamas",
-    solution: "Ērta navigācija un pārdomāts mobilais izkārtojums"
+    title: "Telefonā ir grūti atrast vajadzīgo",
+    impact: "Apmeklētājam jāmeklē cenas, pakalpojumi vai kontaktinformācija",
+    solution: "Sakārtojam lapu, lai svarīgākais būtu ātri atrodams arī telefonā"
   },
   {
-    title: "Klientam nav skaidrs, kā pieteikties",
-    impact: "Klients nezina, kur sazināties vai pieteikt pakalpojumu",
-    solution: "Vienkārša un viegli atrodama saziņas iespēja"
+    title: "Interesents nezina, ko darīt tālāk",
+    impact: "Pat ieinteresēts klients var nepieteikties, ja nākamais solis nav skaidrs",
+    solution: "Izceļam vienkāršu veidu, kā pieteikties vai sazināties"
   }
 ];
 
@@ -21,8 +21,8 @@ export default function ValueShowcase() {
     <section className="value-section kestrel-problems-section kestrel-problems-cards" aria-labelledby="problems-title">
       <div className="value-inner">
         <div className="kestrel-problems-heading">
-          <h2 id="problems-title">Kas traucē mājaslapai strādāt?</h2>
-          <p>Trīs biežas problēmas un kā mēs tās risinām</p>
+          <h2 id="problems-title">Kas traucē mājaslapai piesaistīt klientus?</h2>
+          <p>Kur pazūd klientu interese un kā to novēršam</p>
         </div>
         <div className="kestrel-problems-list">
           {issues.map(item => (
