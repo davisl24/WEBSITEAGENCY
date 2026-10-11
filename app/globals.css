@@ -8446,3 +8446,55 @@ main#top .call-section .call-dot {display:none}
 @media(prefers-reduced-motion:reduce) {
   main#top .kestrel-services-editorial .ks-category {transition:none}
 }
+
+
+/* V2 fix — problem/solution rhythm based on Dāvis Design DNA, without filler whitespace */
+main#top > section.kestrel-problems-section {
+  height:auto;min-height:0;
+  padding-top:clamp(76px,7vw,108px);
+  padding-bottom:clamp(80px,7.5vw,112px);
+}
+main#top .kestrel-problems-section .value-inner {
+  display:flex;flex-direction:column;
+  gap:clamp(42px,4vw,60px);
+}
+main#top .kestrel-problems-section .kestrel-problems-heading {
+  margin:0 auto;max-width:900px;
+}
+main#top .kestrel-problems-section .kestrel-problems-list {
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  grid-template-rows:auto;gap:clamp(22px,3.2vw,48px);
+  align-items:start;margin:0 auto;width:100%;
+}
+main#top .kestrel-problems-section .kestrel-issue-card,
+main#top .kestrel-problems-section .kestrel-issue-card:first-child {
+  grid-row:auto;align-self:start;
+  display:grid;grid-template-rows:auto auto 1fr;
+  gap:0;padding:0;min-height:0;height:auto;
+  background:none;border:0;border-radius:0;box-shadow:none;
+}
+html[data-theme="light"] main#top .kestrel-problems-section .kestrel-issue-card {background:none}
+main#top .kestrel-problems-section .kestrel-issue-card h3 {
+  margin:0 0 15px;font-size:clamp(19px,1.65vw,23px);
+  line-height:1.28;font-weight:650;letter-spacing:-.035em;
+}
+main#top .kestrel-problems-section .kestrel-issue-impact {
+  margin:0;min-height:3.3em;max-width:34ch;
+  font-size:15px;line-height:1.65;
+}
+main#top .kestrel-problems-section .kestrel-issue-solution {
+  margin:20px 0 0;padding:19px 0 0;
+  border-top:1px solid rgba(130,130,130,.23);
+}
+main#top .kestrel-problems-section .kestrel-issue-solution p {
+  margin:0;max-width:35ch;font-size:16px;line-height:1.55;font-weight:600;
+}
+@media(max-width:760px) {
+  main#top > section.kestrel-problems-section {padding-block:68px}
+  main#top .kestrel-problems-section .value-inner {gap:30px}
+  main#top .kestrel-problems-section .kestrel-problems-list {
+    grid-template-columns:1fr;gap:30px;
+  }
+  main#top .kestrel-problems-section .kestrel-issue-impact {min-height:0}
+  main#top .kestrel-problems-section .kestrel-issue-solution {margin-top:15px;padding-top:15px}
+}
