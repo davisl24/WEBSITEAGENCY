@@ -37,7 +37,6 @@ export default function ValueShowcase() {
               <h3>{item.title}</h3>
               <p className="kestrel-issue-impact">{item.impact}</p>
               <div className="kestrel-issue-solution">
-                <span>Risinājums</span>
                 <p>{item.solution}</p>
               </div>
             </article>
