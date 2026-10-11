@@ -8267,7 +8267,7 @@ main#top .value-inner,
 main#top .process-inner,
 main#top .call-inner,
 main#top .footer-inner {
-  width:min(var(--k-home-width),calc(100% - 2 * var(--k-home-gutter)));
+  width:min(var(--k-home-width),calc(100% - var(--k-home-gutter) - var(--k-home-gutter)));
   margin-inline:auto;
 }
 main#top > .services-section,
