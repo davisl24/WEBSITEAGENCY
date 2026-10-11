@@ -8491,12 +8491,14 @@ main#top .kestrel-services-premium .ks-item:not(:last-child){
 }
 main#top .kestrel-services-premium .ks-category:hover,
 html[data-theme="light"] main#top .kestrel-services-premium .ks-category:hover{
-  transform:none;padding-left:38px;
-  background:rgba(125,125,125,.115);
+  transform:none;
+  padding-left:32px;
+  background:transparent;
 }
 main#top .kestrel-services-premium .ks-item:hover,
 html[data-theme="light"] main#top .kestrel-services-premium .ks-item:hover{
-  padding-left:38px;background:rgba(125,125,125,.07);
+  padding-left:32px;
+  background:transparent;
 }
 main#top .kestrel-services-premium .ks-service-icon{
   width:27px;height:27px;display:inline-flex;
@@ -8516,9 +8518,9 @@ main#top .kestrel-services-premium .ks-arrow{opacity:.55;justify-self:end;font-s
   main#top .kestrel-services-premium .ks-main,
   html[data-theme="light"] main#top .kestrel-services-premium .ks-main{min-height:0;padding:26px 18px}
   main#top .kestrel-services-premium .ks-category:hover,
-  html[data-theme="light"] main#top .kestrel-services-premium .ks-category:hover{padding-left:19px}
+  html[data-theme="light"] main#top .kestrel-services-premium .ks-category:hover{padding-left:16px}
   main#top .kestrel-services-premium .ks-item:hover,
-  html[data-theme="light"] main#top .kestrel-services-premium .ks-item:hover{padding-left:19px}
+  html[data-theme="light"] main#top .kestrel-services-premium .ks-item:hover{padding-left:16px}
   main#top .kestrel-services-premium .ks-category h3{font-size:19px}
   main#top .kestrel-services-premium .ks-main h3{font-size:27px}
   main#top .kestrel-services-premium .ks-service-svg{width:22px;height:22px}
