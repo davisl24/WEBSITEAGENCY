@@ -44,18 +44,20 @@ export default function Home() {
           <div className="services-head">
             <h2 id="services-title">Pakalpojumi</h2>
           </div>
-          <div className="kestrel-services-v2">
+          <div className="kestrel-services-v2 kestrel-services-editorial">
             <a className="ks-main ks-category" href="/pakalpojumi/web-izstrade">
-              <span className="ks-icon" aria-hidden="true">⌘</span>
-              <h3>Web izstrāde <span className="ks-arrow" aria-hidden="true">↗</span></h3>
-              <p>Landing lapas · Uzņēmuma mājaslapas · Mājaslapu uzlabošana</p>
-              <div className="ks-offers" aria-label="Sākuma cenas"><span>Landing no 200 €</span><span>Uzņēmuma mājaslapa no 450 €</span></div>
+              <div className="ks-row-body">
+                <h3>Web izstrāde</h3>
+                <p>Landing lapas · Uzņēmuma mājaslapas · Mājaslapu uzlabošana</p>
+                <div className="ks-offers" aria-label="Sākuma cenas"><span>Landing no 200 €</span><span>Uzņēmuma mājaslapa no 450 €</span></div>
+              </div>
+              <span className="ks-arrow" aria-hidden="true">↗</span>
             </a>
             <div className="ks-other-grid">
-              <a className="ks-item ks-category" href="/pakalpojumi/e-komercija"><span className="ks-icon" aria-hidden="true">▦</span><h3>E-komercija <span className="ks-arrow" aria-hidden="true">↗</span></h3><p>Interneta veikali · Maksājumi · Piegāde</p></a>
-              <a className="ks-item ks-category" href="/pakalpojumi/seo"><span className="ks-icon" aria-hidden="true">⌕</span><h3>SEO <span className="ks-arrow" aria-hidden="true">↗</span></h3><p>Tehniskais SEO · Satura optimizācija · Audits</p></a>
-              <a className="ks-item ks-category" href="/pakalpojumi/ui-ux"><span className="ks-icon" aria-hidden="true">◫</span><h3>UI/UX dizains <span className="ks-arrow" aria-hidden="true">↗</span></h3><p>Dizaina audits · Struktūra · Saskarnes</p></a>
-              <a className="ks-item ks-category" href="/pakalpojumi/hostings"><span className="ks-icon" aria-hidden="true">▤</span><h3>Hostings un uzturēšana <span className="ks-arrow" aria-hidden="true">↗</span></h3><p>Izvietošana · Uzraudzība · Atjauninājumi</p></a>
+              <a className="ks-item ks-category" href="/pakalpojumi/e-komercija"><div className="ks-row-body"><h3>E-komercija</h3><p>Interneta veikali · Maksājumi · Piegāde</p></div><span className="ks-arrow" aria-hidden="true">↗</span></a>
+              <a className="ks-item ks-category" href="/pakalpojumi/seo"><div className="ks-row-body"><h3>SEO</h3><p>Tehniskais SEO · Satura optimizācija · Audits</p></div><span className="ks-arrow" aria-hidden="true">↗</span></a>
+              <a className="ks-item ks-category" href="/pakalpojumi/ui-ux"><div className="ks-row-body"><h3>UI/UX dizains</h3><p>Dizaina audits · Struktūra · Saskarnes</p></div><span className="ks-arrow" aria-hidden="true">↗</span></a>
+              <a className="ks-item ks-category" href="/pakalpojumi/hostings"><div className="ks-row-body"><h3>Hostings un uzturēšana</h3><p>Izvietošana · Uzraudzība · Atjauninājumi</p></div><span className="ks-arrow" aria-hidden="true">↗</span></a>
             </div>
           </div>
         </div>
@@ -71,8 +73,8 @@ export default function Home() {
           
           <div className="call-content">
             <div>
-              <h2 id="call-title">Pastāsti par savu projektu.</h2>
-              <p>Izrunāsim ieceri un vienosimies par piemērotāko risinājumu.</p>
+              <h2 id="call-title">Pastāsti par savu projektu</h2>
+              <p>Izrunāsim ieceri un vienosimies par piemērotāko risinājumu</p>
             </div>
             <a className="call-cta" href="/kontakti">
               <span className="call-dot" aria-hidden="true" />
