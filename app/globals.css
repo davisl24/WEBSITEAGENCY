@@ -8264,6 +8264,9 @@ main#top {
   --k-body: 15px;
   --k-small: 13px;
   --k-section-heading-gap: 56px;
+  --k-service-hover-radius: 21px;
+  --k-service-hover-surface: rgba(125,125,125,.095);
+  --k-service-row-padding-x: 32px;
 }
 main#top .services-inner,
 main#top .value-inner,
@@ -8467,7 +8470,7 @@ html[data-theme="light"] main#top .kestrel-services-premium .ks-category{
   display:grid;grid-template-columns:34px minmax(0,1fr) 22px;
   align-items:center;column-gap:24px;
   width:100%;min-height:0;margin:0;
-  padding:26px 32px;border:0;
+  padding:26px var(--k-service-row-padding-x);border:0;
   background:transparent;box-shadow:none;
   transform:none;text-decoration:none;
 }
@@ -8475,7 +8478,7 @@ main#top .kestrel-services-premium .ks-main,
 html[data-theme="light"] main#top .kestrel-services-premium .ks-main{
   padding:38px 36px;min-height:190px;
   border:0;
-  border-radius:21px;
+  border-radius:var(--k-service-hover-radius);
   background:transparent;
 }
 main#top .kestrel-services-premium .ks-other-grid,
@@ -8492,18 +8495,18 @@ main#top .kestrel-services-premium .ks-item:not(:last-child){
 main#top .kestrel-services-premium .ks-category:hover,
 html[data-theme="light"] main#top .kestrel-services-premium .ks-category:hover{
   transform:none;
-  background:rgba(125,125,125,.095);
-  border-radius:21px;
+  background:var(--k-service-hover-surface);
+  border-radius:var(--k-service-hover-radius);
 }
 main#top .kestrel-services-premium .ks-item:hover,
 html[data-theme="light"] main#top .kestrel-services-premium .ks-item:hover{
-  background:rgba(125,125,125,.095);
-  border-radius:21px;
+  background:var(--k-service-hover-surface);
+  border-radius:var(--k-service-hover-radius);
 }
 main#top .kestrel-services-premium .ks-category:focus-visible{
   outline:2px solid currentColor;
   outline-offset:3px;
-  border-radius:21px;
+  border-radius:var(--k-service-hover-radius);
 }
 main#top .kestrel-services-premium .ks-service-icon{
   width:27px;height:27px;display:inline-flex;
