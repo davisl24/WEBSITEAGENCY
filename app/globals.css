@@ -8616,3 +8616,33 @@ main#top .kestrel-problems-v3 .kestrel-v3-benefit p {font-weight:600}
   main#top .kestrel-problems-v3 .kestrel-v3-detail p {font-size:14px}
   main#top .kestrel-problems-v3 .kestrel-v3-benefit {margin-top:20px;padding-top:20px}
 }
+
+/* Service editorial A — scoped to the eight shared service-template pages only */
+.kestrel-service-v2 .kst-hero-copy{width:100%;max-width:880px}
+.kestrel-service-v2 .kst-intro{max-width:670px;margin:24px 0 0;font-size:clamp(15px,1.35vw,17px);line-height:1.7;opacity:.76;font-weight:400}
+.kestrel-service-v2 .kst-hero-cta{display:inline-flex;align-items:center;gap:17px;margin-top:31px;padding:12px 0;font-size:14px;font-weight:650;text-decoration:none;border-bottom:1px solid currentColor}
+.kestrel-service-v2 .kst-hero-cta:hover{opacity:.7}
+.kestrel-service-v2 .kst-hero-cta:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+.kestrel-service-v2 .kst-audience-section{padding-top:38px;padding-bottom:50px}
+.kestrel-service-v2 .kst-audience-section .kst-heading{margin-bottom:27px}
+.kestrel-service-v2 .kst-audience{max-width:960px;gap:24px 38px}
+.kestrel-service-v2 .kst-audience p{margin:0;text-align:left;text-wrap:initial;font-size:15px;line-height:1.65;opacity:.75}
+.kestrel-service-v2 .kst-faq-section{padding-top:48px;padding-bottom:65px}
+.kestrel-service-v2 .kst-faq{max-width:780px;margin:0 auto;text-align:left}
+.kestrel-service-v2 .kst-faq details{border-bottom:1px solid rgba(140,140,140,.25);padding:20px 0}
+.kestrel-service-v2 .kst-faq details:first-child{border-top:1px solid rgba(140,140,140,.25)}
+.kestrel-service-v2 .kst-faq summary{cursor:pointer;font-size:16px;line-height:1.5;font-weight:600;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.kestrel-service-v2 .kst-faq summary::-webkit-details-marker{display:none}
+.kestrel-service-v2 .kst-faq summary::after{content:"+";font-size:21px;font-weight:400;opacity:.65}
+.kestrel-service-v2 .kst-faq details[open] summary::after{content:"−"}
+.kestrel-service-v2 .kst-faq summary:focus-visible{outline:2px solid currentColor;outline-offset:5px}
+.kestrel-service-v2 .kst-faq details>p{margin:14px 0 0;max-width:650px;font-size:14px;line-height:1.7;opacity:.73}
+.kestrel-service-v2 .kst-process span{display:none}
+@media(max-width:850px){.kestrel-service-v2 .kst-audience{grid-template-columns:1fr;gap:18px}.kestrel-service-v2 .kst-audience p{max-width:660px}}
+@media(max-width:600px){
+  .kestrel-service-v2 .kst-intro{margin-top:20px;font-size:15px;line-height:1.65}
+  .kestrel-service-v2 .kst-hero-cta{margin-top:24px}
+  .kestrel-service-v2 .kst-audience-section{padding-top:28px;padding-bottom:40px}
+  .kestrel-service-v2 .kst-faq-section{padding-top:34px;padding-bottom:48px}
+  .kestrel-service-v2 .kst-faq summary{font-size:15px}
+}
