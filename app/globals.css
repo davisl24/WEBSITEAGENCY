@@ -7694,6 +7694,15 @@ html[data-theme="light"] .ks-detail-link{background:#171717;color:white!importan
 .ks-shared-footer-brand{font-size:18px;font-weight:750;letter-spacing:-.06em}
 .ks-shared-footer nav{display:flex;gap:24px;flex-wrap:wrap;font-size:12px}
 .ks-shared-footer-inner>span{font-size:12px;opacity:.55}
+/* Shared navigation accessibility — no change to resting visual composition */
+.site-header.kestrel-shared-header a:focus-visible,
+.site-header.kestrel-shared-header button:focus-visible,
+.ks-shared-footer a:focus-visible{
+  outline:2px solid currentColor;
+  outline-offset:4px;
+  border-radius:4px;
+}
+
 .ks-detail-page .ks-detail-list>div,.ks-detail-page .ks-detail-list>a{border:0}
 .kestrel-services-v2{grid-template-columns:1fr 1.05fr;gap:16px}
 .ks-main{min-height:0;padding:34px;justify-content:center}
