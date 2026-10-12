@@ -34,3 +34,12 @@ Working branch: `chore/kestrel-design-system-audit`. The production `main` branc
 
 ## Next changes requiring separate approval
 Service-template information architecture, About page section removal, and Contact booking functionality.
+
+
+## CSS audit, pass 2 — 2026-10-12
+- Current CSS has ~253.7k characters and 129 CSS comment blocks, reflecting several generations of experiments.
+- Basic balanced-brace scan: zero unclosed blocks (not a full CSS parser or browser validation).
+- Repeated selector references identified: `.kestrel-services-premium .ks-main` (6), `.kestrel-problems-v3 .kestrel-v3-benefit` (3), `.process-track-line` (5), `.kestrel-shared-header` (24), `.ks-shared-footer` (6). Counts are occurrences, not necessarily equivalent/dead rules.
+- Removed one duplicated `margin-top:20px` mobile declaration in the active problems-v3 media query (later declaration retained).
+- Do **not** bulk-delete historical homepage or internal-page CSS from this branch without computed style comparisons. Multiple selectors have broad page effects.
+- Next verified work: render each representative page and collect screenshots at 390/768/1024/1440; only then consolidate old competing declarations and run a proper CSS parser/build check.
