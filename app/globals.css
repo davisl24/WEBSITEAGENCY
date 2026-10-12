@@ -8602,7 +8602,6 @@ main#top .kestrel-problems-v3 .kestrel-v3-benefit p {font-weight:600}
   main#top .kestrel-problems-v3 .kestrel-issue-card,
   main#top .kestrel-problems-v3 .kestrel-issue-card:first-child {display:flex}
   main#top .kestrel-problems-v3 .kestrel-issue-card > .kestrel-v3-detail:not(.kestrel-v3-benefit) {min-height:0}
-  main#top .kestrel-problems-v3 .kestrel-v3-benefit {margin-top:20px}
   main#top .kestrel-problems-v3 .kestrel-v3-issue-head {min-height:0;margin-bottom:4px}
   main#top .kestrel-problems-v3 .kestrel-v3-issue-head h3 {font-size:20px}
   main#top .kestrel-problems-v3 .kestrel-v3-detail p {font-size:14px}
