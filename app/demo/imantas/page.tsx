@@ -75,7 +75,7 @@ export default function ImantasDemo() {
         <header className={styles.navigation}>
           <a href="#sakums" className={styles.brand} aria-label="Imantas — sākums" onClick={() => setMenuOpen(false)}>
             <span className={styles.brandName}>IMANTAS</span>
-            <span className={styles.brandSubtitle}>ATPŪTA SALACGRĪVĀ</span>
+            <span className={styles.brandSubtitle}>ATPŪTA SALACGRĪVĀ</span>
           </a>
           <nav className={styles.desktopLinks} aria-label="Galvenā navigācija">
             <a href="#naktsmitnes">Naktsmītnes</a>
@@ -139,7 +139,7 @@ export default function ImantasDemo() {
         <div className={styles.stayRow}>
           <div className={styles.stayImageWrap}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={IMAGES.kitchen} alt="Imantas pirtsmājas autentisks koka interjers ar virtuves zonu" loading="lazy" className={styles.stayImage} />
+            <img src={IMAGES.sign} alt="Saimniecības Imantas koka nosaukuma zīme zaļā dārzā" loading="lazy" className={styles.stayImage} />
             <span className={styles.imageIndex}>Īsts Imantas īpašuma foto</span>
           </div>
           <div className={styles.stayText}>
