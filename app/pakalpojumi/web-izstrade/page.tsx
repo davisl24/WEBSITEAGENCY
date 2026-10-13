@@ -137,7 +137,7 @@ export default function ServicePage() {
           </div>
         </section>
 
-        <section className={`${styles.section} ${styles.processSection}`} aria-labelledby="web-process-title">
+        <section className={styles.section} aria-labelledby="web-process-title">
           <h2 id="web-process-title">No idejas līdz gatavai lapai</h2>
           <div className={styles.processGrid}>
             {steps.map((step, index) => (
@@ -156,7 +156,7 @@ export default function ServicePage() {
           </div>
         </section>
 
-        <section className={`${styles.section} ${styles.faqSection}`} aria-labelledby="web-faq-title">
+        <section className={styles.section} aria-labelledby="web-faq-title">
           <h2 id="web-faq-title">Biežākie jautājumi</h2>
           <div className={styles.faq}>
             {service.faq.map((item) => (
