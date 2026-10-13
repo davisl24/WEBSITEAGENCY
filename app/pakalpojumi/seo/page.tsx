@@ -44,17 +44,17 @@ const service: ServiceInfo = {
   ],
   "faq": [
     {
-      "question": "Cik ilgā laikā projekts būs gatavs?",
-      "answer": "Termiņu nosakām pēc darba apjoma un saskaņojam pirms sākuma."
+        "question": "Vai garantējat pirmo vietu Google?",
+        "answer": "Nē. SEO labojumi palīdz novērst tehniskus un satura šķēršļus, bet negarantē konkrētas pozīcijas."
     },
     {
-      "question": "Vai man nepieciešami gatavi materiāli?",
-      "answer": "Izmantojam tavus materiālus un palīdzam tos sakārtot. Jaunu materiālu izveidi vērtējam atsevišķi."
+        "question": "Ko saņemšu pēc SEO audita?",
+        "answer": "Noskaidrojam problēmas un prioritātes, pēc tam vienojamies, kurus labojumus īstenot."
     },
     {
-      "question": "Kā nosaka gala cenu?",
-      "answer": "Cena atkarīga no apjoma un funkcijām. Pirms izstrādes vienojamies par iekļauto un izmaksām."
+        "question": "Vai nepieciešams uzreiz veikt visus labojumus?",
+        "answer": "Nē. Svarīgākos darbus izvēlamies atbilstoši problēmu ietekmei un saskaņotajam apjomam."
     }
-  ]
+]
 };
 export default function ServicePage(){return <KestrelServiceTemplate service={service}/>;}
