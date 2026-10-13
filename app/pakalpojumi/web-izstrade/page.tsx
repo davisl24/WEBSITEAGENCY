@@ -133,7 +133,7 @@ export default function ServicePage() {
                 </RevealOnView>
               ))}
             </div>
-            <RevealOnView className={styles.deviceVisual} aria-label="Mājaslapas desktop un mobilās versijas ilustrācija" role="img">
+            <RevealOnView className={styles.deviceVisual}><div role="img" aria-label="Mājaslapas desktop un mobilās versijas ilustrācija">
               <div className={styles.desktopFrame}>
                 <div className={styles.desktopTop}>
                   <span className={styles.previewBrand}>Jūsu uzņēmums</span>
@@ -161,6 +161,7 @@ export default function ServicePage() {
                 <span className={styles.mobileHeadingShort} />
                 <span className={styles.mobileCopy} />
                 <span className={styles.mobileCta} />
+              </div>
               </div>
             </RevealOnView>
           </div>
