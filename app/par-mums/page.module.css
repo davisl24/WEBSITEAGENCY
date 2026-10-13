@@ -1,0 +1,58 @@
+/* Compact editorial treatment for About → Kas mēs esam only.
+   Larger text and tighter layout are balanced, not crowded. */
+.companySection{
+  padding-top:60px;
+  padding-bottom:74px;
+}
+.companySection :global(.about-company-intro){
+  max-width:900px;
+  margin-bottom:34px;
+}
+.companySection :global(.about-company-title){
+  max-width:780px;
+  font-size:clamp(35px,3.5vw,49px);
+  line-height:1.11;
+  letter-spacing:-.045em;
+}
+.companySection :global(.about-company-layout){
+  display:grid;
+  grid-template-columns:minmax(0,1.2fr) minmax(280px,.8fr);
+  align-items:start;
+  gap:clamp(30px,4vw,58px);
+}
+.companySection :global(.about-company-main p){
+  max-width:690px;
+  font-size:clamp(19px,1.7vw,24px);
+  line-height:1.52;
+  letter-spacing:-.02em;
+}
+.companySection :global(.about-company-side){
+  gap:24px;
+  padding-top:0;
+}
+.companySection :global(.about-company-side>div){
+  padding-top:15px;
+}
+.companySection :global(.about-company-side p){
+  max-width:42ch;
+  font-size:15px;
+  line-height:1.58;
+}
+@media(max-width:900px){
+  .companySection :global(.about-company-layout){
+    grid-template-columns:1fr;
+    gap:28px;
+  }
+  .companySection :global(.about-company-main p){max-width:730px}
+  .companySection :global(.about-company-side){
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:24px;
+  }
+}
+@media(max-width:600px){
+  .companySection{padding-top:50px;padding-bottom:64px}
+  .companySection :global(.about-company-intro){margin-bottom:27px}
+  .companySection :global(.about-company-title){font-size:clamp(31px,8vw,39px)}
+  .companySection :global(.about-company-main p){font-size:19px;line-height:1.52}
+  .companySection :global(.about-company-side){grid-template-columns:1fr;gap:17px}
+}
