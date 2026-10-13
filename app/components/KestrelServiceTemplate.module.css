@@ -1,5 +1,6 @@
 .page{--kst-bg:#0b0b0c;--kst-ink:#f4f1ea;--kst-muted:rgba(244,241,234,.68);--kst-rule:rgba(130,130,130,.26);min-height:100vh;background:var(--kst-bg);color:var(--kst-ink);padding-top:82px}
 :global(html[data-theme="light"]) .page{--kst-bg:#f7f7f5;--kst-ink:#171717;--kst-muted:#686866;--kst-rule:rgba(23,23,23,.15)}
+.page :global(.site-header.kestrel-shared-header .brand){color:var(--kst-ink)}
 .wrap{width:min(1200px,calc(100% - 2 * clamp(20px,4.4vw,64px)));margin:0 auto}
 .hero{padding:96px 0 70px;min-height:0}
 .heroCopy{max-width:770px}
