@@ -8938,3 +8938,40 @@ html[data-theme="light"] .kestrel-service-unified .kst-glass-cta{
   .kst-commerce-window{min-height:215px}
   .kst-product-shape{height:64px}
 }
+
+/* Contact page: explicit inquiry fields; no pretend reservation UI. */
+.kestrel-inquiry-form{display:flex;flex-direction:column;gap:25px;margin-top:30px}
+.kestrel-inquiry-form .inquiry-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 19px}
+.kestrel-inquiry-form label{display:flex;flex-direction:column;gap:9px;font-size:13px;font-weight:600}
+.kestrel-inquiry-form input,
+.kestrel-inquiry-form select,
+.kestrel-inquiry-form textarea{
+  display:block;width:100%;min-width:0;
+  border:1px solid rgba(130,130,130,.28);
+  border-radius:12px;
+  padding:14px 15px;
+  background:rgba(130,130,130,.055);
+  color:inherit;
+  font:inherit;font-size:15px;font-weight:400;line-height:1.5;
+}
+.kestrel-inquiry-form select option{color:#171717;background:#fff}
+.kestrel-inquiry-form textarea{resize:vertical;min-height:140px}
+.kestrel-inquiry-form input:focus-visible,
+.kestrel-inquiry-form select:focus-visible,
+.kestrel-inquiry-form textarea:focus-visible{
+  outline:2px solid currentColor;outline-offset:2px;
+}
+.kestrel-inquiry-form .inquiry-submit{
+  align-self:flex-start;display:inline-flex;align-items:center;justify-content:center;
+  gap:19px;min-height:49px;padding:12px 24px;
+  border:0;border-radius:999px;background:#f5f3ee;color:#171717;
+  cursor:pointer;font:inherit;font-weight:650;font-size:14px;
+}
+html[data-theme="light"] .kestrel-inquiry-form .inquiry-submit{background:#171717;color:#fff}
+.kestrel-inquiry-form .inquiry-submit:hover{opacity:.85}
+.kestrel-inquiry-form .inquiry-help{font-size:13px;line-height:1.6;opacity:.64;margin:-8px 0 0;max-width:58ch}
+.kestrel-inquiry-form .inquiry-state{font-size:14px;line-height:1.6;font-weight:600;margin:0}
+@media(max-width:600px){
+  .kestrel-inquiry-form .inquiry-fields{grid-template-columns:1fr;gap:19px}
+  .kestrel-inquiry-form .inquiry-submit{width:100%}
+}
