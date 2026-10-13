@@ -349,6 +349,9 @@
   .section h2{margin-bottom:32px}
   .end{padding:64px 0 75px}
 }
+@media(max-width:380px){
+  .page :global(.site-header.kestrel-shared-header){padding-inline:10px}
+}
 @media(prefers-reduced-motion:reduce){
   .heroDark,.heroLight,.primaryCta,.offerLink,.arrow{transition:none}
 }
