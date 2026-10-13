@@ -51,9 +51,9 @@
 }
 .heroLayout{
   display:grid;
-  grid-template-columns:minmax(0,1.25fr) minmax(295px,.75fr);
+  grid-template-columns:minmax(0,1fr);
   align-items:end;
-  gap:clamp(44px,6.5vw,106px);
+  gap:0;
 }
 .heroCopy{max-width:740px}
 .serviceLabel{
@@ -153,22 +153,22 @@
   text-align:center;
   text-wrap:balance;
 }
-.offerList{display:flex;flex-direction:column;gap:12px}
+.offerList{display:flex;flex-direction:column;gap:0}
 .offerLink{
   display:grid;
-  grid-template-columns:minmax(180px,1.04fr) minmax(250px,1.36fr) minmax(105px,.45fr) 24px;
+  grid-template-columns:minmax(205px,.95fr) minmax(270px,1.3fr) minmax(100px,.4fr) 22px;
   align-items:center;
   gap:30px;
-  min-height:145px;
-  padding:31px 34px;
-  border:0;
-  border-radius:21px;
+  min-height:104px;
+  padding:23px 25px;
+  border-bottom:1px solid var(--web-line);
+  border-radius:0;
   background:transparent;
   color:var(--web-ink);
   text-decoration:none;
   transition:background .18s ease;
 }
-.offerLink:hover{background:var(--web-hover)}
+.offerLink:hover{background:var(--web-hover);border-radius:16px}
 .offerLink h3{
   grid-column:1;
   margin:0;
@@ -211,7 +211,7 @@
   gap:clamp(36px,5vw,78px);
   align-items:center;
 }
-.includedGrid{
+ .includedGrid{
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr));
   column-gap:28px;
@@ -410,7 +410,7 @@
 
 @media(max-width:1000px){
   .heroLayout{gap:42px;grid-template-columns:minmax(0,1.15fr) minmax(260px,.85fr)}
-  .offerLink{gap:20px;padding:28px 22px;grid-template-columns:minmax(160px,1fr) minmax(210px,1.2fr) minmax(100px,.5fr) 24px}
+  .offerLink{gap:20px;padding:21px 22px;grid-template-columns:minmax(160px,1fr) minmax(210px,1.2fr) minmax(100px,.5fr) 24px}
   .includedLayout{grid-template-columns:1fr;gap:30px}
   .includedGrid{max-width:780px;margin:0 auto;width:100%}
   .deviceVisual{width:min(100%,560px);margin:0 auto}
@@ -471,3 +471,8 @@
   .processGrid::before{transform:none}
   .step{opacity:1;transform:none}
 }
+
+/* Browser review: line-aligned packages and reveal around the device model. */
+.includedItem{transition:transform .68s cubic-bezier(.22,1,.36,1),opacity .55s ease}
+.includedItem:nth-child(2n){transition-delay:.08s}
+@media(min-width:761px){.hero{padding-bottom:48px}.offerLink:hover{border-radius:16px}.includedLayout{align-items:center}}
