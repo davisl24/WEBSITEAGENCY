@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
-import KestrelServiceTemplate, { type ServiceInfo } from "../../components/KestrelServiceTemplate";
+import type { ServiceInfo } from "../../components/KestrelServiceTemplate";
+import KestrelHeader from "../../components/KestrelHeader";
+import KestrelFooter from "../../components/KestrelFooter";
+import styles from "./page.module.css";
 
 export const metadata: Metadata = {title:"Mājaslapas tavam uzņēmumam | Kestrel",description:"Izstrādājam mājaslapas, kurās ir skaidrs piedāvājums un viegli atrodama saziņas iespēja."};
 const service: ServiceInfo = {
@@ -70,4 +73,90 @@ const service: ServiceInfo = {
     }
   ]
 };
-export default function ServicePage(){return <KestrelServiceTemplate service={service}/>;}
+const steps = [
+  { title: "Izrunājam", detail: "Saprotam uzņēmumu, mērķi un vajadzīgo mājaslapas apjomu." },
+  { title: "Saskaņojam", detail: "Vienojamies par saturu, risinājumu un darba apjomu." },
+  { title: "Izstrādājam", detail: "Veidojam mājaslapu un pārbaudām tās lietojamību." },
+  { title: "Publicējam", detail: "Pārbaudām gatavo lapu un publicējam to." },
+];
+
+export default function ServicePage() {
+  return (
+    <main className={styles.page}>
+      <KestrelHeader />
+
+      <div className={styles.wrap}>
+        <section className={styles.hero} aria-labelledby="web-service-title">
+          <h1 id="web-service-title">{service.title}</h1>
+          <p className={styles.intro}>
+            Veidojam pārskatāmas mājaslapas, kurās klienti ātri saprot piedāvājumu,
+            atrod svarīgāko informāciju un var ērti sazināties.
+          </p>
+          <a className={styles.primaryCta} href="/kontakti">
+            Pieteikt sarunu <span aria-hidden="true">↗</span>
+          </a>
+        </section>
+
+        <section className={styles.section} aria-labelledby="web-offers-title">
+          <h2 id="web-offers-title">Izvēlies piemērotāko risinājumu</h2>
+          <div className={styles.offerList}>
+            {service.offers.map((offer) => (
+              <a className={styles.offerLink} href={offer.href ?? "/kontakti"} key={offer.title}>
+                <h3>{offer.title}</h3>
+                <p>{offer.detail}</p>
+                {offer.price && <span className={styles.price}>{offer.price}</span>}
+                <span className={styles.arrow} aria-hidden="true">↗</span>
+              </a>
+            ))}
+          </div>
+        </section>
+
+        <section className={`${styles.section} ${styles.includedSection}`} aria-labelledby="web-included-title">
+          <h2 id="web-included-title">Ko tu saņem</h2>
+          <div className={styles.includedGrid}>
+            {service.included.map((item) => (
+              <div className={styles.includedItem} key={item.title}>
+                <h3>{item.title}</h3>
+                <p>{item.detail}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className={`${styles.section} ${styles.processSection}`} aria-labelledby="web-process-title">
+          <h2 id="web-process-title">No idejas līdz gatavai lapai</h2>
+          <div className={styles.processGrid}>
+            {steps.map((step) => (
+              <div className={styles.step} key={step.title}>
+                <h3>{step.title}</h3>
+                <p>{step.detail}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className={`${styles.section} ${styles.faqSection}`} aria-labelledby="web-faq-title">
+          <h2 id="web-faq-title">Biežākie jautājumi</h2>
+          <div className={styles.faq}>
+            {service.faq.map((item) => (
+              <details key={item.question}>
+                <summary>{item.question}</summary>
+                <p>{item.answer}</p>
+              </details>
+            ))}
+          </div>
+        </section>
+
+        <section className={styles.end} aria-labelledby="web-end-title">
+          <h2 id="web-end-title">Pastāsti par savu projektu</h2>
+          <p>Izrunāsim ieceri un vienosimies, ar kādu risinājumu būtu jēga sākt.</p>
+          <a className={styles.primaryCta} href="/kontakti">
+            Pieteikt sarunu <span aria-hidden="true">↗</span>
+          </a>
+        </section>
+      </div>
+
+      <KestrelFooter />
+    </main>
+  );
+}
