@@ -42,8 +42,8 @@ export default function LanguageSwitcher() {
 
   return (
     <div className="language-switcher language-switcher-dropdown" ref={root}>
-      <button ref={trigger} className="language-switcher-trigger" type="button" aria-expanded={open} aria-haspopup="true" aria-label="Select language" onClick={() => setOpen(v => !v)}>
-        <span>{current.toUpperCase()}</span>
+      <button ref={trigger} className="language-switcher-trigger" type="button" aria-expanded={open} aria-haspopup="true" aria-label="Izvēlēties valodu" onClick={() => setOpen(v => !v)}>
+        <span className="language-switcher-three" aria-hidden="true">{(["lv","en","ru"] as const).map(lang => <span key={lang} className={lang === current ? "is-current" : undefined}>{lang.toUpperCase()}</span>)}</span>
         <span className="language-switcher-chevron" aria-hidden="true">⌄</span>
       </button>
       {open && <div className="language-switcher-menu" aria-label="Languages">
