@@ -8760,3 +8760,183 @@ html[data-theme="light"] .kestrel-service-v2 .kestrel-shared-header .brand{
   .kestrel-service-v2 .kst-process{gap:16px}
   .kestrel-service-v2 .kst-end{padding-top:54px;padding-bottom:68px}
 }
+
+
+/* Kestrel site-wide composition review — 2026-10-13.
+   Scoped refinements only: approved homepage problem cards / About / service detail.
+   Do not alter contact booking or the approved service-hover geometry. */
+
+/* Home problems: centred H2 with a deliberate heading-to-grid separation */
+main#top .kestrel-problems-v3 .value-inner{
+  row-gap:clamp(56px,5vw,68px);
+}
+main#top .kestrel-problems-v3 .kestrel-problems-heading{
+  display:block;
+  align-self:center;
+  width:100%;
+  max-width:900px;
+  margin:0 auto;
+  text-align:center;
+}
+main#top .kestrel-problems-v3 .kestrel-problems-heading h2{
+  display:block;
+  width:100%;
+  margin:0 auto;
+  text-align:center;
+  text-wrap:balance;
+}
+
+/* About: consistent editorial rhythm, readable copy and less competing text */
+.about-page .about-hero{
+  min-height:0;
+  gap:clamp(32px,4vw,64px);
+  padding-top:90px;
+  padding-bottom:72px;
+}
+.about-page .about-hero-visual{min-height:440px}
+.about-page > .service-page-section,
+.about-page > .service-page-section:not(.about-company-section){
+  padding-top:82px;
+  padding-bottom:82px;
+}
+.about-page .about-company-intro{
+  max-width:880px;
+  margin:0 auto 42px;
+  text-align:center;
+}
+.about-page .about-company-title{
+  max-width:880px;
+  margin:0 auto;
+  font-size:clamp(36px,3.5vw,48px);
+  line-height:1.12;
+  letter-spacing:-.047em;
+  text-wrap:balance;
+}
+.about-page .about-company-layout{
+  max-width:1080px;
+  margin:0 auto;
+  grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);
+  gap:clamp(38px,5vw,70px);
+}
+.about-page .about-company-main p{
+  max-width:620px;
+  font-size:clamp(21px,2.1vw,26px);
+  line-height:1.47;
+  letter-spacing:-.022em;
+}
+.about-page .about-company-side{gap:25px;padding-top:2px}
+.about-page .about-company-side>div{padding-top:18px}
+.about-page .about-company-side p{margin-top:11px;line-height:1.7}
+.about-page .about-thinking-intro,
+.about-page .about-focus-intro{margin-bottom:44px}
+.about-page .about-thinking-title,
+.about-page .about-focus-title,
+.about-page .about-working-title{
+  font-size:clamp(36px,3.5vw,48px);
+  line-height:1.12;
+}
+.about-page .about-thinking-layout{
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  gap:clamp(40px,5vw,70px);
+  align-items:start;
+}
+.about-page .about-thinking-statement .service-line-stack{
+  font-size:clamp(30px,2.75vw,38px);
+  line-height:1.17;
+}
+.about-page .about-principles{
+  display:grid;
+  grid-template-columns:1fr;
+  row-gap:27px;
+}
+.about-page .about-principle,
+.about-page .about-principle:nth-child(1),
+.about-page .about-principle:nth-child(2),
+.about-page .about-principle:nth-child(3){
+  grid-column:auto;
+  max-width:460px;
+}
+.about-page .about-principle h3{font-size:20px}
+.about-page .about-chaos-ui,
+.about-page .about-clear-ui{min-height:285px}
+.about-page .about-working-section{
+  gap:clamp(40px,5vw,70px);
+}
+.about-page .about-working-copy{
+  gap:28px;
+  padding-top:8px;
+}
+.about-page .about-working-copy p{
+  font-size:clamp(21px,2vw,26px);
+  line-height:1.48;
+  letter-spacing:-.02em;
+}
+.about-page .service-page-cta{padding-top:80px;padding-bottom:92px}
+
+/* Shared service-template pages: calm section separation and homepage type scale.
+   Web-izstrade uses its own approved scoped CSS module. */
+.kestrel-service-v2 .kst-heading h2{
+  font-size:clamp(34px,3.4vw,48px);
+  line-height:1.12;
+}
+.kestrel-service-v2 .kst-section{
+  padding-top:72px;
+  padding-bottom:76px;
+}
+.kestrel-service-v2 .kst-heading{margin-bottom:36px}
+.kestrel-service-v2 .kst-audience-section{
+  padding-top:38px;
+  padding-bottom:48px;
+}
+.kestrel-service-v2 .kst-end{
+  padding-top:76px;
+  padding-bottom:88px;
+}
+
+@media(max-width:900px){
+  .about-page .about-company-layout,
+  .about-page .about-thinking-layout,
+  .about-page .about-working-section{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+  .about-page .about-company-intro{margin-bottom:34px}
+}
+@media(max-width:767px){
+  main#top .kestrel-problems-v3 .value-inner{row-gap:38px}
+  main#top .kestrel-problems-v3 .kestrel-problems-heading h2{
+    font-size:32px;
+  }
+  .about-page .about-hero{
+    padding-top:58px;
+    padding-bottom:48px;
+    gap:30px;
+  }
+  .about-page .about-hero-visual{min-height:340px}
+  .about-page > .service-page-section,
+  .about-page > .service-page-section:not(.about-company-section){
+    padding-top:62px;
+    padding-bottom:62px;
+  }
+  .about-page .about-company-title,
+  .about-page .about-thinking-title,
+  .about-page .about-focus-title,
+  .about-page .about-working-title{
+    font-size:clamp(31px,7vw,38px);
+  }
+  .about-page .about-company-main p{
+    font-size:20px;
+    line-height:1.5;
+  }
+  .about-page .about-thinking-statement .service-line-stack{
+    font-size:clamp(27px,6vw,33px);
+  }
+  .about-page .about-chaos-ui,
+  .about-page .about-clear-ui{min-height:255px}
+  .about-page .about-working-copy p{font-size:20px;line-height:1.55}
+  .about-page .service-page-cta{padding-top:70px;padding-bottom:78px}
+  .kestrel-service-v2 .kst-heading h2{font-size:32px}
+  .kestrel-service-v2 .kst-section{padding-top:54px;padding-bottom:58px}
+  .kestrel-service-v2 .kst-heading{margin-bottom:28px}
+  .kestrel-service-v2 .kst-audience-section{padding-top:32px;padding-bottom:38px}
+}
