@@ -1,6 +1,7 @@
 import KestrelHeader from "./KestrelHeader";
 import KestrelFooter from "./KestrelFooter";
 import RevealOnView from "./RevealOnView";
+import ProcessFlow from "./ProcessFlow";
 
 export type ServiceInfo = {
   title: string;
@@ -10,22 +11,6 @@ export type ServiceInfo = {
   included: { title: string; detail: string }[];
   faq: { question: string; answer: string }[];
 };
-
-const steps = [
-  { title: "Izrunājam", detail: "Noskaidrojam mērķi un nepieciešamo apjomu." },
-  { title: "Saskaņojam", detail: "Vienojamies par saturu un darba gaitu." },
-  { title: "Izstrādājam", detail: "Veicam darbus un pārbaudām rezultātu." },
-  { title: "Publicējam", detail: "Nododam rezultātu un vienojamies par nākamo soli." },
-];
-
-export function KestrelProcessIcon({ index }: { index: number }) {
-  return <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    {index === 0 && <><circle cx="16" cy="16" r="11"/><circle cx="16" cy="16" r="5"/><path d="M16 3v6M16 23v6M3 16h6M23 16h6"/></>}
-    {index === 1 && <><rect x="5" y="5" width="22" height="22" rx="3"/><path d="M11 11h11M11 16h11M11 21h7"/></>}
-    {index === 2 && <><rect x="4" y="6" width="24" height="20" rx="3"/><path d="M4 12h24M13 16l-4 3 4 3M19 16l4 3-4 3"/></>}
-    {index === 3 && <><path d="M12 21l-1-7c3-6 8-9 15-9 0 7-3 12-9 15l-5 1Z"/><path d="m17 15 0 0M11 14l-5 1-2 5 7-1M18 21l-1 7-5 1 1-7M9 23l-3 3M24 9h.01"/></>}
-  </svg>;
-}
 
 function OfferIcon({ index }: { index: number }) {
   return <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -81,15 +66,7 @@ export default function KestrelServiceTemplate({ service }: { service: ServiceIn
       </div>
     </section>
 
-    <section className="kst-section kst-process-section" aria-labelledby="kst-process">
-      <div className="kst-heading"><RevealOnView><h2 id="kst-process">Kā strādājam</h2></RevealOnView></div>
-      <div className="kst-process">
-        {steps.map((step,index) => <RevealOnView className="kst-process-step" delay={110+index*95} key={step.title}>
-          <span className="kst-process-icon"><KestrelProcessIcon index={index}/></span>
-          <h3>{step.title}</h3><p>{step.detail}</p>
-        </RevealOnView>)}
-      </div>
-    </section>
+    <ProcessFlow />
 
     {service.faq.length>0 && <section className="kst-section kst-faq-section" aria-labelledby="kst-faq-title">
       <div className="kst-heading"><RevealOnView><h2 id="kst-faq-title">Biežākie jautājumi</h2></RevealOnView></div>
