@@ -96,7 +96,7 @@ export default function ServicePage() {
                 atrod svarīgāko un var ērti pieteikties.
               </p>
               <div className={styles.heroActions}>
-                <a className={styles.primaryCta} href="/kontakti">Pieteikt sarunu</a>
+                <a className={`${styles.primaryCta} kestrel-unified-cta`} href="/kontakti">Pieteikt sarunu</a>
                 <a className={styles.secondaryLink} href="#web-offers-title">
                   Apskatīt risinājumus <span aria-hidden="true">↘</span>
                 </a>
@@ -200,7 +200,7 @@ export default function ServicePage() {
         <section className={styles.end} aria-labelledby="web-end-title">
           <h2 id="web-end-title">Pastāsti par savu projektu</h2>
           <p>Izrunāsim ieceri un vienosimies, ar kādu risinājumu būtu jēga sākt.</p>
-          <a className={styles.primaryCta} href="/kontakti">
+          <a className={`${styles.primaryCta} kestrel-unified-cta`} href="/kontakti">
             Pieteikt sarunu
           </a>
         </section>
