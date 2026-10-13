@@ -8975,3 +8975,13 @@ html[data-theme="light"] .kestrel-inquiry-form .inquiry-submit{background:#17171
   .kestrel-inquiry-form .inquiry-fields{grid-template-columns:1fr;gap:19px}
   .kestrel-inquiry-form .inquiry-submit{width:100%}
 }
+
+/* About page's post-hero headings follow the site's centered H2 hierarchy. */
+main.about-page .about-thinking-intro,
+main.about-page .about-focus-intro,
+main.about-page .about-working-intro{margin-inline:auto;text-align:center}
+main.about-page .about-thinking-title,
+main.about-page .about-focus-title,
+main.about-page .about-working-title{margin-inline:auto;text-align:center}
+main.about-page .about-thinking-copy,
+main.about-page .about-focus-copy{margin-inline:auto;text-align:center}
