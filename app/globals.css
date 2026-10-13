@@ -8278,7 +8278,7 @@ main#top .hero .button-primary:focus-visible{
   .site-header.kestrel-shared-header .site-nav{gap:14px}
   .site-header.kestrel-shared-header .site-nav>a[href="/"],
   .site-header.kestrel-shared-header .site-nav>a[href="/par-mums"],
-  .site-header.kestrel-shared-header .site-nav>a[href="/kontakti"]{display:none}
+  .site-header.kestrel-shared-header .site-nav>a[href="/kontakti"]:not(.header-cta){display:none}
 }
 /* Small phones: retain theme, language and booking without a clipped CTA. */
 @media(max-width:380px){
