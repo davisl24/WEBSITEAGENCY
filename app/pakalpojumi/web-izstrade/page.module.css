@@ -346,7 +346,7 @@
     width:calc(100% - 24px);
     min-height:56px;
     top:10px;
-    padding:0 18px;
+    padding:0 12px;
   }
   .wrap {width:calc(100% - 48px)}
   .heroBand {min-height:0}
