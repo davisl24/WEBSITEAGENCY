@@ -4,7 +4,7 @@ const { chromium } = require("playwright");
   const browser = await chromium.launch({ headless: true });
   const failures = [];
   for (const route of ["/", "/pakalpojumi/web-izstrade"]) {
-    for (const width of [390, 1440]) {
+    for (const width of [360, 390, 768, 1024, 1440]) {
       for (const theme of ["light", "dark"]) {
         const context = await browser.newContext({
           viewport: { width, height: 900 },
@@ -59,6 +59,6 @@ const { chromium } = require("playwright");
     console.error("DESIGN_QA_FAILURES:", failures.join("; "));
     process.exitCode = 1;
   } else {
-    console.log("DESIGN_QA_PASS: both routes at 390/1440 light/dark without horizontal overflow or clipped booking buttons");
+    console.log("DESIGN_QA_PASS: both routes at 360/390/768/1024/1440 light/dark without horizontal overflow or clipped booking buttons");
   }
 })().catch(error => { console.error(error); process.exitCode=1; });
