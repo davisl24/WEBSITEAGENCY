@@ -17,12 +17,12 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <main className="service-page about-page">
+    <main className={`service-page about-page ${styles.page}`}>
       <KestrelHeader active="about" />
 
       <section className="about-hero">
         <div className="about-hero-copy">
-          <p className="service-page-kicker">Par Kestrel</p>
+          
           <h1>Mājaslapas ar domu</h1>
           <p>
             Veidojam mājaslapas mazajiem uzņēmumiem tā, lai cilvēkam būtu viegli
@@ -59,9 +59,7 @@ export default function AboutPage() {
 
       <section className={`service-page-section about-company-section ${styles.companySection}`} aria-labelledby="about-company-title">
         <div className="about-company-intro">
-          <RevealOnView>
-            <p className="service-page-kicker">Kas mēs esam</p>
-          </RevealOnView>
+          
 
           <RevealOnView className="line-mask-reveal" delay={60}>
             <h2 id="about-company-title" className="service-line-stack about-company-title">
@@ -94,9 +92,7 @@ export default function AboutPage() {
 
       <section className="service-page-section about-thinking-section" aria-labelledby="about-thinking-title">
         <div className="about-thinking-intro">
-          <RevealOnView>
-            <p className="service-page-kicker">Kā domājam</p>
-          </RevealOnView>
+          
 
           <RevealOnView className="line-mask-reveal" delay={60}>
             <h2 id="about-thinking-title" className="service-line-stack about-thinking-title">
@@ -142,20 +138,18 @@ export default function AboutPage() {
 
       <section className="service-page-section about-focus-section" aria-labelledby="about-focus-title">
         <div className="about-focus-intro">
-          <RevealOnView>
-            <p className="service-page-kicker">Ko aizstāvam</p>
-          </RevealOnView>
+          
 
           <RevealOnView className="line-mask-reveal" delay={60}>
             <h2 id="about-focus-title" className="service-line-stack about-focus-title">
-              <span className="service-reveal-line"><span>Mazāk bet labāk</span></span>
+              <span className="service-reveal-line"><span>No pārblīvēta uz skaidru</span></span>
             </h2>
           </RevealOnView>
 
           <RevealOnView delay={150}>
             <p className="about-focus-copy">
-              Mēs labāk noņemam vienu lieku bloku nekā pievienojam trīs jaunus.
-              Katram elementam jābūt ar iemeslu.
+              Pa kreisi — pārāk daudz elementu, kas novērš uzmanību.
+              Pa labi — skaidrs piedāvājums, kuru vieglāk saprast un izmantot.
             </p>
           </RevealOnView>
         </div>
@@ -186,9 +180,7 @@ export default function AboutPage() {
 
       <section className="service-page-section about-working-section" aria-labelledby="about-working-title">
         <div className="about-working-intro">
-          <RevealOnView>
-            <p className="service-page-kicker">Sadarbība</p>
-          </RevealOnView>
+          
 
           <RevealOnView className="line-mask-reveal" delay={60}>
             <h2 id="about-working-title" className="service-line-stack about-working-title">
