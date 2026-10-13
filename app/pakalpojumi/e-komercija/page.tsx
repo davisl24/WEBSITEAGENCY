@@ -44,17 +44,17 @@ const service: ServiceInfo = {
   ],
   "faq": [
     {
-      "question": "Cik ilgā laikā projekts būs gatavs?",
-      "answer": "Termiņu nosakām pēc darba apjoma un saskaņojam pirms sākuma."
+        "question": "Ar ko sākam interneta veikala izstrādi?",
+        "answer": "Vispirms sakārtojam produktu katalogu un pasūtīšanas ceļu. Tad izvērtējam nepieciešamās integrācijas."
     },
     {
-      "question": "Vai man nepieciešami gatavi materiāli?",
-      "answer": "Izmantojam tavus materiālus un palīdzam tos sakārtot. Jaunu materiālu izveidi vērtējam atsevišķi."
+        "question": "Vai maksājumi un piegāde jau ir iekļauti?",
+        "answer": "Integrācijas un to apjomu izvērtējam atsevišķi. Konkrēto risinājumu un izmaksas saskaņojam pirms darba."
     },
     {
-      "question": "Kā nosaka gala cenu?",
-      "answer": "Cena atkarīga no apjoma un funkcijām. Pirms izstrādes vienojamies par iekļauto un izmaksām."
+        "question": "Kā tiek noteikta cena?",
+        "answer": "Cena atkarīga no kataloga, pasūtīšanas procesa un nepieciešamajām integrācijām."
     }
-  ]
+]
 };
 export default function ServicePage(){return <KestrelServiceTemplate service={service}/>;}

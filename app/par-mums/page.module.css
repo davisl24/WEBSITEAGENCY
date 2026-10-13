@@ -56,3 +56,12 @@
   .companySection :global(.about-company-main p){font-size:19px;line-height:1.52}
   .companySection :global(.about-company-side){grid-template-columns:1fr;gap:17px}
 }
+
+/* About page: unified centered headings after hero, without decorative labels */
+.companySection :global(.about-company-intro){margin:0 auto 38px;text-align:center}
+.companySection :global(.about-company-title){margin-inline:auto;text-align:center}
+.focusExamples{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(28px,5vw,72px);width:min(900px,100%);margin:48px auto 0}
+.focusExample{padding-top:20px;border-top:1px solid rgba(130,130,130,.27)}
+.focusExample h3{margin:0 0 12px;font-size:clamp(20px,2vw,24px);line-height:1.3;letter-spacing:-.03em}
+.focusExample p{margin:0;max-width:42ch;font-size:15px;line-height:1.65;opacity:.73}
+@media(max-width:600px){.focusExamples{grid-template-columns:1fr;gap:27px;margin-top:32px}}

@@ -22,13 +22,12 @@ export default function AboutPage() {
 
       <section className="about-hero">
         <div className="about-hero-copy">
-          <p className="service-page-kicker">Par Kestrel</p>
           <h1>Mājaslapas ar domu</h1>
           <p>
             Veidojam mājaslapas mazajiem uzņēmumiem tā, lai cilvēkam būtu viegli
             saprast piedāvājumu, uzticēties un izdarīt nākamo soli.
           </p>
-          <a className="button button-primary" href="/kontakti">Pastāstīt par projektu</a>
+          <a className="button button-primary" href="/kontakti">Pieteikt sarunu</a>
         </div>
 
         <div className="about-hero-visual" aria-hidden="true">
@@ -59,9 +58,6 @@ export default function AboutPage() {
 
       <section className={`service-page-section about-company-section ${styles.companySection}`} aria-labelledby="about-company-title">
         <div className="about-company-intro">
-          <RevealOnView>
-            <p className="service-page-kicker">Kas mēs esam</p>
-          </RevealOnView>
 
           <RevealOnView className="line-mask-reveal" delay={60}>
             <h2 id="about-company-title" className="service-line-stack about-company-title">
@@ -94,9 +90,6 @@ export default function AboutPage() {
 
       <section className="service-page-section about-thinking-section" aria-labelledby="about-thinking-title">
         <div className="about-thinking-intro">
-          <RevealOnView>
-            <p className="service-page-kicker">Kā domājam</p>
-          </RevealOnView>
 
           <RevealOnView className="line-mask-reveal" delay={60}>
             <h2 id="about-thinking-title" className="service-line-stack about-thinking-title">
@@ -142,53 +135,34 @@ export default function AboutPage() {
 
       <section className="service-page-section about-focus-section" aria-labelledby="about-focus-title">
         <div className="about-focus-intro">
-          <RevealOnView>
-            <p className="service-page-kicker">Ko aizstāvam</p>
-          </RevealOnView>
 
           <RevealOnView className="line-mask-reveal" delay={60}>
             <h2 id="about-focus-title" className="service-line-stack about-focus-title">
-              <span className="service-reveal-line"><span>Mazāk bet labāk</span></span>
+              <span className="service-reveal-line"><span>Mazāk lieka, vairāk skaidrības</span></span>
             </h2>
           </RevealOnView>
 
           <RevealOnView delay={150}>
             <p className="about-focus-copy">
-              Mēs labāk noņemam vienu lieku bloku nekā pievienojam trīs jaunus.
-              Katram elementam jābūt ar iemeslu.
+              Izņemam elementus, kas apgrūtina uztveri, un izceļam svarīgāko — piedāvājumu, uzticamību un saziņu.
             </p>
           </RevealOnView>
         </div>
 
-        <div className="about-focus-visual">
-          <RevealOnView className="about-chaos-panel">
-            <span className="about-focus-caption">Par daudz</span>
-            <div className="about-chaos-ui" aria-hidden="true">
-              <span/><span/><span/><span/><span/><span/>
-            </div>
+        <div className={styles.focusExamples}>
+          <RevealOnView className={styles.focusExample}>
+            <h3>Ja viss ir vienlīdz svarīgs</h3>
+            <p>Apmeklētājam jāmeklē, kur sākt un kā sazināties</p>
           </RevealOnView>
-
-          <RevealOnView className="about-focus-arrow" delay={100} aria-hidden="true">
-            <span>→</span>
-          </RevealOnView>
-
-          <RevealOnView className="about-clear-panel" delay={180}>
-            <span className="about-focus-caption">Skaidrs</span>
-            <div className="about-clear-ui" aria-hidden="true">
-              <span className="about-clear-kicker"/>
-              <span className="about-clear-title"/>
-              <span className="about-clear-copy"/>
-              <span className="about-clear-button"/>
-            </div>
+          <RevealOnView className={styles.focusExample} delay={110}>
+            <h3>Ja galvenais ir skaidri izcelts</h3>
+            <p>Cilvēks redz pakalpojumu un nākamo soli bez liekas meklēšanas</p>
           </RevealOnView>
         </div>
       </section>
 
       <section className="service-page-section about-working-section" aria-labelledby="about-working-title">
         <div className="about-working-intro">
-          <RevealOnView>
-            <p className="service-page-kicker">Sadarbība</p>
-          </RevealOnView>
 
           <RevealOnView className="line-mask-reveal" delay={60}>
             <h2 id="about-working-title" className="service-line-stack about-working-title">
@@ -229,7 +203,7 @@ export default function AboutPage() {
         </RevealOnView>
 
         <RevealOnView className="service-cta-action" delay={220}>
-          <a className="button button-primary" href="/kontakti">Pastāstīt par projektu</a>
+          <a className="button button-primary" href="/kontakti">Pieteikt sarunu</a>
         </RevealOnView>
       </section>
 
