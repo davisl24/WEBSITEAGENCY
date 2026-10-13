@@ -1,0 +1,57 @@
+name: Kestrel visual parity
+on:
+  pull_request:
+    paths:
+      - 'app/**'
+      - 'scripts/kestrel-qa.cjs'
+      - '.github/workflows/kestrel-visual-parity.yml'
+  workflow_dispatch:
+
+jobs:
+  build-and-screenshots:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Build Next.js
+        run: npm run build
+      - name: Install Playwright Chromium
+        run: npx --yes playwright@1.56.1 install --with-deps chromium
+      - name: Start local production server
+        run: |
+          npm run start -- -p 3000 > /tmp/kestrel-server.log 2>&1 &
+          for i in $(seq 1 45); do
+            if curl -fsS http://127.0.0.1:3000/ > /dev/null; then exit 0; fi
+            sleep 2
+          done
+          cat /tmp/kestrel-server.log
+          exit 1
+      - name: Run browser design checks
+        run: |
+          PLAYWRIGHT_DIR="$(find "$HOME/.npm/_npx" -type d -path '*/node_modules/playwright' -print -quit)"
+          if [ -z "$PLAYWRIGHT_DIR" ]; then
+            echo "Playwright package from previous step not found"
+            exit 1
+          fi
+          NODE_PATH="$(dirname "$PLAYWRIGHT_DIR")" node scripts/kestrel-qa.cjs
+      - name: Capture homepage and service parity
+        run: |
+          mkdir -p parity-shots
+          for theme in light dark; do
+            npx --yes playwright@1.56.1 screenshot --browser chromium --color-scheme "$theme" --viewport-size "1440,900" --full-page "http://127.0.0.1:3000/" "parity-shots/home-desktop-$theme.png"
+            npx --yes playwright@1.56.1 screenshot --browser chromium --color-scheme "$theme" --viewport-size "1440,900" --full-page "http://127.0.0.1:3000/pakalpojumi/web-izstrade" "parity-shots/web-desktop-$theme.png"
+            npx --yes playwright@1.56.1 screenshot --browser chromium --color-scheme "$theme" --viewport-size "390,844" --full-page "http://127.0.0.1:3000/" "parity-shots/home-mobile-$theme.png"
+            npx --yes playwright@1.56.1 screenshot --browser chromium --color-scheme "$theme" --viewport-size "390,844" --full-page "http://127.0.0.1:3000/pakalpojumi/web-izstrade" "parity-shots/web-mobile-$theme.png"
+          done
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: kestrel-design-parity
+          path: parity-shots/
+          if-no-files-found: warn
