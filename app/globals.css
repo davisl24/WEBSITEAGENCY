@@ -8985,3 +8985,17 @@ main.about-page .about-focus-title,
 main.about-page .about-working-title{margin-inline:auto;text-align:center}
 main.about-page .about-thinking-copy,
 main.about-page .about-focus-copy{margin-inline:auto;text-align:center}
+
+/* Avoid a misleading homepage redirect for service pages without translated routes. */
+.language-switcher-menu .language-switcher-unavailable{
+  display:flex;align-items:center;justify-content:space-between;gap:24px;
+  padding:11px 14px;font-size:12px;line-height:1.4;opacity:.4;cursor:not-allowed;
+}
+.language-switcher-menu .language-switcher-note{
+  display:block;border-top:1px solid rgba(130,130,130,.2);
+  margin:5px 10px 0;padding:12px 4px 4px;
+  font-size:11px;line-height:1.45;opacity:.65;
+}
+/* Keep E-commerce's editorial offers borderless in both color themes. */
+html[data-theme="light"] .kestrel-service-unified .kst-offer{background:transparent}
+html[data-theme="light"] .kestrel-service-unified .kst-offer:hover{background:rgba(125,125,125,.055)}
