@@ -8646,3 +8646,87 @@ main#top .kestrel-problems-v3 .kestrel-v3-benefit p {font-weight:600}
   .kestrel-service-v2 .kst-faq-section{padding-top:34px;padding-bottom:48px}
   .kestrel-service-v2 .kst-faq summary{font-size:15px}
 }
+
+/* Service editorial A visual correction — contrast and controlled section rhythm.
+   Scoped to service-template pages; leaves homepage and contacts unchanged. */
+html[data-theme="light"] .kestrel-service-v2{
+  background:#f7f7f5;
+  color:#1a1b1b;
+}
+html[data-theme="light"] .kestrel-service-v2 .kst-hero h1,
+html[data-theme="light"] .kestrel-service-v2 .kst-intro,
+html[data-theme="light"] .kestrel-service-v2 .kst-hero-cta{
+  color:#1a1b1b;
+}
+html[data-theme="light"] .kestrel-service-v2 .kestrel-shared-header .brand{
+  color:#1a1b1b;
+}
+.kestrel-service-v2 .kst-hero{
+  min-height:0;
+  padding-top:92px;
+  padding-bottom:48px;
+  align-items:flex-start;
+}
+.kestrel-service-v2 .kst-hero h1{
+  max-width:780px;
+  font-size:clamp(44px,4.6vw,64px);
+  line-height:1.1;
+}
+.kestrel-service-v2 .kst-intro{max-width:620px}
+.kestrel-service-v2 .kst-section{
+  padding-top:46px;
+  padding-bottom:52px;
+}
+.kestrel-service-v2 .kst-audience-section{
+  padding-top:25px;
+  padding-bottom:44px;
+}
+.kestrel-service-v2 .kst-offers-section{
+  padding-top:54px;
+  padding-bottom:58px;
+}
+.kestrel-service-v2 .kst-heading{margin-bottom:32px}
+.kestrel-service-v2 .kst-heading h2{
+  font-size:clamp(29px,2.6vw,39px);
+  line-height:1.14;
+}
+.kestrel-service-v2 .kst-included-section{
+  padding-top:58px;
+  padding-bottom:55px;
+}
+.kestrel-service-v2 .kst-process-section{
+  padding-top:52px;
+  padding-bottom:48px;
+}
+.kestrel-service-v2 .kst-process{
+  max-width:920px;
+  gap:32px;
+}
+.kestrel-service-v2 .kst-process>div{
+  text-align:left;
+  padding-top:14px;
+  border-top:1px solid rgba(130,130,130,.28);
+}
+.kestrel-service-v2 .kst-process span{display:none}
+.kestrel-service-v2 .kst-faq-section{
+  padding-top:54px;
+  padding-bottom:63px;
+}
+.kestrel-service-v2 .kst-end{
+  padding-top:64px;
+  padding-bottom:78px;
+}
+@media(max-width:850px){
+  .kestrel-service-v2 .kst-hero{padding-top:76px;padding-bottom:40px}
+  .kestrel-service-v2 .kst-section{padding-top:41px;padding-bottom:47px}
+  .kestrel-service-v2 .kst-audience-section{padding-top:24px;padding-bottom:38px}
+}
+@media(max-width:600px){
+  .kestrel-service-v2 .kst-hero{padding-top:57px;padding-bottom:32px}
+  .kestrel-service-v2 .kst-hero h1{font-size:clamp(36px,9vw,46px)}
+  .kestrel-service-v2 .kst-section{padding-top:35px;padding-bottom:42px}
+  .kestrel-service-v2 .kst-audience-section{padding-top:20px;padding-bottom:34px}
+  .kestrel-service-v2 .kst-heading{margin-bottom:24px}
+  .kestrel-service-v2 .kst-process{gap:16px}
+  .kestrel-service-v2 .kst-end{padding-top:54px;padding-bottom:68px}
+}
