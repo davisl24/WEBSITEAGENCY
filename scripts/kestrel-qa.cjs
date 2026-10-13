@@ -48,7 +48,7 @@ const { chromium } = require("playwright");
         console.log("PARITY_METRIC " + JSON.stringify({ label, ...result }));
         if (result.scrollWidth > width + 2) failures.push(`${label}: horizontal overflow ${result.scrollWidth}-${width}`);
         if (!result.h1) failures.push(`${label}: missing H1`);
-        if (!result.bookingButton || result.bookingButton.right > width + 2 || result.bookingButton.left < -2)
+        if (!result.bookingButton || result.bookingButton.width < 50 || result.bookingButton.right > width + 2 || result.bookingButton.left < -2)
           failures.push(`${label}: booking CTA clipped (${JSON.stringify(result.bookingButton)})`);
         await context.close();
       }
@@ -59,6 +59,6 @@ const { chromium } = require("playwright");
     console.error("DESIGN_QA_FAILURES:", failures.join("; "));
     process.exitCode = 1;
   } else {
-    console.log("DESIGN_QA_PASS: both routes at 360/390/768/1024/1440 light/dark without horizontal overflow or clipped booking buttons");
+    console.log("DESIGN_QA_PASS: both routes at 360/390/768/1024/1440 light/dark without horizontal overflow, clipped or hidden booking buttons");
   }
 })().catch(error => { console.error(error); process.exitCode=1; });
