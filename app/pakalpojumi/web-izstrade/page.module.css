@@ -400,6 +400,9 @@
   .end {padding:72px 0 80px}
   .end p {font-size:15px}
 }
+@media(max-width:380px){
+  .page :global(.site-header.kestrel-shared-header){padding-inline:10px}
+}
 @media(prefers-reduced-motion:reduce){
   .offerLink,.arrow {transition:none}
 }
