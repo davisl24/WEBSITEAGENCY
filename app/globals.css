@@ -8750,3 +8750,191 @@ main#top .kestrel-problems-v3 .kestrel-problems-list{margin:0 auto}
 @media(max-width:767px){
   main#top .kestrel-problems-v3 .kestrel-problems-heading{margin-bottom:38px}
 }
+
+/* Kestrel consistency round 2 — shared styles.
+   One CTA and information hierarchy across service pages. */
+.language-switcher-three{display:flex;align-items:center;gap:5px}
+.language-switcher-three>span{font-size:11px;opacity:.54;font-weight:550;line-height:1}
+.language-switcher-three>span.is-current{opacity:1;font-weight:800}
+.language-switcher-dropdown .language-switcher-trigger{gap:7px;padding:0 12px;height:38px;min-width:100px}
+.language-switcher-dropdown .language-switcher-chevron{margin-top:-3px;font-size:14px;opacity:.6}
+@media(max-width:900px){
+  .language-switcher-dropdown .language-switcher-trigger{min-width:82px;height:33px;padding:0 8px}
+  .language-switcher-three{gap:4px}
+  .language-switcher-three>span{font-size:10px}
+}
+
+/* Homepage: increase breathing room above the actual problem details. */
+main#top .kestrel-problems-v3 .kestrel-problems-heading{margin-bottom:70px}
+main#top .kestrel-problems-v3 .kestrel-issue-card,
+main#top .kestrel-problems-v3 .kestrel-issue-card:first-child{padding-top:18px}
+@media(max-width:767px){
+  main#top .kestrel-problems-v3 .kestrel-problems-heading{margin-bottom:42px}
+  main#top .kestrel-problems-v3 .kestrel-issue-card,
+  main#top .kestrel-problems-v3 .kestrel-issue-card:first-child{padding-top:4px}
+}
+
+/* Service inner pages: editorial, not repeated generic audience cards. */
+.kestrel-service-unified .kst-audience-section{display:none}
+.kestrel-service-unified .kst-hero{
+  display:grid;
+  grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);
+  align-items:center;
+  column-gap:clamp(35px,5vw,75px);
+  min-height:370px;
+  padding-block:94px 72px;
+}
+.kestrel-service-unified .kst-hero-copy{max-width:720px}
+.kestrel-service-unified .kst-hero h1{max-width:710px}
+.kestrel-service-unified .kst-hero-cta,
+.kestrel-service-unified .kst-glass-cta{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:49px;
+  padding:13px 26px;
+  margin-top:28px;
+  border:1px solid transparent;
+  border-radius:999px;
+  background:#f5f3ee;
+  color:#171717;
+  box-shadow:none;
+  font-size:14px;
+  font-weight:650;
+  line-height:1.2;
+  text-decoration:none;
+}
+html[data-theme="light"] .kestrel-service-unified .kst-hero-cta,
+html[data-theme="light"] .kestrel-service-unified .kst-glass-cta{
+  background:#171717;color:#f5f3ee;
+}
+.kestrel-service-unified .kst-hero-cta:hover,
+.kestrel-service-unified .kst-glass-cta:hover{opacity:.86;transform:none}
+.kestrel-service-unified .kst-end h2{max-width:850px;margin-inline:auto}
+.kestrel-service-unified .kst-section{padding-block:77px 82px}
+.kestrel-service-unified .kst-heading{margin-bottom:42px}
+.kestrel-service-unified .kst-offers{
+  width:min(1100px,calc(100% - 64px));
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:22px;
+}
+.kestrel-service-unified .kst-offer{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  min-height:205px;
+  padding:22px 17px 20px;
+  gap:17px;
+  border:0;
+  border-radius:0;
+  border-top:1px solid rgba(130,130,130,.28);
+  background:transparent;
+  text-align:left;
+}
+.kestrel-service-unified .kst-offer:hover{background:rgba(125,125,125,.055)}
+.kestrel-service-unified .kst-offer-icon{
+  width:32px;height:32px;display:block;color:inherit;opacity:.82;flex:none;
+}
+.kestrel-service-unified .kst-offer-icon svg{width:100%;height:100%}
+.kestrel-service-unified .kst-offer-body{display:block}
+.kestrel-service-unified .kst-offer-body h3{font-size:clamp(19px,2vw,23px);line-height:1.35;margin:0 0 12px}
+.kestrel-service-unified .kst-offer-body p{font-size:15px;line-height:1.6;margin:0;opacity:.7}
+.kestrel-service-unified .kst-offer-body strong{display:block;margin-top:16px;font-size:14px}
+.kestrel-service-unified .kst-offer-arrow{margin-top:auto;align-self:flex-end;opacity:.6}
+.kestrel-service-unified .kst-included{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  max-width:920px;
+  gap:30px 58px;
+  margin:0 auto;
+  text-align:left;
+}
+.kestrel-service-unified .kst-included-item{
+  display:flex;
+  align-items:flex-start;
+  gap:16px;
+  min-width:0;
+}
+.kestrel-service-unified .kst-included-mark{
+  display:grid;place-items:center;flex:none;
+  width:25px;height:25px;border-radius:50%;
+  border:1px solid rgba(130,130,130,.35);
+  opacity:.8;font-size:13px;
+}
+.kestrel-service-unified .kst-included-item h3{margin:0 0 7px;font-size:21px}
+.kestrel-service-unified .kst-included-item p{margin:0;font-size:15px;line-height:1.65;opacity:.72}
+.kestrel-service-unified .kst-process{
+  max-width:1080px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:28px;
+  text-align:left;
+}
+.kestrel-service-unified .kst-process-step{
+  display:flex;flex-direction:column;align-items:flex-start;
+  gap:0;min-width:0;padding-top:22px;
+  border-top:1px solid rgba(130,130,130,.3);
+}
+.kestrel-service-unified .kst-process-icon{
+  display:block !important;width:31px;height:31px;
+  margin-bottom:21px;opacity:.8;
+}
+.kestrel-service-unified .kst-process-icon svg{width:100%;height:100%}
+.kestrel-service-unified .kst-process-step h3{font-size:21px;margin:0 0 10px}
+.kestrel-service-unified .kst-process-step p{margin:0;font-size:14px;line-height:1.65;opacity:.68}
+.kestrel-service-unified .kst-faq{max-width:780px}
+.kestrel-service-unified .kst-end{padding-block:75px 95px}
+
+/* Actual ecommerce journey illustration, not stock photos or imagined client work. */
+.kst-commerce-preview{
+  position:relative;
+  width:min(100%,475px);
+  min-height:270px;
+  margin:0 auto;
+  color:#171717;
+}
+.kst-commerce-window{
+  width:88%;
+  min-height:237px;
+  padding:14px 16px 18px;
+  background:#f1efeb;
+  border:1px solid #d7d3cc;
+  border-radius:17px;
+  box-shadow:0 14px 38px rgba(0,0,0,.14);
+}
+.kst-commerce-window-top{display:flex;align-items:center;gap:18px;font-size:10px;border-bottom:1px solid #d9d5ce;padding:3px 4px 13px}
+.kst-commerce-window-top strong{margin-right:auto}
+.kst-commerce-product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:19px}
+.kst-commerce-product-grid>div{min-width:0}
+.kst-product-shape{display:block;height:84px;border-radius:9px;background:linear-gradient(145deg,#e3ded5,#bdb7ad)}
+.kst-product-shape.shape-two{background:linear-gradient(145deg,#d4cfc7,#ada59b)}
+.kst-product-shape.shape-three{background:linear-gradient(145deg,#e3e0dc,#c5beb3)}
+.kst-commerce-product-grid i{display:block;width:64%;height:6px;margin:11px 0 6px;background:#242424}
+.kst-commerce-product-grid small{font-size:9px;color:#565656}
+.kst-commerce-checkout{position:absolute;right:0;bottom:0;width:142px;min-height:158px;padding:18px 13px;background:#fcfbf9;border:1px solid #d9d5ce;border-radius:15px;box-shadow:0 14px 35px rgba(0,0,0,.2)}
+.kst-commerce-checkout strong{display:block;font-size:12px;margin-bottom:10px}
+.kst-commerce-checkout>span:not(.kst-checkout-button){font-size:10px;color:#6b6b6b}
+.kst-checkout-line{height:5px;width:100%;margin-top:12px;background:#d6d0c6;border-radius:4px}
+.kst-checkout-line.short{width:62%;margin-top:7px}
+.kst-checkout-button{display:block !important;color:#fff;font-size:10px;background:#161616;border-radius:20px;text-align:center;padding:9px;margin-top:16px}
+
+@media(max-width:900px){
+  .kestrel-service-unified .kst-hero{grid-template-columns:1fr;gap:32px}
+  .kst-commerce-preview{margin-left:0}
+  .kestrel-service-unified .kst-offers{grid-template-columns:1fr 1fr}
+  .kestrel-service-unified .kst-process{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:600px){
+  .kestrel-service-unified .kst-hero{padding-top:62px;padding-bottom:42px}
+  .kestrel-service-unified .kst-section{padding-block:55px 60px}
+  .kestrel-service-unified .kst-offers{grid-template-columns:1fr;gap:18px}
+  .kestrel-service-unified .kst-offer{min-height:0}
+  .kestrel-service-unified .kst-included{grid-template-columns:1fr;gap:24px}
+  .kestrel-service-unified .kst-process{grid-template-columns:1fr;gap:23px}
+  .kst-commerce-preview{max-width:360px;min-height:245px}
+  .kst-commerce-window{min-height:215px}
+  .kst-product-shape{height:64px}
+}
