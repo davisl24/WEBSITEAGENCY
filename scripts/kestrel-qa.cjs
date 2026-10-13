@@ -36,12 +36,20 @@ const { chromium } = require("playwright");
               color:getComputedStyle(h1).color } : null,
             footerFont:footer?getComputedStyle(footer).fontSize:null,
             logoColor:navBrand?getComputedStyle(navBrand).color:null,
+            bookingButton:(()=>{
+              const el=document.querySelector(".site-header .header-cta");
+              if(!el)return null;
+              const box=el.getBoundingClientRect();
+              return {left:Math.round(box.left),right:Math.round(box.right),width:Math.round(box.width)};
+            })(),
           };
         });
         const label = `${route} ${width} ${theme}`;
         console.log("PARITY_METRIC " + JSON.stringify({ label, ...result }));
         if (result.scrollWidth > width + 2) failures.push(`${label}: horizontal overflow ${result.scrollWidth}-${width}`);
         if (!result.h1) failures.push(`${label}: missing H1`);
+        if (!result.bookingButton || result.bookingButton.right > width + 2 || result.bookingButton.left < -2)
+          failures.push(`${label}: booking CTA clipped (${JSON.stringify(result.bookingButton)})`);
         await context.close();
       }
     }
@@ -51,6 +59,6 @@ const { chromium } = require("playwright");
     console.error("DESIGN_QA_FAILURES:", failures.join("; "));
     process.exitCode = 1;
   } else {
-    console.log("DESIGN_QA_PASS: both routes at 390/1440 light/dark without horizontal overflow");
+    console.log("DESIGN_QA_PASS: both routes at 390/1440 light/dark without horizontal overflow or clipped booking buttons");
   }
 })().catch(error => { console.error(error); process.exitCode=1; });
