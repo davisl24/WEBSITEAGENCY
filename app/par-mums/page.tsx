@@ -1,3 +1,4 @@
+import styles from "./page.module.css";
 import KestrelHeader from "../components/KestrelHeader";
 import KestrelFooter from "../components/KestrelFooter";
 import { lvMetadataAlternates } from "../lib/localizedSeo";
@@ -56,7 +57,7 @@ export default function AboutPage() {
       </section>
 
 
-      <section className="service-page-section about-company-section" aria-labelledby="about-company-title">
+      <section className={`service-page-section about-company-section ${styles.companySection}`} aria-labelledby="about-company-title">
         <div className="about-company-intro">
           <RevealOnView>
             <p className="service-page-kicker">Kas mēs esam</p>

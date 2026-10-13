@@ -44,53 +44,42 @@
 .page :global(.site-header.kestrel-shared-header .brand){color:#f4f1ea}
 :global(html[data-theme="light"]) .page :global(.site-header.kestrel-shared-header .brand){color:#171717}
 
-/* Hero reuses the two actual Kestrel homepage images, with accessible contrast. */
+/* Service-specific hero. No repeated homepage artwork; offers are visible immediately. */
 .hero{
-  position:relative;
-  isolation:isolate;
-  display:flex;
-  align-items:center;
-  min-height:clamp(530px,68svh,750px);
-  overflow:hidden;
-  margin-top:-70px;
-  padding:118px 0 92px;
-  background:#0b0b0c;
+  padding:78px 0 64px;
+  background:transparent;
 }
-.heroMedia,.heroOverlay{position:absolute;inset:0;z-index:-1}
-.heroMedia{overflow:hidden}
-.heroMedia :is(.heroDark,.heroLight){object-fit:cover;object-position:center;transition:opacity .2s}
-.heroLight{opacity:0}
-.heroDark{opacity:1}
-.heroOverlay{
-  background:linear-gradient(90deg,rgba(6,6,8,.95) 0%,rgba(6,6,8,.79) 43%,rgba(6,6,8,.33) 100%),
-             linear-gradient(0deg,rgba(6,6,8,.45),transparent 35%);
+.heroLayout{
+  display:grid;
+  grid-template-columns:minmax(0,1.25fr) minmax(295px,.75fr);
+  align-items:end;
+  gap:clamp(44px,6.5vw,106px);
 }
-:global(html[data-theme="light"]) .hero{background:#f7f7f5}
-:global(html[data-theme="light"]) .heroDark{opacity:0}
-:global(html[data-theme="light"]) .heroLight{opacity:1}
-:global(html[data-theme="light"]) .heroOverlay{
-  background:linear-gradient(90deg,rgba(247,247,245,.95) 0%,rgba(247,247,245,.84) 49%,rgba(247,247,245,.48) 100%);
+.heroCopy{max-width:740px}
+.serviceLabel{
+  margin:0 0 24px;
+  color:var(--web-muted);
+  font-size:13px;
+  line-height:1.4;
+  font-weight:600;
 }
-.heroCopy{position:relative;z-index:1;max-width:770px}
 .hero h1{
   margin:0;
-  max-width:770px;
   color:var(--web-ink);
-  font-size:clamp(52px,5.2vw,76px);
+  font-size:clamp(46px,5.1vw,70px);
   font-weight:650;
-  line-height:1.06;
+  line-height:1.07;
   letter-spacing:-.055em;
   text-wrap:balance;
 }
 .intro{
-  max-width:615px;
-  margin:27px 0 0;
+  max-width:590px;
+  margin:25px 0 0;
   color:var(--web-muted);
   font-size:17px;
-  font-weight:400;
-  line-height:1.66;
+  line-height:1.65;
 }
-.heroActions{display:flex;flex-wrap:wrap;align-items:center;gap:20px 28px;margin-top:32px}
+.heroActions{display:flex;flex-wrap:wrap;align-items:center;gap:20px 28px;margin-top:28px}
 .primaryCta{
   display:inline-flex;
   align-items:center;
@@ -120,10 +109,36 @@
   text-decoration:none;
 }
 .secondaryLink:hover{border-bottom-color:currentColor}
-.primaryCta:focus-visible,.secondaryLink:focus-visible,.offerLink:focus-visible,.faq summary:focus-visible{
+.primaryCta:focus-visible,.secondaryLink:focus-visible,.offerLink:focus-visible,.faq summary:focus-visible,.heroOptions a:focus-visible{
   outline:2px solid var(--web-ink);
   outline-offset:4px;
 }
+.heroOptions{
+  display:flex;
+  flex-direction:column;
+  padding-left:29px;
+  border-left:1px solid var(--web-line);
+}
+.heroOptionsTitle{
+  margin:0 0 15px;
+  color:var(--web-muted);
+  font-size:14px;
+  font-weight:600;
+}
+.heroOptions a{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+  padding:15px 0;
+  color:var(--web-ink);
+  text-decoration:none;
+  border-top:1px solid var(--web-line);
+  font-size:15px;
+  font-weight:600;
+}
+.heroOptions a:hover{opacity:.72}
+.heroOptions strong{font-size:13px;white-space:nowrap;font-weight:650}
 
 /* The approved homepage's 1200px / 104px / 48px hierarchy. */
 .section{padding:var(--web-space) 0}
@@ -188,15 +203,19 @@
 }
 .offerLink:hover .arrow{transform:translate(2px,-2px)}
 
-/* Editorial inclusion list: no six identical cards. */
-.includedSection{background:rgba(125,125,125,.035)}
+/* Existing desktop/mobile visual direction, without the section's gray panel. */
+.includedSection{background:transparent}
+.includedLayout{
+  display:grid;
+  grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);
+  gap:clamp(36px,5vw,78px);
+  align-items:center;
+}
 .includedGrid{
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr));
-  column-gap:clamp(45px,8vw,115px);
-  row-gap:35px;
-  max-width:980px;
-  margin:0 auto;
+  column-gap:28px;
+  row-gap:31px;
 }
 .includedItem h3,.step h3{
   margin:0 0 9px;
@@ -213,35 +232,117 @@
   font-size:15px;
   line-height:1.62;
 }
+.deviceVisual{
+  position:relative;
+  min-height:360px;
+  padding:10px 22px 20px 0;
+}
+.desktopFrame{
+  position:relative;
+  overflow:hidden;
+  width:91%;
+  min-height:277px;
+  background:#f2f0eb;
+  color:#171717;
+  border:1px solid rgba(120,115,106,.2);
+  border-radius:14px;
+  box-shadow:0 20px 55px rgba(0,0,0,.16);
+}
+.desktopTop{
+  height:43px;
+  display:flex;
+  align-items:center;
+  gap:11px;
+  padding:0 20px;
+  border-bottom:1px solid #d8d4cd;
+}
+.previewBrand{font-size:10px;font-weight:750;white-space:nowrap}
+.previewNav{width:27%;height:5px;margin-left:auto;background:#c5c0b7;border-radius:4px}
+.previewButton{width:46px;height:18px;background:#222;border-radius:50px}
+.desktopScreen{display:grid;grid-template-columns:1fr .85fr;gap:14px;padding:30px 24px 20px}
+.previewText{display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding-top:12px}
+.previewEyebrow{width:43%;height:5px;background:#b2aca1}
+.previewHeading{width:91%;height:17px;background:#171717;margin-top:6px}
+.previewHeadingShort{width:67%;height:17px;background:#171717}
+.previewCopy{width:92%;height:6px;margin-top:5px;background:#c2bdb4}
+.previewCopyShort{width:69%;height:6px;background:#c2bdb4}
+.previewCta{width:74px;height:23px;margin-top:10px;border-radius:50px;background:#171717}
+.previewArtwork{
+  min-height:143px;
+  border-radius:54% 54% 19px 19px;
+  background:linear-gradient(145deg,#ddd8d0,#c1b6a8);
+}
+.desktopCards{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:8px 24px 20px}
+.desktopCards span{height:19px;border-radius:4px;background:#d9d3ca}
+.mobileFrame{
+  position:absolute;
+  width:126px;
+  height:246px;
+  right:0;
+  bottom:0;
+  padding:15px 11px;
+  border:8px solid #202124;
+  border-radius:25px;
+  background:#f2f0eb;
+  color:#171717;
+  box-shadow:0 18px 42px rgba(0,0,0,.2);
+}
+.mobileNotch{height:4px;width:35px;margin:-3px auto 15px;border-radius:4px;background:#202124}
+.mobileBrand{font-size:8px;font-weight:750}
+.mobileArtwork{display:block;height:67px;margin:14px 0 13px;border-radius:30px 30px 8px 8px;background:linear-gradient(145deg,#ddd8d0,#c1b6a8)}
+.mobileHeading,.mobileHeadingShort,.mobileCopy,.mobileCta{display:block;border-radius:2px}
+.mobileHeading{width:85%;height:9px;background:#171717}
+.mobileHeadingShort{width:63%;height:9px;margin-top:5px;background:#171717}
+.mobileCopy{width:80%;height:5px;margin-top:9px;background:#c2bdb4}
+.mobileCta{width:59px;height:17px;margin-top:13px;border-radius:40px;background:#171717}
 
-/* Shared Kestrel icon vocabulary and connected process timeline. */
+/* Timeline reveals as it enters view, using the existing RevealOnView mechanism. */
 .processGrid{
+  position:relative;
   display:grid;
   grid-template-columns:repeat(4,minmax(0,1fr));
   column-gap:30px;
   margin-top:8px;
   padding-top:36px;
-  border-top:1px solid var(--web-line);
 }
-.step{position:relative;min-width:0}
+.processGrid::before{
+  content:"";
+  position:absolute;
+  height:1px;
+  left:0;
+  right:0;
+  top:0;
+  background:var(--web-line);
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform .95s cubic-bezier(.22,1,.36,1);
+}
+.processGrid:global(.is-visible)::before{transform:scaleX(1)}
+.step{
+  position:relative;
+  min-width:0;
+  opacity:0;
+  transform:translateY(12px);
+  transition:opacity .55s ease,transform .6s cubic-bezier(.22,1,.36,1);
+}
+.processGrid:global(.is-visible) .step{opacity:1;transform:none}
+.step:nth-child(1){transition-delay:80ms}
+.step:nth-child(2){transition-delay:180ms}
+.step:nth-child(3){transition-delay:280ms}
+.step:nth-child(4){transition-delay:380ms}
 .timelineDot{
   position:absolute;
   top:-41px;
   left:0;
-  width:9px;height:9px;
+  width:9px;
+  height:9px;
   border-radius:50%;
   background:var(--web-ink);
   border:2px solid #0b0b0c;
   box-shadow:0 0 0 1px var(--web-line);
 }
 :global(html[data-theme="light"]) .timelineDot{border-color:#f7f7f5}
-.stepIcon{
-  display:block;
-  width:32px;
-  height:32px;
-  margin-bottom:19px;
-  opacity:.75;
-}
+.stepIcon{display:block;width:32px;height:32px;margin-bottom:19px;opacity:.75}
 .stepIcon svg{display:block;width:100%;height:100%;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round}
 .step h3{font-size:22px}
 .step p{max-width:28ch;font-size:15px}
@@ -308,7 +409,11 @@
 .page .footer :global(.footer-links){justify-self:end;width:min(100%,440px)}
 
 @media(max-width:1000px){
+  .heroLayout{gap:42px;grid-template-columns:minmax(0,1.15fr) minmax(260px,.85fr)}
   .offerLink{gap:20px;padding:28px 22px;grid-template-columns:minmax(160px,1fr) minmax(210px,1.2fr) minmax(100px,.5fr) 24px}
+  .includedLayout{grid-template-columns:1fr;gap:30px}
+  .includedGrid{max-width:780px;margin:0 auto;width:100%}
+  .deviceVisual{width:min(100%,560px);margin:0 auto}
   .processGrid{gap:22px}
 }
 @media(max-width:900px){
@@ -320,10 +425,13 @@
   .page :global(.site-header.kestrel-shared-header){
     top:10px;width:calc(100% - 20px);min-height:60px;padding:0 17px;
   }
-  .hero{min-height:530px;margin-top:-60px;padding:120px 0 74px}
+  .hero{padding:62px 0 46px}
+  .heroLayout{grid-template-columns:1fr;gap:35px}
+  .serviceLabel{margin-bottom:16px}
   .hero h1{font-size:clamp(39px,8.4vw,54px);max-width:13ch}
   .intro{font-size:15px;line-height:1.65;max-width:530px}
   .heroActions{gap:14px 24px}
+  .heroOptions{padding-left:18px}
   .section h2{margin-bottom:38px}
   .offerLink{grid-template-columns:minmax(0,1fr) auto;gap:9px 16px;padding:22px 16px}
   .offerLink h3{grid-column:1;grid-row:1;font-size:20px}
@@ -331,7 +439,8 @@
   .price{grid-column:1;grid-row:3;justify-self:start;margin-top:2px;font-size:14px}
   .arrow{grid-column:2;grid-row:1;align-self:start}
   .includedGrid{row-gap:28px;column-gap:28px}
-  .processGrid{grid-template-columns:1fr;gap:30px;padding-top:0;border-top:0}
+  .processGrid{grid-template-columns:1fr;gap:25px;padding-top:0}
+  .processGrid::before{display:none}
   .step{padding-top:18px;border-top:1px solid var(--web-line)}
   .timelineDot{display:none}
   .stepIcon{margin-bottom:13px}
@@ -341,14 +450,24 @@
 }
 @media(max-width:480px){
   .page{--web-gutter:18px}
-  .hero{min-height:500px;padding:108px 0 66px}
+  .hero{padding:49px 0 40px}
   .hero h1{font-size:clamp(37px,9vw,46px)}
   .intro{font-size:15px;margin-top:21px}
   .heroActions{margin-top:26px}
-  .includedGrid{grid-template-columns:1fr;gap:27px}
+  .includedGrid{grid-template-columns:1fr;gap:23px}
+  .deviceVisual{min-height:290px;padding-right:15px}
+  .desktopFrame{width:93%;min-height:230px}
+  .desktopTop{padding:0 10px}
+  .desktopScreen{padding:16px 12px;gap:7px}
+  .previewArtwork{min-height:113px}
+  .desktopCards{padding:7px 12px}
+  .mobileFrame{width:106px;height:205px;padding:13px 8px}
+  .mobileArtwork{height:51px}
   .section h2{margin-bottom:32px}
   .end{padding:64px 0 75px}
 }
 @media(prefers-reduced-motion:reduce){
-  .heroDark,.heroLight,.primaryCta,.offerLink,.arrow{transition:none}
+  .primaryCta,.offerLink,.arrow,.processGrid::before,.step{transition:none}
+  .processGrid::before{transform:none}
+  .step{opacity:1;transform:none}
 }

@@ -8730,3 +8730,23 @@ html[data-theme="light"] .kestrel-service-v2 .kestrel-shared-header .brand{
   .kestrel-service-v2 .kst-process{gap:16px}
   .kestrel-service-v2 .kst-end{padding-top:54px;padding-bottom:68px}
 }
+
+/* Kestrel problem heading hierarchy — browser review.
+   Keeps the approved three-column problem/action/benefit composition. */
+main#top .kestrel-problems-v3 .value-inner{row-gap:0}
+main#top .kestrel-problems-v3 .kestrel-problems-heading{
+  width:100%;
+  max-width:900px;
+  margin:0 auto 60px;
+  text-align:center;
+}
+main#top .kestrel-problems-v3 .kestrel-problems-heading h2{
+  margin:0 auto;
+  text-align:center;
+  max-width:820px;
+  text-wrap:balance;
+}
+main#top .kestrel-problems-v3 .kestrel-problems-list{margin:0 auto}
+@media(max-width:767px){
+  main#top .kestrel-problems-v3 .kestrel-problems-heading{margin-bottom:38px}
+}
