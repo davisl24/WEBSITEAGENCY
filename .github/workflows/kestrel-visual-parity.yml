@@ -34,8 +34,12 @@ jobs:
           exit 1
       - name: Run browser design checks
         run: |
-          npm install --no-save --package-lock=false playwright@1.56.1
-          node scripts/kestrel-qa.cjs
+          PLAYWRIGHT_DIR="$(find "$HOME/.npm/_npx" -type d -path '*/node_modules/playwright' -print -quit)"
+          if [ -z "$PLAYWRIGHT_DIR" ]; then
+            echo "Playwright package from previous step not found"
+            exit 1
+          fi
+          NODE_PATH="$(dirname "$PLAYWRIGHT_DIR")" node scripts/kestrel-qa.cjs
       - name: Capture homepage and service parity
         run: |
           mkdir -p parity-shots
