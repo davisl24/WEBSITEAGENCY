@@ -12,7 +12,7 @@ export default function KestrelHeader({ active = "" }: { active?: "home" | "abou
       <a href="/kontakti" aria-current={active === "contact" ? "page" : undefined}>Kontakti</a>
       <LanguageSwitcher />
       <ThemeToggle />
-      <a className="header-cta" href="/kontakti">Pieteikt sarunu</a>
+      <a className="header-cta kestrel-unified-cta" href="/kontakti">Pieteikt sarunu</a>
     </nav>
   </header>;
 }
