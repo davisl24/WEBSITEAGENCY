@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import heroBg from "../../assets/images/andrew-kliatskyi-k7XTD-HCZAw-unsplash.jpg";
-import heroBgLight from "../../assets/images/balts_fons_optimizets.webp";
+import RevealOnView from "../../components/RevealOnView";
 import type { ServiceInfo } from "../../components/KestrelServiceTemplate";
 import KestrelHeader from "../../components/KestrelHeader";
 import styles from "./page.module.css";
@@ -88,24 +86,34 @@ export default function ServicePage() {
       <KestrelHeader />
 
       <section className={styles.hero} aria-labelledby="web-service-title">
-        <div className={styles.heroMedia} aria-hidden="true">
-          <Image src={heroBg} alt="" fill priority sizes="100vw" className={styles.heroDark} />
-          <Image src={heroBgLight} alt="" fill priority sizes="100vw" className={styles.heroLight} />
-          <div className={styles.heroOverlay} />
-        </div>
         <div className={styles.wrap}>
-          <div className={styles.heroCopy}>
-            <h1 id="web-service-title">{service.title}</h1>
-            <p className={styles.intro}>
-              Veidojam pārskatāmas mājaslapas, kurās klienti ātri saprot piedāvājumu,
-              atrod svarīgāko informāciju un var ērti sazināties.
-            </p>
-            <div className={styles.heroActions}>
-              <a className={styles.primaryCta} href="/kontakti">Pieteikt sarunu</a>
-              <a className={styles.secondaryLink} href="#web-offers-title">
-                Skatīt risinājumus <span aria-hidden="true">↘</span>
-              </a>
+          <div className={styles.heroLayout}>
+            <div className={styles.heroCopy}>
+              <p className={styles.serviceLabel}>Web izstrāde</p>
+              <h1 id="web-service-title">{service.title}</h1>
+              <p className={styles.intro}>
+                Izveidojam mājaslapu, kurā klienti ātri saprot jūsu piedāvājumu,
+                atrod svarīgāko un var ērti pieteikties.
+              </p>
+              <div className={styles.heroActions}>
+                <a className={styles.primaryCta} href="/kontakti">Pieteikt sarunu</a>
+                <a className={styles.secondaryLink} href="#web-offers-title">
+                  Apskatīt risinājumus <span aria-hidden="true">↘</span>
+                </a>
+              </div>
             </div>
+            <nav className={styles.heroOptions} aria-label="Web izstrādes piedāvājumu izvēle">
+              <p className={styles.heroOptionsTitle}>Ko varam izveidot</p>
+              <a href="/pakalpojumi/landing-lapa">
+                <span>Landing lapa</span><strong>no 200 €</strong>
+              </a>
+              <a href="/pakalpojumi/uznemuma-majaslapa">
+                <span>Uzņēmuma mājaslapa</span><strong>no 450 €</strong>
+              </a>
+              <a href="/pakalpojumi/majaslapas-uzlabosana">
+                <span>Mājaslapas uzlabošana</span><span aria-hidden="true">↗</span>
+              </a>
+            </nav>
           </div>
         </div>
       </section>
@@ -127,19 +135,51 @@ export default function ServicePage() {
 
         <section className={`${styles.section} ${styles.includedSection}`} aria-labelledby="web-included-title">
           <h2 id="web-included-title">Ko tu saņem</h2>
-          <div className={styles.includedGrid}>
-            {service.included.map((item) => (
-              <div className={styles.includedItem} key={item.title}>
-                <h3>{item.title}</h3>
-                <p>{item.detail}</p>
+          <div className={styles.includedLayout}>
+            <div className={styles.includedGrid}>
+              {service.included.map((item) => (
+                <div className={styles.includedItem} key={item.title}>
+                  <h3>{item.title}</h3>
+                  <p>{item.detail}</p>
+                </div>
+              ))}
+            </div>
+            <div className={styles.deviceVisual} aria-label="Mājaslapas desktop un mobilās versijas ilustrācija" role="img">
+              <div className={styles.desktopFrame}>
+                <div className={styles.desktopTop}>
+                  <span className={styles.previewBrand}>Jūsu uzņēmums</span>
+                  <span className={styles.previewNav} />
+                  <span className={styles.previewButton} />
+                </div>
+                <div className={styles.desktopScreen}>
+                  <div className={styles.previewText}>
+                    <span className={styles.previewEyebrow} />
+                    <span className={styles.previewHeading} />
+                    <span className={styles.previewHeadingShort} />
+                    <span className={styles.previewCopy} />
+                    <span className={styles.previewCopyShort} />
+                    <span className={styles.previewCta} />
+                  </div>
+                  <div className={styles.previewArtwork} />
+                </div>
+                <div className={styles.desktopCards}><span /><span /><span /></div>
               </div>
-            ))}
+              <div className={styles.mobileFrame}>
+                <div className={styles.mobileNotch} />
+                <div className={styles.mobileBrand}>Jūsu uzņēmums</div>
+                <span className={styles.mobileArtwork} />
+                <span className={styles.mobileHeading} />
+                <span className={styles.mobileHeadingShort} />
+                <span className={styles.mobileCopy} />
+                <span className={styles.mobileCta} />
+              </div>
+            </div>
           </div>
         </section>
 
         <section className={styles.section} aria-labelledby="web-process-title">
           <h2 id="web-process-title">No idejas līdz gatavai lapai</h2>
-          <div className={styles.processGrid}>
+          <RevealOnView className={styles.processGrid}>
             {steps.map((step, index) => (
               <div className={styles.step} key={step.title}>
                 <span className={styles.timelineDot} aria-hidden="true" />
@@ -153,7 +193,7 @@ export default function ServicePage() {
                 <p>{step.detail}</p>
               </div>
             ))}
-          </div>
+          </RevealOnView>
         </section>
 
         <section className={styles.section} aria-labelledby="web-faq-title">
