@@ -1,0 +1,13 @@
+.contactWrap{width:min(1200px,calc(100% - 64px));margin:0 auto;padding:118px 0 106px}
+.contactIntro{max-width:770px;margin:0 0 62px}
+.contactIntro h1{font-size:clamp(46px,5vw,70px);line-height:1.07;letter-spacing:-.055em;font-weight:650;margin:0}
+.contactIntro p{font-size:17px;line-height:1.65;opacity:.72;margin:25px 0 0;max-width:625px}
+.contactGrid{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(300px,.72fr);gap:clamp(40px,7vw,110px);align-items:start}
+.formPanel h2,.callPanel h2{font-size:clamp(27px,2.6vw,35px);font-weight:650;letter-spacing:-.04em;line-height:1.14;margin:0 0 12px}
+.panelIntro,.callPanel>p{margin:0 0 31px;line-height:1.65;font-size:15px;opacity:.7}
+.callPanel{border-top:1px solid rgba(130,130,130,.28);padding-top:28px}
+.meetLink{display:inline-flex;align-items:center;gap:18px;border-bottom:1px solid currentColor;padding:11px 0;text-decoration:none;font-size:14px;font-weight:650}
+.noBooking{font-size:14px!important;line-height:1.6;opacity:.74!important}
+.meetNote{border-top:1px solid rgba(130,130,130,.22);margin-top:28px;padding-top:20px;font-size:13px;opacity:.62}
+@media(max-width:900px){.contactGrid{grid-template-columns:1fr;gap:68px}.contactWrap{padding-top:90px}}
+@media(max-width:600px){.contactWrap{width:calc(100% - 36px);padding-top:80px;padding-bottom:75px}.contactIntro{margin-bottom:38px}.contactIntro h1{font-size:clamp(38px,9vw,48px)}.contactIntro p{font-size:15px}.contactGrid{gap:55px}}
