@@ -28,7 +28,7 @@ export default function ContactForm(){
     <label>Īsi par projektu <textarea name="message" required minLength={10} maxLength={5000} rows={5} placeholder="Kas nepieciešams un kāds ir mērķis?"/></label>
     <label className={styles.honeypot} aria-hidden="true">Website <input name="website" tabIndex={-1} autoComplete="off"/></label>
     <label className={styles.consent}><input type="checkbox" required/>Piekrītu, ka norādītos datus izmantos saziņai par manu pieteikumu</label>
-    <button type="submit" className={styles.submit} disabled={status==="sending"}>{status==="sending"?"Nosūtām…":"Nosūtīt pieteikumu"}</button>
+    <button type="submit" className={`${styles.submit} kestrel-unified-cta`} disabled={status==="sending"}>{status==="sending"?"Nosūtām…":"Nosūtīt pieteikumu"}</button>
     <p className={styles.status} role="status" aria-live="polite">{message}</p>
   </form>;
 }
