@@ -17,7 +17,7 @@ const names = {lv:"Latviešu",en:"English",ru:"Русский"} as const;
 export default function LanguageSwitcher() {
   const pathname = usePathname();
   const current = pathname.startsWith("/en") ? "en" : pathname.startsWith("/ru") ? "ru" : "lv";
-  const row = Object.values(routes).find(item => Object.values(item).includes(pathname)) ?? routes.home;
+  const row = Object.values(routes).find(item => Object.values(item).includes(pathname));
   const [open, setOpen] = useState(false);
   const root = useRef<HTMLDivElement>(null);
   const trigger = useRef<HTMLButtonElement>(null);
@@ -43,13 +43,13 @@ export default function LanguageSwitcher() {
   return (
     <div className="language-switcher language-switcher-dropdown" ref={root}>
       <button ref={trigger} className="language-switcher-trigger" type="button" aria-expanded={open} aria-haspopup="true" aria-label="Select language" onClick={() => setOpen(v => !v)}>
-        <span>{current.toUpperCase()}</span>
+        <span className="language-switcher-codes" aria-hidden="true"><span className={current==="lv"?"active":""}>LV</span><span className={current==="en"?"active":""}>EN</span><span className={current==="ru"?"active":""}>RU</span></span>
         <span className="language-switcher-chevron" aria-hidden="true">⌄</span>
       </button>
       {open && <div className="language-switcher-menu" aria-label="Languages">
-        {(["lv","en","ru"] as const).map(lang => <a key={lang} href={row[lang]} lang={lang} hrefLang={lang} aria-current={current===lang?"page":undefined} className={current===lang?"is-active":undefined} onClick={() => setOpen(false)}>
+        {(["lv","en","ru"] as const).map(lang => row ? <a key={lang} href={row[lang]} lang={lang} hrefLang={lang} aria-current={current===lang?"page":undefined} className={current===lang?"is-active":undefined} onClick={() => setOpen(false)}>
           <span>{names[lang]}</span><span>{lang.toUpperCase()}</span>
-        </a>)}
+        </a> : lang === current ? <span key={lang} className="is-active"><span>{names[lang]}</span><span>{lang.toUpperCase()}</span></span> : <span key={lang} className="language-option-unavailable" title="Šīs lapas tulkojums nav pieejams"><span>{names[lang]}</span><span>Drīzumā</span></span>)}
       </div>}
     </div>
   );

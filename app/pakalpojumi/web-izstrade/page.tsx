@@ -96,24 +96,13 @@ export default function ServicePage() {
                 atrod svarīgāko un var ērti pieteikties.
               </p>
               <div className={styles.heroActions}>
-                <a className={styles.primaryCta} href="/kontakti">Pieteikt sarunu</a>
+                <a className={`${styles.primaryCta} kestrel-unified-cta`} href="/kontakti">Pieteikt sarunu</a>
                 <a className={styles.secondaryLink} href="#web-offers-title">
                   Apskatīt risinājumus <span aria-hidden="true">↘</span>
                 </a>
               </div>
             </div>
-            <nav className={styles.heroOptions} aria-label="Web izstrādes piedāvājumu izvēle">
-              <p className={styles.heroOptionsTitle}>Ko varam izveidot</p>
-              <a href="/pakalpojumi/landing-lapa">
-                <span>Landing lapa</span><strong>no 200 €</strong>
-              </a>
-              <a href="/pakalpojumi/uznemuma-majaslapa">
-                <span>Uzņēmuma mājaslapa</span><strong>no 450 €</strong>
-              </a>
-              <a href="/pakalpojumi/majaslapas-uzlabosana">
-                <span>Mājaslapas uzlabošana</span><span aria-hidden="true">↗</span>
-              </a>
-            </nav>
+
           </div>
         </div>
       </section>
@@ -138,10 +127,10 @@ export default function ServicePage() {
           <div className={styles.includedLayout}>
             <div className={styles.includedGrid}>
               {service.included.map((item) => (
-                <div className={styles.includedItem} key={item.title}>
+                <RevealOnView className={styles.includedItem} delay={service.included.indexOf(item) * 80} key={item.title}>
                   <h3>{item.title}</h3>
                   <p>{item.detail}</p>
-                </div>
+                </RevealOnView>
               ))}
             </div>
             <div className={styles.deviceVisual} aria-label="Mājaslapas desktop un mobilās versijas ilustrācija" role="img">
@@ -211,8 +200,8 @@ export default function ServicePage() {
         <section className={styles.end} aria-labelledby="web-end-title">
           <h2 id="web-end-title">Pastāsti par savu projektu</h2>
           <p>Izrunāsim ieceri un vienosimies, ar kādu risinājumu būtu jēga sākt.</p>
-          <a className={styles.primaryCta} href="/kontakti">
-            Pieteikt sarunu <span aria-hidden="true">↗</span>
+          <a className={`${styles.primaryCta} kestrel-unified-cta`} href="/kontakti">
+            Pieteikt sarunu
           </a>
         </section>
       </div>

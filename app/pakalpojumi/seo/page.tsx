@@ -3,6 +3,7 @@ import KestrelServiceTemplate, { type ServiceInfo } from "../../components/Kestr
 
 export const metadata: Metadata = {title:"SEO | Kestrel",description:"Pārbaudām mājaslapas tehnisko pamatu un saturu, lai novērstu šķēršļus atrašanai meklētājos."};
 const service: ServiceInfo = {
+  "kind": "seo",
   "title": "Esi atrodams Google",
   "intro": "Ja meklētājs nevar pareizi nolasīt lapas saturu, cilvēkiem var būt grūtāk to atrast. Pārbaudām tehniskos šķēršļus un sakārtojam lapu struktūru bez pozīciju garantijām.",
   "audience": [

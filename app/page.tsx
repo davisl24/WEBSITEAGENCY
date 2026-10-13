@@ -31,7 +31,7 @@ export default function Home() {
               ātrāk saprastu piedāvājumu un pieteiktos
             </p>
             <div className="hero-actions">
-              <a className="button button-primary" href="/kontakti">Pieteikt sarunu</a>
+              <a className="button button-primary kestrel-unified-cta" href="/kontakti">Pieteikt sarunu</a>
               <a className="text-link" href="#services">Skatīt pakalpojumus <span aria-hidden="true">↘</span></a>
             </div>
           </div>
@@ -77,7 +77,7 @@ export default function Home() {
               <h2 id="call-title">Pastāsti par savu projektu</h2>
               <p>Izrunāsim ieceri un vienosimies par piemērotāko risinājumu</p>
             </div>
-            <a className="call-cta" href="/kontakti">
+            <a className="call-cta kestrel-unified-cta" href="/kontakti">
               <span className="call-dot" aria-hidden="true" />
               <span>Pieteikt sarunu</span>
               <span aria-hidden="true">→</span>

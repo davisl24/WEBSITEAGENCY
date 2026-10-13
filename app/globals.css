@@ -8568,7 +8568,7 @@ main#top .kestrel-problems-v3 .kestrel-problems-list {
 main#top .kestrel-problems-v3 .kestrel-issue-card,
 main#top .kestrel-problems-v3 .kestrel-issue-card:first-child {
   display:grid;
-  grid-template-rows:56px 108px auto;
+  grid-template-rows:minmax(94px,auto) minmax(132px,auto) auto;
   gap:0;
   padding:0;
   background:transparent;
@@ -8580,7 +8580,7 @@ main#top .kestrel-problems-v3 .kestrel-v3-issue-head {
   display:flex;
   align-items:flex-start;
   gap:12px;
-  min-height:78px;
+  min-height:0;
 }
 main#top .kestrel-problems-v3 .kestrel-v3-icon {width:20px;height:20px;flex:none;margin-top:4px;opacity:.7}
 main#top .kestrel-problems-v3 .kestrel-v3-icon svg {display:block;width:100%;height:100%}
@@ -8750,3 +8750,42 @@ main#top .kestrel-problems-v3 .kestrel-problems-list{margin:0 auto}
 @media(max-width:767px){
   main#top .kestrel-problems-v3 .kestrel-problems-heading{margin-bottom:38px}
 }
+
+/* Header controls: compact three-language trigger and separate theme group. */
+.site-header.kestrel-shared-header .language-switcher-trigger{min-width:112px;gap:8px;padding-inline:10px}
+.site-header.kestrel-shared-header .language-switcher-codes{display:inline-flex;align-items:center;gap:5px;font-size:11px;letter-spacing:0}
+.site-header.kestrel-shared-header .language-switcher-codes>span{opacity:.47}
+.site-header.kestrel-shared-header .language-switcher-codes>span.active{opacity:1;font-weight:800}
+.language-switcher-dropdown .language-switcher-menu>span{display:flex;justify-content:space-between;gap:8px;padding:10px 12px;font-size:12px;opacity:.55}
+@media(max-width:760px){.site-header.kestrel-shared-header .language-switcher-trigger{min-width:93px;padding-inline:6px}.site-header.kestrel-shared-header .language-switcher-codes{gap:3px;font-size:10px}}
+
+/* Shared CTA system — same silhouette, typography and height sitewide. */
+a.kestrel-unified-cta,
+button.kestrel-unified-cta{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:49px;
+  padding:13px 25px;
+  border-radius:999px;
+  border:1px solid #f5f2ed;
+  background:#f5f2ed;
+  color:#171717;
+  font-size:14px;
+  line-height:1.2;
+  font-weight:650;
+  text-align:center;
+  text-decoration:none;
+  box-shadow:0 5px 20px rgba(0,0,0,.09);
+  cursor:pointer;
+}
+html[data-theme="light"] a.kestrel-unified-cta,
+html[data-theme="light"] button.kestrel-unified-cta{
+  background:#171717;
+  border-color:#171717;
+  color:#f5f2ed;
+}
+a.kestrel-unified-cta:hover,
+button.kestrel-unified-cta:not(:disabled):hover{opacity:.88}
+a.kestrel-unified-cta:focus-visible,
+button.kestrel-unified-cta:focus-visible{outline:2px solid currentColor;outline-offset:4px}

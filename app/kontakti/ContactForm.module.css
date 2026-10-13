@@ -1,0 +1,15 @@
+.form{display:flex;flex-direction:column;gap:23px;max-width:720px}
+.twoCols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.form label{display:flex;flex-direction:column;gap:9px;font-size:14px;line-height:1.45;font-weight:650}
+.form input:not([type=checkbox]),.form select,.form textarea{width:100%;max-width:100%;min-width:0;padding:14px 15px;border:1px solid rgba(135,135,135,.38);border-radius:12px;background:rgba(130,130,130,.045);color:inherit;font:inherit;font-size:15px;font-weight:400;line-height:1.45;outline:none}
+.form input:focus-visible,.form select:focus-visible,.form textarea:focus-visible{outline:2px solid currentColor;outline-offset:2px}
+.form textarea{resize:vertical}
+.form input::placeholder,.form textarea::placeholder{opacity:.58}
+.form .consent{display:flex;flex-direction:row;gap:12px;align-items:flex-start;font-size:13px;font-weight:400;opacity:.8}
+.consent input{width:17px;height:17px;flex:none;margin:1px 0}
+.submit{align-self:flex-start;min-height:50px;padding:13px 26px;border:0;border-radius:999px;color:#171717;background:#f5f2ed;font-weight:650;font-size:14px;cursor:pointer}
+:global(html[data-theme=light]) .submit{background:#171717;color:#fff}
+.submit:disabled{opacity:.6;cursor:wait}
+.status{margin:0;font-size:14px;line-height:1.5}
+.honeypot{position:absolute!important;left:-9999px;opacity:0}
+@media(max-width:650px){.twoCols{grid-template-columns:1fr;gap:22px}}
