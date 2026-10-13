@@ -17,7 +17,8 @@ const names = {lv:"Latviešu",en:"English",ru:"Русский"} as const;
 export default function LanguageSwitcher() {
   const pathname = usePathname();
   const current = pathname.startsWith("/en") ? "en" : pathname.startsWith("/ru") ? "ru" : "lv";
-  const row = Object.values(routes).find(item => Object.values(item).includes(pathname)) ?? routes.home;
+  const matchedRoute = Object.values(routes).find(item => Object.values(item).includes(pathname));
+  const row = matchedRoute ?? routes.home;
   const [open, setOpen] = useState(false);
   const root = useRef<HTMLDivElement>(null);
   const trigger = useRef<HTMLButtonElement>(null);
@@ -47,9 +48,10 @@ export default function LanguageSwitcher() {
         <span className="language-switcher-chevron" aria-hidden="true">⌄</span>
       </button>
       {open && <div className="language-switcher-menu" aria-label="Languages">
-        {(["lv","en","ru"] as const).map(lang => <a key={lang} href={row[lang]} lang={lang} hrefLang={lang} aria-current={current===lang?"page":undefined} className={current===lang?"is-active":undefined} onClick={() => setOpen(false)}>
+        {(["lv","en","ru"] as const).map(lang => matchedRoute ? <a key={lang} href={row[lang]} lang={lang} hrefLang={lang} aria-current={current===lang?"page":undefined} className={current===lang?"is-active":undefined} onClick={() => setOpen(false)}>
           <span>{names[lang]}</span><span>{lang.toUpperCase()}</span>
-        </a>)}
+        </a> : <span key={lang} className="language-switcher-unavailable" title="Šai lapai tulkojums vēl nav pieejams"><span>{names[lang]}</span><span>{lang.toUpperCase()}</span></span>)}
+        {!matchedRoute && <small className="language-switcher-note">Šai lapai tulkojumi vēl nav pieejami</small>}
       </div>}
     </div>
   );
