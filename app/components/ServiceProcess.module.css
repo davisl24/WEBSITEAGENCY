@@ -1,0 +1,11 @@
+.section{padding:78px 0 76px;max-width:1200px;margin:0 auto}
+.section h2{margin:0 0 54px;text-align:center;font-size:clamp(32px,3.6vw,48px);line-height:1.13;letter-spacing:-.045em;font-weight:650}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:28px;border-top:1px solid rgba(135,135,135,.3);padding-top:35px}
+.step{position:relative;min-width:0}
+.dot{position:absolute;width:9px;height:9px;border:2px solid currentColor;border-radius:100%;top:-40px;left:0;background:var(--kst-bg, #111)}
+.icon{display:block;width:31px;height:31px;margin-bottom:17px;opacity:.75}
+.icon svg{display:block;width:100%;height:100%;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.step h3{margin:0 0 10px;font-size:21px;font-weight:650;line-height:1.3;letter-spacing:-.03em}
+.step p{margin:0;max-width:27ch;font-size:15px;line-height:1.65;opacity:.7}
+@media(max-width:760px){.section{padding:60px 0}.section h2{margin-bottom:32px}.grid{grid-template-columns:1fr 1fr;gap:28px;border-top:0;padding-top:0}.step{border-top:1px solid rgba(135,135,135,.3);padding-top:18px}.dot{display:none}}
+@media(max-width:460px){.grid{grid-template-columns:1fr;gap:24px}.step p{max-width:45ch}}
