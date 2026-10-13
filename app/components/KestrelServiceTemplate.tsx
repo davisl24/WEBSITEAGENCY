@@ -43,7 +43,7 @@ export default function KestrelServiceTemplate({service}:{service:ServiceInfo}){
         <div className={styles.heroCopy}>
           <h1 id="service-title">{service.title}</h1>
           <p>{service.intro}</p>
-          <a className={styles.cta} href="/kontakti">Pieteikt sarunu</a>
+          <a className={`${styles.cta} kestrel-unified-cta`} href="/kontakti">Pieteikt sarunu</a>
         </div>
       </div>
     </section>
@@ -69,7 +69,7 @@ export default function KestrelServiceTemplate({service}:{service:ServiceInfo}){
       <section className={styles.end}>
         <h2>Pastāsti par savu projektu</h2>
         <p>Izrunāsim vajadzības un vienosimies par piemērotāko nākamo soli</p>
-        <a href="/kontakti" className={styles.cta}>Pieteikt sarunu</a>
+        <a href="/kontakti" className={`${styles.cta} kestrel-unified-cta`}>Pieteikt sarunu</a>
       </section>
     </div>
     <KestrelFooter />
