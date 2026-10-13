@@ -206,16 +206,17 @@
 /* Existing desktop/mobile visual direction, without the section's gray panel. */
 .includedSection{background:transparent}
 .includedLayout{
-  display:grid;
-  grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);
-  gap:clamp(36px,5vw,78px);
-  align-items:center;
+  display:flex;
+  flex-direction:column;
+  gap:52px;
+  align-items:stretch;
 }
- .includedGrid{
+.includedGrid{
   display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  column-gap:28px;
-  row-gap:31px;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  column-gap:44px;
+  row-gap:29px;
+  width:100%;
 }
 .includedItem h3,.step h3{
   margin:0 0 9px;
@@ -234,14 +235,17 @@
 }
 .deviceVisual{
   position:relative;
-  min-height:360px;
-  padding:10px 22px 20px 0;
+  order:-1;
+  width:min(900px,100%);
+  min-height:405px;
+  margin:0 auto;
+  padding:18px 36px 22px 0;
 }
 .desktopFrame{
   position:relative;
   overflow:hidden;
   width:91%;
-  min-height:277px;
+  min-height:325px;
   background:#f2f0eb;
   color:#171717;
   border:1px solid rgba(120,115,106,.2);
@@ -411,9 +415,9 @@
 @media(max-width:1000px){
   .heroLayout{gap:42px;grid-template-columns:minmax(0,1.15fr) minmax(260px,.85fr)}
   .offerLink{gap:20px;padding:21px 22px;grid-template-columns:minmax(160px,1fr) minmax(210px,1.2fr) minmax(100px,.5fr) 24px}
-  .includedLayout{grid-template-columns:1fr;gap:30px}
-  .includedGrid{max-width:780px;margin:0 auto;width:100%}
-  .deviceVisual{width:min(100%,560px);margin:0 auto}
+  .includedLayout{gap:37px}
+  .includedGrid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:780px;margin:0 auto;width:100%}
+  .deviceVisual{width:min(100%,760px);margin:0 auto}
   .processGrid{gap:22px}
 }
 @media(max-width:900px){
