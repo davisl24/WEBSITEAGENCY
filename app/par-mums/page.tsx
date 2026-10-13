@@ -28,7 +28,7 @@ export default function AboutPage() {
             Veidojam mājaslapas mazajiem uzņēmumiem tā, lai cilvēkam būtu viegli
             saprast piedāvājumu, uzticēties un izdarīt nākamo soli.
           </p>
-          <a className="button button-primary" href="/kontakti">Pastāstīt par projektu</a>
+          <a className="button button-primary kestrel-unified-cta" href="/kontakti">Pastāstīt par projektu</a>
         </div>
 
         <div className="about-hero-visual" aria-hidden="true">
@@ -221,7 +221,7 @@ export default function AboutPage() {
         </RevealOnView>
 
         <RevealOnView className="service-cta-action" delay={220}>
-          <a className="button button-primary" href="/kontakti">Pastāstīt par projektu</a>
+          <a className="button button-primary kestrel-unified-cta" href="/kontakti">Pastāstīt par projektu</a>
         </RevealOnView>
       </section>
 
