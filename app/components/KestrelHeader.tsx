@@ -10,8 +10,8 @@ export default function KestrelHeader({ active = "" }: { active?: "home" | "abou
       <ServicesDropdown />
       <a href="/par-mums" aria-current={active === "about" ? "page" : undefined}>Par mums</a>
       <a href="/kontakti" aria-current={active === "contact" ? "page" : undefined}>Kontakti</a>
-      <ThemeToggle />
       <LanguageSwitcher />
+      <ThemeToggle />
       <a className="header-cta" href="/kontakti">Pieteikt sarunu</a>
     </nav>
   </header>;
