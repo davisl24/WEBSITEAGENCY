@@ -8272,6 +8272,19 @@ main#top .hero .button-primary:focus-visible{
     white-space:nowrap;
   }
 }
+/* Tablet navigation keeps services and booking accessible without clipping. */
+@media(min-width:761px) and (max-width:900px){
+  .site-header.kestrel-shared-header{gap:14px;padding-inline:18px}
+  .site-header.kestrel-shared-header .site-nav{gap:14px}
+  .site-header.kestrel-shared-header .site-nav>a[href="/"],
+  .site-header.kestrel-shared-header .site-nav>a[href="/par-mums"],
+  .site-header.kestrel-shared-header .site-nav>a[href="/kontakti"]{display:none}
+}
+/* Small phones: retain theme, language and booking without a clipped CTA. */
+@media(max-width:380px){
+  .site-header.kestrel-shared-header{padding-inline:10px;gap:5px}
+  .site-header.kestrel-shared-header .site-nav{gap:4px}
+}
 @media(prefers-reduced-motion:reduce){
  .site-header.kestrel-shared-header .header-cta,
  .kestrel-service .kst-glass-cta,
