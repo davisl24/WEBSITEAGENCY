@@ -9345,3 +9345,66 @@ html[data-theme="light"] .services-dropdown-web-row:focus-within{
   overflow-y:auto;
   scrollbar-width:thin;
 }
+
+
+/* KESTREL TYPOGRAPHY CONTRACT
+   Sections: H2 48px desktop / 32–36px phone, H3 24px desktop / 20px phone.
+   Hero H1 and deliberately featured service title retain their approved emphasis.
+   These variables are the shared source of truth, replacing page-specific sizes. */
+:root{
+  --kestrel-section-h2:clamp(34px,4vw,48px);
+  --kestrel-section-h3:clamp(20px,2vw,24px);
+}
+
+/* Existing homepage typography tokens now reference the shared scale. */
+main#top{
+  --k-h2:var(--kestrel-section-h2);
+  --k-h3:var(--kestrel-section-h3);
+}
+
+/* H2 — home, service pages, About, and normal secondary sections. */
+main#top .services-head h2,
+main#top .process-head h2,
+main#top .kestrel-problems-v3 .kestrel-problems-heading h2,
+main#top .call-section .call-content h2,
+main.kestrel-service-unified .kst-section .kst-heading h2,
+main.kestrel-service-unified .process-head h2,
+main.kestrel-service-unified .kst-end h2,
+main.about-page .about-company-title,
+main.about-page .about-thinking-title,
+main.about-page .service-page-cta h2{
+  font-size:var(--kestrel-section-h2);
+  line-height:1.12;
+  letter-spacing:-.047em;
+  font-weight:650;
+}
+
+/* H3 — normal card, checklist, and process titles.
+   The featured Web izstrāde card intentionally remains more prominent. */
+main#top .kestrel-services-premium .ks-category:not(.ks-main) h3,
+main#top .process-step h3,
+main#top .kestrel-problems-v3 .kestrel-v3-issue-head h3,
+main.kestrel-service-unified .kst-offer h3,
+main.kestrel-service-unified .kst-included-item h3,
+main.kestrel-service-unified .process-step h3,
+main.about-page .about-thinking-section h3{
+  font-size:var(--kestrel-section-h3);
+  line-height:1.28;
+  letter-spacing:-.035em;
+  font-weight:650;
+}
+
+@media(max-width:760px){
+  :root{
+    --kestrel-section-h2:clamp(32px,8.5vw,36px);
+    --kestrel-section-h3:20px;
+  }
+}
+
+/* The duplicated About timeline is removed; preserve a composed transition to CTA. */
+main.about-page .about-thinking-section{
+  padding-bottom:clamp(72px,7vw,104px);
+}
+main.about-page > .service-page-cta{
+  padding-top:clamp(75px,8vw,112px);
+}

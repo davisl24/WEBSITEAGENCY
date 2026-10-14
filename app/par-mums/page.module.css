@@ -67,118 +67,22 @@
 @media(max-width:600px){.focusExamples{grid-template-columns:1fr;gap:27px;margin-top:32px}}
 
 /* Facts → possibilities → benefits and a concrete cooperation sequence. */
-.proofGrid,.workingGrid{width:min(1130px,calc(100% - 64px));margin:52px auto 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,4vw,56px)}
-.proofStep,.workingStep{min-width:0;padding-top:22px;border-top:1px solid rgba(130,130,130,.28)}
-.proofStep h3,.workingStep h3{font-size:clamp(20px,2vw,25px);line-height:1.3;letter-spacing:-.03em;margin:22px 0 11px}
-.workingStep h3{margin-top:0}
-.proofStep p,.workingStep p{font-size:15px;line-height:1.68;opacity:.72;margin:0;max-width:36ch}
+.proofGrid{width:min(1130px,calc(100% - 64px));margin:52px auto 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(24px,4vw,56px)}
+.proofStep{min-width:0;padding-top:22px;border-top:1px solid rgba(130,130,130,.28)}
+.proofStep h3{font-size:clamp(20px,2vw,25px);line-height:1.3;letter-spacing:-.03em;margin:22px 0 11px}
+.proofStep p{font-size:15px;line-height:1.68;opacity:.72;margin:0;max-width:36ch}
 .proofVisual{height:125px;border:1px solid rgba(130,130,130,.25);border-radius:14px;background:rgba(125,125,125,.05);padding:20px;display:flex;flex-direction:column;gap:10px}
 .proofBusy span{height:8px;background:currentColor;opacity:.19;border-radius:2px}
 .proofBusy span:nth-child(1){width:93%}.proofBusy span:nth-child(2){width:55%}.proofBusy span:nth-child(3){width:75%}.proofBusy span:nth-child(4){width:85%}.proofBusy span:nth-child(5){width:45%}
 .proofClear span,.proofAction span{display:block;height:9px;background:currentColor;opacity:.23;border-radius:2px}
 .proofClear span:nth-child(1){width:78%;height:20px;opacity:.86}.proofClear span:nth-child(2){width:91%}.proofClear span:nth-child(3){width:43%;height:20px;border-radius:50px;opacity:.86;margin-top:6px}
 .proofAction span:nth-child(1){width:74%;height:18px;opacity:.86}.proofAction span:nth-child(2){width:90%}.proofAction span:nth-child(3){width:61%;height:27px;opacity:.88;border-radius:60px;margin-top:8px}
-@media(max-width:760px){.proofGrid,.workingGrid{width:calc(100% - 36px);grid-template-columns:1fr;gap:28px;margin-top:36px}.proofVisual{max-width:480px}}
+@media(max-width:760px){.proofGrid{width:calc(100% - 36px);grid-template-columns:1fr;gap:28px;margin-top:36px}.proofVisual{max-width:480px}}
 
 /* The sales logic is visible in the examples, not as "Fakts / Iespēja / Ieguvums" labels. */
 .proofGrid{margin-top:49px;row-gap:34px}
 .proofStep{padding-top:0;border-top:0}
 .proofStep h3{margin-top:23px}
-
-/* About cooperation follows the approved homepage timeline vocabulary. */
-.workingSection:global(.about-working-section){
-  display:block;
-  grid-template-columns:none;
-  width:min(1200px,calc(100% - 64px));
-  margin-inline:auto;
-  padding-top:98px;
-  padding-bottom:108px;
-}
-.workingSection :global(.about-working-intro){
-  width:100%;
-  max-width:none;
-  margin:0 auto 60px;
-  text-align:center;
-}
-.workingSection :global(.about-working-title){
-  max-width:850px;
-  margin-inline:auto;
-  font-size:clamp(37px,4vw,54px);
-  line-height:1.1;
-  text-align:center;
-}
-.workingTimeline{
-  position:relative;
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:clamp(30px,5vw,70px);
-  align-items:start;
-  padding-top:42px;
-}
-.workingTimeline::before{
-  content:"";
-  position:absolute;top:0;left:0;right:0;
-  height:1px;
-  background:rgba(130,130,130,.32);
-  transform:scaleX(0);
-  transform-origin:left;
-  transition:transform .95s cubic-bezier(.22,1,.36,1);
-}
-.workingTimeline:global(.is-visible)::before{transform:scaleX(1)}
-.workingItem{position:relative;min-width:0}
-.workingDot{
-  position:absolute;
-  top:-47px;left:0;
-  width:10px;height:10px;
-  border:2px solid currentColor;
-  border-radius:50%;
-  background:currentColor;
-  box-shadow:0 0 0 3px rgba(125,125,125,.09);
-}
-.workingIcon{display:block;width:32px;height:32px;margin-bottom:21px;opacity:.78}
-.workingIcon svg{
-  display:block;width:100%;height:100%;
-  stroke:currentColor;stroke-width:1.6;
-  stroke-linecap:round;stroke-linejoin:round;
-}
-.workingItem h3{
-  max-width:28ch;
-  margin:0 0 12px;
-  font-size:clamp(21px,2vw,25px);
-  line-height:1.28;
-  letter-spacing:-.035em;
-  font-weight:650;
-}
-.workingItem p{
-  max-width:34ch;
-  margin:0;
-  font-size:15px;
-  line-height:1.68;
-  opacity:.7;
-}
-@media(max-width:760px){
-  .workingSection:global(.about-working-section){
-    width:calc(100% - 36px);
-    padding-top:70px;
-    padding-bottom:78px;
-  }
-  .workingSection :global(.about-working-intro){margin-bottom:45px}
-  .workingTimeline{grid-template-columns:1fr;gap:38px;padding:0 0 0 29px}
-  .workingTimeline::before{
-    left:3px;right:auto;top:0;bottom:0;
-    height:calc(100% - 22px);width:1px;
-    transform:scaleY(0);transform-origin:top;
-  }
-  .workingTimeline:global(.is-visible)::before{transform:scaleY(1)}
-  .workingDot{top:5px;left:-30px}
-  .workingIcon{margin-bottom:14px}
-  .workingItem{padding-bottom:0}
-  .workingItem p{max-width:48ch}
-}
-@media(prefers-reduced-motion:reduce){
-  .workingTimeline::before{transition:none;transform:none}
-}
-
 
 /* Two concrete states explain the problem and solution without marketing labels. */
 .proofGrid{

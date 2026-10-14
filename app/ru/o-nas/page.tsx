@@ -114,31 +114,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="service-page-section about-working-section" aria-labelledby="about-working-title">
-        <div className="about-working-intro">
-
-          <RevealOnView className="line-mask-reveal" delay={60}>
-            <h2 id="about-working-title" className="service-line-stack about-working-title">
-              <span className="service-reveal-line"><span>Простое общение</span></span>
-            </h2>
-          </RevealOnView>
-        </div>
-
-        <div className="about-working-copy">
-          <RevealOnView delay={0}>
-            <p>
-              Не усложняем процесс презентациями и техническими терминами ради видимости серьёзности.
-            </p>
-          </RevealOnView>
-
-          <RevealOnView delay={120}>
-            <p>
-              Если что-то делать не нужно, скажем об этом. Когда следующий шаг ясен, приступаем к работе и доводим её до конца.
-            </p>
-          </RevealOnView>
-        </div>
-      </section>
-
       <section className="service-page-cta">
         <RevealOnView className="line-mask-reveal service-cta-title">
           <h2 className="service-line-stack">

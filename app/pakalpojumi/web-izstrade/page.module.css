@@ -4,8 +4,8 @@
   --web-width:1200px;
   --web-gutter:clamp(20px,4.4vw,64px);
   --web-space:104px;
-  --web-h2:48px;
-  --web-h3:23px;
+  --web-h2:var(--kestrel-section-h2);
+  --web-h3:var(--kestrel-section-h3);
   --web-ink:#f4f1ea;
   --web-muted:rgba(244,241,234,.72);
   --web-line:rgba(244,241,234,.17);
@@ -421,7 +421,7 @@
   .page .footer :global(.footer-links){justify-self:start}
 }
 @media(max-width:760px){
-  .page{--web-gutter:24px;--web-space:72px;--web-h2:32px;--web-h3:20px;padding-top:10px}
+  .page{--web-gutter:24px;--web-space:72px;--web-h2:var(--kestrel-section-h2);--web-h3:var(--kestrel-section-h3);padding-top:10px}
   .page :global(.site-header.kestrel-shared-header){
     top:10px;width:calc(100% - 20px);min-height:60px;padding:0 17px;
   }

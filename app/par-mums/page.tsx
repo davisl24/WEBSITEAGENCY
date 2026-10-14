@@ -123,43 +123,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className={`service-page-section about-working-section ${styles.workingSection}`} aria-labelledby="about-working-title">
-        <div className="about-working-intro">
-          <RevealOnView className="line-mask-reveal">
-            <h2 id="about-working-title" className="service-line-stack about-working-title">
-              <span className="service-reveal-line"><span>Kā notiek sadarbība</span></span>
-            </h2>
-          </RevealOnView>
-        </div>
-
-        <RevealOnView className={styles.workingTimeline}>
-          <RevealOnView className={styles.workingItem} delay={70}>
-            <span className={styles.workingDot} aria-hidden="true"/>
-            <span className={styles.workingIcon} aria-hidden="true">
-              <svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="11"/><circle cx="16" cy="16" r="5"/><path d="M16 3v6M16 23v6M3 16h6M23 16h6"/></svg>
-            </span>
-            <h3>Vienojamies par uzdevumu</h3>
-            <p>Izrunājam mērķi, saturu, darba apjomu un nākamos soļus.</p>
-          </RevealOnView>
-          <RevealOnView className={styles.workingItem} delay={170}>
-            <span className={styles.workingDot} aria-hidden="true"/>
-            <span className={styles.workingIcon} aria-hidden="true">
-              <svg viewBox="0 0 32 32" fill="none"><rect x="5" y="5" width="22" height="22" rx="3"/><path d="M11 11h11M11 16h11M11 21h6"/></svg>
-            </span>
-            <h3>Parādām progresu</h3>
-            <p>Pārskatām rezultātu un izmaiņas saskaņojam pirms ieviešanas.</p>
-          </RevealOnView>
-          <RevealOnView className={styles.workingItem} delay={270}>
-            <span className={styles.workingDot} aria-hidden="true"/>
-            <span className={styles.workingIcon} aria-hidden="true">
-              <svg viewBox="0 0 32 32" fill="none"><path d="M12 21l-1-7c3-6 8-9 15-9 0 7-3 12-9 15l-5 1Z"/><path d="M11 14l-5 1-2 5 7-1M18 21l-1 7-5 1 1-7M9 23l-3 3M24 9h.01"/></svg>
-            </span>
-            <h3>Nododam pārbaudītu lapu</h3>
-            <p>Pārbaudām svarīgākās darbības un vienojamies par uzturēšanu, ja tā vajadzīga.</p>
-          </RevealOnView>
-        </RevealOnView>
-      </section>
-
       <section className="service-page-cta">
         <RevealOnView className="line-mask-reveal service-cta-title">
           <h2 className="service-line-stack">
