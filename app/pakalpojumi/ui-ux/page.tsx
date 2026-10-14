@@ -3,6 +3,7 @@ import KestrelServiceTemplate, { type ServiceInfo } from "../../components/Kestr
 
 export const metadata: Metadata = {title:"Dizains, kuru viegli lietot | Kestrel",description:"Sakārtojam lietotāja ceļu, informācijas hierarhiju un vizuālo noformējumu."};
 const service: ServiceInfo = {
+  kind:"uiux",
   "title": "Dizains, kuru viegli lietot",
   "intro": "Ja lietotājs apmaldās lapā, pat labs piedāvājums var palikt nepamanīts. Sakārtojam navigāciju, vizuālo hierarhiju un darbību secību.",
   "audience": [
