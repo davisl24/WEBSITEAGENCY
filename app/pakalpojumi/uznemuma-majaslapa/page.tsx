@@ -19,30 +19,12 @@ const service: ServiceInfo = {
     }
   ],
   "included": [
-    {
-      "title": "Satura struktūra",
-      "detail": "Sakārtojam informāciju pēc klienta vajadzībām."
-    },
-    {
-      "title": "Dizains",
-      "detail": "Pielāgojam izskatu uzņēmumam."
-    },
-    {
-      "title": "Mobilā versija",
-      "detail": "Pārbaudām telefonā un datorā."
-    },
-    {
-      "title": "SEO pamati",
-      "detail": "Virsraksti un metadati."
-    },
-    {
-      "title": "Saziņa",
-      "detail": "Saskaņots saziņas veids."
-    },
-    {
-      "title": "Palaišana",
-      "detail": "Testējam un publicējam."
-    }
+    {"title":"Pakalpojumu lapas","detail":"Katram pakalpojumam ir sava skaidra sadaļa vai atsevišķa lapa."},
+    {"title":"Navigācija","detail":"Apmeklētājs viegli atrod pakalpojumus, informāciju par uzņēmumu un kontaktus."},
+    {"title":"Uzņēmuma informācija","detail":"Sakārtojam faktus un pieejamos materiālus par uzņēmumu."},
+    {"title":"Pieteikšanās ceļš","detail":"Katrā būtiskajā vietā ir saprotams nākamais solis."},
+    {"title":"Mobilā versija","detail":"Pārbaudām izvēlnes un saturu dažādos ekrānos."},
+    {"title":"Palaišana","detail":"Pēc testiem publicējam saskaņoto mājaslapu."}
   ],
   "faq": [
     {
