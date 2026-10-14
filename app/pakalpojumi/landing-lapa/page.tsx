@@ -3,6 +3,7 @@ import KestrelServiceTemplate, { type ServiceInfo } from "../../components/Kestr
 
 export const metadata: Metadata = {title:"Landing lapa | Kestrel",description:"Vienā lapā izskaidrojam konkrētu pakalpojumu vai piedāvājumu."};
 const service: ServiceInfo = {
+  kind:"landing",
   "title": "Landing lapa",
   "intro": "Izstrādājam vienas lapas mājaslapu konkrētam pakalpojumam, produktam vai kampaņai. Viens piedāvājums un viens skaidrs pieteikšanās ceļš.",
   "audience": [
