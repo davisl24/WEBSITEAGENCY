@@ -9,10 +9,10 @@ export default function LanguageSwitcher(){
   const locale:Language=pathname.startsWith("/en")?"en":pathname.startsWith("/ru")?"ru":"lv";
   const entry=Object.entries(localizedRoutes).find(([,variants])=>Object.values(variants).includes(pathname)) as [PageKey,Record<Language,string>]|undefined;
   useEffect(()=>{document.documentElement.lang=locale},[locale]);
-  return <nav className="language-switcher language-switcher-inline" aria-label={locale==="en"?"Language":locale==="ru"?"Язык":"Valoda"}>
+  return <div className="language-switcher language-switcher-inline" role="group" aria-label={locale==="en"?"Language":locale==="ru"?"Язык":"Valoda"}>
     {languages.map(lang=>entry
       ? <a key={lang} href={entry[1][lang]} hrefLang={lang} lang={lang} aria-current={lang===locale?"page":undefined} title={lang==="lv"?"Latviešu":lang==="en"?"English":"Русский"}>{lang.toUpperCase()}</a>
       : <span key={lang} className={lang===locale?"is-current":"is-unavailable"} title="Šai lapai tulkojums vēl nav pieejams">{lang.toUpperCase()}</span>
     )}
-  </nav>;
+  </div>;
 }
