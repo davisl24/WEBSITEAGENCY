@@ -22,7 +22,7 @@ export default function AboutPage() {
 
       <section className="about-hero">
         <div className="about-hero-copy">
-          <h1>Mājaslapas ar domu</h1>
+          <h1>Par mums</h1>
           <p>
             Veidojam mājaslapas mazajiem uzņēmumiem tā, lai cilvēkam būtu viegli
             saprast piedāvājumu, uzticēties un izdarīt nākamo soli.
@@ -42,7 +42,7 @@ export default function AboutPage() {
           <div className="about-browser">
             <div className="ui-browser-top"><span/><span/><span/></div>
             <div className="about-browser-nav">
-              <strong>North</strong>
+              <strong>Kestrel</strong>
               <span/>
             </div>
             <div className="about-browser-body">
