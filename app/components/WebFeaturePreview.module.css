@@ -1,0 +1,38 @@
+.layout{display:grid;grid-template-columns:minmax(0,.82fr) minmax(360px,1.5fr) minmax(0,.82fr);align-items:center;gap:clamp(16px,2.5vw,36px)}
+.features{display:flex;flex-direction:column;gap:13px}
+.feature{display:flex;align-items:flex-start;gap:12px;width:100%;padding:17px 12px;background:transparent;border:1px solid transparent;border-radius:16px;color:inherit;cursor:pointer;text-align:left;transition:background .2s,border-color .2s}
+.feature:hover{background:rgba(125,125,125,.06)}
+.feature:focus-visible{outline:2px solid currentColor;outline-offset:2px}
+.selected{background:rgba(125,125,125,.075);border-color:rgba(130,130,130,.24)}
+.featureDot{display:block;flex:none;width:7px;height:7px;margin-top:8px;border-radius:50%;background:currentColor;opacity:.3}
+.selected .featureDot{opacity:1}
+.feature strong{display:block;font-size:clamp(15px,1.4vw,19px);font-weight:650;line-height:1.35;letter-spacing:-.025em}
+.feature small{display:block;font-size:13px;line-height:1.55;opacity:.66;margin-top:8px}
+.scene{position:relative;min-height:356px;padding:18px 22px 36px 0}
+.screen{width:91%;min-height:270px;overflow:hidden;border-radius:15px;border:1px solid #d7d4cf;background:#f3f1ed;box-shadow:0 22px 48px rgba(0,0,0,.12);color:#202020}
+.top{display:flex;align-items:center;gap:12px;height:42px;padding:0 15px;border-bottom:1px solid #dedbd6;font-size:9px}
+.top strong{margin-right:auto;white-space:nowrap}
+.top span{padding:5px;border-radius:3px}
+.focus{outline:2px solid #666;outline-offset:3px}
+.screenBody{display:grid;grid-template-columns:1.15fr .85fr;gap:12px;padding:26px 17px 16px}
+.copy{display:flex;flex-direction:column;align-items:flex-start;gap:9px}
+.copy .eyebrow{font-size:9px;opacity:.65}
+.copy strong{font-size:clamp(14px,1.35vw,20px);line-height:1.16;letter-spacing:-.035em}
+.copy p{font-size:10px;line-height:1.5;margin:0;color:#6c6a66}
+.demoButton{display:inline-block;padding:8px 12px;border-radius:40px;background:#202020;color:#fff;font-size:9px;margin-top:7px}
+.art{min-height:124px;border-radius:55% 55% 15px 15px;background:linear-gradient(140deg,#ded9d1,#c7bfb3)}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;padding:2px 17px 18px}
+.cards span{display:flex;align-items:center;min-height:28px;padding:7px;background:#e3dfd9;border-radius:5px;font-size:8px}
+.phone{position:absolute;right:0;bottom:28px;width:118px;min-height:220px;border:7px solid #1d1f22;border-radius:25px;background:#f3f1ed;box-shadow:0 16px 35px rgba(0,0,0,.22);color:#202020;padding:11px 10px;display:flex;flex-direction:column;gap:9px;transition:transform .25s}
+.phoneFocus{transform:translateY(-9px) scale(1.04)}
+.phoneTop{height:4px;width:30px;margin:0 auto 3px;border-radius:4px;background:#1d1f22}
+.phone strong{font-size:8px}
+.phoneArt{display:block;height:55px;background:linear-gradient(140deg,#d9d2c8,#bab1a5);border-radius:25px 25px 7px 7px}
+.phone b{font-size:9px;line-height:1.2}
+.phoneLine{width:85%;height:5px;background:#c4beb5}
+.phoneCta{display:inline-block;align-self:flex-start;border-radius:30px;background:#202020;color:#fff;font-size:8px;padding:6px 9px}
+.sceneCaption{position:absolute;bottom:0;left:0;font-size:12px;opacity:.6;line-height:1.4}
+@media(max-width:1040px){.layout{grid-template-columns:1fr 1.3fr;gap:10px 30px}.features{display:grid;grid-template-columns:1fr;gap:8px}.features:last-child{grid-column:1;grid-row:2}.scene{grid-column:2;grid-row:1 / span 2}.feature{padding:12px}}
+@media(max-width:700px){.layout{grid-template-columns:1fr;gap:30px}.scene{grid-column:1;grid-row:1;width:min(100%,530px);margin:0 auto}.features{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.features:last-child{grid-column:1;grid-row:3}.feature{padding:13px 10px}.feature strong{font-size:15px}.feature small{font-size:12px}.screen{min-height:235px}.scene{min-height:315px}}
+@media(max-width:420px){.screenBody{padding:18px 10px 12px;gap:7px}.top{gap:5px;padding:0 9px}.copy strong{font-size:13px}.art{min-height:100px}.cards{padding-inline:10px}.phone{width:99px;min-height:186px;bottom:27px}.scene{min-height:277px}}
+@media(prefers-reduced-motion:reduce){.feature,.phone{transition:none}}
