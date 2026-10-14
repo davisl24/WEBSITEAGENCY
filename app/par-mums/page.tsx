@@ -61,7 +61,7 @@ export default function AboutPage() {
 
           <RevealOnView className="line-mask-reveal" delay={60}>
             <h2 id="about-company-title" className="service-line-stack about-company-title">
-              <span className="service-reveal-line"><span>Web izstrāde ar skaidru mērķi</span></span>
+              <span className="service-reveal-line"><span>Ko mēs darām</span></span>
             </h2>
           </RevealOnView>
         </div>
@@ -69,16 +69,16 @@ export default function AboutPage() {
         <div className="about-company-layout">
           <RevealOnView className="about-company-main">
             <p>
-              Kestrel ir web izstrādes komanda Latvijā. Strādājam ar
-              uzņēmumiem, kuriem vajag skaidru, ātru un profesionālu mājaslapu,
-              nevis sarežģītu digitālu projektu bez konkrēta mērķa.
+              Kestrel ir mājaslapu izstrādes komanda Latvijā. Palīdzam uzņēmumiem
+              izveidot jaunu mājaslapu vai sakārtot esošo, lai klienti viegli
+              atrod pakalpojumus un saziņas iespējas.
             </p>
           </RevealOnView>
 
           <RevealOnView className="about-company-side" delay={120}>
             <div>
-              <span>Ko veidojam</span>
-              <p>Landing lapas, uzņēmumu mājaslapas un esošo lapu uzlabojumus.</p>
+              <span>Ko piedāvājam</span>
+              <p>Landing lapas, uzņēmumu mājaslapas un esošo vietņu uzlabošanu.</p>
             </div>
             <div>
               <span>Pēc palaišanas</span>
@@ -93,33 +93,32 @@ export default function AboutPage() {
 
           <RevealOnView className="line-mask-reveal" delay={60}>
             <h2 id="about-thinking-title" className="service-line-stack about-thinking-title">
-              <span className="service-reveal-line"><span>Skaidrība pirms efektiem</span></span>
+              <span className="service-reveal-line"><span>Kā sakārtojam mājaslapu</span></span>
             </h2>
           </RevealOnView>
 
           <RevealOnView delay={150}>
             <p className="about-thinking-copy">
-              Labs dizains nav tikai skaists ekrāns. Tam jāpalīdz cilvēkam ātri saprast,
-              kur viņš ir, ko saņems un ko darīt tālāk.
+              Ja cilvēks nevar ātri atrast pakalpojumus vai kontaktus, viņš var aiziet.
+              Mēs izceļam svarīgāko un parādām skaidru nākamo soli.
             </p>
           </RevealOnView>
         </div>
 
         <div className={styles.proofGrid}>
-          <RevealOnView className={styles.proofStep} delay={60}>
-            <div className={[styles.proofVisual,styles.proofBusy].join(" ")} aria-hidden="true"><span/><span/><span/><span/><span/></div>
-            <h3>Grūti atrast svarīgāko</h3>
-            <p>Ja viss ir vienlīdz izcelts, cilvēkam ilgāk jāmeklē piedāvājums un kontakti.</p>
+          <RevealOnView className={styles.proofStep} delay={80}>
+            <div className={[styles.proofVisual,styles.proofBusy].join(" ")} aria-hidden="true">
+              <span/><span/><span/><span/><span/>
+            </div>
+            <h3>Grūti atrast vajadzīgo</h3>
+            <p>Pakalpojumi un kontakti pazūd starp citu informāciju. Apmeklētājam jāmeklē, kur pieteikties.</p>
           </RevealOnView>
-          <RevealOnView className={styles.proofStep} delay={140}>
-            <div className={[styles.proofVisual,styles.proofClear].join(" ")} aria-hidden="true"><span/><span/><span/></div>
-            <h3>Sakārtojam informāciju</h3>
-            <p>Izceļam pakalpojumu, tā ieguvumu un saprotamu nākamo soli.</p>
-          </RevealOnView>
-          <RevealOnView className={styles.proofStep} delay={220}>
-            <div className={[styles.proofVisual,styles.proofAction].join(" ")} aria-hidden="true"><span/><span/><span/></div>
-            <h3>Vienkāršāk pieteikties</h3>
-            <p>Apmeklētājs ātrāk saprot piedāvājumu un viegli atrod saziņas iespēju.</p>
+          <RevealOnView className={styles.proofStep} delay={180}>
+            <div className={[styles.proofVisual,styles.proofClear].join(" ")} aria-hidden="true">
+              <span/><span/><span/>
+            </div>
+            <h3>Piedāvājums ir uzreiz saprotams</h3>
+            <p>Parādām galveno pakalpojumu, īsu skaidrojumu un redzamu saziņas pogu.</p>
           </RevealOnView>
         </div>
       </section>
@@ -128,7 +127,7 @@ export default function AboutPage() {
         <div className="about-working-intro">
           <RevealOnView className="line-mask-reveal">
             <h2 id="about-working-title" className="service-line-stack about-working-title">
-              <span className="service-reveal-line"><span>Skaidra sadarbība</span></span>
+              <span className="service-reveal-line"><span>Kā notiek sadarbība</span></span>
             </h2>
           </RevealOnView>
         </div>
@@ -165,7 +164,7 @@ export default function AboutPage() {
         <RevealOnView className="line-mask-reveal service-cta-title">
           <h2 className="service-line-stack">
             <span className="service-reveal-line"><span>Parunājam par</span></span>
-            <span className="service-reveal-line"><span>tavu lapu</span></span>
+            <span className="service-reveal-line"><span>tavu mājaslapu</span></span>
           </h2>
         </RevealOnView>
 

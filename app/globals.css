@@ -9279,3 +9279,69 @@ html[data-theme="light"] .services-dropdown-divider{background:rgba(23,23,23,.1)
 @media(prefers-reduced-motion:reduce){
   .services-dropdown-sublink{transition:none}
 }
+
+
+/* Nested web services: subcategories appear only while Web Development is hovered or expanded. */
+.services-dropdown-web-group{
+  position:relative;
+  display:block;
+}
+.services-dropdown-web-row{
+  display:flex;
+  align-items:center;
+  gap:0;
+  padding-right:4px;
+  border-radius:10px;
+}
+.services-dropdown-web-row:hover,
+.services-dropdown-web-row:focus-within{
+  background:rgba(255,255,255,.055);
+}
+html[data-theme="light"] .services-dropdown-web-row:hover,
+html[data-theme="light"] .services-dropdown-web-row:focus-within{
+  background:rgba(23,23,23,.055);
+}
+.services-dropdown-web-row .services-dropdown-parent{
+  flex:1;
+  min-width:0;
+}
+.services-dropdown-web-row .services-dropdown-parent:hover{
+  background:transparent;
+  transform:none;
+}
+.services-dropdown-web-expand{
+  flex:0 0 auto;
+  width:32px;
+  height:32px;
+  margin-right:3px;
+  display:grid;
+  place-items:center;
+  border:0;
+  border-radius:50%;
+  background:transparent;
+  color:inherit;
+  opacity:.75;
+  cursor:pointer;
+  font:inherit;
+  font-size:19px;
+}
+.services-dropdown-web-expand:hover{
+  opacity:1;
+  background:rgba(125,125,125,.13);
+}
+.services-dropdown-web-expand:focus-visible,
+.services-dropdown-web-row a:focus-visible{
+  outline:2px solid currentColor;
+  outline-offset:1px;
+}
+.services-dropdown-subgroup{
+  margin-top:2px;
+  margin-bottom:9px;
+}
+.services-dropdown-subgroup .services-dropdown-sublink{
+  min-height:38px;
+}
+.services-dropdown-menu-grouped{
+  overflow-y:auto;
+  scrollbar-width:thin;
+}

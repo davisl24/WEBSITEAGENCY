@@ -178,3 +178,45 @@
 @media(prefers-reduced-motion:reduce){
   .workingTimeline::before{transition:none;transform:none}
 }
+
+
+/* Two concrete states explain the problem and solution without marketing labels. */
+.proofGrid{
+  width:min(1010px,calc(100% - 64px));
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:clamp(28px,5vw,80px);
+  margin:56px auto 0;
+  align-items:start;
+}
+.proofStep{
+  min-width:0;
+  padding-top:0;
+  border:0;
+}
+.proofVisual{
+  min-height:164px;
+  height:auto;
+  border-radius:18px;
+  padding:29px;
+  justify-content:center;
+  gap:12px;
+}
+.proofBusy span{height:8px}
+.proofClear span:nth-child(1){height:24px;width:75%}
+.proofClear span:nth-child(2){width:91%}
+.proofClear span:nth-child(3){height:35px;width:42%;margin-top:8px}
+.proofStep h3{
+  margin:27px 0 12px;
+  font-size:clamp(22px,2.25vw,28px);
+  line-height:1.24;
+}
+.proofStep p{font-size:16px;max-width:44ch;line-height:1.68}
+@media(max-width:760px){
+  .proofGrid{
+    width:calc(100% - 36px);
+    grid-template-columns:1fr;
+    gap:38px;
+    margin-top:38px;
+  }
+  .proofVisual{max-width:none;min-height:135px;padding:23px}
+}

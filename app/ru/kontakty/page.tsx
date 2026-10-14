@@ -1,24 +1,13 @@
 import { localizedMetadata } from "../../lib/localizedSeo";
-import LanguageSwitcher from "../../components/LanguageSwitcher";
 import RevealOnView from "../../components/RevealOnView";
-import ThemeToggle from "../../components/ThemeToggle";
-import ServicesDropdown from "../../components/ServicesDropdown";
+import KestrelHeader from "../../components/KestrelHeader";
 
 export const metadata = localizedMetadata("ru","contact");
 
 export default function ContactPage() {
   return (
     <main lang="ru" className="service-page contact-page">
-      <header className="service-page-header" aria-label="Главная навигация">
-        <a className="brand" href="/ru" aria-label="Главная">Kestrel</a>
-        <nav className="service-page-nav" aria-label="Главная навигация">
-            <ServicesDropdown />
-            <a href="/ru/o-nas">О нас</a>
-            <ThemeToggle />
-            <LanguageSwitcher />
-            <a className="header-cta" href="/ru/kontakty" aria-current="page">Обсудить проект</a>
-          </nav>
-      </header>
+      <KestrelHeader active="contact" lang="ru" />
 
       <section className="contact-page-hero contact-booking-layout" aria-labelledby="booking-title">
         <div className="contact-page-copy">

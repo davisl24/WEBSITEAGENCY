@@ -57,6 +57,7 @@ export default function ServicesDropdown(){
   const label=locale==="en"?"Services":locale==="ru"?"Услуги":"Pakalpojumi";
   const menu=services[locale];
   const [open,setOpen]=useState(false);
+  const [webOpen,setWebOpen]=useState(false);
   const rootRef=useRef<HTMLDivElement>(null);
   const closeTimer=useRef<ReturnType<typeof setTimeout>|null>(null);
 
@@ -65,16 +66,17 @@ export default function ServicesDropdown(){
   };
   const scheduleClose=()=>{
     cancelClose();
-    closeTimer.current=setTimeout(()=>setOpen(false),150);
+    closeTimer.current=setTimeout(()=>{setOpen(false);setWebOpen(false)},150);
   };
   useEffect(()=>{
     if(!open)return;
     const pointer=(event:PointerEvent)=>{
-      if(!rootRef.current?.contains(event.target as Node))setOpen(false);
+      if(!rootRef.current?.contains(event.target as Node)){setOpen(false);setWebOpen(false)}
     };
     const keyboard=(event:KeyboardEvent)=>{
       if(event.key==="Escape"){
         setOpen(false);
+        setWebOpen(false);
         rootRef.current?.querySelector<HTMLButtonElement>(".services-dropdown-trigger")?.focus();
       }
     };
@@ -93,7 +95,7 @@ export default function ServicesDropdown(){
     key={service.href}
     aria-current={pathname===service.href?"page":undefined}
     className={sub?"services-dropdown-sublink":service.href===menu.web.href?"services-dropdown-link services-dropdown-parent":"services-dropdown-link"}
-    onClick={()=>setOpen(false)}
+    onClick={()=>{setOpen(false);setWebOpen(false)}}
   ><span>{service.label}</span>{!sub&&<span aria-hidden="true">→</span>}</a>;
 
   return <div className="services-dropdown" ref={rootRef}
@@ -106,9 +108,25 @@ export default function ServicesDropdown(){
     </button>
     {open&&<div className="services-dropdown-menu services-dropdown-menu-grouped"
       role="menu" aria-label={label}>
-      {item(menu.web)}
-      <div className="services-dropdown-subgroup" role="group" aria-label={menu.web.label}>
-        {menu.subcategories.map(service=>item(service,true))}
+      <div className="services-dropdown-web-group"
+        onPointerEnter={()=>setWebOpen(true)}
+        onPointerLeave={()=>setWebOpen(false)}
+        onFocusCapture={()=>setWebOpen(true)}
+        onBlurCapture={event=>{
+          if(!event.currentTarget.contains(event.relatedTarget as Node))setWebOpen(false);
+        }}>
+        <div className="services-dropdown-web-row">
+          {item(menu.web)}
+          <button type="button" className="services-dropdown-web-expand"
+            aria-label={locale==="en"?"Web development subcategories":locale==="ru"?"Подкатегории разработки сайтов":"Web izstrādes apakškategorijas"}
+            aria-expanded={webOpen}
+            onClick={()=>setWebOpen(value=>!value)}>
+            <span aria-hidden="true">{webOpen?"−":"+"}</span>
+          </button>
+        </div>
+        {webOpen&&<div className="services-dropdown-subgroup" role="group" aria-label={menu.web.label}>
+          {menu.subcategories.map(service=>item(service,true))}
+        </div>}
       </div>
       <div className="services-dropdown-divider" aria-hidden="true"/>
       {menu.others.map(service=>item(service))}
