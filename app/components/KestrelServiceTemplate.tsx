@@ -17,14 +17,29 @@ export type ServiceInfo = {
 };
 
 function OfferIcon({kind,index}:{kind:NonNullable<ServiceInfo["kind"]>,index:number}){
-  const icon=kind==="seo"?"search":kind==="uiux"?"layout":kind==="hosting"?"server":kind==="commerce"?"cart":kind==="upgrade"?"refresh":kind==="company"?"site":kind==="landing"?"page":"site";
-  return <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.65" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    {icon==="search"&&<><circle cx="14" cy="14" r="8"/><path d="m20 20 8 8"/>{index===0&&<path d="m10 14 3 3 5-6"/>}{index===1&&<path d="M14 8v12"/>}{index===2&&<path d="M9 16h10"/>}</>}
-    {icon==="layout"&&<><rect x="4" y="5" width="24" height="22" rx="3"/><path d={index===0?"M4 13h24M11 13v14":index===1?"M4 12h24M17 12v15":"M4 12h24M8 19h16M8 23h10"}/></>}
-    {icon==="server"&&<><rect x="4" y="5" width="24" height="9" rx="2"/><rect x="4" y="18" width="24" height="9" rx="2"/><path d="M9 10h1M9 23h1M15 10h8M15 23h8"/></>}
-    {icon==="cart"&&<><path d="M5 7h3l4 15h13l3-11H10"/><circle cx="14" cy="26" r="1.5"/><circle cx="23" cy="26" r="1.5"/></>}
-    {icon==="refresh"&&<><path d="M26 13a11 11 0 0 0-19-4l-3 3m0-7v7h7M6 19a11 11 0 0 0 19 4l3-3m0 7v-7h-7"/></>}
-    {(icon==="site"||icon==="page")&&<><rect x="4" y="5" width="24" height="22" rx="3"/><path d="M4 12h24M10 18h12M10 22h8"/></>}
+  const icon:Record<NonNullable<ServiceInfo["kind"]>,string[]>={
+    web:["window","pages","refresh"],commerce:["grid","cart","plug"],
+    seo:["search","code","type"],uiux:["search","flow","layout"],
+    hosting:["server","shield","refresh"],landing:["page","window","type"],
+    company:["window","pages","flow"],upgrade:["search","layout","settings"]
+  };
+  const type=icon[kind][index%3];
+  return <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    {type==="window"&&<><rect x="4" y="5" width="24" height="22" rx="3"/><path d="M4 12h24M10 18h12M10 22h8"/></>}
+    {type==="page"&&<><rect x="7" y="3" width="18" height="26" rx="2"/><path d="M11 12h10M11 17h10M11 22h7"/></>}
+    {type==="pages"&&<><rect x="9" y="7" width="19" height="21" rx="2"/><path d="M4 23V5a2 2 0 0 1 2-2h16M13 13h11M13 18h8"/></>}
+    {type==="grid"&&<><rect x="4" y="5" width="24" height="22" rx="3"/><path d="M4 12h24M12 12v15M20 12v15"/></>}
+    {type==="cart"&&<><path d="M5 7h3l4 15h13l3-11H10"/><circle cx="14" cy="26" r="1.5"/><circle cx="23" cy="26" r="1.5"/></>}
+    {type==="plug"&&<><path d="M10 8v8M22 8v8M8 16h16v3a8 8 0 0 1-16 0v-3ZM16 27v3"/></>}
+    {type==="search"&&<><circle cx="14" cy="14" r="9"/><path d="m21 21 7 7"/></>}
+    {type==="code"&&<><rect x="3" y="5" width="26" height="22" rx="3"/><path d="m12 12-5 5 5 5m8-10 5 5-5 5"/></>}
+    {type==="type"&&<><path d="M5 7h22M16 7v20M10 27h12M7 13h6M19 13h6"/></>}
+    {type==="flow"&&<><rect x="3" y="11" width="9" height="10" rx="2"/><rect x="20" y="3" width="9" height="10" rx="2"/><rect x="20" y="19" width="9" height="10" rx="2"/><path d="M12 16h4v-8h4M16 16v8h4"/></>}
+    {type==="layout"&&<><rect x="3" y="4" width="26" height="24" rx="3"/><path d="M3 12h26M13 12v16M7 18h3M17 18h8"/></>}
+    {type==="server"&&<><rect x="3" y="5" width="26" height="9" rx="2"/><rect x="3" y="18" width="26" height="9" rx="2"/><path d="M9 10h1M9 23h1M16 10h8M16 23h8"/></>}
+    {type==="shield"&&<><path d="m16 3 11 5v8c0 7-4 11-11 13C9 27 5 23 5 16V8l11-5Z"/><path d="m11 16 3 3 7-7"/></>}
+    {type==="refresh"&&<><path d="M26 13A11 11 0 0 0 7 9l-3 3m0-7v7h7M6 19a11 11 0 0 0 19 4l3-3m0 7v-7h-7"/></>}
+    {type==="settings"&&<><circle cx="16" cy="16" r="6"/><path d="M16 3v5M16 24v5M3 16h5M24 16h5M7 7l4 4m10 10 4 4M25 7l-4 4M11 21l-4 4"/></>}
   </svg>;
 }
 
