@@ -22,7 +22,7 @@ export default function AboutPage() {
 
       <section className="about-hero">
         <div className="about-hero-copy">
-          <p className="service-page-kicker">About Kestrel</p>
+          
           <h1>About us</h1>
           <p>
             We create websites that make it easier for small businesses to explain their offer, earn trust and turn visits into enquiries.
