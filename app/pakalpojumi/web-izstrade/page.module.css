@@ -540,3 +540,31 @@
   .includedGrid{grid-template-columns:1fr;gap:24px}
   .deviceVisual{min-height:295px}
 }
+
+/* Approved three separate rounded offers, replacing the joined segmented band. */
+.offerList{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;border:0}
+.offerLink{
+  display:flex;flex-direction:column;align-items:flex-start;gap:16px;
+  min-height:244px;
+  padding:32px 28px;
+  border:1px solid transparent;
+  border-radius:23px;
+  background:rgba(125,125,125,.075);
+  transition:background .2s ease,border-color .2s ease,transform .2s ease;
+}
+.offerLink:last-child{border:1px solid transparent}
+.offerLink:hover{background:rgba(125,125,125,.12);border-color:var(--web-line);transform:translateY(-2px)}
+.offerLink h3{font-size:clamp(20px,2vw,26px);line-height:1.27}
+.offerLink p{font-size:15px;line-height:1.6}
+.offerLink .price{margin-top:auto;align-self:flex-start}
+.offerLink .arrow{margin-top:-25px;align-self:flex-end}
+@media(max-width:900px){.offerLink{min-height:226px;padding:24px 19px}.offerList{gap:12px}}
+@media(max-width:760px){
+  .offerList{grid-template-columns:1fr;gap:14px}
+  .offerLink{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px 16px;min-height:0;padding:22px 19px;border:1px solid transparent;border-radius:20px}
+  .offerLink h3{grid-column:1;grid-row:1}
+  .offerLink p{grid-column:1;grid-row:2}
+  .offerLink .price{grid-column:1;grid-row:3;margin:3px 0 0}
+  .offerLink .arrow{grid-column:2;grid-row:1;margin:0}
+}
+@media(prefers-reduced-motion:reduce){.offerLink{transition:none}.offerLink:hover{transform:none}}
