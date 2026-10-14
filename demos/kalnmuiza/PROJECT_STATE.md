@@ -10,7 +10,7 @@ Dizaina virziens: A — Heritage Editorial (apstiprināts).
 - FRAME / VERIFY: DONE ar publiskiem avotiem; būtiski fakti vēl jāapstiprina.
 - DECIDE: APPROVED (A; viena lapa, 6 sadaļas, saziņa pa tālruni).
 - BUILD: BUILT; statisks HTML bez atkarībām, ārēja izsekošanas koda vai formām.
-- REVIEW: NOT TESTED pilnā īstā pārlūka QA, līdz pārbaude veikta.
+- REVIEW: STATIC PASS 2026-10-14 (GitHub faila pārbaude: derīga enkuru struktūra, responsīvie CSS noteikumi, noindex, LV valoda, nav izdomātu attēlu, nav trešo pušu skriptu/formu); BROWSER QA: NOT TESTED (320/390/768/1440 skati un faktiskie klikšķi).
 - LOCK: WAITING FOR USER REVIEW.
 - LIVE: NOT AUTHORIZED.
 
