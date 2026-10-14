@@ -72,10 +72,10 @@ export default function KestrelServiceTemplate({ service, lang="lv" }: { service
         <a className="kst-hero-cta" href={contact}>{copy.cta}</a>
       </div>
       {isCommerce && <CommercePreview />}
-      {kind==="landing" && <LandingPreview />}
+
     </section>
 
-    <section className="kst-section kst-offers-section" aria-labelledby="kst-offers">
+    <section className={"kst-section kst-offers-section "+(kind==="landing"?"kst-offers-landing":"")} aria-labelledby="kst-offers">
       <div className="kst-heading"><RevealOnView><h2 id="kst-offers">{isCommerce ? copy.commerce : copy.offers}</h2></RevealOnView></div>
       <div className="kst-offers">
         {service.offers.map((item,index) => {
@@ -83,6 +83,7 @@ export default function KestrelServiceTemplate({ service, lang="lv" }: { service
           return item.href ? <a key={item.title} href={item.href} className="kst-offer">{inside}</a> : <div key={item.title} className="kst-offer">{inside}</div>;
         })}
       </div>
+      {kind==="landing" && <LandingPreview />}
     </section>
 
     <section className="kst-section kst-included-section" aria-labelledby="kst-included">
