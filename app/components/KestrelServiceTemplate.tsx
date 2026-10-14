@@ -2,8 +2,6 @@ import KestrelHeader from "./KestrelHeader";
 import KestrelFooter from "./KestrelFooter";
 import RevealOnView from "./RevealOnView";
 import ProcessFlow from "./ProcessFlow";
-import ProcessFlowEn from "./ProcessFlowEn";
-import ProcessFlowRu from "./ProcessFlowRu";
 import type { Language } from "../lib/localizedSeo";
 
 export type ServiceInfo = {
@@ -112,7 +110,7 @@ export default function KestrelServiceTemplate({ service, lang="lv" }: { service
       </div>
     </section>
 
-    {lang==="en"?<ProcessFlowEn/>:lang==="ru"?<ProcessFlowRu/>:<ProcessFlow/>}
+    <ProcessFlow lang={lang}/>
 
     {service.faq.length>0 && <section className="kst-section kst-faq-section" aria-labelledby="kst-faq-title">
       <div className="kst-heading"><RevealOnView><h2 id="kst-faq-title">{copy.faq}</h2></RevealOnView></div>
