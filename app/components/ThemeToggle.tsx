@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 
 type ThemePreference = "system" | "light" | "dark";
 type ResolvedTheme = "light" | "dark";
@@ -17,6 +18,8 @@ function ThemeIcon({ mode }: { mode: ThemePreference }) {
 }
 
 export default function ThemeToggle() {
+  const path=usePathname();
+  const locale=path.startsWith("/en")?"en":path.startsWith("/ru")?"ru":"lv";
   const [preference, setPreference] = useState<ThemePreference>("system");
   const [open,setOpen]=useState(false);
   const ref=useRef<HTMLDivElement>(null);
@@ -53,15 +56,20 @@ export default function ThemeToggle() {
     setOpen(false);
   };
 
-  const labels: Record<ThemePreference, string> = { system: "Sistēmas režīms", light: "Gaišais režīms", dark: "Tumšais režīms" };
+  const translation={
+    lv:{system:"Sistēmas režīms",light:"Gaišais režīms",dark:"Tumšais režīms",trigger:"Krāsu režīms",menu:"Izvēlēties krāsu režīmu"},
+    en:{system:"System theme",light:"Light theme",dark:"Dark theme",trigger:"Color theme",menu:"Choose color theme"},
+    ru:{system:"Системная тема",light:"Светлая тема",dark:"Тёмная тема",trigger:"Цветовая тема",menu:"Выбрать цветовую тему"}
+  }[locale];
+  const labels:Record<ThemePreference,string>={system:translation.system,light:translation.light,dark:translation.dark};
   return (
     <div className="theme-dropdown" ref={ref}>
       <button ref={trigger} type="button" className="theme-dropdown-trigger"
-        aria-label="Krāsu režīms" aria-expanded={open} aria-haspopup="true"
+        aria-label={translation.trigger} aria-expanded={open} aria-haspopup="true"
         onClick={()=>setOpen(x=>!x)}>
         <ThemeIcon mode={preference}/><span className="theme-dropdown-chevron" aria-hidden="true">⌄</span>
       </button>
-      {open && <div className="theme-dropdown-menu" role="group" aria-label="Izvēlēties krāsu režīmu">
+      {open && <div className="theme-dropdown-menu" role="group" aria-label={translation.menu}>
         {(["system","light","dark"] as const).map(mode=><button key={mode} type="button"
           className={preference===mode?"is-active":undefined}
           onClick={()=>selectTheme(mode)} aria-pressed={preference===mode}>

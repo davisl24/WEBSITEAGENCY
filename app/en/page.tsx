@@ -1,13 +1,10 @@
 import { localizedMetadata } from "../lib/localizedSeo";
-import LanguageSwitcher from "../components/LanguageSwitcher";
 import Image from "next/image";
 import heroBg from "../assets/images/andrew-kliatskyi-k7XTD-HCZAw-unsplash.jpg";
 import heroBgLight from "../assets/images/balts_fons_optimizets.webp";
 import ValueShowcase from "../components/ValueShowcaseEn";
-import ProcessFlow from "../components/ProcessFlowEn";
-import RevealOnView from "../components/RevealOnView";
-import ThemeToggle from "../components/ThemeToggle";
-import ServicesDropdown from "../components/ServicesDropdown";
+import ProcessFlow from "../components/ProcessFlow";
+import KestrelHeader from "../components/KestrelHeader";
 
 export const metadata = localizedMetadata("en","home");
 
@@ -21,26 +18,16 @@ export default function Home() {
           <div className="hero-media-overlay" />
         </div>
 
-        <header className="site-header" aria-label="Main navigation">
-          <a className="brand" href="/en" aria-label="Home">Kestrel</a>
-          <nav className="site-nav" aria-label="Main navigation">
-            <ServicesDropdown />
-            <a href="/en/about">About us</a>
-            <ThemeToggle />
-            <LanguageSwitcher />
-            <a className="header-cta" href="/en/contact">Let's talk</a>
-          </nav>
-        </header>
-
+        <KestrelHeader active="home" lang="en" />
         <div className="hero-shell">
           <div className="hero-copy">
-            <p className="hero-label">Websites for small businesses</p>
             <h1>Websites that turn visits into enquiries</h1>
             <p className="hero-description">
-              We build fast, easy-to-use websites that make your offer clear and help visitors take the next step.
+              We build clear and fast business websites so visitors
+              understand your offer and know how to get in touch
             </p>
             <div className="hero-actions">
-              <a className="button button-primary" href="/en/contact">Let's talk</a>
+              <a className="button button-primary" href="/en/contact">Discuss your project</a>
               <a className="text-link" href="#services">Explore services <span aria-hidden="true">↘</span></a>
             </div>
           </div>
@@ -51,86 +38,24 @@ export default function Home() {
       <section className="services-section" id="services" aria-labelledby="services-title">
         <div className="services-inner">
           <div className="services-head">
-            <p className="section-label">Services</p>
-            <h2 id="services-title">Find the right solution</h2>
-            <p className="services-intro">
-              One focused page, a complete business website, or improvements to what you already have — choose what fits.
-            </p>
+            <h2 id="services-title">Services</h2>
           </div>
-
-          <div className="services-grid">
-            <a href="/en/services/landing-page" className="service-card">
-              <div className="service-visual service-visual-landing">
-                <div className="service-story service-story-landing" aria-hidden="true">
-                  <div className="story-top"><span/><span/><span/></div>
-                  <div className="story-landing-body">
-                    <span className="story-eyebrow"/>
-                    <span className="story-landing-title"/>
-                    <span className="story-landing-subtitle"/>
-                    <span className="story-landing-cta"/>
-                  </div>
-                </div>
+          <div className="kestrel-services-v2 kestrel-services-premium">
+            <a className="ks-main ks-category" href="/en/services/web-development">
+              <span className="ks-service-icon"><svg className="ks-service-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="5" width="18" height="13" rx="2"/><path d="M8 22h8m-4-4v4"/></svg></span>
+              <div className="ks-row-body">
+                <h3>Web development</h3>
+                <p>Landing pages · Business websites · Website improvements</p>
+                <div className="ks-offers" aria-label="Sākuma cenas"><span>Landing from €200</span><span>Business website from €450</span></div>
               </div>
-
-              <div className="service-card-body">
-                <p className="service-kicker">For one focused offer</p>
-                <h3>Landing page</h3>
-                <p>One page built around a specific service, product or campaign.</p>
-
-                <span className="service-link" aria-hidden="true">Explore service <span>→</span></span>
-              </div>
+              <span className="ks-arrow" aria-hidden="true">↗</span>
             </a>
-
-            <a href="/en/services/business-website" className="service-card service-card-featured">
-              <div className="service-visual service-visual-website">
-                <div className="service-story service-story-company" aria-hidden="true">
-                  <div className="story-top"><span/><span/><span/></div>
-                  <div className="story-company-nav"><span/><span/><span/><span/></div>
-                  <div className="story-company-hero">
-                    <div className="story-company-copy"><span/><span/><span/></div>
-                    <div className="story-company-image"/>
-                  </div>
-                  <div className="story-company-pages"><span/><span/><span/></div>
-                </div>
-              </div>
-
-              <div className="service-card-body">
-                <p className="service-kicker">When you need more than one page</p>
-                <h3>Business website</h3>
-                <p>A clear home for your services, business information and customer enquiries.</p>
-
-                <span className="service-link" aria-hidden="true">Explore service <span>→</span></span>
-              </div>
-            </a>
-
-            <a href="/en/services/website-improvements" className="service-card">
-              <div className="service-visual service-visual-upgrade">
-                <div className="story-upgrade" aria-hidden="true">
-                  <div className="story-upgrade-before">
-                    <div className="story-top"><span/><span/><span/></div>
-                    <div className="story-before-body"><span/><span/><span/><span/></div>
-                  </div>
-                  <span className="story-upgrade-arrow">→</span>
-                  <div className="story-upgrade-after">
-                    <div className="story-top"><span/><span/><span/></div>
-                    <div className="story-after-body">
-                      <span className="story-after-eyebrow"/>
-                      <span className="story-after-title"/>
-                      <span className="story-after-copy"/>
-                      <span className="story-after-button"/>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="service-card-body">
-                <p className="service-kicker">When you already have a site</p>
-                <h3>Website improvements</h3>
-                <p>Improve your existing site's design, structure and ease of use.</p>
-
-                <span className="service-link" aria-hidden="true">Explore service <span>→</span></span>
-              </div>
-            </a>
+            <div className="ks-other-grid">
+              <a className="ks-item ks-category" href="/en/services/ecommerce"><span className="ks-service-icon"><svg className="ks-service-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><circle cx="9" cy="20" r="1"/><circle cx="19" cy="20" r="1"/><path d="M2 3h2l3 13h13l2-9H5"/></svg></span><div className="ks-row-body"><h3>E-commerce</h3><p>Online stores · Payments · Delivery</p></div><span className="ks-arrow" aria-hidden="true">↗</span></a>
+              <a className="ks-item ks-category" href="/en/services/seo"><span className="ks-service-icon"><svg className="ks-service-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><circle cx="10.8" cy="10.8" r="7"/><path d="m16 16 5 5"/></svg></span><div className="ks-row-body"><h3>SEO</h3><p>Technical SEO · Content optimisation · Audit</p></div><span className="ks-arrow" aria-hidden="true">↗</span></a>
+              <a className="ks-item ks-category" href="/en/services/ui-ux"><span className="ks-service-icon"><svg className="ks-service-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="m5 3 14 9-7 1.6L9 20 5 3Z"/></svg></span><div className="ks-row-body"><h3>UI/UX design</h3><p>Design audit · Structure · Interfaces</p></div><span className="ks-arrow" aria-hidden="true">↗</span></a>
+              <a className="ks-item ks-category" href="/en/services/website-maintenance"><span className="ks-service-icon"><svg className="ks-service-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="8" rx="2"/><rect x="3" y="13" width="18" height="8" rx="2"/><path d="M7 7h.01M7 17h.01"/></svg></span><div className="ks-row-body"><h3>Hosting and maintenance</h3><p>Deployment · Monitoring · Updates</p></div><span className="ks-arrow" aria-hidden="true">↗</span></a>
+            </div>
           </div>
         </div>
       </section>
@@ -138,19 +63,19 @@ export default function Home() {
 
       <ValueShowcase />
 
-      <ProcessFlow />
+      <ProcessFlow lang="en" />
 
       <section className="call-section" aria-labelledby="call-title">
         <div className="call-inner">
-          <div className="call-kicker">A quick chat, no commitment</div>
+          
           <div className="call-content">
             <div>
-              <h2 id="call-title">Let's talk about your website</h2>
-              <p>15 minutes to discuss what your business needs and whether we can help.</p>
+              <h2 id="call-title">Tell us about your project</h2>
+              <p>We will discuss your idea and agree on a suitable solution</p>
             </div>
             <a className="call-cta" href="/en/contact">
               <span className="call-dot" aria-hidden="true" />
-              <span>Let's talk</span>
+              <span>Discuss your project</span>
               <span aria-hidden="true">→</span>
             </a>
           </div>
@@ -162,7 +87,7 @@ export default function Home() {
           <div className="footer-main">
           <div className="footer-wordmark-block">
             <a href="/en" className="footer-wordmark">Kestrel</a>
-            <p className="footer-statement">Websites built with a clear purpose and thoughtful design.<br/>We help small businesses explain their offer and make it easier for customers to get in touch.</p>
+            <p className="footer-statement">Websites with clear structure and thoughtful design.</p>
           </div>
             <div className="footer-links">
               <div>
@@ -173,8 +98,8 @@ export default function Home() {
                 <a href="/en/contact">Contact</a>
               </div>
               <div>
-                <span>Get in touch</span>
-                <a className="footer-contact-link" href="/en/contact">Let's talk <span aria-hidden="true">↗</span></a>
+                <span>Contact</span>
+                <a className="footer-contact-link" href="/en/contact">Discuss your project <span aria-hidden="true">↗</span></a>
               </div>
             </div>
           </div>

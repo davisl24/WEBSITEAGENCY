@@ -18,7 +18,7 @@ const steps = [
     icon: "build",
   },
   {
-    title: "Live",
+    title: "Palaišana",
     text: "Palaižam lapu dzīvē un, ja vajag, turpinām ar uzturēšanu un uzlabojumiem",
     icon: "launch",
   },
@@ -36,7 +36,7 @@ export default function ProcessFlow({lang="lv"}:{lang?:Language}) {
     {title:"Разработка",text:"Создаём и проверяем сайт на компьютере и телефоне",icon:"build"},
     {title:"Запуск",text:"Публикуем сайт и при необходимости согласуем дальнейшие работы",icon:"launch"}
   ]}[lang];
-  const heading=lang==="ru"?"Процесс":"Process";
+  const heading=lang==="ru"?"Процесс":lang==="en"?"Process":"Kā strādājam";
   return (
     <section className="process-section" id="process" aria-labelledby="process-title">
       <div className="process-inner">

@@ -1,13 +1,10 @@
 import { localizedMetadata } from "../lib/localizedSeo";
-import LanguageSwitcher from "../components/LanguageSwitcher";
 import Image from "next/image";
 import heroBg from "../assets/images/andrew-kliatskyi-k7XTD-HCZAw-unsplash.jpg";
 import heroBgLight from "../assets/images/balts_fons_optimizets.webp";
 import ValueShowcase from "../components/ValueShowcaseRu";
-import ProcessFlow from "../components/ProcessFlowRu";
-import RevealOnView from "../components/RevealOnView";
-import ThemeToggle from "../components/ThemeToggle";
-import ServicesDropdown from "../components/ServicesDropdown";
+import ProcessFlow from "../components/ProcessFlow";
+import KestrelHeader from "../components/KestrelHeader";
 
 export const metadata = localizedMetadata("ru","home");
 
@@ -21,27 +18,17 @@ export default function Home() {
           <div className="hero-media-overlay" />
         </div>
 
-        <header className="site-header" aria-label="Главная навигация">
-          <a className="brand" href="/ru" aria-label="Главная">Kestrel</a>
-          <nav className="site-nav" aria-label="Главная навигация">
-            <ServicesDropdown />
-            <a href="/ru/o-nas">О нас</a>
-            <ThemeToggle />
-            <LanguageSwitcher />
-            <a className="header-cta" href="/ru/kontakty">Обсудить проект</a>
-          </nav>
-        </header>
-
+        <KestrelHeader active="home" lang="ru" />
         <div className="hero-shell">
           <div className="hero-copy">
-            <p className="hero-label">Сайты для малого бизнеса</p>
             <h1>Сайты, которые помогают получать заявки</h1>
             <p className="hero-description">
-              Создаём быстрые и понятные сайты, на которых клиент сразу видит предложение и знает, как оставить заявку.
+              Создаём понятные сайты для компаний, чтобы клиенты
+              быстрее понимали предложение и могли связаться
             </p>
             <div className="hero-actions">
               <a className="button button-primary" href="/ru/kontakty">Обсудить проект</a>
-              <a className="text-link" href="#services">Наши услуги <span aria-hidden="true">↘</span></a>
+              <a className="text-link" href="#services">Смотреть услуги <span aria-hidden="true">↘</span></a>
             </div>
           </div>
         </div>
@@ -51,86 +38,24 @@ export default function Home() {
       <section className="services-section" id="services" aria-labelledby="services-title">
         <div className="services-inner">
           <div className="services-head">
-            <p className="section-label">Услуги</p>
-            <h2 id="services-title">Выберите подходящее решение</h2>
-            <p className="services-intro">
-              Нужен лендинг, полноценный сайт компании или улучшение существующего? Начнём с вашей задачи.
-            </p>
+            <h2 id="services-title">Услуги</h2>
           </div>
-
-          <div className="services-grid">
-            <a href="/ru/uslugi/lending" className="service-card">
-              <div className="service-visual service-visual-landing">
-                <div className="service-story service-story-landing" aria-hidden="true">
-                  <div className="story-top"><span/><span/><span/></div>
-                  <div className="story-landing-body">
-                    <span className="story-eyebrow"/>
-                    <span className="story-landing-title"/>
-                    <span className="story-landing-subtitle"/>
-                    <span className="story-landing-cta"/>
-                  </div>
-                </div>
+          <div className="kestrel-services-v2 kestrel-services-premium">
+            <a className="ks-main ks-category" href="/ru/uslugi/razrabotka-sajtov">
+              <span className="ks-service-icon"><svg className="ks-service-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="5" width="18" height="13" rx="2"/><path d="M8 22h8m-4-4v4"/></svg></span>
+              <div className="ks-row-body">
+                <h3>Разработка сайтов</h3>
+                <p>Лендинги · Сайты компаний · Улучшение сайтов</p>
+                <div className="ks-offers" aria-label="Sākuma cenas"><span>Лендинг от 200 €</span><span>Сайт компании от 450 €</span></div>
               </div>
-
-              <div className="service-card-body">
-                <p className="service-kicker">Для одного конкретного предложения</p>
-                <h3>Лендинг</h3>
-                <p>Одна страница для конкретной услуги, продукта или рекламной кампании.</p>
-
-                <span className="service-link" aria-hidden="true">Подробнее об услуге <span>→</span></span>
-              </div>
+              <span className="ks-arrow" aria-hidden="true">↗</span>
             </a>
-
-            <a href="/ru/uslugi/sajt-dlya-biznesa" className="service-card service-card-featured">
-              <div className="service-visual service-visual-website">
-                <div className="service-story service-story-company" aria-hidden="true">
-                  <div className="story-top"><span/><span/><span/></div>
-                  <div className="story-company-nav"><span/><span/><span/><span/></div>
-                  <div className="story-company-hero">
-                    <div className="story-company-copy"><span/><span/><span/></div>
-                    <div className="story-company-image"/>
-                  </div>
-                  <div className="story-company-pages"><span/><span/><span/></div>
-                </div>
-              </div>
-
-              <div className="service-card-body">
-                <p className="service-kicker">Когда одной страницы недостаточно</p>
-                <h3>Сайт для бизнеса</h3>
-                <p>Сайт, где удобно представить услуги, компанию и способы связи.</p>
-
-                <span className="service-link" aria-hidden="true">Подробнее об услуге <span>→</span></span>
-              </div>
-            </a>
-
-            <a href="/ru/uslugi/uluchshenie-sajta" className="service-card">
-              <div className="service-visual service-visual-upgrade">
-                <div className="story-upgrade" aria-hidden="true">
-                  <div className="story-upgrade-before">
-                    <div className="story-top"><span/><span/><span/></div>
-                    <div className="story-before-body"><span/><span/><span/><span/></div>
-                  </div>
-                  <span className="story-upgrade-arrow">→</span>
-                  <div className="story-upgrade-after">
-                    <div className="story-top"><span/><span/><span/></div>
-                    <div className="story-after-body">
-                      <span className="story-after-eyebrow"/>
-                      <span className="story-after-title"/>
-                      <span className="story-after-copy"/>
-                      <span className="story-after-button"/>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="service-card-body">
-                <p className="service-kicker">Когда сайт уже есть</p>
-                <h3>Улучшение сайта</h3>
-                <p>Делаем существующий сайт понятнее, удобнее и эффективнее.</p>
-
-                <span className="service-link" aria-hidden="true">Подробнее об услуге <span>→</span></span>
-              </div>
-            </a>
+            <div className="ks-other-grid">
+              <a className="ks-item ks-category" href="/ru/uslugi/internet-magazin"><span className="ks-service-icon"><svg className="ks-service-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><circle cx="9" cy="20" r="1"/><circle cx="19" cy="20" r="1"/><path d="M2 3h2l3 13h13l2-9H5"/></svg></span><div className="ks-row-body"><h3>Интернет-магазины</h3><p>Каталог · Оплата · Доставка</p></div><span className="ks-arrow" aria-hidden="true">↗</span></a>
+              <a className="ks-item ks-category" href="/ru/uslugi/seo"><span className="ks-service-icon"><svg className="ks-service-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><circle cx="10.8" cy="10.8" r="7"/><path d="m16 16 5 5"/></svg></span><div className="ks-row-body"><h3>SEO</h3><p>Техническое SEO · Контент · Аудит</p></div><span className="ks-arrow" aria-hidden="true">↗</span></a>
+              <a className="ks-item ks-category" href="/ru/uslugi/ui-ux"><span className="ks-service-icon"><svg className="ks-service-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="m5 3 14 9-7 1.6L9 20 5 3Z"/></svg></span><div className="ks-row-body"><h3>UI/UX-дизайн</h3><p>Аудит · Структура · Интерфейсы</p></div><span className="ks-arrow" aria-hidden="true">↗</span></a>
+              <a className="ks-item ks-category" href="/ru/uslugi/obsluzhivanie-sajtov"><span className="ks-service-icon"><svg className="ks-service-svg" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="8" rx="2"/><rect x="3" y="13" width="18" height="8" rx="2"/><path d="M7 7h.01M7 17h.01"/></svg></span><div className="ks-row-body"><h3>Хостинг и поддержка</h3><p>Размещение · Мониторинг · Обновления</p></div><span className="ks-arrow" aria-hidden="true">↗</span></a>
+            </div>
           </div>
         </div>
       </section>
@@ -138,15 +63,15 @@ export default function Home() {
 
       <ValueShowcase />
 
-      <ProcessFlow />
+      <ProcessFlow lang="ru" />
 
       <section className="call-section" aria-labelledby="call-title">
         <div className="call-inner">
-          <div className="call-kicker">Короткий разговор без обязательств</div>
+          
           <div className="call-content">
             <div>
-              <h2 id="call-title">Обсудим ваш сайт</h2>
-              <p>За 15 минут выясним, что нужно вашему бизнесу и чем мы можем помочь.</p>
+              <h2 id="call-title">Расскажите о вашем проекте</h2>
+              <p>Обсудим идею и выберем подходящее решение</p>
             </div>
             <a className="call-cta" href="/ru/kontakty">
               <span className="call-dot" aria-hidden="true" />
@@ -162,18 +87,18 @@ export default function Home() {
           <div className="footer-main">
           <div className="footer-wordmark-block">
             <a href="/ru" className="footer-wordmark">Kestrel</a>
-            <p className="footer-statement">Создаём сайты с понятной целью и продуманным дизайном.<br/>Помогаем малому бизнесу представить услуги и упростить путь клиента к заявке.</p>
+            <p className="footer-statement">Сайты с понятной структурой и продуманным дизайном.</p>
           </div>
             <div className="footer-links">
               <div>
                 <span>Навигация</span>
                 <a href="#services">Услуги</a>
-                <a href="#process">Процесс</a>
+                <a href="#process">Process</a>
                 <a href="/ru/o-nas">О нас</a>
                 <a href="/ru/kontakty">Контакты</a>
               </div>
               <div>
-                <span>Связаться</span>
+                <span>Контакты</span>
                 <a className="footer-contact-link" href="/ru/kontakty">Обсудить проект <span aria-hidden="true">↗</span></a>
               </div>
             </div>

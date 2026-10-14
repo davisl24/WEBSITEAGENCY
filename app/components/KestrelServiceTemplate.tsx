@@ -42,19 +42,42 @@ function OfferIcon({kind,index}:{kind:NonNullable<ServiceInfo["kind"]>,index:num
 }
 
 function LandingPreview({lang}:{lang:Language}){
-  const words={lv:{offer:"Viens piedāvājums",cta:"Pieteikties"},en:{offer:"One clear offer",cta:"Enquire"},ru:{offer:"Одно предложение",cta:"Оставить заявку"}}[lang];
+  const words={lv:{offer:"Viens konkrēts pakalpojums",cta:"Pieteikties",sub:"Skaidrs piedāvājums un nākamais solis",caption:"Piemērs: piedāvājums → ieguvums → pieteikšanās"},en:{offer:"One clear service",cta:"Enquire",sub:"A clear offer and a next step",caption:"Example: offer → benefit → enquiry"},ru:{offer:"Одна понятная услуга",cta:"Оставить заявку",sub:"Понятное предложение и следующий шаг",caption:"Пример: предложение → выгода → заявка"}}[lang];
   return <div className="kst-landing-preview" role="img" aria-label="Vienas lapas dizaina piemērs ar skaidru piedāvājumu un vienu primāro pogu">
     <div className="kst-landing-browser">
       <div className="kst-landing-nav"><b>Kestrel</b><span>☰</span></div>
       <div className="kst-landing-content">
         <span className="kst-landing-eyebrow"/>
         <strong>{words.offer}</strong>
+        <p className="kst-landing-example-copy">{words.sub}</p>
         <span className="kst-landing-description"/>
         <span className="kst-landing-description short"/>
         <span className="kst-landing-demo-cta">{words.cta}</span>
       </div>
       <div className="kst-landing-bottom"><span/><span/><span/></div>
     </div>
+    <p className="kst-landing-caption">{words.caption}</p>
+  </div>;
+}
+
+function CompanyPreview({lang}:{lang:Language}) {
+  const words={
+    lv:{services:"Pakalpojumi",about:"Par mums",contact:"Kontakti",title:"Ko piedāvājam",items:["Pakalpojums A","Pakalpojums B","Pakalpojums C"],caption:"Piemērs: katram pakalpojumam ir skaidra vieta"},
+    en:{services:"Services",about:"About",contact:"Contact",title:"Our services",items:["Service A","Service B","Service C"],caption:"Example: a clear place for each service"},
+    ru:{services:"Услуги",about:"О нас",contact:"Контакты",title:"Наши услуги",items:["Услуга A","Услуга B","Услуга C"],caption:"Пример: понятная структура услуг"}
+  }[lang];
+  return <div className="kst-company-demo" role="img" aria-label={words.caption}>
+    <div className="kst-company-browser">
+      <div className="kst-company-top"><b>Kestrel</b><span>{words.services}</span><span>{words.about}</span><span>{words.contact}</span></div>
+      <div className="kst-company-body">
+        <aside><strong>{words.services}</strong>{words.items.map(item=><span key={item}>{item}</span>)}</aside>
+        <div className="kst-company-main"><span>{words.services}</span><strong>{words.title}</strong>
+          <div className="kst-company-intro-line"/>
+          <div className="kst-company-mini-cards">{words.items.map(item=><div key={item}><span className="kst-company-art"/><b>{item}</b></div>)}</div>
+        </div>
+      </div>
+    </div>
+    <p className="kst-company-caption">{words.caption}</p>
   </div>;
 }
 
@@ -90,7 +113,7 @@ export default function KestrelServiceTemplate({ service, lang="lv" }: { service
 
     </section>
 
-    <section className={"kst-section kst-offers-section "+(kind==="landing"?"kst-offers-landing":"")} aria-labelledby="kst-offers">
+    <section className={"kst-section kst-offers-section "+((kind==="landing"||kind==="company")?"kst-offers-landing":"")} aria-labelledby="kst-offers">
       <div className="kst-heading"><RevealOnView><h2 id="kst-offers">{isCommerce ? copy.commerce : copy.offers}</h2></RevealOnView></div>
       <div className="kst-offers">
         {service.offers.map((item,index) => {
@@ -99,6 +122,7 @@ export default function KestrelServiceTemplate({ service, lang="lv" }: { service
         })}
       </div>
       {kind==="landing" && <LandingPreview lang={lang}/>}
+      {kind==="company" && <CompanyPreview lang={lang}/>}
     </section>
 
     <section className="kst-section kst-included-section" aria-labelledby="kst-included">

@@ -1,6 +1,7 @@
 import KestrelHeader from "../components/KestrelHeader";
 import KestrelFooter from "../components/KestrelFooter";
 import KestrelInquiryForm from "../components/KestrelInquiryForm";
+import BookingCalendarDemo from "../components/BookingCalendarDemo";
 import { lvMetadataAlternates } from "../lib/localizedSeo";
 import type { Metadata } from "next";
 import styles from "./page.module.css";
@@ -27,15 +28,19 @@ export default function ContactPage() {
           <p className={styles.panelIntro}>Uzraksti īsi — detaļas varēsim precizēt sarunā.</p>
           <KestrelInquiryForm />
         </section>
-        <aside className={styles.callPanel} aria-labelledby="meet-title">
-          <h2 id="meet-title">Vēlies uzreiz izrunāt?</h2>
-          <p>Ja projekts jau ir skaidrs, varam vienoties par 15 minūšu Google Meet sarunu.</p>
-          {bookingUrl
-            ? <a className={styles.meetLink} href={bookingUrl} target="_blank" rel="noopener noreferrer">Izvēlēties sarunas laiku <span aria-hidden="true">↗</span></a>
-            : <p className={styles.noBooking}>Kalendāra rezervācija vēl nav pieslēgta. Laiku sarunai vienosimies pēc pieteikuma.</p>}
-          <div className={styles.meetNote}>15 minūtes · Google Meet · bez saistībām</div>
-        </aside>
+
       </div>
+      <section className={styles.calendarSection} aria-labelledby="meet-title">
+        <div className={styles.calendarCopy}>
+          <h2 id="meet-title">Vēlies izrunāt projektu?</h2>
+          <p>Ja ērtāk ir izrunāt ieceri, vari izvēlēties 15 minūšu Google Meet sarunu. Zemāk redzams tikai kalendāra dizaina piemērs, nevis īsta pieejamība.</p>
+          {bookingUrl
+            ? <a className={styles.meetLink} href={bookingUrl} target="_blank" rel="noopener noreferrer">Atvērt rezervācijas kalendāru <span aria-hidden="true">↗</span></a>
+            : <p className={styles.noBooking}>Rezervācijas saite vēl nav pieslēgta. Pagaidām izmanto pieteikuma formu augstāk.</p>}
+          <div className={styles.meetNote}>15 minūtes · Google Meet · bez saistībām</div>
+        </div>
+        <BookingCalendarDemo/>
+      </section>
     </div>
     <KestrelFooter />
   </main>;

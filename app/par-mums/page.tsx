@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   alternates: lvMetadataAlternates("about"),
   title: "Par mums | Kestrel",
   description:
-    "Kestrel veido skaidras un ātras mājaslapas mazajiem uzņēmumiem ar fokusu uz saprotamu piedāvājumu un ērtu klienta ceļu.",
+    "Kestrel veido skaidras un ātras mājaslapas uzņēmumiem ar fokusu uz saprotamu piedāvājumu un ērtu klienta ceļu.",
 };
 
 export default function AboutPage() {
@@ -24,7 +24,7 @@ export default function AboutPage() {
         <div className="about-hero-copy">
           <h1>Par mums</h1>
           <p>
-            Veidojam mājaslapas mazajiem uzņēmumiem tā, lai cilvēkam būtu viegli
+            Veidojam mājaslapas uzņēmumiem tā, lai cilvēkam būtu viegli
             saprast piedāvājumu, uzticēties un izdarīt nākamo soli.
           </p>
           <a className="button button-primary" href="/kontakti">Pieteikt sarunu</a>
@@ -69,7 +69,7 @@ export default function AboutPage() {
         <div className="about-company-layout">
           <RevealOnView className="about-company-main">
             <p>
-              Kestrel ir web izstrādes komanda Latvijā. Strādājam ar mazajiem
+              Kestrel ir web izstrādes komanda Latvijā. Strādājam ar
               uzņēmumiem, kuriem vajag skaidru, ātru un profesionālu mājaslapu,
               nevis sarežģītu digitālu projektu bez konkrēta mērķa.
             </p>
@@ -105,47 +105,48 @@ export default function AboutPage() {
           </RevealOnView>
         </div>
 
-        <div className="about-thinking-layout">
-          <div className="about-principles">
-            <RevealOnView className="about-principle" delay={60}>
-              <h3>Skaidrs mērķis</h3>
-              <p>Nosakām, ko apmeklētājam jāsaprot un kāda darbība jāveic.</p>
-            </RevealOnView>
-            <RevealOnView className="about-principle" delay={140}>
-              <h3>Pārdomāts saturs</h3>
-              <p>Galveno informāciju parādām īstajā secībā, bez liekiem blokiem.</p>
-            </RevealOnView>
-            <RevealOnView className="about-principle" delay={220}>
-              <h3>Ērta lietošana</h3>
-              <p>Pārbaudām, vai lapa ir saprotama gan datorā, gan telefonā.</p>
-            </RevealOnView>
-          </div>
+        <div className={styles.proofGrid}>
+          <RevealOnView className={styles.proofStep} delay={60}>
+            <span className={styles.proofOverline}>Fakts</span>
+            <div className={[styles.proofVisual,styles.proofBusy].join(" ")} aria-hidden="true"><span/><span/><span/><span/><span/></div>
+            <h3>Grūti atrast svarīgāko</h3>
+            <p>Ja viss ir vienlīdz izcelts, cilvēkam ilgāk jāmeklē piedāvājums un kontakti.</p>
+          </RevealOnView>
+          <RevealOnView className={styles.proofStep} delay={140}>
+            <span className={styles.proofOverline}>Iespēja</span>
+            <div className={[styles.proofVisual,styles.proofClear].join(" ")} aria-hidden="true"><span/><span/><span/></div>
+            <h3>Sakārtojam informāciju</h3>
+            <p>Izceļam pakalpojumu, tā ieguvumu un saprotamu nākamo soli.</p>
+          </RevealOnView>
+          <RevealOnView className={styles.proofStep} delay={220}>
+            <span className={styles.proofOverline}>Ieguvums</span>
+            <div className={[styles.proofVisual,styles.proofAction].join(" ")} aria-hidden="true"><span/><span/><span/></div>
+            <h3>Vienkāršāk pieteikties</h3>
+            <p>Apmeklētājs ātrāk saprot piedāvājumu un viegli atrod saziņas iespēju.</p>
+          </RevealOnView>
         </div>
       </section>
 
       <section className="service-page-section about-working-section" aria-labelledby="about-working-title">
         <div className="about-working-intro">
-
-          <RevealOnView className="line-mask-reveal" delay={60}>
+          <RevealOnView className="line-mask-reveal">
             <h2 id="about-working-title" className="service-line-stack about-working-title">
-              <span className="service-reveal-line"><span>Vienkārša komunikācija</span></span>
+              <span className="service-reveal-line"><span>Skaidra sadarbība</span></span>
             </h2>
           </RevealOnView>
         </div>
-
-        <div className="about-working-copy">
-          <RevealOnView delay={0}>
-            <p>
-              Mēs negribam sarežģīt procesu ar liekām prezentācijām un tehniskiem vārdiem
-              tikai tāpēc, lai tas izklausītos dārgāk.
-            </p>
+        <div className={styles.workingGrid}>
+          <RevealOnView className={styles.workingStep} delay={50}>
+            <h3>Vienojamies par uzdevumu</h3>
+            <p>Izrunājam mērķi, saturu, darba apjomu un nākamos soļus.</p>
           </RevealOnView>
-
-          <RevealOnView delay={120}>
-            <p>
-              Ja kaut ko nav jēgas būvēt, pasakām. Ja ir skaidrs nākamais solis,
-              ejam uz izpildi un pabeidzam to pirms pievienojam nākamo.
-            </p>
+          <RevealOnView className={styles.workingStep} delay={130}>
+            <h3>Parādām progresu</h3>
+            <p>Pārskatām rezultātu un izmaiņas saskaņojam pirms ieviešanas.</p>
+          </RevealOnView>
+          <RevealOnView className={styles.workingStep} delay={210}>
+            <h3>Nododam pārbaudītu lapu</h3>
+            <p>Pārbaudām svarīgākās darbības un vienojamies par uzturēšanu, ja tā vajadzīga.</p>
           </RevealOnView>
         </div>
       </section>

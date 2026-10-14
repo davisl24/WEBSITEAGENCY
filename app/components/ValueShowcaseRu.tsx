@@ -1,45 +1,58 @@
-import RevealOnView from "./RevealOnView";
+const issues = [
+  {
+    icon: "clarity",
+    title: "Посетители не понимают предложение",
+    action: "Упорядочиваем услуги и основную информацию",
+    benefit: "Человек быстрее понимает ваши услуги"
+  },
+  {
+    icon: "mobile",
+    title: "На телефоне трудно найти нужную информацию",
+    action: "Улучшаем мобильную структуру и меню",
+    benefit: "Важное удобно находить с телефона"
+  },
+  {
+    icon: "contact",
+    title: "Непонятно, что делать дальше",
+    action: "Делаем способ связи и заявки заметным",
+    benefit: "Клиенту проще связаться с вами"
+  }
+];
+
+function ProblemIcon({ type }: { type: string }) {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+      {type === "clarity" && <><rect x="3" y="4" width="18" height="16" rx="2" /><path d="M7 9h10M7 13h7M7 17h4" /></>}
+      {type === "mobile" && <><rect x="7" y="2" width="10" height="20" rx="2" /><path d="M11 18h2" /></>}
+      {type === "contact" && <><path d="M4 5h16v11H9l-5 4V5Z" /><path d="M8 10h8M8 13h5" /></>}
+    </svg>
+  );
+}
 
 export default function ValueShowcase() {
   return (
-    <section className="value-section" aria-labelledby="value-title">
+    <section className="value-section kestrel-problems-section kestrel-problems-cards kestrel-problems-v3" aria-labelledby="problems-title">
       <div className="value-inner">
-        <div className="value-layout value-plan-layout">
-          <RevealOnView className="value-copy-side">
-            <p className="section-label">Почему Kestrel</p>
-            <h2 id="value-title">Сайт, на котором<span>всё понятно.</span></h2>
-            <p className="value-intro">
-              Создание сайта не должно быть сложным. Помогаем сосредоточиться на том, что действительно нужно бизнесу.
-            </p>
-          </RevealOnView>
-
-          <RevealOnView className="value-showcase">
-            <div className="value-contrast-showcase" aria-label="От перегруженного сайта к понятному предложению">
-              <div className="value-contrast-panel value-contrast-before">
-                <div className="value-contrast-top"><span>СЛИШКОМ МНОГО</span><span>01 / ДО</span></div>
-                <div className="value-contrast-demo value-contrast-demo-before" aria-hidden="true">
-                  <div className="contrast-demo-nav"><strong>Автоуход в Риге</strong><span>Главная</span><span>Новости</span><span>Услуги</span></div>
-                  <div className="contrast-demo-promo">Услуги по уходу за авто в Риге</div>
-                  <div className="contrast-demo-blurb">Чистка салона, уход за кузовом и другие услуги — подробности в разделах сайта.</div>
-                  <div className="contrast-demo-grid"><span>Чистка салона</span><span>Уход за кузовом</span><span>Акции</span><span>Галерея</span><span>Новости</span><span>Контакты</span></div>
-                  <div className="contrast-demo-actions"><span>Посмотреть цены</span><span>Смотреть акции</span><span>Подробнее →</span></div>
-                </div>
-                <p>Услуги перечислены, но непонятно, как записаться.</p>
+        <div className="kestrel-problems-heading">
+          <h2 id="problems-title">Частые проблемы</h2>
+        </div>
+        <div className="kestrel-problems-list">
+          {issues.map(item => (
+            <article className="kestrel-issue-card" key={item.title}>
+              <div className="kestrel-v3-issue-head">
+                <span className="kestrel-v3-icon"><ProblemIcon type={item.icon} /></span>
+                <h3>{item.title}</h3>
               </div>
-              <span className="value-contrast-transition" aria-hidden="true">→</span>
-              <div className="value-contrast-panel value-contrast-after">
-                <div className="value-contrast-top"><span>ПОНЯТНО</span><span>02 / ПОСЛЕ</span></div>
-                <div className="value-contrast-demo value-contrast-demo-after" aria-hidden="true">
-                  <div className="contrast-demo-nav"><strong>Компания</strong><span>Услуги</span><span>Контакты</span></div>
-                  <div className="contrast-demo-eyebrow">ОДНО ПОНЯТНОЕ ПРЕДЛОЖЕНИЕ</div>
-                  <div className="contrast-demo-headline">Глубокая чистка салона авто в Риге</div>
-                  <div className="contrast-demo-blurb">Убираем пятна, пыль и накопившуюся грязь. Выберите удобное время.</div>
-                  <span className="contrast-demo-cta">Записаться на чистку <span>↗</span></span>
-                </div>
-                <p>Одна услуга. Один понятный следующий шаг.</p>
+              <div className="kestrel-v3-detail">
+                <span className="kestrel-v3-label">Что мы делаем</span>
+                <p>{item.action}</p>
               </div>
-            </div>
-          </RevealOnView>
+              <div className="kestrel-v3-detail kestrel-v3-benefit">
+                <span className="kestrel-v3-label">Что получает клиент</span>
+                <p>{item.benefit}</p>
+              </div>
+            </article>
+          ))}
         </div>
       </div>
     </section>
