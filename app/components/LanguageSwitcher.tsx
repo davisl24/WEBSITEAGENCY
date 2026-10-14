@@ -1,58 +1,18 @@
 "use client";
-
 import { usePathname } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useEffect } from "react";
+import { localizedRoutes, type Language, type PageKey } from "../lib/localizedSeo";
 
-const routes: Record<string, Record<"lv"|"en"|"ru", string>> = {
-  home: {lv:"/",en:"/en",ru:"/ru"},
-  about: {lv:"/par-mums",en:"/en/about",ru:"/ru/o-nas"},
-  contact: {lv:"/kontakti",en:"/en/contact",ru:"/ru/kontakty"},
-  landing: {lv:"/pakalpojumi/landing-lapa",en:"/en/services/landing-page",ru:"/ru/uslugi/lending"},
-  company: {lv:"/pakalpojumi/uznemuma-majaslapa",en:"/en/services/business-website",ru:"/ru/uslugi/sajt-dlya-biznesa"},
-  upgrade: {lv:"/pakalpojumi/majaslapas-uzlabosana",en:"/en/services/website-improvements",ru:"/ru/uslugi/uluchshenie-sajta"},
-};
-
-const names = {lv:"Latviešu",en:"English",ru:"Русский"} as const;
-
-export default function LanguageSwitcher() {
-  const pathname = usePathname();
-  const current = pathname.startsWith("/en") ? "en" : pathname.startsWith("/ru") ? "ru" : "lv";
-  const matchedRoute = Object.values(routes).find(item => Object.values(item).includes(pathname));
-  const row = matchedRoute ?? routes.home;
-  const [open, setOpen] = useState(false);
-  const root = useRef<HTMLDivElement>(null);
-  const trigger = useRef<HTMLButtonElement>(null);
-
-  useEffect(() => { document.documentElement.lang = current; }, [current]);
-  useEffect(() => { setOpen(false); }, [pathname]);
-  useEffect(() => {
-    if (!open) return;
-    const closeOutside = (event: PointerEvent) => {
-      if (!root.current?.contains(event.target as Node)) setOpen(false);
-    };
-    const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {setOpen(false);trigger.current?.focus();}
-    };
-    document.addEventListener("pointerdown",closeOutside);
-    document.addEventListener("keydown",onKeyDown);
-    return () => {
-      document.removeEventListener("pointerdown",closeOutside);
-      document.removeEventListener("keydown",onKeyDown);
-    };
-  }, [open]);
-
-  return (
-    <div className="language-switcher language-switcher-dropdown" ref={root}>
-      <button ref={trigger} className="language-switcher-trigger" type="button" aria-expanded={open} aria-haspopup="true" aria-label="Izvēlēties valodu" onClick={() => setOpen(v => !v)}>
-        <span className="language-switcher-three" aria-hidden="true">{(["lv","en","ru"] as const).map(lang => <span key={lang} className={lang === current ? "is-current" : undefined}>{lang.toUpperCase()}</span>)}</span>
-        <span className="language-switcher-chevron" aria-hidden="true">⌄</span>
-      </button>
-      {open && <div className="language-switcher-menu" aria-label="Languages">
-        {(["lv","en","ru"] as const).map(lang => matchedRoute ? <a key={lang} href={row[lang]} lang={lang} hrefLang={lang} aria-current={current===lang?"page":undefined} className={current===lang?"is-active":undefined} onClick={() => setOpen(false)}>
-          <span>{names[lang]}</span><span>{lang.toUpperCase()}</span>
-        </a> : <span key={lang} className="language-switcher-unavailable" title="Šai lapai tulkojums vēl nav pieejams"><span>{names[lang]}</span><span>{lang.toUpperCase()}</span></span>)}
-        {!matchedRoute && <small className="language-switcher-note">Šai lapai tulkojumi vēl nav pieejami</small>}
-      </div>}
-    </div>
-  );
+const languages: Language[] = ["lv", "en", "ru"];
+export default function LanguageSwitcher(){
+  const pathname=usePathname();
+  const locale:Language=pathname.startsWith("/en")?"en":pathname.startsWith("/ru")?"ru":"lv";
+  const entry=Object.entries(localizedRoutes).find(([,variants])=>Object.values(variants).includes(pathname)) as [PageKey,Record<Language,string>]|undefined;
+  useEffect(()=>{document.documentElement.lang=locale},[locale]);
+  return <nav className="language-switcher language-switcher-inline" aria-label={locale==="en"?"Language":locale==="ru"?"Язык":"Valoda"}>
+    {languages.map(lang=>entry
+      ? <a key={lang} href={entry[1][lang]} hrefLang={lang} lang={lang} aria-current={lang===locale?"page":undefined} title={lang==="lv"?"Latviešu":lang==="en"?"English":"Русский"}>{lang.toUpperCase()}</a>
+      : <span key={lang} className={lang===locale?"is-current":"is-unavailable"} title="Šai lapai tulkojums vēl nav pieejams">{lang.toUpperCase()}</span>
+    )}
+  </nav>;
 }
