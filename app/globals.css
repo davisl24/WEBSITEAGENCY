@@ -8999,3 +8999,153 @@ main.about-page .about-focus-copy{margin-inline:auto;text-align:center}
 /* Keep E-commerce's editorial offers borderless in both color themes. */
 html[data-theme="light"] .kestrel-service-unified .kst-offer{background:transparent}
 html[data-theme="light"] .kestrel-service-unified .kst-offer:hover{background:rgba(125,125,125,.055)}
+
+/* OCT 14 — explicitly approved Kestrel navigation + editorial refinements.
+   Only scoped selectors; do not modify approved home layout. */
+.site-nav .language-switcher-inline,
+.service-page-nav .language-switcher-inline{
+  display:inline-flex;
+  flex:0 0 auto;
+  align-items:center;
+  gap:2px;
+  margin:0;
+  padding:5px 7px;
+  height:38px;
+  border-radius:999px;
+  background:rgba(128,128,128,.11);
+}
+.language-switcher-inline a,
+.language-switcher-inline span{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-width:27px;min-height:27px;
+  border-radius:999px;
+  text-decoration:none;
+  font:inherit;font-size:11px;font-weight:600;
+  color:inherit;
+  opacity:.52;
+  transition:background .15s,color .15s,opacity .15s;
+}
+.language-switcher-inline a:hover{opacity:1;background:rgba(128,128,128,.13)}
+.language-switcher-inline a[aria-current="page"],
+.language-switcher-inline .is-current{
+  opacity:1;background:rgba(128,128,128,.15);font-weight:750;
+}
+.language-switcher-inline .is-unavailable{cursor:not-allowed;opacity:.23}
+.language-switcher-inline a:focus-visible{outline:2px solid currentColor;outline-offset:2px}
+
+.site-nav .theme-dropdown,.service-page-nav .theme-dropdown{position:relative;flex:none}
+.theme-dropdown-trigger{
+  display:inline-flex;align-items:center;justify-content:center;gap:7px;
+  height:38px;min-width:53px;padding:5px 10px;
+  border:1px solid rgba(130,130,130,.25);
+  border-radius:999px;
+  background:rgba(128,128,128,.065);
+  color:inherit;
+  cursor:pointer;
+}
+.theme-dropdown-trigger svg{display:block;width:19px;height:19px}
+.theme-dropdown-trigger:hover,.theme-dropdown-trigger[aria-expanded="true"]{background:rgba(128,128,128,.13)}
+.theme-dropdown-chevron{font-size:15px;opacity:.6}
+.theme-dropdown-menu{
+  position:absolute;right:0;top:calc(100% + 10px);z-index:110;
+  min-width:215px;
+  padding:7px;
+  border-radius:17px;
+  border:1px solid rgba(128,128,128,.23);
+  background:#181819;color:#f5f3ed;
+  box-shadow:0 18px 46px rgba(0,0,0,.24);
+}
+html[data-theme="light"] .theme-dropdown-menu{background:#f7f7f5;color:#171717}
+.theme-dropdown-menu button{
+  display:flex;align-items:center;gap:12px;
+  width:100%;padding:12px 13px;
+  border:0;border-radius:11px;
+  text-align:left;background:transparent;color:inherit;
+  font:inherit;font-size:13px;font-weight:550;cursor:pointer;
+}
+.theme-dropdown-menu button:hover,.theme-dropdown-menu button.is-active{background:rgba(128,128,128,.14)}
+.theme-dropdown-menu button svg{width:19px;height:19px;flex:none}
+.theme-dropdown-trigger:focus-visible,.theme-dropdown-menu button:focus-visible{outline:2px solid currentColor;outline-offset:2px}
+@media(max-width:900px){
+  .site-nav .language-switcher-inline,.service-page-nav .language-switcher-inline{height:34px;padding:3px 5px}
+  .language-switcher-inline a,.language-switcher-inline span{font-size:10px;min-width:25px;min-height:25px}
+  .theme-dropdown-trigger{height:34px;min-width:44px;padding:4px 7px}
+}
+@media(max-width:580px){
+  .site-nav .language-switcher-inline,.service-page-nav .language-switcher-inline{gap:0;padding:2px}
+  .language-switcher-inline a,.language-switcher-inline span{min-width:23px;font-size:9px}
+}
+
+/* All service detail Process headers must be centered after the hero. */
+.kestrel-service-unified .process-head,
+.kestrel-service-unified .process-head-minimal{
+  width:100%;max-width:100%;margin:0 auto 48px;display:flex;justify-content:center;text-align:center;
+}
+.kestrel-service-unified .process-head h2{margin:0 auto;text-align:center;width:100%;max-width:920px}
+.kestrel-service-unified .process-inner{width:min(1180px,calc(100% - 64px));margin:auto}
+@media(max-width:600px){.kestrel-service-unified .process-inner{width:calc(100% - 36px)}}
+
+/* Landing service shows the single real product with its layout demo alongside. */
+.kestrel-service-unified .kst-offers-landing{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(290px,1fr);
+  align-items:center;
+  column-gap:clamp(35px,6vw,95px);
+  row-gap:39px;
+}
+.kestrel-service-unified .kst-offers-landing .kst-heading{grid-column:1/-1;margin-bottom:0}
+.kestrel-service-unified .kst-offers-landing .kst-offers{display:block;width:100%;margin:0}
+.kestrel-service-unified .kst-offers-landing .kst-offer{min-height:0;max-width:520px}
+.kst-landing-preview{width:100%;display:flex;align-items:center;justify-content:center;min-height:320px}
+.kst-landing-browser{
+  width:min(100%,450px);
+  border-radius:17px;
+  overflow:hidden;
+  border:1px solid #d6d2ca;
+  background:#f4f2ee;
+  color:#1c1c1c;
+  box-shadow:0 22px 54px rgba(0,0,0,.12);
+}
+.kst-landing-nav{height:49px;padding:0 21px;border-bottom:1px solid #d6d2ca;display:flex;align-items:center;justify-content:space-between;font-size:12px}
+.kst-landing-content{display:flex;flex-direction:column;align-items:flex-start;gap:13px;padding:35px 25px 28px}
+.kst-landing-eyebrow{height:5px;width:66px;background:#a9a49b;border-radius:3px}
+.kst-landing-content strong{font-size:clamp(24px,2.3vw,35px);font-weight:700;letter-spacing:-.05em;line-height:1.14;max-width:320px}
+.kst-landing-description{height:7px;background:#c3bfb8;width:83%;border-radius:3px}
+.kst-landing-description.short{width:60%}
+.kst-landing-demo-cta{margin-top:10px;border-radius:999px;background:#202020;color:#fff;font-size:12px;font-weight:650;padding:11px 20px}
+.kst-landing-bottom{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:0 25px 26px}
+.kst-landing-bottom span{height:40px;background:#e2ded7;border-radius:7px}
+@media(max-width:800px){
+  .kestrel-service-unified .kst-offers-landing{grid-template-columns:1fr;gap:24px}
+  .kst-landing-preview{min-height:260px;justify-content:flex-start}
+}
+@media(prefers-reduced-motion:reduce){
+  .theme-dropdown-trigger,.language-switcher-inline a{transition:none}
+}
+
+/* About principles are editorial columns rather than generic floating cards. */
+main.about-page .about-thinking-section{padding-top:85px;padding-bottom:92px;min-height:0}
+main.about-page .about-thinking-layout{
+  display:block;width:min(1100px,calc(100% - 64px));
+  max-width:1100px;margin:52px auto 0;
+}
+main.about-page .about-principles{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  column-gap:clamp(27px,4vw,62px);row-gap:24px;
+  align-items:start;width:100%;
+}
+main.about-page .about-principle{
+  display:block;
+  min-width:0;
+  margin:0;
+  padding:25px 0 0;
+  border:0;border-top:1px solid rgba(130,130,130,.27);
+  border-radius:0;background:transparent;
+}
+main.about-page .about-principle h3{margin:0 0 12px;font-size:clamp(20px,2vw,25px);line-height:1.28;font-weight:650}
+main.about-page .about-principle p{margin:0;font-size:15px;line-height:1.7;max-width:35ch}
+@media(max-width:760px){
+  main.about-page .about-thinking-layout{width:calc(100% - 36px)}
+  main.about-page .about-principles{grid-template-columns:1fr;gap:28px}
+  main.about-page .about-thinking-section{padding-top:62px;padding-bottom:72px}
+}

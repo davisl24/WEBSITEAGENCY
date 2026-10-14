@@ -1,4 +1,5 @@
 import RevealOnView from "./RevealOnView";
+import type { Language } from "../lib/localizedSeo";
 
 const steps = [
   {
@@ -23,15 +24,27 @@ const steps = [
   },
 ];
 
-export default function ProcessFlow() {
+export default function ProcessFlow({lang="lv"}:{lang?:Language}) {
+  const translated={lv:steps,en:[
+    {title:"Goal",text:"We clarify what the business offers, to whom and what visitors should do",icon:"target"},
+    {title:"Content",text:"We select the information customers need to make a decision",icon:"content"},
+    {title:"Development",text:"We build and check the site on desktop and mobile",icon:"build"},
+    {title:"Launch",text:"We publish the site and agree on next steps if needed",icon:"launch"}
+  ],ru:[
+    {title:"Цель",text:"Определяем предложение, аудиторию и нужное действие посетителя",icon:"target"},
+    {title:"Контент",text:"Оставляем информацию, которая помогает принять решение",icon:"content"},
+    {title:"Разработка",text:"Создаём и проверяем сайт на компьютере и телефоне",icon:"build"},
+    {title:"Запуск",text:"Публикуем сайт и при необходимости согласуем дальнейшие работы",icon:"launch"}
+  ]}[lang];
+  const heading=lang==="ru"?"Процесс":"Process";
   return (
     <section className="process-section" id="process" aria-labelledby="process-title">
       <div className="process-inner">
-        <div className="process-head process-head-minimal"><h2 id="process-title">Process</h2></div>
+        <div className="process-head process-head-minimal"><h2 id="process-title">{heading}</h2></div>
 
         <div className="process-track">
           <span className="process-track-line" aria-hidden="true" />
-          {steps.map((step, index) => (
+          {translated.map((step, index) => (
             <RevealOnView
               className="process-step"
               delay={120 + index * 90}

@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import KestrelServiceTemplate, { type ServiceInfo } from "../../components/KestrelServiceTemplate";
 
-export const metadata: Metadata = {title:"Mājaslapa darbojas bez raizēm | Kestrel",description:"Palīdzam ar mājaslapas izvietošanu un saskaņotiem uzturēšanas darbiem."};
+export const metadata: Metadata = {title:"Mājaslapas uzturēšana | Kestrel",description:"Palīdzam ar mājaslapas izvietošanu un saskaņotiem uzturēšanas darbiem."};
 const service: ServiceInfo = {
-  "title": "Mājaslapa darbojas bez raizēm",
+  kind:"hosting",
+  "title": "Mājaslapas uzturēšana",
   "intro": "Lai mājaslapa būtu pieejama pēc publicēšanas, tai nepieciešama atbilstoša izvietošana un uzturēšanas kārtība. Palīdzam izvērtēt tehniskās vajadzības.",
   "audience": [
     "Jaunā mājaslapa jāizvieto publiski pieejamā vidē.",

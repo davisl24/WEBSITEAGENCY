@@ -22,8 +22,8 @@ export default function AboutPage() {
 
       <section className="about-hero">
         <div className="about-hero-copy">
-          <p className="service-page-kicker">О Kestrel</p>
-          <h1>Сайты с понятной целью</h1>
+          
+          <h1>О нас</h1>
           <p>
             Мы создаём сайты для малого бизнеса, на которых клиент легко понимает предложение, доверяет компании и знает, как оставить заявку.
           </p>
@@ -42,7 +42,7 @@ export default function AboutPage() {
           <div className="about-browser">
             <div className="ui-browser-top"><span/><span/><span/></div>
             <div className="about-browser-nav">
-              <strong>North</strong>
+              <strong>Kestrel</strong>
               <span/>
             </div>
             <div className="about-browser-body">
@@ -58,9 +58,6 @@ export default function AboutPage() {
 
       <section className="service-page-section about-company-section" aria-labelledby="about-company-title">
         <div className="about-company-intro">
-          <RevealOnView>
-            <p className="service-page-kicker">Кто мы</p>
-          </RevealOnView>
 
           <RevealOnView className="line-mask-reveal" delay={60}>
             <h2 id="about-company-title" className="service-line-stack about-company-title">
@@ -109,81 +106,16 @@ export default function AboutPage() {
         </div>
 
         <div className="about-thinking-layout">
-          <RevealOnView className="line-mask-reveal about-thinking-statement">
-            <p className="service-line-stack">
-              <span className="service-reveal-line"><span>Если сайт выглядит красиво,</span></span>
-              <span className="service-reveal-line"><span>но посетитель теряется,</span></span>
-              <span className="service-reveal-line"><span>работа не закончена.</span></span>
-            </p>
-          </RevealOnView>
-
           <div className="about-principles">
-            <RevealOnView className="about-principle" delay={60}>
-              <h3>Понятная цель</h3>
-              <p>Сначала определяем, какое действие должен совершить посетитель.</p>
-            </RevealOnView>
-
-            <RevealOnView className="about-principle" delay={150}>
-              <h3>Меньше лишнего</h3>
-              <p>Не добавляем блоки только ради объёма.</p>
-            </RevealOnView>
-
-            <RevealOnView className="about-principle" delay={240}>
-              <h3>Удобство в реальности</h3>
-              <p>Проверяем сайт на компьютере и телефоне как реальный путь клиента.</p>
-            </RevealOnView>
+            <RevealOnView className="about-principle" delay={60}><h3>Понятная цель</h3><p>Определяем главное действие посетителя</p></RevealOnView>
+            <RevealOnView className="about-principle" delay={140}><h3>Продуманный контент</h3><p>Размещаем важную информацию в понятной последовательности</p></RevealOnView>
+            <RevealOnView className="about-principle" delay={220}><h3>Удобство</h3><p>Проверяем сайт на компьютере и телефоне</p></RevealOnView>
           </div>
-        </div>
-      </section>
-
-      <section className="service-page-section about-focus-section" aria-labelledby="about-focus-title">
-        <div className="about-focus-intro">
-          <RevealOnView>
-            <p className="service-page-kicker">Наши принципы</p>
-          </RevealOnView>
-
-          <RevealOnView className="line-mask-reveal" delay={60}>
-            <h2 id="about-focus-title" className="service-line-stack about-focus-title">
-              <span className="service-reveal-line"><span>Лучше меньше, да лучше</span></span>
-            </h2>
-          </RevealOnView>
-
-          <RevealOnView delay={150}>
-            <p className="about-focus-copy">
-              Лучше убрать один ненужный блок, чем добавить три новых. У каждого элемента должна быть цель.
-            </p>
-          </RevealOnView>
-        </div>
-
-        <div className="about-focus-visual">
-          <RevealOnView className="about-chaos-panel">
-            <span className="about-focus-caption">Слишком много</span>
-            <div className="about-chaos-ui" aria-hidden="true">
-              <span/><span/><span/><span/><span/><span/>
-            </div>
-          </RevealOnView>
-
-          <RevealOnView className="about-focus-arrow" delay={100} aria-hidden="true">
-            <span>→</span>
-          </RevealOnView>
-
-          <RevealOnView className="about-clear-panel" delay={180}>
-            <span className="about-focus-caption">Понятно</span>
-            <div className="about-clear-ui" aria-hidden="true">
-              <span className="about-clear-kicker"/>
-              <span className="about-clear-title"/>
-              <span className="about-clear-copy"/>
-              <span className="about-clear-button"/>
-            </div>
-          </RevealOnView>
         </div>
       </section>
 
       <section className="service-page-section about-working-section" aria-labelledby="about-working-title">
         <div className="about-working-intro">
-          <RevealOnView>
-            <p className="service-page-kicker">Сотрудничество</p>
-          </RevealOnView>
 
           <RevealOnView className="line-mask-reveal" delay={60}>
             <h2 id="about-working-title" className="service-line-stack about-working-title">

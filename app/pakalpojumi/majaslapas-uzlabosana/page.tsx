@@ -3,6 +3,7 @@ import KestrelServiceTemplate, { type ServiceInfo } from "../../components/Kestr
 
 export const metadata: Metadata = {title:"Sakārtojam esošo mājaslapu | Kestrel",description:"Uzlabojam esošās mājaslapas skaidrību, izskatu un lietošanas ērtumu."};
 const service: ServiceInfo = {
+  kind:"upgrade",
   "title": "Sakārtojam esošo mājaslapu",
   "intro": "Ja apmeklētāji neatrod svarīgo vai mobilā versija ir neērta, ne vienmēr vajag jaunu lapu. Izvērtējam esošo un uzlabojam konkrētas vietas.",
   "audience": [

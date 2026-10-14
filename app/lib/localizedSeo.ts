@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export type Language = "lv" | "en" | "ru";
-export type PageKey = "home" | "about" | "contact" | "landing" | "company" | "upgrade";
+export type PageKey = "home" | "about" | "contact" | "landing" | "company" | "upgrade" | "web" | "commerce" | "seo" | "uiux" | "hosting";
 
 export const localizedRoutes: Record<PageKey, Record<Language, string>> = {
   home: {lv:"/",en:"/en",ru:"/ru"},
@@ -10,6 +10,11 @@ export const localizedRoutes: Record<PageKey, Record<Language, string>> = {
   landing: {lv:"/pakalpojumi/landing-lapa",en:"/en/services/landing-page",ru:"/ru/uslugi/lending"},
   company: {lv:"/pakalpojumi/uznemuma-majaslapa",en:"/en/services/business-website",ru:"/ru/uslugi/sajt-dlya-biznesa"},
   upgrade: {lv:"/pakalpojumi/majaslapas-uzlabosana",en:"/en/services/website-improvements",ru:"/ru/uslugi/uluchshenie-sajta"},
+  web: {lv:"/pakalpojumi/web-izstrade",en:"/en/services/web-development",ru:"/ru/uslugi/razrabotka-sajtov"},
+  commerce: {lv:"/pakalpojumi/e-komercija",en:"/en/services/ecommerce",ru:"/ru/uslugi/internet-magazin"},
+  seo: {lv:"/pakalpojumi/seo",en:"/en/services/seo",ru:"/ru/uslugi/seo"},
+  uiux: {lv:"/pakalpojumi/ui-ux",en:"/en/services/ui-ux",ru:"/ru/uslugi/ui-ux"},
+  hosting: {lv:"/pakalpojumi/hostings",en:"/en/services/website-maintenance",ru:"/ru/uslugi/obsluzhivanie-sajtov"},
 };
 
 const translations: Record<Exclude<Language,"lv">, Record<PageKey, { title:string; description:string }>> = {
@@ -19,7 +24,12 @@ const translations: Record<Exclude<Language,"lv">, Record<PageKey, { title:strin
     contact:{title:"Contact | Kestrel",description:"Tell us about your website or business idea. We'll help you find a practical next step."},
     landing:{title:"Landing Page Design | Kestrel",description:"Focused landing pages that explain one offer clearly and help visitors take action."},
     company:{title:"Business Website Design | Kestrel",description:"Business websites with clear structure, thoughtful design and simple ways for customers to get in touch."},
-    upgrade:{title:"Website Improvements | Kestrel",description:"Improve your existing website's clarity, usability and customer journey without starting from scratch."}
+    upgrade:{title:"Website Improvements | Kestrel",description:"Improve your existing website's clarity, usability and customer journey without starting from scratch."},
+    web:{title:"Web Development | Kestrel",description:"Clear websites for businesses with an easy path to enquiries."},
+    commerce:{title:"E-commerce Development | Kestrel",description:"Online stores with clear product catalogues and a straightforward checkout journey."},
+    seo:{title:"SEO Services | Kestrel",description:"Technical checks and content improvements to help search engines understand your website."},
+    uiux:{title:"UI/UX Design | Kestrel",description:"UX audits, clearer site structure and usable interface design."},
+    hosting:{title:"Website Maintenance | Kestrel",description:"Website hosting, maintenance and agreed technical updates."}
   },
   ru: {
     home:{title:"Разработка сайтов для малого бизнеса | Kestrel",description:"Создаём быстрые и понятные сайты, которые помогают клиентам разобраться в предложении и оставить заявку."},
@@ -27,7 +37,12 @@ const translations: Record<Exclude<Language,"lv">, Record<PageKey, { title:strin
     contact:{title:"Контакты | Kestrel",description:"Расскажите о вашей компании и идее сайта. Поможем определить следующий шаг."},
     landing:{title:"Разработка лендингов | Kestrel",description:"Лендинги для одного предложения с понятным сообщением и удобным способом оставить заявку."},
     company:{title:"Разработка сайтов для бизнеса | Kestrel",description:"Сайты компаний с понятной структурой, продуманным дизайном и удобными способами связи."},
-    upgrade:{title:"Улучшение сайтов | Kestrel",description:"Улучшаем существующий сайт: структуру, удобство и путь клиента к заявке без лишней переделки."}
+    upgrade:{title:"Улучшение сайтов | Kestrel",description:"Улучшаем существующий сайт: структуру, удобство и путь клиента к заявке без лишней переделки."},
+    web:{title:"Разработка сайтов | Kestrel",description:"Понятные сайты для бизнеса с удобным способом оставить заявку."},
+    commerce:{title:"Интернет-магазины | Kestrel",description:"Интернет-магазины с понятным каталогом и процессом оформления заказа."},
+    seo:{title:"SEO-продвижение | Kestrel",description:"Техническая проверка и улучшение контента для поисковых систем."},
+    uiux:{title:"UI/UX-дизайн | Kestrel",description:"Аудит удобства, структура сайта и дизайн интерфейсов."},
+    hosting:{title:"Обслуживание сайтов | Kestrel",description:"Хостинг, обслуживание и согласованные технические обновления."}
   }
 };
 

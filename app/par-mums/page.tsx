@@ -22,7 +22,7 @@ export default function AboutPage() {
 
       <section className="about-hero">
         <div className="about-hero-copy">
-          <h1>Mājaslapas ar domu</h1>
+          <h1>Par mums</h1>
           <p>
             Veidojam mājaslapas mazajiem uzņēmumiem tā, lai cilvēkam būtu viegli
             saprast piedāvājumu, uzticēties un izdarīt nākamo soli.
@@ -42,7 +42,7 @@ export default function AboutPage() {
           <div className="about-browser">
             <div className="ui-browser-top"><span/><span/><span/></div>
             <div className="about-browser-nav">
-              <strong>North</strong>
+              <strong>Kestrel</strong>
               <span/>
             </div>
             <div className="about-browser-body">
@@ -106,58 +106,20 @@ export default function AboutPage() {
         </div>
 
         <div className="about-thinking-layout">
-          <RevealOnView className="line-mask-reveal about-thinking-statement">
-            <p className="service-line-stack">
-              <span className="service-reveal-line"><span>Ja lapa izskatās labi</span></span>
-              <span className="service-reveal-line"><span>bet cilvēks apjūk</span></span>
-              <span className="service-reveal-line"><span>darbs nav pabeigts</span></span>
-            </p>
-          </RevealOnView>
-
           <div className="about-principles">
             <RevealOnView className="about-principle" delay={60}>
               <h3>Skaidrs mērķis</h3>
-              <p>Vispirms saprotam, kādu darbību lapai jāpanāk.</p>
+              <p>Nosakām, ko apmeklētājam jāsaprot un kāda darbība jāveic.</p>
             </RevealOnView>
-
-            <RevealOnView className="about-principle" delay={150}>
-              <h3>Mazāk lieka</h3>
-              <p>Neliekam sekcijas tikai tāpēc, lai lapa izskatītos garāka.</p>
+            <RevealOnView className="about-principle" delay={140}>
+              <h3>Pārdomāts saturs</h3>
+              <p>Galveno informāciju parādām īstajā secībā, bez liekiem blokiem.</p>
             </RevealOnView>
-
-            <RevealOnView className="about-principle" delay={240}>
-              <h3>Reāla lietojamība</h3>
-              <p>Desktop un mobile pārbaudām kā īstu klienta ceļu, nevis tikai maketu.</p>
+            <RevealOnView className="about-principle" delay={220}>
+              <h3>Ērta lietošana</h3>
+              <p>Pārbaudām, vai lapa ir saprotama gan datorā, gan telefonā.</p>
             </RevealOnView>
           </div>
-        </div>
-      </section>
-
-      <section className="service-page-section about-focus-section" aria-labelledby="about-focus-title">
-        <div className="about-focus-intro">
-
-          <RevealOnView className="line-mask-reveal" delay={60}>
-            <h2 id="about-focus-title" className="service-line-stack about-focus-title">
-              <span className="service-reveal-line"><span>Mazāk lieka, vairāk skaidrības</span></span>
-            </h2>
-          </RevealOnView>
-
-          <RevealOnView delay={150}>
-            <p className="about-focus-copy">
-              Izņemam elementus, kas apgrūtina uztveri, un izceļam svarīgāko — piedāvājumu, uzticamību un saziņu.
-            </p>
-          </RevealOnView>
-        </div>
-
-        <div className={styles.focusExamples}>
-          <RevealOnView className={styles.focusExample}>
-            <h3>Ja viss ir vienlīdz svarīgs</h3>
-            <p>Apmeklētājam jāmeklē, kur sākt un kā sazināties</p>
-          </RevealOnView>
-          <RevealOnView className={styles.focusExample} delay={110}>
-            <h3>Ja galvenais ir skaidri izcelts</h3>
-            <p>Cilvēks redz pakalpojumu un nākamo soli bez liekas meklēšanas</p>
-          </RevealOnView>
         </div>
       </section>
 

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import RevealOnView from "../../components/RevealOnView";
+import WebFeaturePreview from "../../components/WebFeaturePreview";
 import type { ServiceInfo } from "../../components/KestrelServiceTemplate";
 import KestrelHeader from "../../components/KestrelHeader";
 import styles from "./page.module.css";
@@ -124,47 +125,8 @@ export default function ServicePage() {
 
         <section className={`${styles.section} ${styles.includedSection}`} aria-labelledby="web-included-title">
           <h2 id="web-included-title">Ko tu saņem</h2>
-          <div className={styles.includedLayout}>
-            <div className={styles.includedGrid}>
-              {service.included.map((item, index) => (
-                <RevealOnView className={styles.includedItem} delay={index * 85} key={item.title}>
-                  <h3>{item.title}</h3>
-                  <p>{item.detail}</p>
-                </RevealOnView>
-              ))}
-            </div>
-            <RevealOnView className={styles.deviceVisual}><div role="img" aria-label="Mājaslapas desktop un mobilās versijas ilustrācija">
-              <div className={styles.desktopFrame}>
-                <div className={styles.desktopTop}>
-                  <span className={styles.previewBrand}>Jūsu uzņēmums</span>
-                  <span className={styles.previewNav} />
-                  <span className={styles.previewButton} />
-                </div>
-                <div className={styles.desktopScreen}>
-                  <div className={styles.previewText}>
-                    <span className={styles.previewEyebrow} />
-                    <span className={styles.previewHeading} />
-                    <span className={styles.previewHeadingShort} />
-                    <span className={styles.previewCopy} />
-                    <span className={styles.previewCopyShort} />
-                    <span className={styles.previewCta} />
-                  </div>
-                  <div className={styles.previewArtwork} />
-                </div>
-                <div className={styles.desktopCards}><span /><span /><span /></div>
-              </div>
-              <div className={styles.mobileFrame}>
-                <div className={styles.mobileNotch} />
-                <div className={styles.mobileBrand}>Jūsu uzņēmums</div>
-                <span className={styles.mobileArtwork} />
-                <span className={styles.mobileHeading} />
-                <span className={styles.mobileHeadingShort} />
-                <span className={styles.mobileCopy} />
-                <span className={styles.mobileCta} />
-              </div>
-              </div>
-            </RevealOnView>
-          </div>
+          <WebFeaturePreview features={service.included}/>
+
         </section>
 
         <section className={styles.section} aria-labelledby="web-process-title">
