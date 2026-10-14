@@ -13,11 +13,21 @@ const services = {
     {href:"/pakalpojumi/hostings",label:"Hostings un uzturēšana"}
   ],
   en: [
+    {href:"/en/services/web-development",label:"Web development"},
+    {href:"/en/services/ecommerce",label:"E-commerce"},
+    {href:"/en/services/seo",label:"SEO"},
+    {href:"/en/services/ui-ux",label:"UI/UX design"},
+    {href:"/en/services/website-maintenance",label:"Website maintenance"},
     {href:"/en/services/landing-page",label:"Landing page"},
     {href:"/en/services/business-website",label:"Business website"},
     {href:"/en/services/website-improvements",label:"Website improvements"}
   ],
   ru: [
+    {href:"/ru/uslugi/razrabotka-sajtov",label:"Разработка сайтов"},
+    {href:"/ru/uslugi/internet-magazin",label:"Интернет-магазины"},
+    {href:"/ru/uslugi/seo",label:"SEO"},
+    {href:"/ru/uslugi/ui-ux",label:"UI/UX-дизайн"},
+    {href:"/ru/uslugi/obsluzhivanie-sajtov",label:"Обслуживание сайтов"},
     {href:"/ru/uslugi/lending",label:"Лендинг"},
     {href:"/ru/uslugi/sajt-dlya-biznesa",label:"Сайт для бизнеса"},
     {href:"/ru/uslugi/uluchshenie-sajta",label:"Улучшение сайта"}
