@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import KestrelServiceTemplate, { type ServiceInfo } from "../../components/KestrelServiceTemplate";
 
-export const metadata: Metadata = {title:"Viena lapa. Viens mērķis. | Kestrel",description:"Vienā lapā izskaidrojam konkrētu pakalpojumu vai piedāvājumu."};
+export const metadata: Metadata = {title:"Landing lapa | Kestrel",description:"Vienā lapā izskaidrojam konkrētu pakalpojumu vai piedāvājumu."};
 const service: ServiceInfo = {
-  "title": "Viena lapa. Viens mērķis.",
-  "intro": "Ja vienam piedāvājumam ir pārāk daudz informācijas un izvēļu, apmeklētājs var nesaprast nākamo soli. Veidojam vienu skaidru lapu ar konkrētu mērķi.",
+  "title": "Landing lapa",
+  "intro": "Izstrādājam vienas lapas mājaslapu konkrētam pakalpojumam, produktam vai kampaņai. Viens piedāvājums un viens skaidrs pieteikšanās ceļš.",
   "audience": [
     "Jāpiesaka viens pakalpojums vai produkts.",
     "Reklāmas kampaņai vajadzīga atsevišķa lapa.",
