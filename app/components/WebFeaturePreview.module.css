@@ -36,3 +36,56 @@
 @media(max-width:700px){.layout{grid-template-columns:1fr;gap:30px}.scene{grid-column:1;grid-row:1;width:min(100%,530px);margin:0 auto}.features{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.features:last-child{grid-column:1;grid-row:3}.feature{padding:13px 10px}.feature strong{font-size:15px}.feature small{font-size:12px}.screen{min-height:235px}.scene{min-height:315px}}
 @media(max-width:420px){.screenBody{padding:18px 10px 12px;gap:7px}.top{gap:5px;padding:0 9px}.copy strong{font-size:13px}.art{min-height:100px}.cards{padding-inline:10px}.phone{width:99px;min-height:186px;bottom:27px}.scene{min-height:277px}}
 @media(prefers-reduced-motion:reduce){.feature,.phone{transition:none}}
+
+/* Make the example self-explanatory: automatically cycle through the six elements.
+   A manual selection pauses the demonstration until the user restarts it. */
+.sceneFooter{
+  position:absolute;
+  left:0;right:0;bottom:0;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:8px 18px;
+  padding-right:4px;
+}
+.sceneFooter .sceneCaption{position:static;bottom:auto;left:auto;font-size:12px;line-height:1.45}
+.demoStatus,.restart{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-size:11px;
+  line-height:1.5;
+  opacity:.66;
+  white-space:nowrap;
+}
+.statusDot{width:6px;height:6px;flex:none;border-radius:50%;background:currentColor;animation:feature-pulse 2.4s ease-in-out infinite}
+.restart{
+  border:0;
+  padding:5px 0;
+  cursor:pointer;
+  color:inherit;
+  font-family:inherit;
+  background:transparent;
+  text-decoration:underline;
+  text-underline-offset:4px;
+}
+.restart:hover{opacity:1}
+.restart:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+@keyframes feature-pulse{0%,100%{opacity:.25}50%{opacity:1}}
+@media(max-width:1040px){
+  .scene{min-height:390px;padding-bottom:54px}
+  .sceneFooter{flex-direction:column;align-items:flex-start;gap:3px}
+}
+@media(max-width:700px){
+  .scene{min-height:355px;padding-bottom:58px}
+  .sceneFooter{max-width:100%}
+}
+@media(max-width:420px){
+  .scene{min-height:312px}
+  .sceneFooter .sceneCaption{font-size:11px}
+  .demoStatus,.restart{font-size:10px}
+}
+@media(prefers-reduced-motion:reduce){
+  .statusDot{animation:none;opacity:.6}
+}

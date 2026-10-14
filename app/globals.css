@@ -9190,3 +9190,92 @@ html[data-theme="light"] .calendar-demo-selected{background:#171717;color:#fff}
 .kst-company-mini-cards b{font-size:9px;font-weight:550;line-height:1.4}
 @media(max-width:800px){.kestrel-service-unified .kst-offers-landing{grid-template-columns:1fr}.kst-company-browser{max-width:530px}}
 @media(max-width:420px){.kst-company-body{grid-template-columns:85px 1fr}.kst-company-body aside{padding:20px 7px}.kst-company-main{padding:21px 10px}.kst-company-mini-cards{gap:4px}}
+
+
+/* Kestrel browser review: no permanent dividers above the three editorial offers. */
+.kestrel-service-unified :is(.kst-offers-landing,.kst-offers-upgrade) .kst-offer{
+  border:0;
+  border-top:0;
+  border-radius:20px;
+  background:transparent;
+  padding:24px 20px;
+  transition:background-color .2s ease,transform .2s ease;
+}
+.kestrel-service-unified :is(.kst-offers-landing,.kst-offers-upgrade) .kst-offer:hover{
+  border:0;
+  border-top:0;
+  background:rgba(220,220,220,.075);
+  transform:translateY(-2px);
+}
+html[data-theme="light"] .kestrel-service-unified :is(.kst-offers-landing,.kst-offers-upgrade) .kst-offer:hover{
+  background:rgba(23,23,23,.07);
+}
+.kestrel-service-unified :is(.kst-offers-landing,.kst-offers-upgrade) .kst-offer:focus-visible{
+  outline:2px solid currentColor;
+  outline-offset:3px;
+}
+@media(prefers-reduced-motion:reduce){
+  .kestrel-service-unified :is(.kst-offers-landing,.kst-offers-upgrade) .kst-offer{
+    transition:none;
+  }
+  .kestrel-service-unified :is(.kst-offers-landing,.kst-offers-upgrade) .kst-offer:hover{
+    transform:none;
+  }
+}
+
+/* Group web development and its 3 real subservices in the same menu (LV/EN/RU). */
+.services-dropdown-menu.services-dropdown-menu-grouped{
+  width:310px;
+  max-height:min(560px,75vh);
+  overflow-y:auto;
+  overscroll-behavior:contain;
+}
+.services-dropdown-menu-grouped .services-dropdown-parent{
+  font-weight:700;
+}
+.services-dropdown-subgroup{
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+  margin:0 9px 8px 18px;
+  padding:0 0 0 14px;
+  border-left:1px solid rgba(244,241,234,.18);
+}
+.services-dropdown-sublink{
+  display:flex;
+  align-items:center;
+  min-height:35px;
+  padding:7px 11px;
+  color:rgba(244,241,234,.66);
+  font-size:12.5px;
+  font-weight:550;
+  line-height:1.4;
+  text-decoration:none;
+  border-radius:9px;
+  transition:color .18s ease,background .18s ease;
+}
+.services-dropdown-sublink:hover,
+.services-dropdown-sublink[aria-current="page"]{
+  color:#f4f1ea;
+  background:rgba(255,255,255,.065);
+}
+.services-dropdown-sublink:focus-visible{
+  outline:2px solid currentColor;
+  outline-offset:1px;
+}
+.services-dropdown-divider{
+  height:1px;
+  margin:9px 11px;
+  background:rgba(244,241,234,.1);
+}
+html[data-theme="light"] .services-dropdown-subgroup{border-left-color:rgba(23,23,23,.17)}
+html[data-theme="light"] .services-dropdown-sublink{color:rgba(23,23,23,.68)}
+html[data-theme="light"] .services-dropdown-sublink:hover,
+html[data-theme="light"] .services-dropdown-sublink[aria-current="page"]{
+  color:#171717;
+  background:rgba(23,23,23,.055);
+}
+html[data-theme="light"] .services-dropdown-divider{background:rgba(23,23,23,.1)}
+@media(prefers-reduced-motion:reduce){
+  .services-dropdown-sublink{transition:none}
+}

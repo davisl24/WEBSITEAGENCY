@@ -113,7 +113,7 @@ export default function KestrelServiceTemplate({ service, lang="lv" }: { service
 
     </section>
 
-    <section className={"kst-section kst-offers-section "+((kind==="landing"||kind==="company")?"kst-offers-landing":"")} aria-labelledby="kst-offers">
+    <section className={"kst-section kst-offers-section "+((kind==="landing"||kind==="company")?"kst-offers-landing":kind==="upgrade"?"kst-offers-upgrade":"")} aria-labelledby="kst-offers">
       <div className="kst-heading"><RevealOnView><h2 id="kst-offers">{isCommerce ? copy.commerce : copy.offers}</h2></RevealOnView></div>
       <div className="kst-offers">
         {service.offers.map((item,index) => {

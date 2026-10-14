@@ -107,19 +107,16 @@ export default function AboutPage() {
 
         <div className={styles.proofGrid}>
           <RevealOnView className={styles.proofStep} delay={60}>
-            <span className={styles.proofOverline}>Fakts</span>
             <div className={[styles.proofVisual,styles.proofBusy].join(" ")} aria-hidden="true"><span/><span/><span/><span/><span/></div>
             <h3>Grūti atrast svarīgāko</h3>
             <p>Ja viss ir vienlīdz izcelts, cilvēkam ilgāk jāmeklē piedāvājums un kontakti.</p>
           </RevealOnView>
           <RevealOnView className={styles.proofStep} delay={140}>
-            <span className={styles.proofOverline}>Iespēja</span>
             <div className={[styles.proofVisual,styles.proofClear].join(" ")} aria-hidden="true"><span/><span/><span/></div>
             <h3>Sakārtojam informāciju</h3>
             <p>Izceļam pakalpojumu, tā ieguvumu un saprotamu nākamo soli.</p>
           </RevealOnView>
           <RevealOnView className={styles.proofStep} delay={220}>
-            <span className={styles.proofOverline}>Ieguvums</span>
             <div className={[styles.proofVisual,styles.proofAction].join(" ")} aria-hidden="true"><span/><span/><span/></div>
             <h3>Vienkāršāk pieteikties</h3>
             <p>Apmeklētājs ātrāk saprot piedāvājumu un viegli atrod saziņas iespēju.</p>
@@ -127,7 +124,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="service-page-section about-working-section" aria-labelledby="about-working-title">
+      <section className={`service-page-section about-working-section ${styles.workingSection}`} aria-labelledby="about-working-title">
         <div className="about-working-intro">
           <RevealOnView className="line-mask-reveal">
             <h2 id="about-working-title" className="service-line-stack about-working-title">
@@ -135,20 +132,33 @@ export default function AboutPage() {
             </h2>
           </RevealOnView>
         </div>
-        <div className={styles.workingGrid}>
-          <RevealOnView className={styles.workingStep} delay={50}>
+
+        <RevealOnView className={styles.workingTimeline}>
+          <RevealOnView className={styles.workingItem} delay={70}>
+            <span className={styles.workingDot} aria-hidden="true"/>
+            <span className={styles.workingIcon} aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="11"/><circle cx="16" cy="16" r="5"/><path d="M16 3v6M16 23v6M3 16h6M23 16h6"/></svg>
+            </span>
             <h3>Vienojamies par uzdevumu</h3>
             <p>Izrunājam mērķi, saturu, darba apjomu un nākamos soļus.</p>
           </RevealOnView>
-          <RevealOnView className={styles.workingStep} delay={130}>
+          <RevealOnView className={styles.workingItem} delay={170}>
+            <span className={styles.workingDot} aria-hidden="true"/>
+            <span className={styles.workingIcon} aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none"><rect x="5" y="5" width="22" height="22" rx="3"/><path d="M11 11h11M11 16h11M11 21h6"/></svg>
+            </span>
             <h3>Parādām progresu</h3>
             <p>Pārskatām rezultātu un izmaiņas saskaņojam pirms ieviešanas.</p>
           </RevealOnView>
-          <RevealOnView className={styles.workingStep} delay={210}>
+          <RevealOnView className={styles.workingItem} delay={270}>
+            <span className={styles.workingDot} aria-hidden="true"/>
+            <span className={styles.workingIcon} aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none"><path d="M12 21l-1-7c3-6 8-9 15-9 0 7-3 12-9 15l-5 1Z"/><path d="M11 14l-5 1-2 5 7-1M18 21l-1 7-5 1 1-7M9 23l-3 3M24 9h.01"/></svg>
+            </span>
             <h3>Nododam pārbaudītu lapu</h3>
             <p>Pārbaudām svarīgākās darbības un vienojamies par uzturēšanu, ja tā vajadzīga.</p>
           </RevealOnView>
-        </div>
+        </RevealOnView>
       </section>
 
       <section className="service-page-cta">
