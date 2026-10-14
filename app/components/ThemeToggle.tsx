@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type ThemePreference = "system" | "light" | "dark";
 type ResolvedTheme = "light" | "dark";
@@ -18,6 +18,16 @@ function ThemeIcon({ mode }: { mode: ThemePreference }) {
 
 export default function ThemeToggle() {
   const [preference, setPreference] = useState<ThemePreference>("system");
+  const [open,setOpen]=useState(false);
+  const ref=useRef<HTMLDivElement>(null);
+  const trigger=useRef<HTMLButtonElement>(null);
+  useEffect(()=>{
+    if(!open)return;
+    const click=(e:PointerEvent)=>{if(!ref.current?.contains(e.target as Node))setOpen(false)};
+    const escape=(e:KeyboardEvent)=>{if(e.key==="Escape"){setOpen(false);trigger.current?.focus()}};
+    document.addEventListener("pointerdown",click);document.addEventListener("keydown",escape);
+    return ()=>{document.removeEventListener("pointerdown",click);document.removeEventListener("keydown",escape)};
+  },[open]);
 
   useEffect(() => {
     const saved = window.localStorage.getItem("kestrel-theme");
@@ -40,16 +50,24 @@ export default function ThemeToggle() {
   const selectTheme = (mode: ThemePreference) => {
     setPreference(mode);
     window.localStorage.setItem("kestrel-theme", mode);
+    setOpen(false);
   };
 
   const labels: Record<ThemePreference, string> = { system: "Sistēmas režīms", light: "Gaišais režīms", dark: "Tumšais režīms" };
   return (
-    <div className="theme-segmented" role="group" aria-label="Krāsu režīms">
-      {(["system", "light", "dark"] as const).map((mode) => (
-        <button key={mode} type="button" className="theme-segmented-button" onClick={() => selectTheme(mode)} aria-label={labels[mode]} aria-pressed={preference === mode} title={labels[mode]}>
-          <ThemeIcon mode={mode} />
-        </button>
-      ))}
+    <div className="theme-dropdown" ref={ref}>
+      <button ref={trigger} type="button" className="theme-dropdown-trigger"
+        aria-label="Krāsu režīms" aria-expanded={open} aria-haspopup="true"
+        onClick={()=>setOpen(x=>!x)}>
+        <ThemeIcon mode={preference}/><span className="theme-dropdown-chevron" aria-hidden="true">⌄</span>
+      </button>
+      {open && <div className="theme-dropdown-menu" role="group" aria-label="Izvēlēties krāsu režīmu">
+        {(["system","light","dark"] as const).map(mode=><button key={mode} type="button"
+          className={preference===mode?"is-active":undefined}
+          onClick={()=>selectTheme(mode)} aria-pressed={preference===mode}>
+          <ThemeIcon mode={mode}/><span>{labels[mode]}</span>
+        </button>)}
+      </div>}
     </div>
   );
 }
