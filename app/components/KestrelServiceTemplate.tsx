@@ -28,33 +28,35 @@ function OfferIcon({kind,index}:{kind:NonNullable<ServiceInfo["kind"]>,index:num
   </svg>;
 }
 
-function LandingPreview(){
+function LandingPreview({lang}:{lang:Language}){
+  const words={lv:{offer:"Viens piedāvājums",cta:"Pieteikties"},en:{offer:"One clear offer",cta:"Enquire"},ru:{offer:"Одно предложение",cta:"Оставить заявку"}}[lang];
   return <div className="kst-landing-preview" role="img" aria-label="Vienas lapas dizaina piemērs ar skaidru piedāvājumu un vienu primāro pogu">
     <div className="kst-landing-browser">
       <div className="kst-landing-nav"><b>Kestrel</b><span>☰</span></div>
       <div className="kst-landing-content">
         <span className="kst-landing-eyebrow"/>
-        <strong>Viens piedāvājums</strong>
+        <strong>{words.offer}</strong>
         <span className="kst-landing-description"/>
         <span className="kst-landing-description short"/>
-        <span className="kst-landing-demo-cta">Pieteikties</span>
+        <span className="kst-landing-demo-cta">{words.cta}</span>
       </div>
       <div className="kst-landing-bottom"><span/><span/><span/></div>
     </div>
   </div>;
 }
 
-function CommercePreview() {
+function CommercePreview({lang}:{lang:Language}) {
+  const words={lv:{store:"Veikals",catalog:"Katalogs",cart:"Grozs (2)",product:"Produkts",order:"Pasūtījums",items:"2 produkti",next:"Turpināt"},en:{store:"Store",catalog:"Catalogue",cart:"Cart (2)",product:"Product",order:"Your order",items:"2 items",next:"Continue"},ru:{store:"Магазин",catalog:"Каталог",cart:"Корзина (2)",product:"Товар",order:"Заказ",items:"2 товара",next:"Далее"}}[lang];
   return <div className="kst-commerce-preview" role="img" aria-label="Ilustratīvs interneta veikala piemērs: preču katalogs, grozs un pasūtījuma noformēšana">
     <div className="kst-commerce-window">
-      <div className="kst-commerce-window-top"><strong>Veikals</strong><span>Katalogs</span><span>Grozs (2)</span></div>
+      <div className="kst-commerce-window-top"><strong>{words.store}</strong><span>{words.catalog}</span><span>{words.cart}</span></div>
       <div className="kst-commerce-product-grid">
-        <div><span className="kst-product-shape shape-one"/><i/><small>Produkts A</small></div>
-        <div><span className="kst-product-shape shape-two"/><i/><small>Produkts B</small></div>
-        <div><span className="kst-product-shape shape-three"/><i/><small>Produkts C</small></div>
+        <div><span className="kst-product-shape shape-one"/><i/><small>{words.product} A</small></div>
+        <div><span className="kst-product-shape shape-two"/><i/><small>{words.product} B</small></div>
+        <div><span className="kst-product-shape shape-three"/><i/><small>{words.product} C</small></div>
       </div>
     </div>
-    <div className="kst-commerce-checkout"><strong>Pasūtījums</strong><span>2 produkti</span><div className="kst-checkout-line"/><div className="kst-checkout-line short"/><span className="kst-checkout-button">Turpināt</span></div>
+    <div className="kst-commerce-checkout"><strong>{words.order}</strong><span>{words.items}</span><div className="kst-checkout-line"/><div className="kst-checkout-line short"/><span className="kst-checkout-button">{words.next}</span></div>
   </div>;
 }
 
@@ -71,7 +73,7 @@ export default function KestrelServiceTemplate({ service, lang="lv" }: { service
         <RevealOnView delay={70}><p className="kst-intro">{service.intro}</p></RevealOnView>
         <a className="kst-hero-cta" href={contact}>{copy.cta}</a>
       </div>
-      {isCommerce && <CommercePreview />}
+      {isCommerce && <CommercePreview lang={lang}/>}
 
     </section>
 
@@ -83,7 +85,7 @@ export default function KestrelServiceTemplate({ service, lang="lv" }: { service
           return item.href ? <a key={item.title} href={item.href} className="kst-offer">{inside}</a> : <div key={item.title} className="kst-offer">{inside}</div>;
         })}
       </div>
-      {kind==="landing" && <LandingPreview />}
+      {kind==="landing" && <LandingPreview lang={lang}/>}
     </section>
 
     <section className="kst-section kst-included-section" aria-labelledby="kst-included">
@@ -106,6 +108,6 @@ export default function KestrelServiceTemplate({ service, lang="lv" }: { service
       <RevealOnView><h2>{copy.end}</h2></RevealOnView>
       <a className="kst-glass-cta" href={contact}>{copy.cta}</a>
     </section>
-    <KestrelFooter />
+    <KestrelFooter lang={lang}/>
   </main>;
 }
